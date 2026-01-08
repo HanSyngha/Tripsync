@@ -1,0 +1,79 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check if user owns the document
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Users can read their own profile and other users' public profiles
+      allow read: if isAuthenticated();
+      // Users can only write to their own profile
+      allow write: if isOwner(userId);
+
+      // Notifications subcollection - users can only access their own notifications
+      match /notifications/{notificationId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Collection group rule for participants - allows querying across all trips
+    match /{path=**}/participants/{participantId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Trips collection
+    match /trips/{tripId} {
+      // Authenticated users can read trips
+      // Access control is enforced through participant subcollection queries
+      allow read: if isAuthenticated();
+      // Only authenticated users can create trips
+      allow create: if isAuthenticated();
+      // Only trip host can update/delete
+      allow update, delete: if isAuthenticated() && resource.data.hostId == request.auth.uid;
+
+      // Itinerary subcollection
+      match /itinerary/{itemId} {
+        allow read, write: if isAuthenticated() && (
+          get(/databases/$(database)/documents/trips/$(tripId)).data.hostId == request.auth.uid ||
+          request.auth.uid in get(/databases/$(database)/documents/trips/$(tripId)).data.participantIds
+        );
+      }
+
+      // Messages subcollection
+      match /messages/{messageId} {
+        allow read, write: if isAuthenticated() && (
+          get(/databases/$(database)/documents/trips/$(tripId)).data.hostId == request.auth.uid ||
+          request.auth.uid in get(/databases/$(database)/documents/trips/$(tripId)).data.participantIds
+        );
+      }
+
+      // Expenses subcollection
+      match /expenses/{expenseId} {
+        allow read, write: if isAuthenticated() && (
+          get(/databases/$(database)/documents/trips/$(tripId)).data.hostId == request.auth.uid ||
+          request.auth.uid in get(/databases/$(database)/documents/trips/$(tripId)).data.participantIds
+        );
+      }
+    }
+
+
+    // Trip invitations
+    match /invitations/{invitationId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (
+        resource.data.inviterId == request.auth.uid ||
+        resource.data.inviteeEmail == request.auth.token.email
+      );
+    }
+  }
+}

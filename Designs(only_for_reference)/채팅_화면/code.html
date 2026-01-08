@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel Chat Screen</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "background-light": "#f9fafa",
+                        "background-dark": "#22262a",
+                        "chat-bubble-gray": "#f0f2f5",
+                        "chat-bubble-organizer": "#e0f2f5",
+                        "text-main": "#121617",
+                        "text-secondary": "#677f83",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+        /* Hide scrollbar for clean mobile look if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-main h-screen flex flex-col overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex-none bg-white dark:bg-[#1a1d21] border-b border-gray-100 dark:border-gray-800 z-20 shadow-sm pt-safe-top">
+<div class="flex items-center justify-between px-4 py-3 h-16">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<div class="flex flex-col items-center flex-1 mx-2">
+<h1 class="text-base font-bold leading-tight text-text-main dark:text-white">Jeju Island Trip 🌴</h1>
+<span class="text-xs text-primary font-medium">1 Guide • 14 Members</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar bg-background-light dark:bg-background-dark p-4 pb-24 space-y-6">
+<!-- Date Separator -->
+<div class="flex justify-center my-4">
+<span class="bg-gray-200 dark:bg-gray-700 text-text-secondary dark:text-gray-300 text-xs px-3 py-1 rounded-full font-medium">Today, Oct 24</span>
+</div>
+<!-- Message: Organizer (Guide Kim) -->
+<div class="flex items-end gap-3 group">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-white dark:border-gray-800 shadow-sm" data-alt="Portrait of a friendly tour guide smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCv9yDtjONq1UZqJmrfOp8M3ICgjRq5K65EM1rlaaZu5QHywdWoEXMjzNje05-G3oHiDjXT-zEMxfQhGDwlu168yp2KiWyPvJO_QuyegWhTPu-voh4QTuq1zCByjIEKK5lu2mOOqLkg-x1Ne8s_YmUKFfj6DYmV7_Hf0wt7IzXD29GgaIa14u1Bohk62-rjSDEFSqXGVEB4_tXfrY2GR2m9i_XZdk4kqOl0tvRc29DjFX8PJ1uC2eqdCxAknjK-ALl-aqi6IszbgeE");'></div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white dark:border-background-dark">GUIDE</div>
+</div>
+<div class="flex flex-col items-start max-w-[80%]">
+<div class="flex items-center gap-2 mb-1 pl-1">
+<span class="text-xs font-bold text-text-main dark:text-white">Guide Kim</span>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded">ORGANIZER</span>
+</div>
+<div class="bg-chat-bubble-organizer dark:bg-[#1e3a40] p-3.5 rounded-2xl rounded-bl-none shadow-sm border border-primary/10 dark:border-primary/20">
+<p class="text-sm text-text-main dark:text-gray-100 leading-relaxed">
+                        Hello everyone! 👋 Please gather at the hotel lobby by 10 AM for our bus tour. Don't forget your tickets!
+                    </p>
+</div>
+<span class="text-[10px] text-text-secondary mt-1 pl-1">09:41 AM</span>
+</div>
+</div>
+<!-- Message: Me -->
+<div class="flex items-end gap-3 justify-end group">
+<div class="flex flex-col items-end max-w-[80%]">
+<div class="bg-primary p-3.5 rounded-2xl rounded-br-none shadow-md">
+<p class="text-sm text-white leading-relaxed">
+                        Got it! On my way down now.
+                    </p>
+</div>
+<div class="flex items-center gap-1 mt-1 pr-1">
+<span class="text-[10px] text-text-secondary">09:42 AM</span>
+<span class="material-symbols-outlined text-[12px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<!-- Message: Participant (Sarah Lee) -->
+<div class="flex items-end gap-3 group">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-gray-100 dark:border-gray-700" data-alt="Portrait of a female traveler looking at camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmiKtXVinSshP9rbuvVERsXbUcFdwBi-6mTzl6WfyuWF_aJgtMsWuYc0UqOCMk7gXy5w0x4nOqGGmtfikdUiKyhT9NQWejkAl4MICfl7xtbNGL9dk-qWJ-TmnbD1BV1gDuj6QP2HpnHfaX4PHLjLNzu7lnqTsoBRJyNQMj8mORBkHIpSR1XThwlavqEKkICQq-vlsrIvPoulqsxXD0Q9rVuglBXd1DTLFE379LeQK1wM7Wg-UwgLWmPfUD6zEtXRkRVgGGtyUSbO0");'></div>
+</div>
+<div class="flex flex-col items-start max-w-[80%]">
+<span class="text-xs font-medium text-text-secondary mb-1 pl-1">Sarah Lee</span>
+<div class="bg-white dark:bg-[#2c3035] p-3.5 rounded-2xl rounded-bl-none shadow-sm border border-gray-100 dark:border-gray-700">
+<p class="text-sm text-text-main dark:text-gray-200 leading-relaxed">
+                        Is there a convenience store nearby? I need to buy some water before we leave. 🥤
+                    </p>
+</div>
+<span class="text-[10px] text-text-secondary mt-1 pl-1">09:45 AM</span>
+</div>
+</div>
+<!-- Message: Organizer (Guide Kim) - Reply -->
+<div class="flex items-end gap-3 group">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-white dark:border-gray-800 shadow-sm" data-alt="Portrait of a friendly tour guide smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1Glrabt6q5lZTK3Tl1bVaxyVv3cypIa18odLYKbQ_QtluxDTSuCuedxF6XV7r94DRUjXxj09mcY5zqtmqiXIYVYCjY9KHVf9cTUEZ0u1B1eJGkFt6_zQBYXgeh9pJPWMnCYAnQbv5t9pfWKZIB4cIpaqmPwkdngjFZFzkKsybZh1_AKG9x19BusV9uZwrIjFpkYF4CM3k2PGc_ZqF-U2BxH1uoYp_cY-RRKTxNTfOYYbwV9jr4-zuDWv5wn8ZFOpRmr6hFnUxulU");'></div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white dark:border-background-dark">GUIDE</div>
+</div>
+<div class="flex flex-col items-start max-w-[80%]">
+<div class="flex items-center gap-2 mb-1 pl-1">
+<span class="text-xs font-bold text-text-main dark:text-white">Guide Kim</span>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded">ORGANIZER</span>
+</div>
+<div class="bg-chat-bubble-organizer dark:bg-[#1e3a40] p-3.5 rounded-2xl rounded-bl-none shadow-sm border border-primary/10 dark:border-primary/20">
+<!-- Map Preview Card within chat -->
+<div class="mb-2 rounded-lg overflow-hidden relative group cursor-pointer">
+<div class="bg-center bg-no-repeat bg-cover h-24 w-full" data-alt="Map view showing location pins on a street map" data-location="Jeju Island Convenience Store Map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-uAQuskhuFnDNFGv5erweTHiwzlBeMzEwasBZcTYd6r3TySTDBsc7yVTu4AS6kF9rvysNOV1SQtQI4uKN8VFgN9vOt20ajleukywYfD20l-kX7nc2951elKQeyo4SV4GkQjtJNEdJ850VCAh3beVOz02FdUa6OimVMcGcXUpvJxhtjjiRgAPAmYDSX5-uAU2nMIn1h0n1DVaM24XBQtc6PS2EHBrybygp0OLYp_cHJJIQIQzFd8zDXdD0_ebvS7MNufGqvth41MU");'></div>
+<div class="bg-white/90 dark:bg-black/60 absolute bottom-0 left-0 right-0 p-2 flex items-center justify-between backdrop-blur-sm">
+<div class="flex items-center gap-1.5 text-xs font-bold text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary text-[16px]">location_on</span>
+                                CU Mart - Jeju Lobby
+                            </div>
+<span class="material-symbols-outlined text-gray-500 text-[16px]">chevron_right</span>
+</div>
+</div>
+<p class="text-sm text-text-main dark:text-gray-100 leading-relaxed">
+                        Yes! There is a CU Mart right next to the elevators on the ground floor. Here is the location.
+                    </p>
+</div>
+<span class="text-[10px] text-text-secondary mt-1 pl-1">09:48 AM</span>
+</div>
+</div>
+</main>
+<!-- Input Area (Fixed Bottom) -->
+<footer class="bg-white dark:bg-[#1a1d21] border-t border-gray-100 dark:border-gray-800 p-3 pb-8 safe-bottom z-30">
+<div class="flex items-end gap-2 max-w-4xl mx-auto">
+<!-- Add Button -->
+<button class="flex-none flex items-center justify-center size-10 rounded-full text-text-secondary hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+<span class="material-symbols-outlined text-[26px]">add_circle</span>
+</button>
+<!-- Text Input -->
+<div class="flex-1 bg-gray-100 dark:bg-[#2a2e33] rounded-[24px] flex items-center min-h-[44px] px-4 py-2 border border-transparent focus-within:border-primary/50 focus-within:bg-white dark:focus-within:bg-[#2a2e33] transition-all">
+<textarea class="w-full bg-transparent border-none p-0 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-0 resize-none max-h-32" placeholder="Message..." rows="1" style="min-height: 24px;"></textarea>
+<button class="ml-2 text-text-secondary hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-[22px]">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Send Button -->
+<button class="flex-none flex items-center justify-center size-10 rounded-full bg-primary text-white shadow-md shadow-primary/30 hover:bg-primary/90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] ml-0.5">send</span>
+</button>
+</div>
+</footer>
+</body></html>

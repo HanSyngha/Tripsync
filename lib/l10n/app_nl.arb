@@ -1,0 +1,754 @@
+{
+  "@@locale": "nl",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Begin je reis",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Ontdek nieuwe ervaringen en creeer bijzondere herinneringen",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Overslaan",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Deelnemer",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Organisator",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Mede-organisator",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Doorgaan met Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Doorgaan met Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Doorgaan met Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Doorgaan met Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Door in te loggen ga je akkoord met onze {terms} en {privacy}.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Servicevoorwaarden",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Privacybeleid",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "Welkom terug",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Klaar voor je volgende reis?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Alle reizen",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Organiseren",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Deelnemen",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Nu bezig",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Aankomende avonturen",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Bekijk alles",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "Dag {current} van {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "Bezig",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Beheren",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Gast",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Nog te bepalen",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Home",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Ontdekken",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Chat",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Profiel",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Reis aanmaken",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Laten we je reis plannen",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Als organisator kun je deze gegevens later altijd nog aanpassen.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Annuleren",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Opslaan",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Basisinformatie",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Verplicht",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Reisnaam",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "bijv. Zomer in Kyoto",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Bestemming",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Waar ga je naartoe?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Datums",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Startdatum",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Einddatum",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Optionele details",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Omslagfoto",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Tik om omslag te uploaden",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Reisdoel / Memo",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Wat is het hoofddoel van deze reis?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Volgende stap",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Deelnemersbeheer",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Deelnemend",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Openstaande uitnodigingen",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Nieuw lid uitnodigen",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Zoeken op naam of e-mail",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Organisatoren",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "BEHEERDER",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Reizigers",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Alle rechten",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Kan planning bewerken",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Alleen lezen",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Wacht op acceptatie",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Opnieuw versturen",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Uitnodigingslink geactiveerd",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Kopieren",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Planning bewerken toestaan",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Foto uploaden toestaan",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Verwijderen uit reis",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "{days} dagen geleden toegetreden",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Reisschema",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Organisatorweergave",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Concept",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} dagen",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "Dag {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Activiteit toevoegen",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Planning",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Kaart",
+  "@map": {"description": "Map nav"},
+
+  "people": "Mensen",
+  "@people": {"description": "People nav"},
+
+  "settings": "Instellingen",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Vlucht",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Accommodatie",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Huurauto",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Restaurant",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Attractie",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Activiteit",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Vervoer",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Voer gegevens in",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Luchtvaartmaatschappij",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Vluchtnummer",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Vertrek",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Aankomst",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Notities",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Schrijf hier belangrijke notities...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Bijlage toevoegen",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "E-ticket of voucher (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Herinneringsinstellingen",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Reservering bevestigd",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} Gids - {members} Leden",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "GIDS",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ORGANISATOR",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Bericht...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Open kaart",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Nieuwe aankondiging",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Aan wie?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Alle deelnemers",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Specifiek selecteren",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} anderen geselecteerd",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Berichtdetails",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Volgende planning",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Dringend",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Algemene informatie",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Peiling",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Snelle sjablonen",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Bus vertrekt over 10 min",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Ontmoetingspunt gewijzigd",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Weerwaarschuwing",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Dinerreserveringen",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Onderwerp",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "bijv. Verzamelen in de lobby",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Bericht",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Schrijf hier je aankondiging...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Foto toevoegen",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Locatie toevoegen",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Vastpinnen bovenaan chat",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Zichtbaar houden voor alle deelnemers",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Versturen als dringende melding",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Meldt ook als gedempt",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Melding versturen",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Meldingen",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Alles als gelezen markeren",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Alles",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Aankondigingen",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Vandaag",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Gisteren",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Aankondiging",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Vorige aankondiging",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} min geleden",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} uur geleden",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Reisdetails",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} nachten",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Georganiseerd door",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Kaartweergave",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Groepschat",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Opgeslagen documenten",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Niet vergeten!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Overzicht",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Alles uitvouwen",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Inchecken",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Uitchecken",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Routebeschrijving",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Reservering",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Huidige status",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Reis begint over {days} dagen",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Account en rechten",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Profielzichtbaarheid",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Weergave-instellingen",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Donkere modus",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Lettergrootte",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Standaard",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Meldingen",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Reisplanningmeldingen",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Pushmeldingen voor belangrijke wijzigingen",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Meldingen voor nieuwe berichten",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Help en ondersteuning",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "App-versie",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Uitloggen",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Toestemming vereist",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync heeft toestemming nodig voor meldingen om je belangrijke reisupdates en aankondigingen van organisatoren te sturen.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Meldingen toestaan",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Later",
+  "@later": {"description": "Later button"},
+
+  "error": "Fout",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Opnieuw proberen",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Nog geen reizen",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Maak je eerste reis aan of neem deel aan een reis!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Geen meldingen",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Je bent helemaal bij!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Laden...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Verbindingsfout",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Controleer je internetverbinding",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Verwijderen bevestigen",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Weet je zeker dat je dit wilt verwijderen?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Verwijderen",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Bevestigen",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Klaar",
+  "@done": {"description": "Done button"},
+
+  "edit": "Bewerken",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Sluiten",
+  "@close": {"description": "Close button"},
+
+  "back": "Terug",
+  "@back": {"description": "Back button"},
+
+  "next": "Volgende",
+  "@next": {"description": "Next button"},
+
+  "search": "Zoeken",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Geen resultaten gevonden",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Selecteer datum",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Selecteer tijd",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Van",
+  "@from": {"description": "From label"},
+
+  "to": "Naar",
+  "@to": {"description": "To label"},
+
+  "duration": "Duur",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Locatie",
+  "@location": {"description": "Location label"},
+
+  "address": "Adres",
+  "@address": {"description": "Address label"},
+
+  "phone": "Telefoon",
+  "@phone": {"description": "Phone label"},
+
+  "email": "E-mail",
+  "@email": {"description": "Email label"},
+
+  "website": "Website",
+  "@website": {"description": "Website label"},
+
+  "price": "Prijs",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Bekijk menu",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Aanbevolen",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Wandelen",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Waarschuwing",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Details bekijken",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Klaar voor je",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "volgende reis?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "Maak je eerste reis aan of neem deel aan een reis!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "Taal",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "Foto wijzigen",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "Foto maken",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "Kiezen uit galerij",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "Foto verwijderen",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "Weergavenaam",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "Voer je weergavenaam in",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "Voer je telefoonnummer in",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "Weergavenaam is verplicht",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "Weergavenaam moet minimaal 2 tekens bevatten",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "Profiel succesvol bijgewerkt",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "Profiel bijwerken mislukt",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "Afbeelding selecteren mislukt",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "Weet je zeker dat je wilt uitloggen?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "Eerder",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "Account",
+  "deleteAccount": "Account verwijderen",
+  "deleteAccountTitle": "Account verwijderen",
+  "deleteAccountMessage": "Weet je zeker dat je je account wilt verwijderen? Deze actie is onomkeerbaar en al je gegevens worden permanent verwijderd.",
+  "deleteAccountConfirmation": "Typ 'VERWIJDEREN' om te bevestigen",
+  "deletingAccount": "Account verwijderen...",
+  "accountDeleted": "Account succesvol verwijderd",
+  "deleteAccountFailed": "Account verwijderen mislukt",
+  "deleteAccountWarning": "Waarschuwing: Deze actie kan niet ongedaan worden gemaakt. Al je gegevens inclusief reizen en berichten worden permanent verwijderd."
+}

@@ -1,0 +1,68 @@
+# Credentials - 절대 커밋하지 마세요!
+credentials.env
+*.env
+.env*
+
+# Firebase 설정 파일
+**/google-services.json
+**/GoogleService-Info.plist
+lib/firebase_options.dart
+
+# API Keys
+**/api_keys.dart
+**/secrets.dart
+**/app_secrets.dart
+
+# Keystore / Signing
+*.jks
+*.keystore
+key.properties
+upload-keystore.jks
+
+# Build outputs
+build/
+.dart_tool/
+.packages
+*.apk
+*.aab
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store
+*.swp
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/release/
+android/app/src/main/res/values/secrets.xml
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Podfile.lock
+
+# Cloud Functions
+functions/node_modules/
+functions/.env
+
+# Generated localization (keep templates, exclude generated)
+# lib/l10n/generated/
+
+# Sensitive manifests - use templates instead
+# AndroidManifest.xml is safe (uses @string references from secrets.xml)
+# Info.plist contains API keys directly - use Info.plist.template
+ios/Runner/Info.plist
+
+# Pubspec lock (optional - some prefer to commit this)
+# pubspec.lock

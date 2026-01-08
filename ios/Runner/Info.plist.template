@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Copy this file to Info.plist and fill in your API keys -->
+<!-- DO NOT commit Info.plist to version control! -->
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>TripSync</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TripSync</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+
+	<!-- Google Maps API Key - Get from Google Cloud Console -->
+	<key>GMSApiKey</key>
+	<string>YOUR_GOOGLE_MAPS_IOS_API_KEY</string>
+
+	<!-- Kakao SDK - Get from Kakao Developers Console -->
+	<key>KAKAO_APP_KEY</key>
+	<string>YOUR_KAKAO_APP_KEY</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaoplus</string>
+		<string>kakaotalk</string>
+		<string>naversearchapp</string>
+		<string>naversearchthirdlogin</string>
+	</array>
+
+	<!-- URL Schemes -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<!-- Kakao -->
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakaoYOUR_KAKAO_APP_KEY</string>
+			</array>
+		</dict>
+		<!-- Naver -->
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>naverlogin</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- Naver Login - Get from Naver Developers Console -->
+	<key>naverServiceAppUrlScheme</key>
+	<string>naverlogin</string>
+	<key>naverConsumerKey</key>
+	<string>YOUR_NAVER_CLIENT_ID</string>
+	<key>naverConsumerSecret</key>
+	<string>YOUR_NAVER_CLIENT_SECRET</string>
+	<key>naverServiceAppName</key>
+	<string>TripSync</string>
+
+	<!-- Location Permission -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to show nearby attractions and provide navigation to trip destinations.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location to provide real-time navigation and share your location with trip members.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to track your trip progress and provide timely notifications.</string>
+
+	<!-- Camera Permission -->
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera access to take photos and scan documents for your trip.</string>
+
+	<!-- Photo Library Permission -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need photo library access to share trip photos with your group.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need permission to save trip photos to your library.</string>
+
+	<!-- Microphone Permission (for voice messages) -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need microphone access to send voice messages in trip chat.</string>
+
+	<!-- Contacts Permission (for inviting friends) -->
+	<key>NSContactsUsageDescription</key>
+	<string>We need contacts access to help you invite friends to your trips.</string>
+
+	<!-- Background Modes -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+		<string>location</string>
+	</array>
+
+	<!-- Firebase Cloud Messaging -->
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+
+	<!-- AdMob App ID (Test) - Replace with production ID for release -->
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>cstr6suwn9.skadnetwork</string>
+		</dict>
+	</array>
+</dict>
+</plist>

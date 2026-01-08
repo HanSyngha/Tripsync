@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Send Announcement - Host View</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#247d8f",
+              "background-light": "#fafaf9",
+              "background-dark": "#212a2c",
+              "coral": "#CC6F57",
+            },
+            fontFamily: {
+              "display": ["Epilogue", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal lists */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 px-4 py-3 flex items-center justify-between">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center text-gray-900 dark:text-white">New Announcement</h2>
+<button class="flex items-center justify-center p-2 -mr-2 rounded-full text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-6 p-4 pb-32">
+<!-- Recipient Selection -->
+<section class="flex flex-col gap-3">
+<h3 class="text-xl font-bold leading-tight px-1">To whom?</h3>
+<div class="flex h-12 w-full items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full flex-1 items-center justify-center rounded-md transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm">
+<span class="text-sm font-bold text-gray-500 dark:text-gray-400 has-[:checked]:text-primary dark:has-[:checked]:text-white">All Participants</span>
+<input checked="" class="hidden" name="recipient-type" type="radio" value="All Participants"/>
+</label>
+<label class="flex cursor-pointer h-full flex-1 items-center justify-center rounded-md transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm">
+<span class="text-sm font-bold text-gray-500 dark:text-gray-400 has-[:checked]:text-primary dark:has-[:checked]:text-white">Select Specific</span>
+<input class="hidden" name="recipient-type" type="radio" value="Select Specific"/>
+</label>
+</div>
+<!-- Specific Selection Preview (Visual Polish) -->
+<div class="flex items-center gap-2 px-1 pt-1 opacity-60">
+<div class="flex -space-x-2">
+<img alt="Portrait of a female traveler" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy99W_ziWgwz6G3ymu3dMUYjxdI4tAoefFbBukHJ745K-trsewEeA7phI8WYuie2k1lc4i4sW3ZcfJc9_NxYVs98Yswg_naopUYWOuiDvLmnaiv98yI84NUAuOh5xxOBgGhXMT6_6gPXkCF-x_nySdRCFKIZhwvnxZtVFgDv8kUZWR28WA9akCdM39boC6UG0txZeNHYWmNfSY6w4GYfwSUXTwnE3jLS1gWvMLn2Tm0CpcbzlJWDo_Z4_1wTtYmmKo9emt4j-B68Q"/>
+<img alt="Portrait of a male traveler" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2DMCmRgFytDshbUPKo0FqxxJWUJ48LYA9hmDLDNR03Pk-m9C2mi1qsW3VieLAFVbyrtB87UWgDtYZqez--uGmoJNjyhkL1Jb-7du3vqvX3OmKaU--XJCPLyfFyIf_Z77UBWO4cixTkBCMdx55tZnrF32keo3XCLNnDHokUcsr-Z3SEGD3vkKAt115G7k2Dw5HaK_5PPFsgStjMr1amFNiUaTArn-0gI71f9ah5QlzJ7cfj9X3dfswYFEofAZhUV3v4x37aa5jSNM"/>
+<img alt="Portrait of a smiling man" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZBp-2Zpfm0QO_nnhc52_ovIcHGTejblxdxLSuNEidsyPWFeX9XOqVU72JsnGovvvRh2SBThxRBpexOoMfPokwIEitSuZDG18kkFZ5EEnYjymvABja-_aHYcmvF_Q8KSQlf46NeDIe-oUTcEZaJcjvkg2bharwwiic4n2_wQHedDuEcxZelSmUPXwIAaJ4-mcg1kvj7nmddPOVr9OF_YsWkODJjfwtQM2IGbfIb96-97SptNMnRfbHCWt0pxeZTHj0d9hxOc-quWw"/>
+</div>
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400">+ 12 others selected</span>
+</div>
+</section>
+<hr class="border-gray-100 dark:border-gray-800"/>
+<!-- Message Details -->
+<section class="flex flex-col gap-4">
+<h3 class="text-xl font-bold leading-tight px-1">Message Details</h3>
+<!-- Type Chips -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+<label class="cursor-pointer group">
+<input checked="" class="peer hidden" name="msg-type" type="radio"/>
+<div class="flex h-9 items-center justify-center px-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 peer-checked:bg-primary peer-checked:text-white transition-colors">
+<span class="text-sm font-medium whitespace-nowrap">Next Schedule</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer hidden" name="msg-type" type="radio"/>
+<div class="flex h-9 items-center justify-center px-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 peer-checked:bg-coral peer-checked:text-white transition-colors">
+<span class="text-sm font-medium whitespace-nowrap">Urgent</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer hidden" name="msg-type" type="radio"/>
+<div class="flex h-9 items-center justify-center px-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 peer-checked:bg-primary peer-checked:text-white transition-colors">
+<span class="text-sm font-medium whitespace-nowrap">General Info</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer hidden" name="msg-type" type="radio"/>
+<div class="flex h-9 items-center justify-center px-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 peer-checked:bg-primary peer-checked:text-white transition-colors">
+<span class="text-sm font-medium whitespace-nowrap">Poll</span>
+</div>
+</label>
+</div>
+<!-- Quick Templates -->
+<div class="flex flex-col gap-2">
+<span class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-1">Quick Templates</span>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="shrink-0 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 bg-transparent text-xs font-medium text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors">
+                        🚍 Bus leaving in 10
+                    </button>
+<button class="shrink-0 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 bg-transparent text-xs font-medium text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors">
+                        📍 Meeting point changed
+                    </button>
+<button class="shrink-0 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 bg-transparent text-xs font-medium text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors">
+                        🌧️ Weather alert
+                    </button>
+<button class="shrink-0 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 bg-transparent text-xs font-medium text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors">
+                        🍽️ Dinner reservations
+                    </button>
+</div>
+</div>
+<!-- Inputs Container -->
+<div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700/50 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-gray-500 dark:text-gray-400">Subject</label>
+<input class="w-full bg-transparent border-0 border-b border-gray-200 dark:border-gray-700 px-0 py-2 text-base focus:ring-0 focus:border-primary placeholder-gray-300 dark:placeholder-gray-600 text-gray-900 dark:text-white transition-colors" placeholder="e.g. Meet at lobby" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-gray-500 dark:text-gray-400">Message</label>
+<textarea class="w-full bg-gray-50 dark:bg-gray-900/50 rounded-lg border-0 px-3 py-3 text-base focus:ring-1 focus:ring-primary placeholder-gray-300 dark:placeholder-gray-600 text-gray-900 dark:text-white resize-none" placeholder="Write your announcement here..." rows="6"></textarea>
+</div>
+<!-- Attachment Row -->
+<div class="flex items-center gap-4 pt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+                        Add Photo
+                    </button>
+<button class="flex items-center gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+                        Add Location
+                    </button>
+</div>
+</div>
+</section>
+<!-- Options -->
+<section class="bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700/50 divide-y divide-gray-100 dark:divide-gray-700/50">
+<div class="flex items-center justify-between p-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-gray-900 dark:text-white">Pin to top of chat</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Keep visible for all participants</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-coral/5 dark:bg-coral/10">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-coral/10 text-coral">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-gray-900 dark:text-white">Send as Urgent Alert</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Notifies even if muted</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-coral"></div>
+</label>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 p-4 pb-6 z-30 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="w-full flex items-center justify-center gap-2 h-14 bg-primary text-white rounded-xl text-lg font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">send</span>
+            Send Notification
+        </button>
+</footer>
+</body></html>

@@ -1,0 +1,719 @@
+{
+  "@@locale": "it",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Inizia il Tuo Viaggio",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Scopri nuove esperienze e crea ricordi speciali",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Salta",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Partecipante",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Organizzatore",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Co-Organizzatore",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Continua con Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Continua con Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Continua con Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Continua con Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Effettuando l'accesso, accetti i nostri {terms} e la nostra {privacy}.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Termini di Servizio",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Informativa sulla Privacy",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "Bentornato",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Pronto per la tua prossima avventura?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Tutti i Viaggi",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Organizzati da te",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "A cui partecipi",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "In Corso",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Prossime Avventure",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Vedi tutto",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "Giorno {current} di {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "In Corso",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Gestisci",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Ospite",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Da definire",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Home",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Esplora",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Chat",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Profilo",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Crea Viaggio",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Pianifichiamo il tuo viaggio",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Come organizzatore, potrai modificare questi dettagli in qualsiasi momento.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Annulla",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Salva",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Informazioni Base",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Obbligatorio",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Nome del Viaggio",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "es. Estate a Kyoto",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Destinazione",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Dove stai andando?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Date",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Data di Inizio",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Data di Fine",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Dettagli Facoltativi",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Foto di Copertina",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Tocca per caricare la copertina",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Obiettivo / Memo del Viaggio",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Qual e' l'obiettivo principale di questo viaggio?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Prossimo Passo",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Gestione Partecipanti",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Partecipanti",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Inviti in Sospeso",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Invita Nuovo Membro",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Cerca per nome o email",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Organizzatori",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "ADMIN",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Viaggiatori",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Tutti i permessi",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Puo' modificare il programma",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Solo lettura",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "In attesa di accettazione",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Reinvia",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Link di invito attivato",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Copia",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Consenti modifica programma",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Consenti caricamento foto",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Rimuovi dal viaggio",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "Si e' unito {days} giorni fa",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Itinerario",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Vista Organizzatore",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Bozza",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} Giorni",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "Giorno {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Aggiungi Attivita'",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Programma",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Mappa",
+  "@map": {"description": "Map nav"},
+
+  "people": "Persone",
+  "@people": {"description": "People nav"},
+
+  "settings": "Impostazioni",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Volo",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Alloggio",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Auto a Noleggio",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Ristorante",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Attrazione",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Attivita'",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Trasporto",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Inserisci Dettagli",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Compagnia Aerea",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Numero del Volo",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Partenza",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Arrivo",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Note",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Scrivi qui eventuali note importanti...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Aggiungi Allegato",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "E-ticket o voucher (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Impostazioni Promemoria",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Prenotazione Confermata",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} Guida - {members} Membri",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "GUIDA",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ORGANIZZATORE",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Messaggio...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Apri Mappa",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Nuovo Annuncio",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "A chi?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Tutti i Partecipanti",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Seleziona Specifici",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} altri selezionati",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Dettagli Messaggio",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Prossimo Programma",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Urgente",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Informazioni Generali",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Sondaggio",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Modelli Rapidi",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Autobus in partenza tra 10",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Punto di incontro cambiato",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Allerta meteo",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Prenotazioni per la cena",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Oggetto",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "es. Ritrovo nella hall",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Messaggio",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Scrivi qui il tuo annuncio...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Aggiungi Foto",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Aggiungi Posizione",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Fissa in cima alla chat",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Mantieni visibile per tutti i partecipanti",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Invia come Avviso Urgente",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Notifica anche se silenziato",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Invia Notifica",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Notifiche",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Segna tutto come letto",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Tutto",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Annunci",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Oggi",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Ieri",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Annuncio",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Annuncio Passato",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} min fa",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} ore fa",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Dettagli Viaggio",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} Notti",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Organizzato da",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Vista Mappa",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Chat di Gruppo",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Documenti Salvati",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Non dimenticare!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Panoramica",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Espandi Tutto",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Check-in",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Check-out",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Indicazioni",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Prenotazione",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Stato Attuale",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Il viaggio inizia tra {days} giorni",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Account e Permessi",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Visibilita' Profilo",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Impostazioni Schermo",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Modalita' Scura",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Dimensione Carattere",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Standard",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Notifiche",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Notifiche programma viaggio",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Notifiche push per modifiche importanti",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Notifiche nuovi messaggi",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Aiuto e Supporto",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Versione App",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Esci",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Permesso Richiesto",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync ha bisogno del permesso per le notifiche per inviarti aggiornamenti importanti sul viaggio e annunci dagli organizzatori.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Consenti Notifiche",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Piu' tardi",
+  "@later": {"description": "Later button"},
+
+  "error": "Errore",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Riprova",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Nessun viaggio ancora",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Crea il tuo primo viaggio o unisciti a uno!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Nessuna notifica",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Sei in pari!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Caricamento...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Errore di connessione",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Controlla la tua connessione internet",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Conferma Eliminazione",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Sei sicuro di voler eliminare questo?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Elimina",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Conferma",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Fatto",
+  "@done": {"description": "Done button"},
+
+  "edit": "Modifica",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Chiudi",
+  "@close": {"description": "Close button"},
+
+  "back": "Indietro",
+  "@back": {"description": "Back button"},
+
+  "next": "Avanti",
+  "@next": {"description": "Next button"},
+
+  "search": "Cerca",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Nessun risultato trovato",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Seleziona Data",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Seleziona Ora",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Da",
+  "@from": {"description": "From label"},
+
+  "to": "A",
+  "@to": {"description": "To label"},
+
+  "duration": "Durata",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Posizione",
+  "@location": {"description": "Location label"},
+
+  "address": "Indirizzo",
+  "@address": {"description": "Address label"},
+
+  "phone": "Telefono",
+  "@phone": {"description": "Phone label"},
+
+  "email": "Email",
+  "@email": {"description": "Email label"},
+
+  "website": "Sito Web",
+  "@website": {"description": "Website label"},
+
+  "price": "Prezzo",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Vedi Menu",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Consigliato",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Escursionismo",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Attenzione",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Vedi Dettagli",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Pronto per la tua",
+  "nextJourney": "prossima avventura?",
+  "createFirstTrip": "Crea il tuo primo viaggio o unisciti a uno!",
+  "language": "Lingua",
+  "changePhoto": "Cambia foto",
+  "takePhoto": "Scatta foto",
+  "chooseFromGallery": "Scegli dalla galleria",
+  "removePhoto": "Rimuovi foto",
+  "displayName": "Nome visualizzato",
+  "enterDisplayName": "Inserisci il nome visualizzato",
+  "enterPhoneNumber": "Inserisci il tuo numero di telefono",
+  "displayNameRequired": "Il nome visualizzato e' obbligatorio",
+  "displayNameMinLength": "Il nome deve avere almeno 2 caratteri",
+  "profileUpdated": "Profilo aggiornato con successo",
+  "failedToUpdateProfile": "Aggiornamento profilo fallito",
+  "failedToPickImage": "Selezione immagine fallita",
+  "logoutConfirmation": "Sei sicuro di voler uscire?",
+  "earlier": "Prima",
+
+  "account": "Account",
+  "deleteAccount": "Elimina Account",
+  "deleteAccountTitle": "Elimina Account",
+  "deleteAccountMessage": "Sei sicuro di voler eliminare il tuo account? Questa azione e' irreversibile e tutti i tuoi dati verranno eliminati permanentemente.",
+  "deleteAccountConfirmation": "Digita 'ELIMINA' per confermare",
+  "deletingAccount": "Eliminazione account in corso...",
+  "accountDeleted": "Account eliminato con successo",
+  "deleteAccountFailed": "Eliminazione account fallita",
+  "deleteAccountWarning": "Attenzione: Questa azione non puo' essere annullata. Tutti i tuoi dati, inclusi viaggi e messaggi, verranno eliminati permanentemente."
+}

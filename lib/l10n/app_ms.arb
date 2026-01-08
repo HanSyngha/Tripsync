@@ -1,0 +1,754 @@
+{
+  "@@locale": "ms",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Mulakan Perjalanan Anda",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Temui pengalaman baharu dan cipta kenangan istimewa",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Langkau",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Peserta",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Hos",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Hos Bersama",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Teruskan dengan Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Teruskan dengan Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Teruskan dengan Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Teruskan dengan Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Dengan log masuk, anda bersetuju dengan {terms} dan {privacy} kami.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Syarat Perkhidmatan",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Dasar Privasi",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "Selamat kembali",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Bersedia untuk perjalanan seterusnya?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Semua Perjalanan",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Menghos",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Menyertai",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Sedang Berlangsung",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Pengembaraan Akan Datang",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Lihat semua",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "Hari {current} daripada {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "Sedang Berjalan",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Urus",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Tetamu",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Akan Ditentukan",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Laman Utama",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Terokai",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Sembang",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Profil",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Cipta Perjalanan",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Mari rancang perjalanan anda",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Sebagai hos, anda boleh mengedit butiran ini kemudian bila-bila masa.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Batal",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Simpan",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Maklumat Asas",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Diperlukan",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Nama Perjalanan",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "cth. Musim Panas di Kyoto",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Destinasi",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Ke mana anda pergi?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Tarikh",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Tarikh Mula",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Tarikh Tamat",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Butiran Pilihan",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Foto Muka Depan",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Ketik untuk muat naik muka depan",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Matlamat / Memo Perjalanan",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Apakah matlamat utama perjalanan ini?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Langkah Seterusnya",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Pengurusan Peserta",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Menyertai",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Jemputan Tertunda",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Jemput Ahli Baharu",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Cari mengikut nama atau e-mel",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Hos",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "PENTADBIR",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Pengembara",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Semua kebenaran",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Boleh edit jadual",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Baca sahaja",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Menunggu penerimaan",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Hantar Semula",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Pautan jemputan diaktifkan",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Salin",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Benarkan edit jadual",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Benarkan muat naik foto",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Keluarkan dari perjalanan",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "Menyertai {days} hari lalu",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Jadual Perjalanan",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Paparan Penganjur",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Draf",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} Hari",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "Hari {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Tambah Aktiviti",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Jadual",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Peta",
+  "@map": {"description": "Map nav"},
+
+  "people": "Orang",
+  "@people": {"description": "People nav"},
+
+  "settings": "Tetapan",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Penerbangan",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Penginapan",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Kereta Sewa",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Restoran",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Tarikan",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Aktiviti",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Pengangkutan",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Masukkan Butiran",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Syarikat Penerbangan",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Nombor Penerbangan",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Berlepas",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Tiba",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Nota",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Tulis sebarang nota penting di sini...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Tambah Lampiran",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "E-tiket atau baucar (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Tetapan Peringatan",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Tempahan Disahkan",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} Pemandu - {members} Ahli",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "PEMANDU",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "PENGANJUR",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Mesej...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Buka Peta",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Pengumuman Baharu",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Kepada siapa?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Semua Peserta",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Pilih Tertentu",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} lagi dipilih",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Butiran Mesej",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Jadual Seterusnya",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Segera",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Maklumat Am",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Undian",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Templat Pantas",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Bas bertolak dalam 10 minit",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Titik pertemuan berubah",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Amaran cuaca",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Tempahan makan malam",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Subjek",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "cth. Berkumpul di lobi",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Mesej",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Tulis pengumuman anda di sini...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Tambah Foto",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Tambah Lokasi",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Semat di bahagian atas sembang",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Pastikan kelihatan untuk semua peserta",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Hantar sebagai Amaran Segera",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Memberitahu walaupun disenyapkan",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Hantar Pemberitahuan",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Pemberitahuan",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Tanda semua sebagai dibaca",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Semua",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Pengumuman",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Hari Ini",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Semalam",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Pengumuman",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Pengumuman Lepas",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} minit lalu",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} jam lalu",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Butiran Perjalanan",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} Malam",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Dihos oleh",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Paparan Peta",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Sembang Kumpulan",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Dokumen Disimpan",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Jangan lupa!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Gambaran Keseluruhan",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Kembangkan Semua",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Daftar Masuk",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Daftar Keluar",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Arah",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Tempahan",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Status Semasa",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Perjalanan bermula dalam {days} hari",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Akaun & Kebenaran",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Keterlihatan Profil",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Tetapan Paparan",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Mod Gelap",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Saiz Fon",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Standard",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Pemberitahuan",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Pemberitahuan jadual perjalanan",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Pemberitahuan tolak perubahan penting",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Pemberitahuan mesej baharu",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Bantuan & Sokongan",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Versi Aplikasi",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Log Keluar",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Kebenaran Diperlukan",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync memerlukan kebenaran pemberitahuan untuk menghantar kemas kini perjalanan penting dan pengumuman daripada penganjur kepada anda.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Benarkan Pemberitahuan",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Kemudian",
+  "@later": {"description": "Later button"},
+
+  "error": "Ralat",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Cuba Lagi",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Tiada perjalanan lagi",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Cipta perjalanan pertama anda atau sertai satu!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Tiada pemberitahuan",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Anda sudah dikemas kini!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Memuatkan...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Ralat sambungan",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Sila semak sambungan internet anda",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Sahkan Padam",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Adakah anda pasti mahu memadam ini?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Padam",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Sahkan",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Selesai",
+  "@done": {"description": "Done button"},
+
+  "edit": "Edit",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Tutup",
+  "@close": {"description": "Close button"},
+
+  "back": "Kembali",
+  "@back": {"description": "Back button"},
+
+  "next": "Seterusnya",
+  "@next": {"description": "Next button"},
+
+  "search": "Cari",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Tiada hasil dijumpai",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Pilih Tarikh",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Pilih Masa",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Dari",
+  "@from": {"description": "From label"},
+
+  "to": "Ke",
+  "@to": {"description": "To label"},
+
+  "duration": "Tempoh",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Lokasi",
+  "@location": {"description": "Location label"},
+
+  "address": "Alamat",
+  "@address": {"description": "Address label"},
+
+  "phone": "Telefon",
+  "@phone": {"description": "Phone label"},
+
+  "email": "E-mel",
+  "@email": {"description": "Email label"},
+
+  "website": "Laman Web",
+  "@website": {"description": "Website label"},
+
+  "price": "Harga",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Lihat Menu",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Disyorkan",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Mendaki",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Amaran",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Lihat Butiran",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Bersedia untuk",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "perjalanan seterusnya?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "Cipta perjalanan pertama anda atau sertai satu!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "Bahasa",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "Tukar Foto",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "Ambil Foto",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "Pilih dari Galeri",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "Buang Foto",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "Nama Paparan",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "Masukkan nama paparan anda",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "Masukkan nombor telefon anda",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "Nama paparan diperlukan",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "Nama paparan mesti sekurang-kurangnya 2 aksara",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "Profil berjaya dikemas kini",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "Gagal mengemas kini profil",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "Gagal memilih imej",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "Adakah anda pasti mahu log keluar?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "Sebelum ini",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "Akaun",
+  "deleteAccount": "Padam Akaun",
+  "deleteAccountTitle": "Padam Akaun",
+  "deleteAccountMessage": "Adakah anda pasti mahu memadam akaun anda? Tindakan ini tidak boleh dibatalkan dan semua data anda akan dipadam secara kekal.",
+  "deleteAccountConfirmation": "Taip 'PADAM' untuk mengesahkan",
+  "deletingAccount": "Memadam akaun...",
+  "accountDeleted": "Akaun berjaya dipadam",
+  "deleteAccountFailed": "Gagal memadam akaun",
+  "deleteAccountWarning": "Amaran: Tindakan ini tidak boleh dibatalkan. Semua data anda termasuk perjalanan dan mesej akan dipadam secara kekal."
+}

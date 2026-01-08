@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home/My Trips</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Epilogue & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#212a2c",
+                        "surface-dark": "#2b393d",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0,0,0,0.05)',
+                        'card': '0 2px 8px rgba(0,0,0,0.04)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hiding */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#121617] dark:text-[#f1f3f4] transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm transition-colors duration-200">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white dark:border-surface-dark shadow-sm" data-alt="Portrait of a young traveler smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDPi_2AvtdlHwtqbMrI-HZYuwWvSuYOgpLwP6T3-_kZ5-vuAUkgIbdPKGA4haZxkl_DgOwszscAFCoRtkoHlCn0h6ehY3c3SuGfcWcPw9g18LJ9AKJiC2DMu2FJdNvCh-jq5eYmsJGcqT_E1Kf4LWI7nNt8DBCC1uWZCIJRt02XkQqNELeo1dtSbOMbdlQVZW0zZkTuUKYF7DTYY4nLa0Wi1LFcOGg6yfzAedjbbWctQaANoq_OWHLY2LsecExGXkMApUjRFPRRdI");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Welcome back</p>
+<h2 class="text-[#121617] dark:text-white text-lg font-bold leading-tight">Ji-min Kim</h2>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-700 text-[#121617] dark:text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Headline -->
+<div class="px-4 pt-2 pb-4">
+<h1 class="text-[#121617] dark:text-white text-[32px] font-bold leading-[1.1] tracking-tight">
+                Ready for your <br/><span class="text-primary">next journey?</span>
+</h1>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 pb-6 overflow-x-auto hide-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#121617] dark:bg-white px-5 shadow-soft transition-colors">
+<p class="text-white dark:text-[#121617] text-sm font-bold">All Trips</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-5 transition-colors">
+<p class="text-[#677f83] dark:text-gray-300 text-sm font-medium">Hosting</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-5 transition-colors">
+<p class="text-[#677f83] dark:text-gray-300 text-sm font-medium">Participating</p>
+</button>
+</div>
+<!-- Section: Happening Now -->
+<section class="mb-6">
+<div class="flex items-center justify-between px-4 pb-3">
+<h3 class="text-[#121617] dark:text-white text-lg font-bold tracking-tight flex items-center gap-2">
+                    Happening Now
+                    <span class="flex size-2 rounded-full bg-red-500 animate-pulse"></span>
+</h3>
+</div>
+<div class="px-4">
+<!-- Hero Card -->
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark shadow-soft transition-all hover:shadow-lg">
+<!-- Image -->
+<div class="w-full h-48 bg-gray-200 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Scenic road trip view of Jeju Island coast" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdFumbqRLoLQYZXRbGvXIlNpKxtjBTUaZNPjznVpdF85dTI2CCFELFkmzZlE2i4pMAooeNJpiKn4vJM62O48x_UhY_lgHUnhfmuF_QWQWEaAN2DXKVKR5AM0W3QIHS6nvfUYg4lBTJveqdF9-E0ZtoYx82YDnaouFnTXe7W0Q6TzYuDQXhdfhKoaNdTVzZU3mbWT_snghCx1KhfEN3E7Z-sZ4FdmVEVGtEC-MRCrskJNJWo3gE9PydgLOgrySHhGbC3ziCFJauNnA");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<!-- Floating Status Badge -->
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="inline-flex items-center rounded-lg bg-white/90 dark:bg-black/80 backdrop-blur px-2.5 py-1 text-xs font-bold text-primary shadow-sm">
+                                HOSTING
+                            </span>
+</div>
+<!-- Overlaid Text -->
+<div class="absolute bottom-3 left-4 right-4">
+<p class="text-white/90 text-sm font-medium mb-0.5">Day 2 of 5 • In Progress</p>
+<h3 class="text-white text-xl font-bold tracking-tight">Jeju Island Roadtrip</h3>
+</div>
+</div>
+<!-- Action Area -->
+<div class="p-4 flex items-center justify-between gap-4">
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Avatar 1" class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-surface-dark object-cover" data-alt="Avatar of participant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKZbynCOuqDFaUSMyVNyE9cqBPjpoAFtNUz-B-p0SiNQYF3lAH9qxPyNDejprCi5AuMmLQfe8mTVH6fxumAHoUSZk3uGpTp5kVE7MCLeXn_XAFc0L-l9_0JIHz9kqUMoE5Ic1PWdWU3N_nP5pG33QZwA_Wgpam6oaJsNM50U5M-XyRugEBHhwiRPfJzWHNZEgRb2o6Fp-cID8BHmU1yY0z9TINPTFGlu_8BL19yOhQ1TvP9GGEwjblNM9kAWpq84C_vqR4XQPgB7I"/>
+<img alt="Avatar 2" class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-surface-dark object-cover" data-alt="Avatar of participant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFLHr9yMF-G4ta38kNShwbl5AOjQJVxgH6OpEIfgv74QRiZpzgI9XApBBPWgSBnUutIaKQxEqpxNN7guspdnC8eESV1KteJ9A8anH9OHPqgoOHEVt-VPPogkVebA_1yfng69a_0Eewtx_gaNgLfqHTn2sDonTk8dDiC9u2-RQlZtE5Lubsn8bW2Fk0FboxfzH_nhwujtuDTeSNUd7sq2WJMOMBxumuCnSwW72i57D1rouyJIZd_yMIg6K2oOyhTGQJdBKYMjRGdh8"/>
+<div class="flex size-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 ring-2 ring-white dark:ring-surface-dark text-xs font-medium text-gray-500 dark:text-gray-300">+3</div>
+</div>
+<button class="flex-1 max-w-[140px] h-10 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-xl shadow-md shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-1">
+<span>Manage</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Upcoming -->
+<section>
+<div class="flex items-center justify-between px-4 pb-3 pt-2">
+<h3 class="text-[#121617] dark:text-white text-lg font-bold tracking-tight">Upcoming Adventures</h3>
+<button class="text-primary text-sm font-semibold">View all</button>
+</div>
+<div class="flex flex-col gap-4 px-4">
+<!-- Card 1: Participant -->
+<div class="flex flex-row bg-white dark:bg-surface-dark rounded-xl shadow-card overflow-hidden h-[110px] transition-transform active:scale-[0.99]">
+<div class="w-[100px] shrink-0 relative bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Traditional Japanese street in Kyoto during spring" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAv0kzMUa7XxTUKXeRIMjCgjpjzsPWsCxAYgNpgXvrnS-xoJ_F2fANrIQUJcFvCqEgDILZsUsXYNJlh_E9JNO358XKi7SMZiIoWHxuLVnnFYkbHjE5Jqbpf3mvy3dQaRBh5Du-UC9l9SI6FNRgPSrtfPR3kcSiCOC-jS20z5cBCPZ-A_y9ranMZSzwKQc7NR7E5OQPDf40g37Mt1Y-NiY8g6SwN0M7fwORKUH4xLdbxiXL3srkDDWCw5Er1_84W12hcCpWbXha4I28");'>
+</div>
+</div>
+<div class="flex-1 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold tracking-wider text-gray-500 dark:text-gray-400 uppercase bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded-md">Guest</span>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">Apr 10</span>
+</div>
+<h4 class="text-[#121617] dark:text-white font-bold leading-tight line-clamp-2">Kyoto Spring Walk</h4>
+</div>
+<div class="flex items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-xs font-medium truncate">Kyoto, Japan</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Hosting -->
+<div class="flex flex-row bg-white dark:bg-surface-dark rounded-xl shadow-card overflow-hidden h-[110px] transition-transform active:scale-[0.99]">
+<div class="w-[100px] shrink-0 relative bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Colorful coastal village in Busan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDN8vd2znqYOglHcDxIJK0-PSn6pW9RbxDWRJ_SyN7qqmjiru1fjYmwvVIWzKUQwxEeVOClxKz7I3Teuoy0vjIu4pQ7RxtmLPzFC_F_I983ZIYMMLgdGeP6drtaaEADkZGaM56rizx74I2vkjowSfPCcTpQ-RYrs9xCoh2DbRWJMbZjjPCnKEynBIFh0T9u2Ftfu8Mz-8OBfPnW9L7FY4WYapPglo0Cjq9c5zJYNtop2I2b3H37Xx-I8B-smM742gmBaigYScqGAW4");'>
+</div>
+</div>
+<div class="flex-1 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold tracking-wider text-primary uppercase bg-primary/10 px-1.5 py-0.5 rounded-md">Host</span>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">May 05</span>
+</div>
+<h4 class="text-[#121617] dark:text-white font-bold leading-tight line-clamp-2">Busan Weekend Getaway</h4>
+</div>
+<div class="flex items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-xs font-medium truncate">Busan, South Korea</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Participant -->
+<div class="flex flex-row bg-white dark:bg-surface-dark rounded-xl shadow-card overflow-hidden h-[110px] transition-transform active:scale-[0.99]">
+<div class="w-[100px] shrink-0 relative bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern architecture in Seoul" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDokvz2yWiHJd9CioV1QstqAi_i_LK6PIRjQyJ-aj0rj38B724Kyy3l0EEBDasulwZLLFSM3kh709fPxsFZv48FGmDSUulqKgzVkveAwKqfp6EETUENLpjWKLeqaVQ69g5GXfwUkwb8WYpW2az4xQCugWra7A44cirVxyD48farRkOcPt3KEZG_VzkPWYqih9Z8zIaUo0BB2nEGcPRF8vKqlwZqcQMTHxwnm0tNvTKqbGj2KGH9MLhTz6kinkWeqd7SMaYDG1c0UcA");'>
+</div>
+<!-- Overlay for "Draft" style indicator perhaps? -->
+</div>
+<div class="flex-1 p-3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold tracking-wider text-gray-500 dark:text-gray-400 uppercase bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded-md">Guest</span>
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">TBD</span>
+</div>
+<h4 class="text-[#121617] dark:text-white font-bold leading-tight line-clamp-2">Seoul Cafe Tour</h4>
+</div>
+<div class="flex items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-xs font-medium truncate">Seoul, South Korea</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Action Button for Hosts -->
+<div class="fixed bottom-24 right-4 z-20">
+<button class="flex items-center justify-center size-14 rounded-full bg-[#121617] dark:bg-primary text-white shadow-lg shadow-black/20 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/90 dark:bg-surface-dark/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 pb-safe pt-2 px-6 z-30">
+<div class="flex justify-between items-center h-16">
+<!-- Home (Active) -->
+<div class="flex flex-col items-center gap-1 text-primary cursor-pointer">
+<span class="material-symbols-outlined icon-filled">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<!-- Explore -->
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-[#121617] dark:hover:text-gray-300 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</div>
+<!-- Chat -->
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-[#121617] dark:hover:text-gray-300 transition-colors cursor-pointer relative">
+<div class="relative">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="absolute -top-1 -right-1 flex size-2.5 bg-red-500 rounded-full border border-white dark:border-surface-dark"></span>
+</div>
+<span class="text-[10px] font-medium">Chat</span>
+</div>
+<!-- Profile -->
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-[#121617] dark:hover:text-gray-300 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</div>
+<!-- Safe Area Spacer for iOS Home Indicator -->
+<div class="h-5"></div>
+</nav>
+</div>
+</body></html>

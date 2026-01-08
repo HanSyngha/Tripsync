@@ -1,0 +1,754 @@
+{
+  "@@locale": "th",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "เริ่มต้นการเดินทางของคุณ",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "ค้นพบประสบการณ์ใหม่และสร้างความทรงจำพิเศษ",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "ข้าม",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "ผู้เข้าร่วม",
+  "@participant": {"description": "Participant role"},
+
+  "host": "ผู้จัด",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "ผู้ช่วยจัด",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "ดำเนินการต่อด้วย Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "ดำเนินการต่อด้วย Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "ดำเนินการต่อด้วย Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "ดำเนินการต่อด้วย Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "การเข้าสู่ระบบหมายความว่าคุณยอมรับ {terms} และ {privacy} ของเรา",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "ข้อกำหนดการใช้งาน",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "ยินดีต้อนรับกลับ",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "พร้อมสำหรับการเดินทางครั้งต่อไปหรือยัง?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "ทริปทั้งหมด",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "ที่จัด",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "ที่เข้าร่วม",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "กำลังเกิดขึ้น",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "การผจญภัยที่กำลังจะมาถึง",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "ดูทั้งหมด",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "วันที่ {current} จาก {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "กำลังดำเนินการ",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "จัดการ",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "แขก",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "ยังไม่กำหนด",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "หน้าหลัก",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "สำรวจ",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "แชท",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "โปรไฟล์",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "สร้างทริป",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "มาวางแผนการเดินทางของคุณกันเถอะ",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "ในฐานะผู้จัด คุณสามารถแก้ไขรายละเอียดเหล่านี้ได้ทุกเมื่อ",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "ยกเลิก",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "บันทึก",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "ข้อมูลพื้นฐาน",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "จำเป็น",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "ชื่อทริป",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "เช่น ฤดูร้อนที่เกียวโต",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "จุดหมายปลายทาง",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "คุณจะไปที่ไหน?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "วันที่",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "วันเริ่มต้น",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "วันสิ้นสุด",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "รายละเอียดเพิ่มเติม",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "รูปปก",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "แตะเพื่ออัปโหลดรูปปก",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "เป้าหมายทริป / บันทึก",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "เป้าหมายหลักของทริปนี้คืออะไร?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "ขั้นตอนถัดไป",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "จัดการผู้เข้าร่วม",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "ที่เข้าร่วม",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "คำเชิญที่รอดำเนินการ",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "เชิญสมาชิกใหม่",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "ค้นหาด้วยชื่อหรืออีเมล",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "ผู้จัด",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "ผู้ดูแล",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "นักเดินทาง",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "สิทธิ์ทั้งหมด",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "แก้ไขกำหนดการได้",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "ดูได้อย่างเดียว",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "รอการตอบรับ",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "ส่งอีกครั้ง",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "ลิงก์เชิญเปิดใช้งานแล้ว",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "คัดลอก",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "อนุญาตให้แก้ไขกำหนดการ",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "อนุญาตให้อัปโหลดรูปภาพ",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "ลบออกจากทริป",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "เข้าร่วมเมื่อ {days} วันที่แล้ว",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "กำหนดการเดินทาง",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "มุมมองผู้จัด",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "ร่าง",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} วัน",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "วันที่ {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "เพิ่มกิจกรรม",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "กำหนดการ",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "แผนที่",
+  "@map": {"description": "Map nav"},
+
+  "people": "ผู้คน",
+  "@people": {"description": "People nav"},
+
+  "settings": "การตั้งค่า",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "เที่ยวบิน",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "ที่พัก",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "รถเช่า",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "ร้านอาหาร",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "สถานที่ท่องเที่ยว",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "กิจกรรม",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "การเดินทาง",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "กรอกรายละเอียด",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "สายการบิน",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "หมายเลขเที่ยวบิน",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "ออกเดินทาง",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "ถึงที่หมาย",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "บันทึก",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "เขียนบันทึกสำคัญที่นี่...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "เพิ่มไฟล์แนบ",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "ตั๋วอิเล็กทรอนิกส์หรือบัตรกำนัล (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "การตั้งค่าการแจ้งเตือน",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "ยืนยันการจองแล้ว",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} ไกด์ - {members} สมาชิก",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "ไกด์",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ผู้จัด",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "ข้อความ...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "เปิดแผนที่",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "ประกาศใหม่",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "ถึงใคร?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "ผู้เข้าร่วมทั้งหมด",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "เลือกเฉพาะ",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ เลือกอีก {count} คน",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "รายละเอียดข้อความ",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "กำหนดการถัดไป",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "ด่วน",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "ข้อมูลทั่วไป",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "โพล",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "เทมเพลตด่วน",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "รถบัสออกใน 10 นาที",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "เปลี่ยนจุดนัดพบ",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "แจ้งเตือนสภาพอากาศ",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "การจองอาหารเย็น",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "หัวข้อ",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "เช่น พบกันที่ล็อบบี้",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "ข้อความ",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "เขียนประกาศของคุณที่นี่...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "เพิ่มรูปภาพ",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "เพิ่มตำแหน่ง",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "ปักหมุดไว้ด้านบนแชท",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "แสดงให้ผู้เข้าร่วมทุกคนเห็น",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "ส่งเป็นการแจ้งเตือนด่วน",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "แจ้งเตือนแม้ปิดเสียงอยู่",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "ส่งการแจ้งเตือน",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "การแจ้งเตือน",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "ทั้งหมด",
+  "@all": {"description": "All filter"},
+
+  "announcements": "ประกาศ",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "วันนี้",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "เมื่อวาน",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "ประกาศ",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "ประกาศที่ผ่านมา",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} นาทีที่แล้ว",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} ชั่วโมงที่แล้ว",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "รายละเอียดทริป",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} คืน",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "จัดโดย",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "ดูแผนที่",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "แชทกลุ่ม",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "เอกสารที่บันทึก",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "อย่าลืม!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "ภาพรวม",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "ขยายทั้งหมด",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "เช็คอิน",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "เช็คเอาท์",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "เส้นทาง",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "การจอง",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "สถานะปัจจุบัน",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "ทริปเริ่มใน {days} วัน",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "บัญชีและสิทธิ์",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "การมองเห็นโปรไฟล์",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "การตั้งค่าการแสดงผล",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "โหมดมืด",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "ขนาดตัวอักษร",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "มาตรฐาน",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "การแจ้งเตือน",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "การแจ้งเตือนกำหนดการทริป",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "การแจ้งเตือนแบบพุชสำหรับการเปลี่ยนแปลงสำคัญ",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "การแจ้งเตือนข้อความใหม่",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "ช่วยเหลือและสนับสนุน",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "เวอร์ชันแอป",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "ออกจากระบบ",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "ต้องการสิทธิ์",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync ต้องการสิทธิ์การแจ้งเตือนเพื่อส่งข้อมูลทริปสำคัญและประกาศจากผู้จัดถึงคุณ",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "อนุญาตการแจ้งเตือน",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "ภายหลัง",
+  "@later": {"description": "Later button"},
+
+  "error": "ข้อผิดพลาด",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "ลองอีกครั้ง",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "ยังไม่มีทริป",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "สร้างทริปแรกของคุณหรือเข้าร่วมทริป!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "ไม่มีการแจ้งเตือน",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "คุณดูครบหมดแล้ว!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "กำลังโหลด...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "ข้อผิดพลาดการเชื่อมต่อ",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "ยืนยันการลบ",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบสิ่งนี้?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "ลบ",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "ยืนยัน",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "เสร็จสิ้น",
+  "@done": {"description": "Done button"},
+
+  "edit": "แก้ไข",
+  "@edit": {"description": "Edit button"},
+
+  "close": "ปิด",
+  "@close": {"description": "Close button"},
+
+  "back": "ย้อนกลับ",
+  "@back": {"description": "Back button"},
+
+  "next": "ถัดไป",
+  "@next": {"description": "Next button"},
+
+  "search": "ค้นหา",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "ไม่พบผลลัพธ์",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "เลือกวันที่",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "เลือกเวลา",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "จาก",
+  "@from": {"description": "From label"},
+
+  "to": "ถึง",
+  "@to": {"description": "To label"},
+
+  "duration": "ระยะเวลา",
+  "@duration": {"description": "Duration label"},
+
+  "location": "ตำแหน่ง",
+  "@location": {"description": "Location label"},
+
+  "address": "ที่อยู่",
+  "@address": {"description": "Address label"},
+
+  "phone": "โทรศัพท์",
+  "@phone": {"description": "Phone label"},
+
+  "email": "อีเมล",
+  "@email": {"description": "Email label"},
+
+  "website": "เว็บไซต์",
+  "@website": {"description": "Website label"},
+
+  "price": "ราคา",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "ดูเมนู",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "แนะนำ",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "เดินป่า",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "คำเตือน",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "ดูรายละเอียด",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "พร้อมสำหรับ",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "การเดินทางครั้งต่อไป?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "สร้างทริปแรกของคุณหรือเข้าร่วมทริป!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "ภาษา",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "เปลี่ยนรูปภาพ",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "ถ่ายรูป",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "เลือกจากแกลเลอรี่",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "ลบรูปภาพ",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "ชื่อที่แสดง",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "กรอกชื่อที่แสดงของคุณ",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "กรอกหมายเลขโทรศัพท์ของคุณ",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "ต้องระบุชื่อที่แสดง",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "ชื่อที่แสดงต้องมีอย่างน้อย 2 ตัวอักษร",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "อัปเดตโปรไฟล์สำเร็จแล้ว",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "ไม่สามารถอัปเดตโปรไฟล์ได้",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "ไม่สามารถเลือกรูปภาพได้",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "ก่อนหน้านี้",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "บัญชี",
+  "deleteAccount": "ลบบัญชี",
+  "deleteAccountTitle": "ลบบัญชี",
+  "deleteAccountMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณ? การดำเนินการนี้ไม่สามารถย้อนกลับได้และข้อมูลทั้งหมดของคุณจะถูกลบอย่างถาวร",
+  "deleteAccountConfirmation": "พิมพ์ 'ลบ' เพื่อยืนยัน",
+  "deletingAccount": "กำลังลบบัญชี...",
+  "accountDeleted": "ลบบัญชีสำเร็จแล้ว",
+  "deleteAccountFailed": "ไม่สามารถลบบัญชีได้",
+  "deleteAccountWarning": "คำเตือน: การดำเนินการนี้ไม่สามารถยกเลิกได้ ข้อมูลทั้งหมดของคุณรวมถึงทริปและข้อความจะถูกลบอย่างถาวร"
+}

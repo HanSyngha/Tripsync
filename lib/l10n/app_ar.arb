@@ -1,0 +1,719 @@
+{
+  "@@locale": "ar",
+
+  "appName": "تريب سينك",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "ابدأ رحلتك",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "اكتشف تجارب جديدة واصنع ذكريات مميزة",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "تخطي",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "مشارك",
+  "@participant": {"description": "Participant role"},
+
+  "host": "المضيف",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "المضيف المشارك",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "المتابعة مع كاكاو",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "المتابعة مع نيفر",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "المتابعة مع جوجل",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "المتابعة مع أبل",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "بتسجيل الدخول، فإنك توافق على {terms} و{privacy}.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "شروط الخدمة",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "مرحباً بعودتك",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "هل أنت مستعد لرحلتك القادمة؟",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "جميع الرحلات",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "استضافة",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "مشاركة",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "يحدث الآن",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "المغامرات القادمة",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "عرض الكل",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "اليوم {current} من {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "قيد التنفيذ",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "إدارة",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "ضيف",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "سيُحدد لاحقاً",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "الرئيسية",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "استكشاف",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "المحادثات",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "الملف الشخصي",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "إنشاء رحلة",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "لنخطط لرحلتك",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "بصفتك المضيف، يمكنك تعديل هذه التفاصيل لاحقاً في أي وقت.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "إلغاء",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "حفظ",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "المعلومات الأساسية",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "مطلوب",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "اسم الرحلة",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "مثال: صيف في كيوتو",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "الوجهة",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "إلى أين تذهب؟",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "التواريخ",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "تاريخ البداية",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "تاريخ النهاية",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "تفاصيل اختيارية",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "صورة الغلاف",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "اضغط لرفع الغلاف",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "هدف الرحلة / ملاحظات",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "ما هو الهدف الرئيسي من هذه الرحلة؟",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "الخطوة التالية",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "إدارة المشاركين",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "مشارك",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "دعوات معلقة",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "دعوة عضو جديد",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "البحث بالاسم أو البريد الإلكتروني",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "المضيفون",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "مسؤول",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "المسافرون",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "جميع الصلاحيات",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "يمكنه تعديل الجدول",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "قراءة فقط",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "في انتظار القبول",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "إعادة إرسال",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "تم تفعيل رابط الدعوة",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "نسخ",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "السماح بتعديل الجدول",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "السماح برفع الصور",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "إزالة من الرحلة",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "انضم منذ {days} أيام",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "خط السير",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "عرض المنظم",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "مسودة",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} أيام",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "اليوم {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "إضافة نشاط",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "الجدول",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "الخريطة",
+  "@map": {"description": "Map nav"},
+
+  "people": "الأشخاص",
+  "@people": {"description": "People nav"},
+
+  "settings": "الإعدادات",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "الطيران",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "الإقامة",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "سيارة مستأجرة",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "مطعم",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "معلم سياحي",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "نشاط",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "المواصلات",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "أدخل التفاصيل",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "شركة الطيران",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "رقم الرحلة",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "المغادرة",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "الوصول",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "ملاحظات",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "اكتب أي ملاحظات مهمة هنا...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "إضافة مرفق",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "تذكرة إلكترونية أو قسيمة (PDF، JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "إعدادات التذكير",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "تم تأكيد الحجز",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} مرشد - {members} أعضاء",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "مرشد",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "المنظم",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "رسالة...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "فتح الخريطة",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "إعلان جديد",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "إلى من؟",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "جميع المشاركين",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "اختيار محدد",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} آخرون محددون",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "تفاصيل الرسالة",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "الجدول التالي",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "عاجل",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "معلومات عامة",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "استطلاع",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "قوالب سريعة",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "الحافلة تغادر خلال 10 دقائق",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "تم تغيير نقطة الالتقاء",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "تنبيه الطقس",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "حجوزات العشاء",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "الموضوع",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "مثال: الاجتماع في الردهة",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "الرسالة",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "اكتب إعلانك هنا...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "إضافة صورة",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "إضافة موقع",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "تثبيت أعلى المحادثة",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "إبقاءه مرئياً لجميع المشاركين",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "إرسال كتنبيه عاجل",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "يُرسل إشعاراً حتى لو كان مكتوماً",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "إرسال الإشعار",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "الإشعارات",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "تحديد الكل كمقروء",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "الكل",
+  "@all": {"description": "All filter"},
+
+  "announcements": "الإعلانات",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "اليوم",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "أمس",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "إعلان",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "إعلان سابق",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "منذ {minutes} دقيقة",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "منذ {hours} ساعات",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "تفاصيل الرحلة",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} ليالي",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "بواسطة",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "عرض الخريطة",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "المحادثة الجماعية",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "المستندات المحفوظة",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "لا تنسَ!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "نظرة عامة",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "توسيع الكل",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "تسجيل الوصول",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "تسجيل المغادرة",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "الاتجاهات",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "الحجز",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "الحالة الحالية",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "تبدأ الرحلة خلال {days} أيام",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "الحساب والصلاحيات",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "ظهور الملف الشخصي",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "إعدادات العرض",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "الوضع الداكن",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "حجم الخط",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "قياسي",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "الإشعارات",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "إشعارات جدول الرحلة",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "إشعارات فورية للتغييرات المهمة",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "إشعارات الرسائل الجديدة",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "المساعدة والدعم",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "إصدار التطبيق",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "تسجيل الخروج",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "مطلوب إذن",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "يحتاج تريب سينك إلى إذن الإشعارات لإرسال تحديثات الرحلة المهمة والإعلانات من المنظمين.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "السماح بالإشعارات",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "لاحقاً",
+  "@later": {"description": "Later button"},
+
+  "error": "خطأ",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "حاول مرة أخرى",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "لا توجد رحلات بعد",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "أنشئ رحلتك الأولى أو انضم إلى واحدة!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "لا توجد إشعارات",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "أنت على اطلاع بكل شيء!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "جاري التحميل...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "خطأ في الاتصال",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "يرجى التحقق من اتصالك بالإنترنت",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "تأكيد الحذف",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "هل أنت متأكد من رغبتك في حذف هذا؟",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "حذف",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "تأكيد",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "تم",
+  "@done": {"description": "Done button"},
+
+  "edit": "تعديل",
+  "@edit": {"description": "Edit button"},
+
+  "close": "إغلاق",
+  "@close": {"description": "Close button"},
+
+  "back": "رجوع",
+  "@back": {"description": "Back button"},
+
+  "next": "التالي",
+  "@next": {"description": "Next button"},
+
+  "search": "بحث",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "لم يتم العثور على نتائج",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "اختر التاريخ",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "اختر الوقت",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "من",
+  "@from": {"description": "From label"},
+
+  "to": "إلى",
+  "@to": {"description": "To label"},
+
+  "duration": "المدة",
+  "@duration": {"description": "Duration label"},
+
+  "location": "الموقع",
+  "@location": {"description": "Location label"},
+
+  "address": "العنوان",
+  "@address": {"description": "Address label"},
+
+  "phone": "الهاتف",
+  "@phone": {"description": "Phone label"},
+
+  "email": "البريد الإلكتروني",
+  "@email": {"description": "Email label"},
+
+  "website": "الموقع الإلكتروني",
+  "@website": {"description": "Website label"},
+
+  "price": "السعر",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "عرض القائمة",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "موصى به",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "المشي لمسافات طويلة",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "تحذير",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "عرض التفاصيل",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "هل أنت مستعد",
+  "nextJourney": "لرحلتك القادمة؟",
+  "createFirstTrip": "أنشئ رحلتك الأولى أو انضم إلى واحدة!",
+  "language": "اللغة",
+  "changePhoto": "تغيير الصورة",
+  "takePhoto": "التقاط صورة",
+  "chooseFromGallery": "اختيار من المعرض",
+  "removePhoto": "إزالة الصورة",
+  "displayName": "اسم العرض",
+  "enterDisplayName": "أدخل اسم العرض",
+  "enterPhoneNumber": "أدخل رقم الهاتف",
+  "displayNameRequired": "اسم العرض مطلوب",
+  "displayNameMinLength": "يجب أن يكون الاسم حرفين على الأقل",
+  "profileUpdated": "تم تحديث الملف الشخصي بنجاح",
+  "failedToUpdateProfile": "فشل تحديث الملف الشخصي",
+  "failedToPickImage": "فشل اختيار الصورة",
+  "logoutConfirmation": "هل أنت متأكد من تسجيل الخروج؟",
+  "earlier": "سابقاً",
+
+  "account": "الحساب",
+  "deleteAccount": "حذف الحساب",
+  "deleteAccountTitle": "حذف الحساب",
+  "deleteAccountMessage": "هل أنت متأكد من رغبتك في حذف حسابك؟ هذا الإجراء لا رجعة فيه وسيتم حذف جميع بياناتك نهائياً.",
+  "deleteAccountConfirmation": "اكتب 'حذف' للتأكيد",
+  "deletingAccount": "جاري حذف الحساب...",
+  "accountDeleted": "تم حذف الحساب بنجاح",
+  "deleteAccountFailed": "فشل حذف الحساب",
+  "deleteAccountWarning": "تحذير: لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع بياناتك بما في ذلك الرحلات والرسائل نهائياً."
+}

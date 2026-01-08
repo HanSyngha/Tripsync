@@ -1,0 +1,754 @@
+{
+  "@@locale": "vi",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Bắt Đầu Hành Trình",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Khám phá trải nghiệm mới và tạo nên những kỷ niệm đặc biệt",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Bỏ qua",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Người tham gia",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Chủ trì",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Đồng chủ trì",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Tiếp tục với Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Tiếp tục với Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Tiếp tục với Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Tiếp tục với Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Bằng việc đăng nhập, bạn đồng ý với {terms} và {privacy} của chúng tôi.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Điều khoản dịch vụ",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Chính sách bảo mật",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "Chào mừng trở lại",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Sẵn sàng cho chuyến đi tiếp theo?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Tất cả chuyến đi",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Đang tổ chức",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Đang tham gia",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Đang diễn ra",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Chuyến phiêu lưu sắp tới",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Xem tất cả",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "Ngày {current} của {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "Đang tiến hành",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Quản lý",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Khách",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Chưa xác định",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Trang chủ",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Khám phá",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Trò chuyện",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Hồ sơ",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Tạo chuyến đi",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Hãy lên kế hoạch cho hành trình của bạn",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Là chủ trì, bạn có thể chỉnh sửa những chi tiết này bất cứ lúc nào.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Hủy",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Lưu",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Thông tin cơ bản",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Bắt buộc",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Tên chuyến đi",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "VD: Mùa hè ở Kyoto",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Điểm đến",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Bạn đang đi đâu?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Ngày",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Ngày bắt đầu",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Ngày kết thúc",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Chi tiết tùy chọn",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Ảnh bìa",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Nhấn để tải ảnh bìa",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Mục tiêu / Ghi chú chuyến đi",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Mục tiêu chính của chuyến đi này là gì?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Bước tiếp theo",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Quản lý người tham gia",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Đang tham gia",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Lời mời đang chờ",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Mời thành viên mới",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Tìm theo tên hoặc email",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Người tổ chức",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "QUẢN TRỊ",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Khách du lịch",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Tất cả quyền",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Có thể chỉnh sửa lịch trình",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Chỉ xem",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Đang chờ chấp nhận",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Gửi lại",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Đã kích hoạt liên kết mời",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Sao chép",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Cho phép chỉnh sửa lịch trình",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Cho phép tải ảnh lên",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Xóa khỏi chuyến đi",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "Đã tham gia {days} ngày trước",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Lịch trình",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Chế độ xem người tổ chức",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Bản nháp",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} Ngày",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "Ngày {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Thêm hoạt động",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Lịch trình",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Bản đồ",
+  "@map": {"description": "Map nav"},
+
+  "people": "Mọi người",
+  "@people": {"description": "People nav"},
+
+  "settings": "Cài đặt",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Chuyến bay",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Chỗ ở",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Xe thuê",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Nhà hàng",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Điểm tham quan",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Hoạt động",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Phương tiện di chuyển",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Nhập chi tiết",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Hãng hàng không",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Số hiệu chuyến bay",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Khởi hành",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Đến nơi",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Ghi chú",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Viết các ghi chú quan trọng ở đây...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Thêm tệp đính kèm",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "Vé điện tử hoặc phiếu (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Cài đặt nhắc nhở",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Đã xác nhận đặt chỗ",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} Hướng dẫn viên - {members} Thành viên",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "HƯỚNG DẪN",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "NGƯỜI TỔ CHỨC",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Tin nhắn...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Mở bản đồ",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Thông báo mới",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Gửi đến ai?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Tất cả người tham gia",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Chọn cụ thể",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} người khác được chọn",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Chi tiết tin nhắn",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Lịch trình tiếp theo",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Khẩn cấp",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Thông tin chung",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Bình chọn",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Mẫu nhanh",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Xe buýt khởi hành trong 10 phút",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Đã thay đổi điểm gặp mặt",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Cảnh báo thời tiết",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Đặt chỗ ăn tối",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Chủ đề",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "VD: Gặp nhau ở sảnh",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Tin nhắn",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Viết thông báo của bạn ở đây...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Thêm ảnh",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Thêm vị trí",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Ghim lên đầu cuộc trò chuyện",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Giữ hiển thị cho tất cả người tham gia",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Gửi dưới dạng cảnh báo khẩn cấp",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Thông báo ngay cả khi đã tắt tiếng",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Gửi thông báo",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Thông báo",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Đánh dấu tất cả đã đọc",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Tất cả",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Thông báo",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Hôm nay",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Hôm qua",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Thông báo",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Thông báo trước đây",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} phút trước",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} giờ trước",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Chi tiết chuyến đi",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} Đêm",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Tổ chức bởi",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Xem bản đồ",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Trò chuyện nhóm",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Tài liệu đã lưu",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Đừng quên!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Tổng quan",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Mở rộng tất cả",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Nhận phòng",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Trả phòng",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Chỉ đường",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Đặt chỗ",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Trạng thái hiện tại",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Chuyến đi bắt đầu trong {days} ngày",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Tài khoản & Quyền",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Hiển thị hồ sơ",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Cài đặt hiển thị",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Chế độ tối",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Cỡ chữ",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Tiêu chuẩn",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Thông báo",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Thông báo lịch trình chuyến đi",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Thông báo đẩy về các thay đổi quan trọng",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Thông báo tin nhắn mới",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Trợ giúp & Hỗ trợ",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Phiên bản ứng dụng",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Đăng xuất",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Yêu cầu quyền",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync cần quyền thông báo để gửi cho bạn các cập nhật chuyến đi quan trọng và thông báo từ người tổ chức.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Cho phép thông báo",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Để sau",
+  "@later": {"description": "Later button"},
+
+  "error": "Lỗi",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Thử lại",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Chưa có chuyến đi nào",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Tạo chuyến đi đầu tiên hoặc tham gia một chuyến!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Không có thông báo",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Bạn đã cập nhật hết rồi!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Đang tải...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Lỗi kết nối",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Vui lòng kiểm tra kết nối internet của bạn",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Xác nhận xóa",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Bạn có chắc chắn muốn xóa không?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Xóa",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Xác nhận",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Xong",
+  "@done": {"description": "Done button"},
+
+  "edit": "Chỉnh sửa",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Đóng",
+  "@close": {"description": "Close button"},
+
+  "back": "Quay lại",
+  "@back": {"description": "Back button"},
+
+  "next": "Tiếp theo",
+  "@next": {"description": "Next button"},
+
+  "search": "Tìm kiếm",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Không tìm thấy kết quả",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Chọn ngày",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Chọn giờ",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Từ",
+  "@from": {"description": "From label"},
+
+  "to": "Đến",
+  "@to": {"description": "To label"},
+
+  "duration": "Thời lượng",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Vị trí",
+  "@location": {"description": "Location label"},
+
+  "address": "Địa chỉ",
+  "@address": {"description": "Address label"},
+
+  "phone": "Điện thoại",
+  "@phone": {"description": "Phone label"},
+
+  "email": "Email",
+  "@email": {"description": "Email label"},
+
+  "website": "Trang web",
+  "@website": {"description": "Website label"},
+
+  "price": "Giá",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Xem thực đơn",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Đề xuất",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Đi bộ đường dài",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Cảnh báo",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Xem chi tiết",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Sẵn sàng cho",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "chuyến đi tiếp theo?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "Tạo chuyến đi đầu tiên hoặc tham gia một chuyến!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "Ngôn ngữ",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "Đổi ảnh",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "Chụp ảnh",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "Chọn từ thư viện",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "Xóa ảnh",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "Tên hiển thị",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "Nhập tên hiển thị của bạn",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "Nhập số điện thoại của bạn",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "Tên hiển thị là bắt buộc",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "Tên hiển thị phải có ít nhất 2 ký tự",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "Hồ sơ đã được cập nhật thành công",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "Không thể cập nhật hồ sơ",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "Không thể chọn hình ảnh",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "Bạn có chắc chắn muốn đăng xuất không?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "Trước đó",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "Tài khoản",
+  "deleteAccount": "Xóa tài khoản",
+  "deleteAccountTitle": "Xóa tài khoản",
+  "deleteAccountMessage": "Bạn có chắc chắn muốn xóa tài khoản không? Hành động này không thể hoàn tác và tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn.",
+  "deleteAccountConfirmation": "Nhập 'XÓA' để xác nhận",
+  "deletingAccount": "Đang xóa tài khoản...",
+  "accountDeleted": "Tài khoản đã được xóa thành công",
+  "deleteAccountFailed": "Xóa tài khoản thất bại",
+  "deleteAccountWarning": "Cảnh báo: Hành động này không thể hoàn tác. Tất cả dữ liệu của bạn bao gồm chuyến đi và tin nhắn sẽ bị xóa vĩnh viễn."
+}

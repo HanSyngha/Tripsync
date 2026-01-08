@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel App Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "primary-dark": "#1b5e6b",
+                        "background-light": "#fafaf9",
+                        "background-dark": "#212a2c",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2c3638",
+                        "text-main": "#121617",
+                        "text-muted": "#677f83",
+                        "text-light": "#e0e0e0",
+                        "text-muted-dark": "#a0b1b5",
+                        "danger": "#CC6F57",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }input[type=range] {
+            -webkit-appearance: none; 
+            background: transparent; 
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid #247d8f; 
+            cursor: pointer;
+            margin-top: -10px; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #e5e7eb;
+            border-radius: 2px;
+        }
+        .dark input[type=range]::-webkit-slider-runnable-track {
+            background: #4a5557;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-text-light antialiased transition-colors duration-300">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto pb-8">
+<header class="flex items-center px-4 py-4 justify-between sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+<button class="text-text-main dark:text-text-light flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">설정</h2>
+</header>
+<main class="flex-1 flex flex-col gap-6 px-4 pt-2">
+<section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-soft flex items-center gap-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full -mr-4 -mt-4 z-0 pointer-events-none"></div>
+<div class="relative z-10 shrink-0">
+<div class="w-16 h-16 rounded-full bg-cover bg-center border-2 border-white dark:border-background-dark shadow-sm" data-alt="Portrait of a smiling traveler with a backpack in nature" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDS7vc33Z8I35AbbLNTF402hL-o-hxH3REJGvr4nAGCDWokm3z0ohvm2hjexFVxFQy6Cc3hzHqQiPUFIevYaZIqqQZ0pQ6n3p4aVoppCrIkjr9ejsUIuCIXZNyo75o5PVuHpdBZZIPAR7YCJFl2-kLe02LUSKHexhuQ65xJ49lgUNsNI0ChS2SqCb4ehMXZE9waW16yr25iVXcXmuveXfA2lza4pY94RN8gXmZ-J3_x0Wa4SNOBFTtl92TAk8cyi1c5_7nJ2UtWsW8");'></div>
+</div>
+<div class="flex-1 flex flex-col justify-center relative z-10">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-xl font-bold leading-tight">김철수</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold tracking-wide uppercase border border-primary/20">참여자</span>
+</div>
+<p class="text-text-muted dark:text-text-muted-dark text-sm font-body">kcs_travel@example.com</p>
+</div>
+<button class="relative z-10 text-text-muted dark:text-text-muted-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</section>
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-bold text-text-muted dark:text-text-muted-dark uppercase tracking-wider px-2">계정 및 권한</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft overflow-hidden">
+<a class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="text-base font-medium font-body">프로필 공개 범위</span>
+<span class="material-symbols-outlined text-gray-400 text-[20px]">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-bold text-text-muted dark:text-text-muted-dark uppercase tracking-wider px-2">화면 설정</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft overflow-hidden">
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-500 dark:text-indigo-300">
+<span class="material-symbols-outlined text-[18px]">dark_mode</span>
+</div>
+<span class="text-base font-medium font-body">다크 모드</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex items-center justify-between">
+<span class="text-base font-medium font-body">글자 크기</span>
+<span class="text-xs text-primary font-bold">표준</span>
+</div>
+<div class="flex items-center gap-4 px-1">
+<span class="text-xs text-text-muted dark:text-text-muted-dark">가</span>
+<input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-primary" max="100" min="1" type="range" value="50"/>
+<span class="text-lg text-text-main dark:text-text-light font-bold">가</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-bold text-text-muted dark:text-text-muted-dark uppercase tracking-wider px-2">알림</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft overflow-hidden">
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800">
+<div class="flex flex-col gap-0.5">
+<span class="text-base font-medium font-body">여행 일정 알림</span>
+<span class="text-xs text-text-muted dark:text-text-muted-dark font-body">중요 변경사항 푸시 알림</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4">
+<span class="text-base font-medium font-body">새 메시지 알림</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft overflow-hidden">
+<a class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="text-base font-medium font-body">도움말 및 지원</span>
+<span class="material-symbols-outlined text-gray-400 text-[20px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="text-base font-medium font-body">앱 버전</span>
+<span class="text-sm text-text-muted dark:text-text-muted-dark">v2.4.0</span>
+</a>
+</div>
+</div>
+<div class="mt-4 mb-8">
+<button class="w-full bg-surface-light dark:bg-surface-dark rounded-2xl p-4 shadow-soft text-danger font-bold text-center hover:bg-danger/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                    로그아웃
+                 </button>
+</div>
+<div class="h-6"></div> 
+</main>
+</div>
+</body></html>

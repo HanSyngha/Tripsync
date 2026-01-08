@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel App Notifications</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "background-light": "#f7f8f8",
+                        "background-dark": "#21282c",
+                        "coral": "#E57373", // Added based on design plan context
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#121617] dark:text-gray-100 font-display transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800 transition-colors">
+<div class="text-[#121617] dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h2 class="text-[#121617] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">알림</h2>
+<div class="flex w-20 items-center justify-end">
+<button class="text-primary text-sm font-bold leading-normal tracking-[0.015em] shrink-0 hover:text-primary/80 transition-colors">모두 읽음</button>
+</div>
+</header>
+<!-- Filter Tabs -->
+<div class="sticky top-[60px] z-40 bg-background-light dark:bg-background-dark px-4 py-3 pb-4 transition-colors">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-white dark:bg-[#2C353B] p-1 shadow-sm border border-gray-100 dark:border-gray-700">
+<label class="group flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:shadow-sm transition-all duration-200">
+<span class="truncate text-sm font-semibold text-gray-500 dark:text-gray-400 group-has-[:checked]:text-white">전체</span>
+<input checked="" class="invisible w-0" name="filter-type" type="radio" value="all"/>
+</label>
+<label class="group flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:shadow-sm transition-all duration-200">
+<span class="truncate text-sm font-semibold text-gray-500 dark:text-gray-400 group-has-[:checked]:text-white">공지</span>
+<input class="invisible w-0" name="filter-type" type="radio" value="notice"/>
+</label>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col gap-4 px-4 pb-20">
+<!-- Date Divider -->
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">오늘</span>
+<div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<!-- Item 1: Announcement (High Priority) -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#2C353B] p-4 shadow-sm border-l-4 border-l-coral dark:border-l-coral hover:shadow-md transition-all cursor-pointer">
+<div class="flex justify-between items-start gap-3">
+<!-- Icon Box -->
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-coral/10 dark:bg-coral/20 text-coral">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<!-- Content -->
+<div class="flex flex-1 flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="inline-flex items-center rounded-md bg-coral/10 px-2 py-0.5 text-xs font-bold text-coral ring-1 ring-inset ring-coral/20">공지</span>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">10분 전</span>
+</div>
+<h3 class="text-[#121617] dark:text-white text-[15px] font-bold leading-snug mb-1 group-hover:text-primary transition-colors">
+                            버스 출발 시간이 오전 9시로 변경되었습니다
+                        </h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">
+                            도로 교통 상황으로 인해 일정이 30분 앞당겨졌습니다. 로비로 늦지 않게 모여주세요.
+                        </p>
+</div>
+<!-- Unread Dot -->
+<div class="shrink-0 mt-1">
+<div class="size-2.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Item 2: Schedule Update -->
+<div class="group relative flex items-start gap-4 rounded-xl bg-white dark:bg-[#2C353B] p-4 shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center justify-between mb-1">
+<p class="text-[#121617] dark:text-white text-[15px] font-bold leading-snug group-hover:text-primary transition-colors">다음 목적지: 블루보틀 커피</p>
+<div class="size-2.5 rounded-full bg-primary shrink-0"></div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-relaxed mb-2">
+                        이동 시간 약 15분 소요 예정입니다.
+                    </p>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">1시간 전</span>
+</div>
+<div class="self-center text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Item 3: Schedule Update -->
+<div class="group relative flex items-start gap-4 rounded-xl bg-white dark:bg-[#2C353B] p-4 shadow-sm hover:shadow-md transition-all cursor-pointer opacity-90">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center justify-between mb-1">
+<p class="text-[#121617] dark:text-gray-200 text-[15px] font-semibold leading-snug group-hover:text-primary transition-colors">센트럴 파크 자유시간 시작</p>
+<!-- Read state: no dot -->
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-relaxed mb-2">
+                        오후 2시까지 자유롭게 관람 후 시계탑 앞에서 모여주세요.
+                    </p>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">3시간 전</span>
+</div>
+<div class="self-center text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="flex items-center gap-4 py-2 mt-2">
+<div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">어제</span>
+<div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<!-- Item 4: Old Announcement (Read) -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white/60 dark:bg-[#2C353B]/60 p-4 shadow-sm border-l-4 border-l-gray-300 dark:border-l-gray-600 hover:bg-white dark:hover:bg-[#2C353B] hover:shadow-md transition-all cursor-pointer">
+<div class="flex justify-between items-start gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-700 px-2 py-0.5 text-xs font-bold text-gray-500 dark:text-gray-400 ring-1 ring-inset ring-gray-500/10">지난 공지</span>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">어제 18:30</span>
+</div>
+<h3 class="text-gray-700 dark:text-gray-300 text-[15px] font-semibold leading-snug mb-1">
+                            저녁 식사 장소 안내
+                        </h3>
+<p class="text-gray-400 dark:text-gray-500 text-sm font-normal leading-relaxed line-clamp-1">
+                            오늘 저녁은 호텔 2층 레스토랑에서 뷔페로 진행됩니다.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Item 5: Photo Upload (Social/Contextual) -->
+<div class="group relative flex items-start gap-4 rounded-xl bg-white/60 dark:bg-[#2C353B]/60 p-4 shadow-sm hover:bg-white dark:hover:bg-[#2C353B] hover:shadow-md transition-all cursor-pointer">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-500">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center justify-between mb-1">
+<p class="text-gray-700 dark:text-gray-300 text-[15px] font-semibold leading-snug">사진 공유 알림</p>
+</div>
+<p class="text-gray-400 dark:text-gray-500 text-sm font-normal leading-relaxed mb-2">
+                        가이드님이 '자유의 여신상' 사진을 공유했습니다.
+                    </p>
+<span class="text-xs font-medium text-gray-400 dark:text-gray-500">어제 15:00</span>
+</div>
+<div class="self-center text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Floating Action Button for Organizer (Optional context hint) -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-105 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[28px]">edit</span>
+</button>
+</div>
+</div>
+</body></html>

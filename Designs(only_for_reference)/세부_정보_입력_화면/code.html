@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel Details Input</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "primary-dark": "#1a5e6b",
+                        "secondary": "#CC6F57",
+                        "background-light": "#fafaf9",
+                        "background-dark": "#212a2c",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2c3639",
+                        "sandy": "#F0E7D4",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "md": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body antialiased text-slate-900 dark:text-slate-50 selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold font-display leading-tight tracking-tight flex-1 text-center">세부 정보 입력</h2>
+<button class="flex w-12 items-center justify-end hover:opacity-70 transition-opacity">
+<p class="text-primary font-bold text-base leading-normal">저장</p>
+</button>
+</header>
+<main class="flex-1 flex flex-col pb-24">
+<!-- Category Chips -->
+<div class="sticky top-[60px] z-40 bg-background-light dark:bg-background-dark pt-4 pb-4 border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar snap-x">
+<button class="snap-start flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-5 pr-5 shadow-lg shadow-primary/20 transition-transform active:scale-95 ring-2 ring-offset-2 ring-primary ring-offset-background-light dark:ring-offset-background-dark">
+<span class="material-symbols-outlined text-white text-sm">flight</span>
+<p class="text-white text-sm font-bold leading-normal">항공편</p>
+</button>
+<button class="snap-start flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-5 pr-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-sm">hotel</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">숙소</p>
+</button>
+<button class="snap-start flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-5 pr-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-sm">directions_car</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">렌터카</p>
+</button>
+<button class="snap-start flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-5 pr-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-sm">restaurant</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">식당</p>
+</button>
+<button class="snap-start flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-5 pr-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-sm">attractions</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">관광지</p>
+</button>
+</div>
+</div>
+<!-- Content Area -->
+<div class="px-4 py-6 space-y-6">
+<!-- Hero Section: Flight Route Visual -->
+<div class="relative w-full h-32 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Abstract view of airplane wing in sky" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrsnUVxFMMJQwLnfJ7kpoxLOu2-H0Jk3GNowHQgRfUpUDW_akKM98wLFxNr-58y6cskLJDZcIjNsUUzdJd1q4Wrkn8k_pRNMg_0OoFGK5t3v6Q06oytdfPAnpmHNUQgj5fc3-2vT2fTOFf4874ldancOmM0L9k4dQr9J0uzJdtt6g36XOWVJqMzXjFHPlots7TrwwZxXMHOOrcKJkwq3Cjm3ONfgJoXOFbRm-cziGmbl-OlxNbmEpRDFh_KCvOoV9fn71Q8h8bgYc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-between px-8 z-10">
+<div class="text-center">
+<span class="block text-white/70 text-xs font-bold tracking-widest uppercase mb-1">From</span>
+<span class="block text-white text-3xl font-display font-black tracking-tight">ICN</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-4">
+<span class="material-symbols-outlined text-white/80 rotate-90 text-2xl">flight</span>
+<div class="w-full h-[1px] bg-white/30 mt-[-12px]"></div>
+</div>
+<div class="text-center">
+<span class="block text-white/70 text-xs font-bold tracking-widest uppercase mb-1">To</span>
+<span class="block text-white text-3xl font-display font-black tracking-tight">JFK</span>
+</div>
+</div>
+</div>
+<!-- Section: Basic Info -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold font-display leading-tight mb-4 flex items-center gap-2">
+<span class="w-1 h-5 bg-primary rounded-full"></span>
+                        기본 정보
+                    </h3>
+<div class="space-y-4">
+<!-- Airline Input -->
+<div class="group">
+<label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">항공사</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-slate-400 material-symbols-outlined">airlines</span>
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white rounded-xl border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary py-3.5 pl-11 pr-4 placeholder:text-slate-400 transition-shadow" placeholder="예: 대한항공" value="Korean Air"/>
+</div>
+</div>
+<!-- Flight Number Input -->
+<div class="group">
+<label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">편명</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-slate-400 material-symbols-outlined">tag</span>
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white rounded-xl border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary py-3.5 pl-11 pr-4 placeholder:text-slate-400 font-mono tracking-wide uppercase transition-shadow" placeholder="예: KE081" value="KE081"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Time & Date (Timeline Style) -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+<div class="absolute left-[29px] top-[70px] bottom-[70px] w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 border-l border-dashed border-primary"></div>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold font-display leading-tight mb-6 flex items-center gap-2">
+<span class="w-1 h-5 bg-secondary rounded-full"></span>
+                        일정
+                    </h3>
+<div class="space-y-8 relative">
+<!-- Departure -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 size-6 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center z-10">
+<div class="size-2 rounded-full bg-primary"></div>
+</div>
+<label class="block text-sm font-bold text-primary mb-2">출발 (Departure)</label>
+<div class="flex gap-3">
+<div class="flex-1 relative">
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white text-sm rounded-lg border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-primary py-3 px-3" type="date" value="2023-10-24"/>
+</div>
+<div class="w-1/3 relative">
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white text-sm rounded-lg border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-primary py-3 px-3 text-center" type="time" value="10:00"/>
+</div>
+</div>
+</div>
+<!-- Arrival -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 size-6 rounded-full bg-slate-100 dark:bg-slate-700 border-2 border-slate-300 dark:border-slate-500 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-slate-500 dark:text-slate-400">flight_land</span>
+</div>
+<label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">도착 (Arrival)</label>
+<div class="flex gap-3">
+<div class="flex-1 relative">
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white text-sm rounded-lg border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-primary py-3 px-3" type="date" value="2023-10-24"/>
+</div>
+<div class="w-1/3 relative">
+<input class="w-full bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-white text-sm rounded-lg border-0 ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-primary py-3 px-3 text-center" type="time" value="11:30"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Notes & Files -->
+<section class="space-y-4">
+<div class="bg-sandy/30 dark:bg-yellow-900/10 rounded-2xl p-5 border border-sandy dark:border-yellow-900/30">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-amber-700 dark:text-amber-500">sticky_note_2</span>
+<h3 class="text-amber-900 dark:text-amber-100 text-base font-bold font-display">메모 (Notes)</h3>
+</div>
+<textarea class="w-full bg-white/50 dark:bg-black/20 text-slate-900 dark:text-white rounded-lg border-0 ring-1 ring-transparent focus:ring-amber-400/50 p-3 text-sm min-h-[100px] placeholder:text-amber-900/40 dark:placeholder:text-amber-100/40 resize-none" placeholder="터미널 정보, 게이트 번호 등 잊지 말아야 할 내용을 적어주세요."></textarea>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-xl border border-dashed border-slate-300 dark:border-slate-600 hover:border-primary hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-400 group-hover:text-primary">attach_file</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200">첨부파일 추가</span>
+<span class="text-xs text-slate-400">E-티켓 또는 바우처 (PDF, JPG)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary">add_circle</span>
+</div>
+</section>
+<!-- Additional Options Toggle -->
+<div class="flex items-center justify-between py-2 px-2">
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">알림 설정</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</main>
+<!-- Bottom Safety Area / Action Bar if needed -->
+<!-- Just extra spacing handled by pb-24 on main -->
+</div>
+</body></html>

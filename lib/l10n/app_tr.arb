@@ -1,0 +1,754 @@
+{
+  "@@locale": "tr",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Yolculugunuza Baslayin",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Yeni deneyimler kesfedin ve ozel anilar biriktirin",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Atla",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Katilimci",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Organizator",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Yardimci Organizator",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Kakao ile Devam Et",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Naver ile Devam Et",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Google ile Devam Et",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Apple ile Devam Et",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Giris yaparak {terms} ve {privacy} kabul etmis olursunuz.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Kullanim Kosullari",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Gizlilik Politikasi",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "Tekrar hos geldiniz",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Bir sonraki yolculugunuza hazir misiniz?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Tum Geziler",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Duzenlediklerim",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Katildiklarim",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Su An Devam Eden",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Yaklasan Maceralar",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Tumunu Gor",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "Gun {current} / {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "Devam Ediyor",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Yonet",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Misafir",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Belirsiz",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Ana Sayfa",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Kesfet",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Sohbet",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Profil",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Gezi Olustur",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Yolculugunuzu planlayalim",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Organizator olarak bu detaylari daha sonra istediginiz zaman duzenleyebilirsiniz.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Iptal",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Kaydet",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Temel Bilgiler",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Zorunlu",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Gezi Adi",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "orn. Kyoto'da Yaz",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Varis Noktasi",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Nereye gidiyorsunuz?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Tarihler",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Baslangic Tarihi",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Bitis Tarihi",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Istege Bagli Detaylar",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Kapak Fotografi",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Kapak yuklemek icin dokunun",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Gezi Amaci / Not",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Bu gezinin ana amaci nedir?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Sonraki Adim",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Katilimci Yonetimi",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Katilimci",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Bekleyen Davetler",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Yeni Uye Davet Et",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Ad veya e-posta ile ara",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Organizatorler",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "YONETICI",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Gezginler",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Tum izinler",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Programi duzenleyebilir",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Sadece okuma",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Kabul bekleniyor",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Tekrar Gonder",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Davet baglantisi etkinlestirildi",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Kopyala",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Program duzenlemeye izin ver",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Fotograf yuklemeye izin ver",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Geziden cikar",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "{days} gun once katildi",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Seyahat Programi",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Organizator Gorunumu",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Taslak",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} Gun",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "Gun {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Etkinlik Ekle",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Program",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Harita",
+  "@map": {"description": "Map nav"},
+
+  "people": "Kisiler",
+  "@people": {"description": "People nav"},
+
+  "settings": "Ayarlar",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Ucus",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Konaklama",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Kiralik Arac",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Restoran",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Turistik Yer",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Etkinlik",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Ulasim",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Detaylari Girin",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Havayolu",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Ucus Numarasi",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Kalkis",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Varis",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Notlar",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Onemli notlarinizi buraya yazin...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Ek Ekle",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "E-bilet veya fiş (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Hatirlatici Ayarlari",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Rezervasyon Onaylandi",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} Rehber - {members} Uye",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "REHBER",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ORGANIZATOR",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Mesaj...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Haritayi Ac",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Yeni Duyuru",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Kime?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Tum Katilimcilar",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Belirli Kisileri Sec",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} diger secildi",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Mesaj Detaylari",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Sonraki Program",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Acil",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Genel Bilgi",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Anket",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Hizli Sablonlar",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Otobus 10 dakika icinde kalkiyor",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Bulusma noktasi degisti",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Hava durumu uyarisi",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Aksam yemegi rezervasyonlari",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Konu",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "orn. Lobide bulusma",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Mesaj",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Duyurunuzu buraya yazin...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Fotograf Ekle",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Konum Ekle",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Sohbetin ustune sabitle",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Tum katilimcilar icin gorunur tut",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Acil Uyari Olarak Gonder",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Sessizde bile bildirim gonderir",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Bildirim Gonder",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Bildirimler",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Tumunu okundu olarak isaretle",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Tumu",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Duyurular",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Bugun",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Dun",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Duyuru",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Gecmis Duyuru",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} dakika once",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} saat once",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Gezi Detaylari",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} Gece",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Duzenleyen",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Harita Gorunumu",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Grup Sohbeti",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Kaydedilen Belgeler",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Unutmayin!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Genel Bakis",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Tumunu Genislet",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Giris",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Cikis",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Yol Tarifi",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Rezervasyon",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Mevcut Durum",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Gezi {days} gun icinde basliyor",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Hesap ve Izinler",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Profil Gorunurlugu",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Gorunum Ayarlari",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Karanlik Mod",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Yazi Boyutu",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Standart",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Bildirimler",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Gezi programi bildirimleri",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Onemli degisiklikler icin anlik bildirimler",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Yeni mesaj bildirimleri",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Yardim ve Destek",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Uygulama Surumu",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Cikis Yap",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Izin Gerekli",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync, onemli gezi guncellemelerini ve organizator duyurularini gonderebilmek icin bildirim iznine ihtiyac duyar.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Bildirimlere Izin Ver",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Daha Sonra",
+  "@later": {"description": "Later button"},
+
+  "error": "Hata",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Tekrar Dene",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Henuz gezi yok",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Ilk gezinizi olusturun veya bir geziye katilin!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Bildirim yok",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Hepsini goruntulediniz!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Yukleniyor...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Baglanti hatasi",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Lutfen internet baglantinizi kontrol edin",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Silmeyi Onayla",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Bunu silmek istediginizden emin misiniz?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Sil",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Onayla",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Tamam",
+  "@done": {"description": "Done button"},
+
+  "edit": "Duzenle",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Kapat",
+  "@close": {"description": "Close button"},
+
+  "back": "Geri",
+  "@back": {"description": "Back button"},
+
+  "next": "Ileri",
+  "@next": {"description": "Next button"},
+
+  "search": "Ara",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Sonuc bulunamadi",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Tarih Sec",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Saat Sec",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Baslangic",
+  "@from": {"description": "From label"},
+
+  "to": "Bitis",
+  "@to": {"description": "To label"},
+
+  "duration": "Sure",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Konum",
+  "@location": {"description": "Location label"},
+
+  "address": "Adres",
+  "@address": {"description": "Address label"},
+
+  "phone": "Telefon",
+  "@phone": {"description": "Phone label"},
+
+  "email": "E-posta",
+  "@email": {"description": "Email label"},
+
+  "website": "Web Sitesi",
+  "@website": {"description": "Website label"},
+
+  "price": "Fiyat",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Menuyu Gor",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Onerilen",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Dogа Yuruyusu",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Uyari",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Detaylari Gor",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Hazir misiniz",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "sonraki yolculugunuz icin?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "Ilk gezinizi olusturun veya bir geziye katilin!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "Dil",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "Fotografi Degistir",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "Fotograf Cek",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "Galeriden Sec",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "Fotografi Kaldir",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "Gorunen Ad",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "Gorunen adinizi girin",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "Telefon numaranizi girin",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "Gorunen ad gerekli",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "Gorunen ad en az 2 karakter olmali",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "Profil basariyla guncellendi",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "Profil guncellenemedi",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "Gorsel secilemedi",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "Cikis yapmak istediginizden emin misiniz?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "Daha Once",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "Hesap",
+  "deleteAccount": "Hesabi Sil",
+  "deleteAccountTitle": "Hesabi Sil",
+  "deleteAccountMessage": "Hesabinizi silmek istediginizden emin misiniz? Bu islem geri alinamaz ve tum verileriniz kalici olarak silinecektir.",
+  "deleteAccountConfirmation": "Onaylamak icin 'SIL' yazin",
+  "deletingAccount": "Hesap siliniyor...",
+  "accountDeleted": "Hesap basariyla silindi",
+  "deleteAccountFailed": "Hesap silinemedi",
+  "deleteAccountWarning": "Uyari: Bu islem geri alinamaz. Geziler ve mesajlar dahil tum verileriniz kalici olarak silinecektir."
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>참여자 관리 (진행자)</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#247d8f",
+                        "primary-dark": "#1b5e6b",
+                        "secondary": "#CC9933",
+                        "background-light": "#f1f3f4",
+                        "background-dark": "#1a2023",
+                        "surface-dark": "#242a2d", 
+                        "surface-lighter": "#2f3639",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "Noto Sans KR", "sans-serif"],
+                        "body": ["Noto Sans KR", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "glow": "0 0 20px -5px rgba(36, 125, 143, 0.3)",
+                        "card": "0 4px 15px -3px rgba(0, 0, 0, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.04)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased transition-colors duration-200">
+<div class="relative mx-auto flex h-full min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<header class="sticky top-0 z-50 flex items-center justify-between bg-background-light/90 dark:bg-background-dark/90 px-4 py-4 backdrop-blur-md transition-all">
+<button class="flex size-10 items-center justify-center rounded-full text-gray-800 hover:bg-black/5 dark:text-white dark:hover:bg-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[28px]">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-gray-900 dark:text-white">참여자 관리</h1>
+<button class="flex size-10 items-center justify-center rounded-full text-gray-800 hover:bg-black/5 dark:text-white dark:hover:bg-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</header>
+<main class="flex-1 px-5 pb-24 pt-2">
+<section class="mb-6 grid grid-cols-2 gap-4">
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-card transition-transform active:scale-[0.98]">
+<div class="absolute right-0 top-0 p-3 opacity-10">
+<span class="material-symbols-outlined text-4xl text-primary">groups</span>
+</div>
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">참여 중</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-gray-900 dark:text-white">14</span>
+<span class="text-xs font-medium text-primary">명</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-card transition-transform active:scale-[0.98]">
+<div class="absolute right-0 top-0 p-3 opacity-10">
+<span class="material-symbols-outlined text-4xl text-secondary">mail</span>
+</div>
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">초대 대기</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-gray-900 dark:text-white">3</span>
+<span class="text-xs font-medium text-secondary">명</span>
+</div>
+</div>
+</section>
+<button class="group relative mb-8 flex w-full items-center justify-between overflow-hidden rounded-xl bg-gradient-to-r from-primary to-[#1d6371] p-1 shadow-glow transition-all active:scale-[0.99]">
+<div class="absolute inset-0 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100"></div>
+<div class="flex h-12 w-full items-center justify-center gap-2 rounded-[10px] bg-transparent px-4">
+<span class="material-symbols-outlined text-white">person_add</span>
+<span class="font-bold text-white tracking-wide">새 멤버 초대하기</span>
+</div>
+<div class="absolute right-4 flex size-8 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</button>
+<div class="mb-8">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-gray-400">search</span>
+<input class="h-12 w-full rounded-xl border-none bg-gray-100 py-3 pl-12 pr-4 text-sm font-medium text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary dark:bg-surface-dark dark:text-white dark:placeholder-gray-400 transition-shadow shadow-sm" placeholder="이름 또는 이메일로 검색" type="text"/>
+</div>
+</div>
+<div class="mb-8">
+<div class="mb-3 flex items-center justify-between px-1">
+<h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">운영진 (Hosts)</h3>
+<span class="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">ADMIN</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-surface-dark border border-primary/30">
+<div class="relative shrink-0">
+<img alt="User Avatar" class="size-12 rounded-full object-cover border-2 border-primary" data-alt="Portrait of a young woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIKNYtFGvSGT-2UgrA-bazuURJyts_CsHwBfp3L-2Jxa8WshsnVHBPc0Z3yFbMFSP6UNOJIOkZG1ljjMNSyh2sKkwqx4jJ7A5ENVMuM81UeaHUVP1XGv5XHs1dS5T8wlSzgZBuQIxhAisuKvCm5u06t0YONzF1GvfzwrPAbi1vGGasdvOM7jpTGwGtB-UfF1Zyr9SelCVBqe3iz9_E1Zdy8WzlOr1w02ZwU5i7i3Pd8qXCk-7OmFnJBhRjGw9DQ6NNX4q8H8TMZc"/>
+<div class="absolute -bottom-1 -right-1 flex size-5 items-center justify-center rounded-full bg-primary text-white ring-2 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined text-[12px]">verified_user</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="truncate font-bold text-gray-900 dark:text-white">김지수 (나)</h4>
+<span class="rounded bg-primary/20 px-1.5 py-0.5 text-[10px] font-bold text-primary">HOST</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-gray-400">jisoo.k@example.com</p>
+</div>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-white p-2">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="relative flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-surface-dark">
+<div class="relative shrink-0">
+<img alt="User Avatar" class="size-12 rounded-full object-cover opacity-90" data-alt="Portrait of a smiling man with a beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvlHtepgRxfsIni5pNWjoF1xK2k8vljp_IoYcZYggfU-zXieaA66JcoX1_rf7DL6-cTL-40sHA-VmhftN2zYMs8e5Qo4HodB7_fsFiirZVULlB4xpasgYU2eY-Y-hZBHks5Y-XUe3pw2tS_FpqHUJjB3EdIvdcTBsc1W6zyl6Pq03RdPieWHLC9U7DRjBJFHFIYvE7hHhoQ3w3PXaFmgBE75WC6iPwUot40QQzWbjOisVkRG2Awrhzecd17G-sUpa3_SwiKbmxg1g"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="truncate font-semibold text-gray-900 dark:text-gray-200">Michael Chen</h4>
+<span class="rounded bg-gray-200 px-1.5 py-0.5 text-[10px] font-bold text-gray-600 dark:bg-gray-700 dark:text-gray-300">CO-HOST</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-gray-400">모든 권한 보유</p>
+</div>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-white p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mb-24">
+<div class="mb-3 flex items-center justify-between px-1">
+<h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">참여자 (Travelers)</h3>
+<span class="text-xs text-gray-400">12명</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="group flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm transition-colors hover:bg-gray-50 dark:bg-surface-dark dark:hover:bg-surface-lighter">
+<img alt="Participant Avatar" class="size-12 rounded-full object-cover" data-alt="Portrait of a woman with curly hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21iPEUhoOYv4x2aCL35bXDdCY8LEczw6rEhhnpqD7CGAv3fwtENLdtIrZ52mqvjl2TTqLNvXzuu3si5Svnogaz_EnvDiff7PV4xsHhW0XKk05NDGWQOvTTYJCLbN9SNowg8OH8mB3McCa34RaM_5i7AFKM9wDkpMsmqFTzgHO8oP-N4l32MWRWpeh_W8fqauhG-wW5TcB99TcHXHpUps9J9E8M76AloEzvyq2tlh9ltBurE2K_Hp2_owAEPGTqc1Jy1RtKAcL2Kg"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-medium text-gray-900 dark:text-gray-200">Olivia Wilson</h4>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+<p class="truncate text-xs text-gray-500 dark:text-gray-400">일정 편집 가능</p>
+</div>
+</div>
+<button class="rounded-lg p-2 text-gray-400 hover:bg-gray-200 hover:text-gray-600 dark:hover:bg-white/10 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+<div class="group flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm transition-colors hover:bg-gray-50 dark:bg-surface-dark dark:hover:bg-surface-lighter">
+<img alt="Participant Avatar" class="size-12 rounded-full object-cover" data-alt="Portrait of a man looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzaZk7BrjSYXzYdsITqMycBhpeUw7XM8A10V0rdNtqA1Ux-4HTuzjqSIA2sshTz0Y6U-v2biNNMSR8WB6OR7dBjeHndoxGENZ4kxvGIvMUV5lZPFpnkTV1qwQDKxv4I1S21MS_nU9i69pqHEQ-ndSVyuHyVULhi-20VYF396esznvUSWuWZ1WK-1SyhU5x9tgKbuhf_vNAyF8m-hMp429f6d_MBmzaNaIiqj5pqX_iHNhrE7fnHsVnxsZGiTdvRYZGlcIOfDzilx4"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-medium text-gray-900 dark:text-gray-200">David Park</h4>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-500"></span>
+<p class="truncate text-xs text-gray-500 dark:text-gray-400">읽기 전용</p>
+</div>
+</div>
+<button class="rounded-lg p-2 text-gray-400 hover:bg-gray-200 hover:text-gray-600 dark:hover:bg-white/10 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+<div class="group relative flex items-center gap-3 rounded-xl border border-dashed border-gray-300 bg-gray-50/50 p-3 dark:border-gray-700 dark:bg-surface-dark/30">
+<div class="relative">
+<div class="flex size-12 items-center justify-center rounded-full bg-gray-200 text-gray-400 dark:bg-surface-lighter dark:text-gray-500">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+<div class="absolute -bottom-1 -right-1 flex size-5 items-center justify-center rounded-full bg-secondary text-white ring-2 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined text-[10px]">hourglass_empty</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 opacity-60">
+<h4 class="font-medium text-gray-900 dark:text-gray-200">sarah.lee@email.com</h4>
+<p class="truncate text-xs text-secondary">초대 수락 대기 중</p>
+</div>
+<button class="rounded-lg bg-secondary/10 px-3 py-1.5 text-xs font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                            재전송
+                        </button>
+</div>
+<div class="group relative flex items-center gap-3 rounded-xl border border-dashed border-gray-300 bg-gray-50/50 p-3 dark:border-gray-700 dark:bg-surface-dark/30">
+<div class="relative">
+<img alt="Participant Avatar" class="size-12 rounded-full object-cover grayscale opacity-50" data-alt="Portrait of a woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFVHpeej9stOoup7fnShK575X29VpBhCDj9oPqcy-95NHLAM5a0uz4-UTBAJ9B7fK4e-urNobZvCGDqlclxIBgPClUkqtdM6bzpl0g4yjexTutvdsLuvtroWx7t1WIetT3wNs8jdEdyQElCzv7toooKrl77s-HZBy5Q8_hrHXgAAJs-Y_mUO4HbQvuu_4GtqFQOLCX4RgSk9NFZmYnixYtZT3qZ9LoKk_lyQfGfpaXruKJXR5wjqnM8YUEnBEWWFIGjGDytMG_WVE"/>
+<div class="absolute -bottom-1 -right-1 flex size-5 items-center justify-center rounded-full bg-secondary text-white ring-2 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined text-[10px]">hourglass_empty</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 opacity-60">
+<h4 class="font-medium text-gray-900 dark:text-gray-200">Emily Blunt</h4>
+<p class="truncate text-xs text-secondary">초대 수락 대기 중</p>
+</div>
+<button class="rounded-lg bg-secondary/10 px-3 py-1.5 text-xs font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                            재전송
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 left-0 right-0 z-40 mx-auto w-full max-w-md px-5 pointer-events-none">
+<div class="flex items-center justify-between rounded-lg bg-surface-dark px-4 py-3 shadow-2xl ring-1 ring-white/10 backdrop-blur-md dark:bg-[#252b2e]/90 pointer-events-auto transform translate-y-0 transition-transform">
+<div class="flex items-center gap-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-lg">link</span>
+</div>
+<span class="text-sm font-medium text-white">초대 링크가 활성화되었습니다</span>
+</div>
+<button class="text-xs font-bold text-primary hover:text-primary-dark">복사</button>
+</div>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-[60] flex items-end justify-center bg-black/60 backdrop-blur-sm">
+<div class="w-full max-w-md rounded-t-2xl bg-white dark:bg-surface-dark p-6 pb-10 ring-1 ring-black/5 dark:ring-white/10">
+<div class="mx-auto mb-6 h-1 w-12 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+<div class="mb-6 flex items-center gap-4">
+<img alt="User Avatar" class="size-16 rounded-full object-cover ring-2 ring-gray-100 dark:ring-white/10" data-alt="Portrait of Olivia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnOq9l1Km5D5x01vJAv0MJpZ-N-OdBxaNihHtJPnqUen2LBEbf11qkqnL78-awejlJOesuk47nHiBL4lE9muU0PMAIbFgBUz2rE_Lw9gC41w0k9TjVVuhFr6i5bjNWa1diIi-91HwBjW3mnzJPLNVHdSWm9h7FUV9fspInmzx0378uK-dR3gN2BpvhvqRc0EliePZz7HBzcdBepTJpJQyk-pSJt7ZQ66DyDi23oZKmx_6154ZljHybnc6-Kpop2uwEB1KaeJ9pD_4"/>
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Olivia Wilson</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">참여자 • 2일 전 가입</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between rounded-lg bg-gray-100 dark:bg-white/5 p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">edit_calendar</span>
+<span class="font-medium text-gray-700 dark:text-gray-200">일정 편집 허용</span>
+</div>
+<div class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary transition-colors">
+<span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-6"></span>
+</div>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-gray-100 dark:bg-white/5 p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">photo_camera</span>
+<span class="font-medium text-gray-700 dark:text-gray-200">사진 업로드 허용</span>
+</div>
+<div class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary transition-colors">
+<span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-6"></span>
+</div>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg py-4 text-red-500 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-400/10 transition-colors">
+<span class="material-symbols-outlined">person_remove</span>
+<span class="font-bold">내보내기</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

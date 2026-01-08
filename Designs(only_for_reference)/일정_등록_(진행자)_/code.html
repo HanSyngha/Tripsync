@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Itinerary Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2a6f41",
+                        "primary-dark": "#1e5230",
+                        "background-light": "#f8f8f7",
+                        "background-dark": "#22252a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d3137",
+                        "text-main-light": "#131614",
+                        "text-main-dark": "#e0e2e1",
+                        "text-sub-light": "#6b8072",
+                        "text-sub-dark": "#9aaeb5",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'card': '0 2px 8px -1px rgba(0, 0, 0, 0.04)',
+                        'floating': '0 12px 24px -4px rgba(42, 111, 65, 0.25)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            bottom: -24px;
+            left: 23px;
+            width: 2px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .dark .timeline-line::before {
+            background-color: #374151;
+        }
+        .timeline-item:last-child .timeline-line::before {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-light dark:text-text-main-dark min-h-screen antialiased selection:bg-primary selection:text-white">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 py-3 max-w-md mx-auto h-14">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-main-light dark:text-text-main-dark">arrow_back_ios_new</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-base font-bold tracking-tight">Jeju Island Trip</h1>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark font-medium">Organizer View</span>
+</div>
+<button class="flex items-center justify-center px-3 py-1.5 rounded-full bg-primary/10 hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors group">
+<span class="text-primary dark:text-primary-300 text-sm font-bold group-hover:text-primary-dark dark:group-hover:text-primary-200">Save</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-28 max-w-md mx-auto px-4 relative min-h-screen">
+<!-- Header Image Card -->
+<div class="mb-6 group relative overflow-hidden rounded-2xl shadow-card">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="h-48 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Beautiful aerial view of Jeju Island coast with turquoise water" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFXkDbiXfQMOA9HxEJeSoZ8NMfhfOzEhoRfZubgI5aP0579IbtHnAcxFaVhw-2Xuar-IqL5M_R1SsN-sAXtbmhrjDFEppm6QeKtszhib-amPpkWXcNz7Oca92wbTbVtL1OiSM9jbS1KksKaw_n9X-XocmtKCTITj7erCQ-RlzJoqhFbFCFXBGz_w-aJZ0iXbASZNlrdZZkoTG2Xhn-K5vO5AL7fYJCOtpVKMaHHUCs6K6jjIVF4TEDbmsC3ZahK2QRQuDklpkY9Pg');">
+</div>
+<div class="absolute bottom-4 left-4 z-20">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-sm border border-white/10 text-[10px] font-bold text-white uppercase tracking-wider">Draft</span>
+</div>
+<h2 class="text-2xl font-bold text-white leading-tight">Jeju Island, South Korea</h2>
+<p class="text-white/80 text-sm font-medium mt-1">Oct 24 - Oct 28 • 5 Days</p>
+</div>
+<button class="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Day Selector Tabs -->
+<div class="sticky top-14 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-2 -mx-4 px-4 mb-4 border-b border-gray-100 dark:border-gray-800">
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1">
+<button class="flex-shrink-0 flex flex-col items-center justify-center min-w-[64px] h-[72px] rounded-xl bg-primary text-white shadow-lg shadow-primary/30 transition-all transform scale-100">
+<span class="text-xs font-medium opacity-80">Day 1</span>
+<span class="text-lg font-bold">24</span>
+<span class="text-[10px] font-medium opacity-80">Thu</span>
+</button>
+<button class="flex-shrink-0 flex flex-col items-center justify-center min-w-[64px] h-[72px] rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-sub-light dark:text-text-sub-dark hover:border-primary/50 hover:text-primary transition-all">
+<span class="text-xs font-medium">Day 2</span>
+<span class="text-lg font-bold text-text-main-light dark:text-text-main-dark">25</span>
+<span class="text-[10px] font-medium">Fri</span>
+</button>
+<button class="flex-shrink-0 flex flex-col items-center justify-center min-w-[64px] h-[72px] rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-sub-light dark:text-text-sub-dark hover:border-primary/50 hover:text-primary transition-all">
+<span class="text-xs font-medium">Day 3</span>
+<span class="text-lg font-bold text-text-main-light dark:text-text-main-dark">26</span>
+<span class="text-[10px] font-medium">Sat</span>
+</button>
+<button class="flex-shrink-0 flex flex-col items-center justify-center min-w-[64px] h-[72px] rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-sub-light dark:text-text-sub-dark hover:border-primary/50 hover:text-primary transition-all">
+<span class="text-xs font-medium">Day 4</span>
+<span class="text-lg font-bold text-text-main-light dark:text-text-main-dark">27</span>
+<span class="text-[10px] font-medium">Sun</span>
+</button>
+<button class="flex-shrink-0 flex flex-col items-center justify-center min-w-[64px] h-[72px] rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-sub-light dark:text-text-sub-dark hover:border-primary/50 hover:text-primary transition-all">
+<span class="text-xs font-medium">Day 5</span>
+<span class="text-lg font-bold text-text-main-light dark:text-text-main-dark">28</span>
+<span class="text-[10px] font-medium">Mon</span>
+</button>
+</div>
+</div>
+<!-- Timeline / Itinerary List -->
+<div class="space-y-0 relative">
+<!-- Item 1: Flight -->
+<div class="timeline-item relative pl-14 pb-8 group">
+<div class="absolute left-0 top-0 flex flex-col items-center z-10 timeline-line h-full">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-surface-dark border-2 border-primary/20 flex items-center justify-center shadow-sm z-10 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="text-primary font-bold text-sm tracking-wide">09:00 AM</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft border border-gray-100 dark:border-gray-700 relative overflow-hidden group-hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Flight to Jeju</h3>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm">Korean Air • KE1234</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<div class="flex gap-4 items-center bg-background-light dark:bg-background-dark p-3 rounded-lg border border-gray-100 dark:border-gray-800">
+<div class="flex-1 text-center">
+<div class="text-2xl font-black text-text-main-light dark:text-text-main-dark">GMP</div>
+<div class="text-[10px] uppercase font-bold text-text-sub-light tracking-wider">Seoul</div>
+</div>
+<div class="flex-none flex flex-col items-center px-2">
+<span class="text-[10px] text-text-sub-light font-medium mb-1">1h 10m</span>
+<div class="w-16 h-[2px] bg-gray-300 dark:bg-gray-600 relative">
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+<div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="flex-1 text-center">
+<div class="text-2xl font-black text-text-main-light dark:text-text-main-dark">CJU</div>
+<div class="text-[10px] uppercase font-bold text-text-sub-light tracking-wider">Jeju</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Rental Car -->
+<div class="timeline-item relative pl-14 pb-8 group">
+<div class="absolute left-0 top-0 flex flex-col items-center z-10 timeline-line h-full">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-surface-dark border-2 border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm z-10 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-text-sub-light text-xl">directions_car</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="text-text-main-light dark:text-text-main-dark font-bold text-sm tracking-wide">11:00 AM</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft border border-gray-100 dark:border-gray-700 relative group-hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-yellow-600 text-2xl">key</span>
+</div>
+<div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Pick up Rental Car</h3>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm">Lotte Rent-a-Car House</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span>
+<span class="text-xs text-primary font-medium">Reservation Confirmed</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Lunch -->
+<div class="timeline-item relative pl-14 pb-8 group">
+<div class="absolute left-0 top-0 flex flex-col items-center z-10 timeline-line h-full">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-surface-dark border-2 border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm z-10 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-text-sub-light text-xl">restaurant</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="text-text-main-light dark:text-text-main-dark font-bold text-sm tracking-wide">12:30 PM</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-0 shadow-soft border border-gray-100 dark:border-gray-700 relative overflow-hidden group-hover:shadow-lg transition-shadow">
+<div class="h-28 w-full bg-cover bg-center" data-alt="Close up of a delicious burger and fries on a wooden table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7dzftmlnce2Jaumj5GWNL1rK3lAZv-jPRso0bs9Z_JYwFuxChcMOzW9ciUETtCFcbHI15VGpkGJQanZrTD5t2X57CghO4N-DBedDXe9NZnc6y-3mBFotHF8NNvXvu2gBaeS9-qyn8ajxX2glcW1Y3MDmxLL8ASE-8ebr9mTqrzRnK8YKFuccEzYurq_VdMju5Fy_4sPwATY0q6UM91Feks21rCWvPjjLcHNrC2HI5ip4g1DzDdqLa5l3ZLq9sBhSOq4-lDaZWUmI');">
+<div class="w-full h-full bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end">
+<h3 class="font-bold text-white text-lg">Downtown Burger Spot</h3>
+<p class="text-white/80 text-xs">Recommended by host</p>
+</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex gap-2 text-xs text-text-sub-light dark:text-text-sub-dark font-medium">
+<span class="px-2 py-1 bg-background-light dark:bg-background-dark rounded border border-gray-200 dark:border-gray-700">$$$</span>
+<span class="px-2 py-1 bg-background-light dark:bg-background-dark rounded border border-gray-200 dark:border-gray-700">American</span>
+</div>
+<button class="text-primary text-xs font-bold px-2 py-1 hover:bg-primary/10 rounded transition-colors">View Menu</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Activity -->
+<div class="timeline-item relative pl-14 pb-4 group">
+<div class="absolute left-0 top-0 flex flex-col items-center z-10 timeline-line h-full">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-surface-dark border-2 border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm z-10 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-text-sub-light text-xl">photo_camera</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="text-text-main-light dark:text-text-main-dark font-bold text-sm tracking-wide">02:30 PM</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft border border-gray-100 dark:border-gray-700 relative group-hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-green-50 dark:bg-green-900/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-green-600 text-2xl">landscape</span>
+</div>
+<div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark text-lg">Seongsan Ilchulbong</h3>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm">Hiking • 1.5 Hours</p>
+</div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<!-- Alert/Note -->
+<div class="mt-3 bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-800 rounded-lg p-2.5 flex gap-2 items-start">
+<span class="material-symbols-outlined text-orange-500 text-sm mt-0.5">warning</span>
+<p class="text-xs text-orange-800 dark:text-orange-200 leading-relaxed">Steep climb. Make sure everyone brings comfortable hiking shoes and water.</p>
+</div>
+</div>
+</div>
+<!-- Add Button Inline -->
+<div class="relative pl-14 pt-4 pb-12">
+<div class="absolute left-0 top-0 bottom-0 w-12 flex justify-center">
+<div class="w-[2px] h-8 bg-gradient-to-b from-gray-200 to-transparent dark:from-gray-700"></div>
+</div>
+<button class="w-full border-2 border-dashed border-primary/30 hover:border-primary bg-primary/5 hover:bg-primary/10 rounded-xl p-4 flex items-center justify-center gap-2 group transition-all duration-300">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+<span class="text-primary font-bold text-sm">Add Activity</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (Alternative quick add) -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-floating flex items-center justify-center hover:bg-primary-dark hover:scale-105 active:scale-95 transition-all duration-300 group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (Organizer Context) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 pb-safe pt-2 px-6 flex justify-around items-center z-40 h-[80px]">
+<button class="flex flex-col items-center gap-1 p-2 text-primary">
+<span class="material-symbols-outlined filled">calendar_month</span>
+<span class="text-[10px] font-bold">Schedule</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Map</span>
+</button>
+<div class="w-12"></div> <!-- Spacer for FAB -->
+<button class="flex flex-col items-center gap-1 p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">People</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+<!-- Quick Modal Simulation (Hidden by default, shown for structure) -->
+<!-- Ideally this would be toggleable, but for the static output I'll leave it as a hidden layer or remove if not needed. 
+         Keeping it clean without overlay for now. -->
+</body></html>

@@ -1,0 +1,719 @@
+{
+  "@@locale": "ru",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Начните своё путешествие",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Открывайте новые впечатления и создавайте особые воспоминания",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Пропустить",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Участник",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Организатор",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Со-организатор",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Войти через Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Войти через Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Войти через Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Войти через Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Входя в систему, вы соглашаетесь с {terms} и {privacy}.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Условиями использования",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Политикой конфиденциальности",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "С возвращением",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Готовы к следующему путешествию?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Все поездки",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Организую",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Участвую",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Сейчас",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Предстоящие приключения",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Смотреть все",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "День {current} из {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "В процессе",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Управление",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Гость",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Уточняется",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Главная",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Обзор",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Чат",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Профиль",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Создать поездку",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Давайте спланируем ваше путешествие",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Как организатор, вы можете изменить эти данные позже в любое время.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Отмена",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Сохранить",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Основная информация",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Обязательно",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Название поездки",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "напр. Лето в Киото",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Направление",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Куда вы направляетесь?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Даты",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Дата начала",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Дата окончания",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Дополнительные сведения",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Обложка",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Нажмите, чтобы загрузить обложку",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Цель поездки / Заметка",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Какова главная цель этой поездки?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Следующий шаг",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Управление участниками",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Участвуют",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Ожидающие приглашения",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Пригласить участника",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Поиск по имени или email",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Организаторы",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "АДМИН",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Путешественники",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Все права",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Может редактировать расписание",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Только просмотр",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Ожидает подтверждения",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Отправить повторно",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Ссылка-приглашение активирована",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Копировать",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Разрешить редактирование расписания",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Разрешить загрузку фото",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Удалить из поездки",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "Присоединился {days} дн. назад",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Маршрут",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Режим организатора",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Черновик",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} дн.",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "День {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Добавить активность",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Расписание",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Карта",
+  "@map": {"description": "Map nav"},
+
+  "people": "Люди",
+  "@people": {"description": "People nav"},
+
+  "settings": "Настройки",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Перелёт",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Проживание",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Аренда авто",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Ресторан",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Достопримечательность",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Активность",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Транспорт",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Введите данные",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Авиакомпания",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Номер рейса",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Вылет",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Прилёт",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Заметки",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Напишите важные заметки здесь...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Добавить вложение",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "Электронный билет или ваучер (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Настройки напоминаний",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Бронирование подтверждено",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} гид - {members} участников",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "ГИД",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ОРГАНИЗАТОР",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Сообщение...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Открыть карту",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Новое объявление",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Кому?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Все участники",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Выбрать конкретных",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ ещё {count} выбрано",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Детали сообщения",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Следующее в расписании",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Срочно",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Общая информация",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Опрос",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Быстрые шаблоны",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Автобус отправляется через 10 мин",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Место встречи изменилось",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Предупреждение о погоде",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Бронирование ужина",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Тема",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "напр. Встреча в холле",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Сообщение",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Напишите ваше объявление здесь...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Добавить фото",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Добавить местоположение",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Закрепить вверху чата",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Видно всем участникам",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Отправить как срочное уведомление",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Уведомляет даже при отключённом звуке",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Отправить уведомление",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Уведомления",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Отметить все как прочитанные",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Все",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Объявления",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Сегодня",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Вчера",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Объявление",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Прошлое объявление",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} мин. назад",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} ч. назад",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Детали поездки",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} ночей",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Организатор",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Вид на карте",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Групповой чат",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Сохранённые документы",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Не забудьте!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Обзор",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Развернуть всё",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Заезд",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Выезд",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Маршрут",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Бронирование",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Текущий статус",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Поездка начнётся через {days} дн.",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Аккаунт и права доступа",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Видимость профиля",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Настройки отображения",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Тёмная тема",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Размер шрифта",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Стандартный",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Уведомления",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Уведомления о расписании поездки",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Push-уведомления о важных изменениях",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Уведомления о новых сообщениях",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Помощь и поддержка",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Версия приложения",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Выйти",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Требуется разрешение",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync требуется разрешение на уведомления, чтобы отправлять вам важные обновления о поездке и объявления от организаторов.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Разрешить уведомления",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Позже",
+  "@later": {"description": "Later button"},
+
+  "error": "Ошибка",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Попробовать снова",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Пока нет поездок",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Создайте свою первую поездку или присоединитесь!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Нет уведомлений",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Вы всё просмотрели!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Загрузка...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Ошибка соединения",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Пожалуйста, проверьте подключение к интернету",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Подтвердить удаление",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Вы уверены, что хотите это удалить?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Удалить",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Подтвердить",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Готово",
+  "@done": {"description": "Done button"},
+
+  "edit": "Редактировать",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Закрыть",
+  "@close": {"description": "Close button"},
+
+  "back": "Назад",
+  "@back": {"description": "Back button"},
+
+  "next": "Далее",
+  "@next": {"description": "Next button"},
+
+  "search": "Поиск",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Ничего не найдено",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Выберите дату",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Выберите время",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Откуда",
+  "@from": {"description": "From label"},
+
+  "to": "Куда",
+  "@to": {"description": "To label"},
+
+  "duration": "Продолжительность",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Местоположение",
+  "@location": {"description": "Location label"},
+
+  "address": "Адрес",
+  "@address": {"description": "Address label"},
+
+  "phone": "Телефон",
+  "@phone": {"description": "Phone label"},
+
+  "email": "Эл. почта",
+  "@email": {"description": "Email label"},
+
+  "website": "Веб-сайт",
+  "@website": {"description": "Website label"},
+
+  "price": "Цена",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Посмотреть меню",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Рекомендовано",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Пеший туризм",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Предупреждение",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Подробнее",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Готовы к вашему",
+  "nextJourney": "следующему путешествию?",
+  "createFirstTrip": "Создайте свою первую поездку или присоединитесь!",
+  "language": "Язык",
+  "changePhoto": "Изменить фото",
+  "takePhoto": "Сделать фото",
+  "chooseFromGallery": "Выбрать из галереи",
+  "removePhoto": "Удалить фото",
+  "displayName": "Отображаемое имя",
+  "enterDisplayName": "Введите отображаемое имя",
+  "enterPhoneNumber": "Введите номер телефона",
+  "displayNameRequired": "Имя обязательно",
+  "displayNameMinLength": "Имя должно содержать минимум 2 символа",
+  "profileUpdated": "Профиль успешно обновлён",
+  "failedToUpdateProfile": "Не удалось обновить профиль",
+  "failedToPickImage": "Не удалось выбрать изображение",
+  "logoutConfirmation": "Вы уверены, что хотите выйти?",
+  "earlier": "Ранее",
+
+  "account": "Аккаунт",
+  "deleteAccount": "Удалить аккаунт",
+  "deleteAccountTitle": "Удалить аккаунт",
+  "deleteAccountMessage": "Вы уверены, что хотите удалить свой аккаунт? Это действие необратимо, и все ваши данные будут безвозвратно удалены.",
+  "deleteAccountConfirmation": "Введите 'УДАЛИТЬ' для подтверждения",
+  "deletingAccount": "Удаление аккаунта...",
+  "accountDeleted": "Аккаунт успешно удалён",
+  "deleteAccountFailed": "Не удалось удалить аккаунт",
+  "deleteAccountWarning": "Внимание: Это действие нельзя отменить. Все ваши данные, включая поездки и сообщения, будут безвозвратно удалены."
+}

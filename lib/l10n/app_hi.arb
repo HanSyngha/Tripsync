@@ -1,0 +1,719 @@
+{
+  "@@locale": "hi",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "अपनी यात्रा शुरू करें",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "नए अनुभव खोजें और खास यादें बनाएं",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "छोड़ें",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "प्रतिभागी",
+  "@participant": {"description": "Participant role"},
+
+  "host": "होस्ट",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "सह-होस्ट",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Kakao से जारी रखें",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Naver से जारी रखें",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Google से जारी रखें",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Apple से जारी रखें",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "लॉग इन करके, आप हमारी {terms} और {privacy} से सहमत होते हैं।",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "सेवा की शर्तें",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "गोपनीयता नीति",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "वापसी पर स्वागत है",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "अपनी अगली यात्रा के लिए तैयार हैं?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "सभी यात्राएं",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "होस्टिंग",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "भाग ले रहे हैं",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "अभी चल रहा है",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "आगामी रोमांच",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "सभी देखें",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "दिन {current} / {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "जारी है",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "प्रबंधित करें",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "अतिथि",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "तय होना बाकी",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "होम",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "एक्सप्लोर",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "चैट",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "प्रोफ़ाइल",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "यात्रा बनाएं",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "आइए आपकी यात्रा की योजना बनाएं",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "होस्ट के रूप में, आप इन विवरणों को बाद में कभी भी संपादित कर सकते हैं।",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "रद्द करें",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "सहेजें",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "मूल जानकारी",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "आवश्यक",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "यात्रा का नाम",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "जैसे क्योटो में गर्मी",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "गंतव्य",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "आप कहां जा रहे हैं?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "तिथियां",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "आरंभ तिथि",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "समाप्ति तिथि",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "वैकल्पिक विवरण",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "कवर फ़ोटो",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "कवर अपलोड करने के लिए टैप करें",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "यात्रा का लक्ष्य / मेमो",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "इस यात्रा का मुख्य उद्देश्य क्या है?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "अगला कदम",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "प्रतिभागी प्रबंधन",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "भाग ले रहे हैं",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "लंबित आमंत्रण",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "नए सदस्य को आमंत्रित करें",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "नाम या ईमेल से खोजें",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "होस्ट",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "एडमिन",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "यात्री",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "सभी अनुमतियां",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "शेड्यूल संपादित कर सकते हैं",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "केवल पढ़ने के लिए",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "स्वीकृति लंबित",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "पुनः भेजें",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "आमंत्रण लिंक सक्रिय",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "कॉपी करें",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "शेड्यूल संपादन की अनुमति दें",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "फ़ोटो अपलोड की अनुमति दें",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "यात्रा से हटाएं",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "{days} दिन पहले शामिल हुए",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "यात्रा कार्यक्रम",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "आयोजक दृश्य",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "ड्राफ्ट",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} दिन",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "दिन {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "गतिविधि जोड़ें",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "शेड्यूल",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "नक्शा",
+  "@map": {"description": "Map nav"},
+
+  "people": "लोग",
+  "@people": {"description": "People nav"},
+
+  "settings": "सेटिंग्स",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "उड़ान",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "आवास",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "किराये की कार",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "रेस्तरां",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "आकर्षण",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "गतिविधि",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "परिवहन",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "विवरण दर्ज करें",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "एयरलाइन",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "उड़ान संख्या",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "प्रस्थान",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "आगमन",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "नोट्स",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "यहां कोई भी महत्वपूर्ण नोट्स लिखें...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "अटैचमेंट जोड़ें",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "ई-टिकट या वाउचर (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "रिमाइंडर सेटिंग्स",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "आरक्षण पुष्ट",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} गाइड - {members} सदस्य",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "गाइड",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "आयोजक",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "संदेश...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "नक्शा खोलें",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "नई घोषणा",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "किसको?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "सभी प्रतिभागी",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "विशिष्ट चुनें",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ {count} अन्य चयनित",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "संदेश विवरण",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "अगला शेड्यूल",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "अत्यावश्यक",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "सामान्य जानकारी",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "मतदान",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "त्वरित टेम्पलेट",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "बस 10 मिनट में निकल रही है",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "मिलने का स्थान बदल गया",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "मौसम चेतावनी",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "रात्रि भोजन आरक्षण",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "विषय",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "जैसे लॉबी में मिलें",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "संदेश",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "अपनी घोषणा यहां लिखें...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "फ़ोटो जोड़ें",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "स्थान जोड़ें",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "चैट के शीर्ष पर पिन करें",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "सभी प्रतिभागियों के लिए दृश्यमान रखें",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "अत्यावश्यक अलर्ट के रूप में भेजें",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "म्यूट होने पर भी सूचित करता है",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "सूचना भेजें",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "सूचनाएं",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "सभी को पढ़ा हुआ चिह्नित करें",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "सभी",
+  "@all": {"description": "All filter"},
+
+  "announcements": "घोषणाएं",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "आज",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "कल",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "घोषणा",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "पिछली घोषणा",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} मिनट पहले",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} घंटे पहले",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "यात्रा विवरण",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} रातें",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "द्वारा होस्ट किया गया",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "नक्शा दृश्य",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "ग्रुप चैट",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "सहेजे गए दस्तावेज़",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "मत भूलें!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "अवलोकन",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "सभी विस्तृत करें",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "चेक-इन",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "चेक-आउट",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "दिशाएं",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "आरक्षण",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "वर्तमान स्थिति",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "यात्रा {days} दिनों में शुरू होगी",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "खाता और अनुमतियां",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "प्रोफ़ाइल दृश्यता",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "प्रदर्शन सेटिंग्स",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "डार्क मोड",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "फ़ॉन्ट आकार",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "मानक",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "सूचनाएं",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "यात्रा शेड्यूल सूचनाएं",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "महत्वपूर्ण परिवर्तन पुश सूचनाएं",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "नए संदेश की सूचनाएं",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "सहायता और समर्थन",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "ऐप संस्करण",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "लॉग आउट",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "अनुमति आवश्यक",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync को आपको महत्वपूर्ण यात्रा अपडेट और आयोजकों की घोषणाएं भेजने के लिए सूचना अनुमति की आवश्यकता है।",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "सूचनाओं की अनुमति दें",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "बाद में",
+  "@later": {"description": "Later button"},
+
+  "error": "त्रुटि",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "पुनः प्रयास करें",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "अभी कोई यात्रा नहीं",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "अपनी पहली यात्रा बनाएं या किसी में शामिल हों!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "कोई सूचना नहीं",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "आप सब कुछ देख चुके हैं!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "लोड हो रहा है...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "कनेक्शन त्रुटि",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "कृपया अपना इंटरनेट कनेक्शन जांचें",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "हटाने की पुष्टि करें",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "क्या आप वाकई इसे हटाना चाहते हैं?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "हटाएं",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "पुष्टि करें",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "हो गया",
+  "@done": {"description": "Done button"},
+
+  "edit": "संपादित करें",
+  "@edit": {"description": "Edit button"},
+
+  "close": "बंद करें",
+  "@close": {"description": "Close button"},
+
+  "back": "वापस",
+  "@back": {"description": "Back button"},
+
+  "next": "अगला",
+  "@next": {"description": "Next button"},
+
+  "search": "खोजें",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "कोई परिणाम नहीं मिला",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "तिथि चुनें",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "समय चुनें",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "से",
+  "@from": {"description": "From label"},
+
+  "to": "तक",
+  "@to": {"description": "To label"},
+
+  "duration": "अवधि",
+  "@duration": {"description": "Duration label"},
+
+  "location": "स्थान",
+  "@location": {"description": "Location label"},
+
+  "address": "पता",
+  "@address": {"description": "Address label"},
+
+  "phone": "फ़ोन",
+  "@phone": {"description": "Phone label"},
+
+  "email": "ईमेल",
+  "@email": {"description": "Email label"},
+
+  "website": "वेबसाइट",
+  "@website": {"description": "Website label"},
+
+  "price": "मूल्य",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "मेन्यू देखें",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "अनुशंसित",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "पैदल यात्रा",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "चेतावनी",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "विवरण देखें",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "क्या आप तैयार हैं",
+  "nextJourney": "अपनी अगली यात्रा के लिए?",
+  "createFirstTrip": "अपनी पहली यात्रा बनाएं या किसी में शामिल हों!",
+  "language": "भाषा",
+  "changePhoto": "फ़ोटो बदलें",
+  "takePhoto": "फ़ोटो लें",
+  "chooseFromGallery": "गैलरी से चुनें",
+  "removePhoto": "फ़ोटो हटाएं",
+  "displayName": "प्रदर्शन नाम",
+  "enterDisplayName": "अपना प्रदर्शन नाम दर्ज करें",
+  "enterPhoneNumber": "अपना फ़ोन नंबर दर्ज करें",
+  "displayNameRequired": "प्रदर्शन नाम आवश्यक है",
+  "displayNameMinLength": "प्रदर्शन नाम कम से कम 2 अक्षर का होना चाहिए",
+  "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई",
+  "failedToUpdateProfile": "प्रोफ़ाइल अपडेट करने में विफल",
+  "failedToPickImage": "छवि चुनने में विफल",
+  "logoutConfirmation": "क्या आप वाकई लॉग आउट करना चाहते हैं?",
+  "earlier": "पहले",
+
+  "account": "खाता",
+  "deleteAccount": "खाता हटाएं",
+  "deleteAccountTitle": "खाता हटाएं",
+  "deleteAccountMessage": "क्या आप वाकई अपना खाता हटाना चाहते हैं? यह क्रिया अपरिवर्तनीय है और आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।",
+  "deleteAccountConfirmation": "पुष्टि के लिए 'हटाएं' टाइप करें",
+  "deletingAccount": "खाता हटाया जा रहा है...",
+  "accountDeleted": "खाता सफलतापूर्वक हटा दिया गया",
+  "deleteAccountFailed": "खाता हटाने में विफल",
+  "deleteAccountWarning": "चेतावनी: इस क्रिया को पूर्ववत नहीं किया जा सकता। यात्राओं और संदेशों सहित आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।"
+}

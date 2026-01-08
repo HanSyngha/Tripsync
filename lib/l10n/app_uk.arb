@@ -1,0 +1,754 @@
+{
+  "@@locale": "uk",
+
+  "appName": "TripSync",
+  "@appName": {"description": "The name of the application"},
+
+  "welcomeTitle": "Розпочніть свою подорож",
+  "@welcomeTitle": {"description": "Welcome screen title"},
+
+  "welcomeSubtitle": "Відкривайте нові враження та створюйте особливі спогади",
+  "@welcomeSubtitle": {"description": "Welcome screen subtitle"},
+
+  "skip": "Пропустити",
+  "@skip": {"description": "Skip button"},
+
+  "participant": "Учасник",
+  "@participant": {"description": "Participant role"},
+
+  "host": "Організатор",
+  "@host": {"description": "Host/Organizer role"},
+
+  "coHost": "Співорганізатор",
+  "@coHost": {"description": "Co-host role"},
+
+  "signInWithKakao": "Продовжити з Kakao",
+  "@signInWithKakao": {"description": "Kakao login button"},
+
+  "signInWithNaver": "Продовжити з Naver",
+  "@signInWithNaver": {"description": "Naver login button"},
+
+  "signInWithGoogle": "Продовжити з Google",
+  "@signInWithGoogle": {"description": "Google login button"},
+
+  "signInWithApple": "Продовжити з Apple",
+  "@signInWithApple": {"description": "Apple login button"},
+
+  "termsAgreement": "Входячи в систему, ви погоджуєтесь з нашими {terms} та {privacy}.",
+  "@termsAgreement": {
+    "description": "Terms agreement text",
+    "placeholders": {
+      "terms": {"type": "String"},
+      "privacy": {"type": "String"}
+    }
+  },
+
+  "termsOfService": "Умови використання",
+  "@termsOfService": {"description": "Terms of service link text"},
+
+  "privacyPolicy": "Політика конфіденційності",
+  "@privacyPolicy": {"description": "Privacy policy link text"},
+
+  "welcomeBack": "З поверненням",
+  "@welcomeBack": {"description": "Welcome back greeting"},
+
+  "readyForNextJourney": "Готові до наступної подорожі?",
+  "@readyForNextJourney": {"description": "Home screen headline"},
+
+  "allTrips": "Усі подорожі",
+  "@allTrips": {"description": "All trips filter"},
+
+  "hosting": "Організую",
+  "@hosting": {"description": "Hosting filter"},
+
+  "participating": "Беру участь",
+  "@participating": {"description": "Participating filter"},
+
+  "happeningNow": "Зараз відбувається",
+  "@happeningNow": {"description": "Current trips section"},
+
+  "upcomingAdventures": "Майбутні пригоди",
+  "@upcomingAdventures": {"description": "Upcoming trips section"},
+
+  "viewAll": "Переглянути все",
+  "@viewAll": {"description": "View all link"},
+
+  "dayOf": "День {current} з {total}",
+  "@dayOf": {
+    "description": "Day progress",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+
+  "inProgress": "Триває",
+  "@inProgress": {"description": "Trip in progress status"},
+
+  "manage": "Керувати",
+  "@manage": {"description": "Manage button"},
+
+  "guest": "Гість",
+  "@guest": {"description": "Guest role"},
+
+  "tbd": "Буде визначено",
+  "@tbd": {"description": "To be determined"},
+
+  "home": "Головна",
+  "@home": {"description": "Home navigation"},
+
+  "explore": "Огляд",
+  "@explore": {"description": "Explore navigation"},
+
+  "chat": "Чат",
+  "@chat": {"description": "Chat navigation"},
+
+  "profile": "Профіль",
+  "@profile": {"description": "Profile navigation"},
+
+  "createTrip": "Створити подорож",
+  "@createTrip": {"description": "Create trip button"},
+
+  "letsplanYourJourney": "Давайте сплануємо вашу подорож",
+  "@letsplanYourJourney": {"description": "Create trip header"},
+
+  "hostCanEditLater": "Як організатор, ви можете змінити ці деталі пізніше в будь-який час.",
+  "@hostCanEditLater": {"description": "Create trip note"},
+
+  "cancel": "Скасувати",
+  "@cancel": {"description": "Cancel button"},
+
+  "save": "Зберегти",
+  "@save": {"description": "Save button"},
+
+  "basicInfo": "Основна інформація",
+  "@basicInfo": {"description": "Basic info section"},
+
+  "required": "Обов'язково",
+  "@required": {"description": "Required field indicator"},
+
+  "tripName": "Назва подорожі",
+  "@tripName": {"description": "Trip name field"},
+
+  "tripNameHint": "напр. Літо в Кіото",
+  "@tripNameHint": {"description": "Trip name hint"},
+
+  "destination": "Місце призначення",
+  "@destination": {"description": "Destination field"},
+
+  "destinationHint": "Куди ви їдете?",
+  "@destinationHint": {"description": "Destination hint"},
+
+  "dates": "Дати",
+  "@dates": {"description": "Dates field"},
+
+  "startDate": "Дата початку",
+  "@startDate": {"description": "Start date"},
+
+  "endDate": "Дата закінчення",
+  "@endDate": {"description": "End date"},
+
+  "optionalDetails": "Додаткові деталі",
+  "@optionalDetails": {"description": "Optional section"},
+
+  "coverPhoto": "Обкладинка",
+  "@coverPhoto": {"description": "Cover photo field"},
+
+  "tapToUploadCover": "Натисніть, щоб завантажити обкладинку",
+  "@tapToUploadCover": {"description": "Upload cover hint"},
+
+  "tripGoalMemo": "Мета подорожі / Нотатка",
+  "@tripGoalMemo": {"description": "Trip goal field"},
+
+  "tripGoalHint": "Яка головна мета цієї подорожі?",
+  "@tripGoalHint": {"description": "Trip goal hint"},
+
+  "nextStep": "Наступний крок",
+  "@nextStep": {"description": "Next step button"},
+
+  "participantManagement": "Керування учасниками",
+  "@participantManagement": {"description": "Participant management title"},
+
+  "participating_count": "Беруть участь",
+  "@participating_count": {"description": "Participating count label"},
+
+  "pendingInvites": "Очікують запрошення",
+  "@pendingInvites": {"description": "Pending invites label"},
+
+  "inviteNewMember": "Запросити нового учасника",
+  "@inviteNewMember": {"description": "Invite member button"},
+
+  "searchByNameOrEmail": "Пошук за іменем або електронною поштою",
+  "@searchByNameOrEmail": {"description": "Search placeholder"},
+
+  "hosts": "Організатори",
+  "@hosts": {"description": "Hosts section"},
+
+  "admin": "АДМІН",
+  "@admin": {"description": "Admin badge"},
+
+  "travelers": "Мандрівники",
+  "@travelers": {"description": "Travelers section"},
+
+  "allPermissions": "Усі дозволи",
+  "@allPermissions": {"description": "All permissions label"},
+
+  "canEditSchedule": "Може редагувати розклад",
+  "@canEditSchedule": {"description": "Edit permission"},
+
+  "readOnly": "Лише перегляд",
+  "@readOnly": {"description": "Read only permission"},
+
+  "pendingAcceptance": "Очікує підтвердження",
+  "@pendingAcceptance": {"description": "Pending status"},
+
+  "resend": "Надіслати повторно",
+  "@resend": {"description": "Resend button"},
+
+  "inviteLinkActivated": "Посилання для запрошення активовано",
+  "@inviteLinkActivated": {"description": "Invite link status"},
+
+  "copy": "Копіювати",
+  "@copy": {"description": "Copy button"},
+
+  "allowScheduleEdit": "Дозволити редагування розкладу",
+  "@allowScheduleEdit": {"description": "Schedule edit toggle"},
+
+  "allowPhotoUpload": "Дозволити завантаження фото",
+  "@allowPhotoUpload": {"description": "Photo upload toggle"},
+
+  "removeFromTrip": "Видалити з подорожі",
+  "@removeFromTrip": {"description": "Remove member button"},
+
+  "joinedDaysAgo": "Приєднався {days} днів тому",
+  "@joinedDaysAgo": {
+    "description": "Join date",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "itinerary": "Маршрут",
+  "@itinerary": {"description": "Itinerary title"},
+
+  "organizerView": "Вигляд організатора",
+  "@organizerView": {"description": "Organizer view label"},
+
+  "draft": "Чернетка",
+  "@draft": {"description": "Draft status"},
+
+  "days": "{count} днів",
+  "@days": {
+    "description": "Days count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "day": "День {number}",
+  "@day": {
+    "description": "Day number",
+    "placeholders": {
+      "number": {"type": "int"}
+    }
+  },
+
+  "addActivity": "Додати активність",
+  "@addActivity": {"description": "Add activity button"},
+
+  "schedule": "Розклад",
+  "@schedule": {"description": "Schedule nav"},
+
+  "map": "Карта",
+  "@map": {"description": "Map nav"},
+
+  "people": "Люди",
+  "@people": {"description": "People nav"},
+
+  "settings": "Налаштування",
+  "@settings": {"description": "Settings nav"},
+
+  "flight": "Рейс",
+  "@flight": {"description": "Flight category"},
+
+  "accommodation": "Проживання",
+  "@accommodation": {"description": "Accommodation category"},
+
+  "rentalCar": "Оренда авто",
+  "@rentalCar": {"description": "Rental car category"},
+
+  "restaurant": "Ресторан",
+  "@restaurant": {"description": "Restaurant category"},
+
+  "attraction": "Пам'ятка",
+  "@attraction": {"description": "Attraction category"},
+
+  "activity": "Активність",
+  "@activity": {"description": "Activity category"},
+
+  "transportation": "Транспорт",
+  "@transportation": {"description": "Transportation category"},
+
+  "enterDetails": "Введіть деталі",
+  "@enterDetails": {"description": "Enter details title"},
+
+  "airline": "Авіакомпанія",
+  "@airline": {"description": "Airline field"},
+
+  "flightNumber": "Номер рейсу",
+  "@flightNumber": {"description": "Flight number field"},
+
+  "departure": "Виліт",
+  "@departure": {"description": "Departure label"},
+
+  "arrival": "Приліт",
+  "@arrival": {"description": "Arrival label"},
+
+  "notes": "Нотатки",
+  "@notes": {"description": "Notes field"},
+
+  "notesHint": "Напишіть тут важливі нотатки...",
+  "@notesHint": {"description": "Notes hint"},
+
+  "addAttachment": "Додати вкладення",
+  "@addAttachment": {"description": "Add attachment button"},
+
+  "eTicketOrVoucher": "Електронний квиток або ваучер (PDF, JPG)",
+  "@eTicketOrVoucher": {"description": "Attachment hint"},
+
+  "reminderSettings": "Налаштування нагадувань",
+  "@reminderSettings": {"description": "Reminder toggle"},
+
+  "reservationConfirmed": "Бронювання підтверджено",
+  "@reservationConfirmed": {"description": "Confirmed status"},
+
+  "chatTitle": "{tripName}",
+  "@chatTitle": {
+    "description": "Chat title",
+    "placeholders": {
+      "tripName": {"type": "String"}
+    }
+  },
+
+  "guideAndMembers": "{guides} гід - {members} учасників",
+  "@guideAndMembers": {
+    "description": "Chat subtitle",
+    "placeholders": {
+      "guides": {"type": "int"},
+      "members": {"type": "int"}
+    }
+  },
+
+  "guide": "ГІД",
+  "@guide": {"description": "Guide badge"},
+
+  "organizer": "ОРГАНІЗАТОР",
+  "@organizer": {"description": "Organizer badge"},
+
+  "messagePlaceholder": "Повідомлення...",
+  "@messagePlaceholder": {"description": "Message input placeholder"},
+
+  "openMap": "Відкрити карту",
+  "@openMap": {"description": "Open map link"},
+
+  "newAnnouncement": "Нове оголошення",
+  "@newAnnouncement": {"description": "Announcement title"},
+
+  "toWhom": "Кому?",
+  "@toWhom": {"description": "Recipients section"},
+
+  "allParticipants": "Усім учасникам",
+  "@allParticipants": {"description": "All participants option"},
+
+  "selectSpecific": "Вибрати конкретних",
+  "@selectSpecific": {"description": "Select specific option"},
+
+  "othersSelected": "+ ще {count} вибрано",
+  "@othersSelected": {
+    "description": "Others selected count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "messageDetails": "Деталі повідомлення",
+  "@messageDetails": {"description": "Message details section"},
+
+  "nextSchedule": "Наступний розклад",
+  "@nextSchedule": {"description": "Schedule type"},
+
+  "urgent": "Терміново",
+  "@urgent": {"description": "Urgent type"},
+
+  "generalInfo": "Загальна інформація",
+  "@generalInfo": {"description": "General info type"},
+
+  "poll": "Опитування",
+  "@poll": {"description": "Poll type"},
+
+  "quickTemplates": "Швидкі шаблони",
+  "@quickTemplates": {"description": "Templates section"},
+
+  "templateBusLeaving": "Автобус відправляється через 10 хв",
+  "@templateBusLeaving": {"description": "Bus template"},
+
+  "templateMeetingPoint": "Місце зустрічі змінено",
+  "@templateMeetingPoint": {"description": "Meeting point template"},
+
+  "templateWeather": "Попередження про погоду",
+  "@templateWeather": {"description": "Weather template"},
+
+  "templateDinner": "Бронювання вечері",
+  "@templateDinner": {"description": "Dinner template"},
+
+  "subject": "Тема",
+  "@subject": {"description": "Subject field"},
+
+  "subjectHint": "напр. Зустріч у холі",
+  "@subjectHint": {"description": "Subject hint"},
+
+  "message": "Повідомлення",
+  "@message": {"description": "Message field"},
+
+  "messageHint": "Напишіть тут своє оголошення...",
+  "@messageHint": {"description": "Message hint"},
+
+  "addPhoto": "Додати фото",
+  "@addPhoto": {"description": "Add photo button"},
+
+  "addLocation": "Додати місцезнаходження",
+  "@addLocation": {"description": "Add location button"},
+
+  "pinToTopOfChat": "Закріпити вгорі чату",
+  "@pinToTopOfChat": {"description": "Pin toggle"},
+
+  "keepVisibleForAll": "Залишити видимим для всіх учасників",
+  "@keepVisibleForAll": {"description": "Pin description"},
+
+  "sendAsUrgentAlert": "Надіслати як термінове сповіщення",
+  "@sendAsUrgentAlert": {"description": "Urgent toggle"},
+
+  "notifiesEvenIfMuted": "Сповіщає навіть якщо вимкнено звук",
+  "@notifiesEvenIfMuted": {"description": "Urgent description"},
+
+  "sendNotification": "Надіслати сповіщення",
+  "@sendNotification": {"description": "Send button"},
+
+  "notifications": "Сповіщення",
+  "@notifications": {"description": "Notifications title"},
+
+  "markAllAsRead": "Позначити все як прочитане",
+  "@markAllAsRead": {"description": "Mark all read button"},
+
+  "all": "Усі",
+  "@all": {"description": "All filter"},
+
+  "announcements": "Оголошення",
+  "@announcements": {"description": "Announcements filter"},
+
+  "today": "Сьогодні",
+  "@today": {"description": "Today label"},
+
+  "yesterday": "Вчора",
+  "@yesterday": {"description": "Yesterday label"},
+
+  "announcement": "Оголошення",
+  "@announcement": {"description": "Announcement badge"},
+
+  "pastAnnouncement": "Минуле оголошення",
+  "@pastAnnouncement": {"description": "Past announcement badge"},
+
+  "minutesAgo": "{minutes} хв тому",
+  "@minutesAgo": {
+    "description": "Minutes ago",
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+
+  "hoursAgo": "{hours} год тому",
+  "@hoursAgo": {
+    "description": "Hours ago",
+    "placeholders": {
+      "hours": {"type": "int"}
+    }
+  },
+
+  "tripDetails": "Деталі подорожі",
+  "@tripDetails": {"description": "Trip details title"},
+
+  "nights": "{count} ночей",
+  "@nights": {
+    "description": "Nights count",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "hostedBy": "Організатор",
+  "@hostedBy": {"description": "Hosted by label"},
+
+  "mapView": "Вигляд карти",
+  "@mapView": {"description": "Map view button"},
+
+  "groupChat": "Груповий чат",
+  "@groupChat": {"description": "Group chat button"},
+
+  "savedDocs": "Збережені документи",
+  "@savedDocs": {"description": "Saved docs button"},
+
+  "dontForget": "Не забудьте!",
+  "@dontForget": {"description": "Reminder title"},
+
+  "overview": "Огляд",
+  "@overview": {"description": "Overview section"},
+
+  "expandAll": "Розгорнути все",
+  "@expandAll": {"description": "Expand all button"},
+
+  "checkIn": "Заселення",
+  "@checkIn": {"description": "Check-in label"},
+
+  "checkOut": "Виселення",
+  "@checkOut": {"description": "Check-out label"},
+
+  "directions": "Маршрут",
+  "@directions": {"description": "Directions button"},
+
+  "reservation": "Бронювання",
+  "@reservation": {"description": "Reservation button"},
+
+  "currentStatus": "Поточний статус",
+  "@currentStatus": {"description": "Status label"},
+
+  "tripStartsIn": "Подорож починається через {days} днів",
+  "@tripStartsIn": {
+    "description": "Trip starts countdown",
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+
+  "accountAndPermissions": "Акаунт і дозволи",
+  "@accountAndPermissions": {"description": "Settings section"},
+
+  "profileVisibility": "Видимість профілю",
+  "@profileVisibility": {"description": "Visibility setting"},
+
+  "displaySettings": "Налаштування відображення",
+  "@displaySettings": {"description": "Display section"},
+
+  "darkMode": "Темний режим",
+  "@darkMode": {"description": "Dark mode toggle"},
+
+  "fontSize": "Розмір шрифту",
+  "@fontSize": {"description": "Font size setting"},
+
+  "standard": "Стандартний",
+  "@standard": {"description": "Standard size"},
+
+  "notificationSettings": "Сповіщення",
+  "@notificationSettings": {"description": "Notification section"},
+
+  "tripScheduleNotifications": "Сповіщення про розклад подорожі",
+  "@tripScheduleNotifications": {"description": "Schedule notification toggle"},
+
+  "importantChangesPush": "Push-сповіщення про важливі зміни",
+  "@importantChangesPush": {"description": "Push description"},
+
+  "newMessageNotifications": "Сповіщення про нові повідомлення",
+  "@newMessageNotifications": {"description": "Message notification toggle"},
+
+  "helpAndSupport": "Допомога та підтримка",
+  "@helpAndSupport": {"description": "Help link"},
+
+  "appVersion": "Версія додатку",
+  "@appVersion": {"description": "Version label"},
+
+  "logout": "Вийти",
+  "@logout": {"description": "Logout button"},
+
+  "permissionRequired": "Потрібен дозвіл",
+  "@permissionRequired": {"description": "Permission dialog title"},
+
+  "notificationPermissionMessage": "TripSync потребує дозволу на сповіщення, щоб надсилати вам важливі оновлення подорожей та оголошення від організаторів.",
+  "@notificationPermissionMessage": {"description": "Notification permission message"},
+
+  "allowNotifications": "Дозволити сповіщення",
+  "@allowNotifications": {"description": "Allow notifications button"},
+
+  "later": "Пізніше",
+  "@later": {"description": "Later button"},
+
+  "error": "Помилка",
+  "@error": {"description": "Error title"},
+
+  "tryAgain": "Спробувати знову",
+  "@tryAgain": {"description": "Retry button"},
+
+  "noTripsYet": "Подорожей ще немає",
+  "@noTripsYet": {"description": "Empty trips message"},
+
+  "createYourFirstTrip": "Створіть свою першу подорож або приєднайтесь до існуючої!",
+  "@createYourFirstTrip": {"description": "Empty trips description"},
+
+  "noNotifications": "Немає сповіщень",
+  "@noNotifications": {"description": "Empty notifications message"},
+
+  "youreAllCaughtUp": "Ви все переглянули!",
+  "@youreAllCaughtUp": {"description": "Empty notifications description"},
+
+  "loading": "Завантаження...",
+  "@loading": {"description": "Loading indicator"},
+
+  "connectionError": "Помилка з'єднання",
+  "@connectionError": {"description": "Connection error message"},
+
+  "checkYourInternet": "Будь ласка, перевірте підключення до інтернету",
+  "@checkYourInternet": {"description": "Connection error description"},
+
+  "confirmDelete": "Підтвердити видалення",
+  "@confirmDelete": {"description": "Delete confirmation title"},
+
+  "deleteConfirmMessage": "Ви впевнені, що хочете це видалити?",
+  "@deleteConfirmMessage": {"description": "Delete confirmation message"},
+
+  "delete": "Видалити",
+  "@delete": {"description": "Delete button"},
+
+  "confirm": "Підтвердити",
+  "@confirm": {"description": "Confirm button"},
+
+  "done": "Готово",
+  "@done": {"description": "Done button"},
+
+  "edit": "Редагувати",
+  "@edit": {"description": "Edit button"},
+
+  "close": "Закрити",
+  "@close": {"description": "Close button"},
+
+  "back": "Назад",
+  "@back": {"description": "Back button"},
+
+  "next": "Далі",
+  "@next": {"description": "Next button"},
+
+  "search": "Пошук",
+  "@search": {"description": "Search placeholder"},
+
+  "noResults": "Результатів не знайдено",
+  "@noResults": {"description": "No search results"},
+
+  "selectDate": "Вибрати дату",
+  "@selectDate": {"description": "Date picker title"},
+
+  "selectTime": "Вибрати час",
+  "@selectTime": {"description": "Time picker title"},
+
+  "from": "Від",
+  "@from": {"description": "From label"},
+
+  "to": "До",
+  "@to": {"description": "To label"},
+
+  "duration": "Тривалість",
+  "@duration": {"description": "Duration label"},
+
+  "location": "Місцезнаходження",
+  "@location": {"description": "Location label"},
+
+  "address": "Адреса",
+  "@address": {"description": "Address label"},
+
+  "phone": "Телефон",
+  "@phone": {"description": "Phone label"},
+
+  "email": "Електронна пошта",
+  "@email": {"description": "Email label"},
+
+  "website": "Веб-сайт",
+  "@website": {"description": "Website label"},
+
+  "price": "Ціна",
+  "@price": {"description": "Price label"},
+
+  "viewMenu": "Переглянути меню",
+  "@viewMenu": {"description": "View menu button"},
+
+  "recommended": "Рекомендовано",
+  "@recommended": {"description": "Recommended label"},
+
+  "hiking": "Піший туризм",
+  "@hiking": {"description": "Hiking activity"},
+
+  "warning": "Попередження",
+  "@warning": {"description": "Warning label"},
+
+  "viewDetails": "Переглянути деталі",
+  "@viewDetails": {"description": "View details button"},
+
+  "readyForYour": "Готові до",
+  "@readyForYour": {"description": "First part of welcome message"},
+
+  "nextJourney": "наступної подорожі?",
+  "@nextJourney": {"description": "Second part of welcome message"},
+
+  "createFirstTrip": "Створіть свою першу подорож або приєднайтесь до існуючої!",
+  "@createFirstTrip": {"description": "Empty state call to action"},
+
+  "language": "Мова",
+  "@language": {"description": "Language setting"},
+
+  "changePhoto": "Змінити фото",
+  "@changePhoto": {"description": "Change photo option"},
+
+  "takePhoto": "Зробити фото",
+  "@takePhoto": {"description": "Take photo option"},
+
+  "chooseFromGallery": "Вибрати з галереї",
+  "@chooseFromGallery": {"description": "Choose from gallery option"},
+
+  "removePhoto": "Видалити фото",
+  "@removePhoto": {"description": "Remove photo option"},
+
+  "displayName": "Ім'я користувача",
+  "@displayName": {"description": "Display name field"},
+
+  "enterDisplayName": "Введіть ваше ім'я",
+  "@enterDisplayName": {"description": "Display name placeholder"},
+
+  "enterPhoneNumber": "Введіть ваш номер телефону",
+  "@enterPhoneNumber": {"description": "Phone number placeholder"},
+
+  "displayNameRequired": "Ім'я користувача обов'язкове",
+  "@displayNameRequired": {"description": "Display name validation"},
+
+  "displayNameMinLength": "Ім'я користувача повинно містити щонайменше 2 символи",
+  "@displayNameMinLength": {"description": "Display name min length validation"},
+
+  "profileUpdated": "Профіль успішно оновлено",
+  "@profileUpdated": {"description": "Profile update success message"},
+
+  "failedToUpdateProfile": "Не вдалося оновити профіль",
+  "@failedToUpdateProfile": {"description": "Profile update error"},
+
+  "failedToPickImage": "Не вдалося вибрати зображення",
+  "@failedToPickImage": {"description": "Image picker error"},
+
+  "logoutConfirmation": "Ви впевнені, що хочете вийти?",
+  "@logoutConfirmation": {"description": "Logout confirmation message"},
+
+  "earlier": "Раніше",
+  "@earlier": {"description": "Earlier time label"},
+
+  "account": "Акаунт",
+  "deleteAccount": "Видалити акаунт",
+  "deleteAccountTitle": "Видалити акаунт",
+  "deleteAccountMessage": "Ви впевнені, що хочете видалити свій акаунт? Ця дія незворотна, і всі ваші дані будуть назавжди видалені.",
+  "deleteAccountConfirmation": "Введіть 'ВИДАЛИТИ' для підтвердження",
+  "deletingAccount": "Видалення акаунту...",
+  "accountDeleted": "Акаунт успішно видалено",
+  "deleteAccountFailed": "Не вдалося видалити акаунт",
+  "deleteAccountWarning": "Увага: Цю дію не можна скасувати. Усі ваші дані, включаючи подорожі та повідомлення, будуть назавжди видалені."
+}
