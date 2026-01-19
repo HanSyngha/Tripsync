@@ -712,123 +712,121 @@ class AppLocalizationsJa extends AppLocalizations {
   String get earlier => '以前';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => '旅行を破棄しますか？';
 
   @override
-  String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+  String get discardTripMessage => 'この旅行を破棄してよろしいですか？すべての変更が失われます。';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => '変更を破棄しますか？';
 
   @override
-  String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+  String get discardChangesMessage => '変更を破棄してよろしいですか？';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => '編集を続ける';
 
   @override
-  String get discard => 'Discard';
+  String get discard => '破棄';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => '旅行が正常に作成されました！';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => '旅行が正常に更新されました！';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => '旅行が見つかりません';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => '旅程が保存されました';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => '近日公開';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'サインアウト';
 
   @override
-  String get retry => 'Retry';
+  String get retry => '再試行';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => '参加者を表示';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => '固定メッセージ';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'メッセージを検索';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'お知らせを送信';
 
   @override
-  String get photo => 'Photo';
+  String get photo => '写真';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'カメラ';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'ギャラリーから写真を共有';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => '新しい写真を撮る';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => '現在地を共有';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => '機能は近日公開！';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'アクティビティが正常に追加されました';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'ファイル選択は近日公開';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'メッセージを入力してください';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'お知らせが正常に送信されました！';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => '参加者の読み込みに失敗しました';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'ログインが必要です';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => '招待の送信に失敗しました。もう一度お試しください。';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => '新しい招待リンクが生成されました';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => '招待リンクがコピーされました';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'ユーザーが見つかりません';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => '目的地なし';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'ようこそ';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'サインインして旅を始めましょう';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Kakaoで続行';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Naverで続行';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Googleで続行';
 
   @override
   String get account => 'アカウント';
@@ -857,4 +855,338 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get deleteAccountWarning => '警告：アカウントと関連するすべてのデータが完全に削除されます。';
+
+  @override
+  String get reportMessage => 'メッセージを報告';
+
+  @override
+  String get reportMessageDescription => '不適切なコンテンツを旅行主催者に報告';
+
+  @override
+  String get blockUser => 'ユーザーをブロック';
+
+  @override
+  String get blockUserDescription => 'このユーザーからのメッセージは表示されなくなります';
+
+  @override
+  String get selectReportReason => '報告理由を選択してください：';
+
+  @override
+  String get additionalDetails => '追加の詳細';
+
+  @override
+  String get optionalDescription => '問題を説明してください（任意）';
+
+  @override
+  String get report => '報告';
+
+  @override
+  String get block => 'ブロック';
+
+  @override
+  String get reportTypeSpam => 'スパム';
+
+  @override
+  String get reportTypeHarassment => '嫌がらせ';
+
+  @override
+  String get reportTypeInappropriate => '不適切なコンテンツ';
+
+  @override
+  String get reportTypeHateSpeech => 'ヘイトスピーチ';
+
+  @override
+  String get reportTypeViolence => '暴力';
+
+  @override
+  String get reportTypeOther => 'その他';
+
+  @override
+  String get reportSubmitted => '報告が送信されました。旅行主催者に通知されます。';
+
+  @override
+  String get reportFailed => '報告の送信に失敗しました。もう一度お試しください。';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return '$userNameをブロックしますか？このユーザーのメッセージは表示されなくなります。';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userNameをブロックしました';
+  }
+
+  @override
+  String get blockFailed => 'ユーザーのブロックに失敗しました。もう一度お試しください。';
+
+  @override
+  String get blockedUsers => 'ブロック中のユーザー';
+
+  @override
+  String get noBlockedUsers => 'ブロック中のユーザーはいません';
+
+  @override
+  String get unblock => 'ブロック解除';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userNameのブロックを解除しました';
+  }
+
+  @override
+  String get reportUser => 'ユーザーを報告';
+
+  @override
+  String get reportUserDescription => 'このユーザーを旅行主催者に報告';
+
+  @override
+  String get locationPermissionDenied => '位置情報の許可が拒否されました';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      '位置情報の許可が永久に拒否されました。設定で有効にしてください。';
+
+  @override
+  String get locationServicesDisabled => '位置情報サービスが無効です';
+
+  @override
+  String get gettingLocation => '位置情報を取得中...';
+
+  @override
+  String get currentLocation => '現在地';
+
+  @override
+  String get shareLocation => '位置情報を共有';
+
+  @override
+  String get shareLocationConfirmation => 'この位置情報をチャットで共有しますか？';
+
+  @override
+  String get share => '共有';
+
+  @override
+  String get uploadFailed => 'アップロードに失敗しました';
+
+  @override
+  String get openInGoogleMaps => 'Googleマップで開く';
+
+  @override
+  String get getDirections => '道順を取得';
+
+  @override
+  String get drivingDirections => '車での道順';
+
+  @override
+  String get walkingDirections => '徒歩での道順';
+
+  @override
+  String get transitDirections => '公共交通機関での道順';
+
+  @override
+  String get noPinnedMessages => '固定メッセージはありません';
+
+  @override
+  String get noItineraryYet => 'まだ旅程がありません';
+
+  @override
+  String get viewFullItinerary => '完全な旅程を表示';
+
+  @override
+  String get inviteParticipant => '参加者を招待';
+
+  @override
+  String get emailAddress => 'メールアドレス';
+
+  @override
+  String get enterEmailAddress => 'メールアドレスを入力';
+
+  @override
+  String get invalidEmail => '無効なメールアドレス';
+
+  @override
+  String get role => '役割';
+
+  @override
+  String get permissions => '権限';
+
+  @override
+  String get sendInvite => '招待を送信';
+
+  @override
+  String get inviteSent => '招待が送信されました';
+
+  @override
+  String get editItinerary => '旅程を編集';
+
+  @override
+  String get deleteItinerary => '旅程を削除';
+
+  @override
+  String get deleteItineraryConfirm => 'この旅程を削除してもよろしいですか？';
+
+  @override
+  String get itineraryDeleted => '旅程が削除されました';
+
+  @override
+  String get searchPlaces => '場所を検索';
+
+  @override
+  String get selectLocation => '場所を選択';
+
+  @override
+  String get confirmLocation => '場所を確認';
+
+  @override
+  String get hotelName => 'ホテル名';
+
+  @override
+  String get roomType => '部屋タイプ';
+
+  @override
+  String get checkInTime => 'チェックイン時間';
+
+  @override
+  String get checkOutTime => 'チェックアウト時間';
+
+  @override
+  String get carCompany => 'レンタカー会社';
+
+  @override
+  String get carModel => '車種';
+
+  @override
+  String get pickupLocation => 'ピックアップ場所';
+
+  @override
+  String get dropoffLocation => '返却場所';
+
+  @override
+  String get pickupTime => 'ピックアップ時間';
+
+  @override
+  String get dropoffTime => '返却時間';
+
+  @override
+  String get restaurantName => 'レストラン名';
+
+  @override
+  String get cuisine => '料理の種類';
+
+  @override
+  String get priceRange => '価格帯';
+
+  @override
+  String get reservationTime => '予約時間';
+
+  @override
+  String get departureAirport => '出発空港';
+
+  @override
+  String get arrivalAirport => '到着空港';
+
+  @override
+  String get departureTime => '出発時間';
+
+  @override
+  String get arrivalTime => '到着時間';
+
+  @override
+  String get terminal => 'ターミナル';
+
+  @override
+  String get gate => 'ゲート';
+
+  @override
+  String get confirmationNumber => '確認番号';
+
+  @override
+  String get other => 'その他';
+
+  @override
+  String get title => 'タイトル';
+
+  @override
+  String get description => '説明';
+
+  @override
+  String get itemNotFound => 'アイテムが見つかりません';
+
+  @override
+  String get selectDay => '日を選択';
+
+  @override
+  String get selectAirline => '航空会社を選択';
+
+  @override
+  String get enterNotesHint => '追加のメモを入力してください';
+
+  @override
+  String get enterHotelName => 'ホテル名を入力';
+
+  @override
+  String get enterRoomType => '例：デラックスツイン';
+
+  @override
+  String get enterAddress => '住所を入力';
+
+  @override
+  String get enterConfirmationNumber => '確認番号を入力';
+
+  @override
+  String get selectCarCompany => 'レンタカー会社を選択';
+
+  @override
+  String get enterCarModel => '例：トヨタ カローラ';
+
+  @override
+  String get enterPickupLocation => 'ピックアップ場所を入力';
+
+  @override
+  String get enterDropoffLocation => '返却場所を入力';
+
+  @override
+  String get pickupInfo => 'ピックアップ情報';
+
+  @override
+  String get dropoffInfo => '返却情報';
+
+  @override
+  String get enterRestaurantName => 'レストラン名を入力';
+
+  @override
+  String get cuisineType => '料理の種類';
+
+  @override
+  String get selectCuisineType => '料理の種類を選択';
+
+  @override
+  String get reservationInfo => '予約情報';
+
+  @override
+  String get enterTitle => 'タイトルを入力';
+
+  @override
+  String get enterDescription => '説明を入力';
+
+  @override
+  String get enterLocation => '場所を入力';
+
+  @override
+  String get startTime => '開始時間';
+
+  @override
+  String get endTime => '終了時間';
+
+  @override
+  String get addAttachments => '添付ファイルを追加';
+
+  @override
+  String get attachmentHint => 'Eチケット、予約確認書など';
+
+  @override
+  String get itemUpdatedSuccess => 'アイテムが更新されました';
+
+  @override
+  String get itemDeletedSuccess => 'アイテムが削除されました';
 }

@@ -433,11 +433,6 @@ class _NotificationsScreenState extends ConsumerState<NotificationsScreen>
         icon = Icons.alarm_outlined;
         iconColor = AppColors.warning;
         bgColor = AppColors.warning.withValues(alpha: 0.1);
-        break;
-      default:
-        icon = Icons.notifications_outlined;
-        iconColor = isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-        bgColor = isDarkMode ? AppColors.surfaceLighter : Colors.grey[200]!;
     }
 
     return Container(

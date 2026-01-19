@@ -268,5 +268,222 @@
   "@deleteAccountFailed": {"description": "Account deletion failed message"},
 
   "deleteAccountWarning": "Warnung: Dies wird Ihr Konto und alle zugehörigen Daten dauerhaft löschen.",
-  "@deleteAccountWarning": {"description": "Delete account warning text"}
+  "@deleteAccountWarning": {"description": "Delete account warning text"},
+
+  "reportMessage": "Nachricht melden",
+  "@reportMessage": {"description": "Report message option"},
+
+  "reportMessageDescription": "Unangemessenen Inhalt an den Reiseveranstalter melden",
+  "@reportMessageDescription": {"description": "Report message description"},
+
+  "blockUser": "Benutzer blockieren",
+  "@blockUser": {"description": "Block user option"},
+
+  "blockUserDescription": "Sie werden keine Nachrichten von diesem Benutzer mehr sehen",
+  "@blockUserDescription": {"description": "Block user description"},
+
+  "selectReportReason": "Wählen Sie einen Grund für die Meldung:",
+  "@selectReportReason": {"description": "Report reason selection prompt"},
+
+  "additionalDetails": "Zusätzliche Details",
+  "@additionalDetails": {"description": "Additional details field label"},
+
+  "optionalDescription": "Beschreiben Sie das Problem (optional)",
+  "@optionalDescription": {"description": "Optional description hint"},
+
+  "report": "Melden",
+  "@report": {"description": "Report button"},
+
+  "block": "Blockieren",
+  "@block": {"description": "Block button"},
+
+  "reportTypeSpam": "Spam",
+  "@reportTypeSpam": {"description": "Spam report type"},
+
+  "reportTypeHarassment": "Belästigung",
+  "@reportTypeHarassment": {"description": "Harassment report type"},
+
+  "reportTypeInappropriate": "Unangemessener Inhalt",
+  "@reportTypeInappropriate": {"description": "Inappropriate content report type"},
+
+  "reportTypeHateSpeech": "Hassrede",
+  "@reportTypeHateSpeech": {"description": "Hate speech report type"},
+
+  "reportTypeViolence": "Gewalt",
+  "@reportTypeViolence": {"description": "Violence report type"},
+
+  "reportTypeOther": "Sonstiges",
+  "@reportTypeOther": {"description": "Other report type"},
+
+  "reportSubmitted": "Meldung gesendet. Der Reiseveranstalter wird benachrichtigt.",
+  "@reportSubmitted": {"description": "Report submitted success message"},
+
+  "reportFailed": "Meldung konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+  "@reportFailed": {"description": "Report failed message"},
+
+  "blockUserConfirmation": "Sind Sie sicher, dass Sie {userName} blockieren möchten? Sie werden deren Nachrichten nicht mehr sehen.",
+  "@blockUserConfirmation": {
+    "description": "Block user confirmation message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "userBlocked": "{userName} wurde blockiert",
+  "@userBlocked": {
+    "description": "User blocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "blockFailed": "Benutzer konnte nicht blockiert werden. Bitte versuchen Sie es erneut.",
+  "@blockFailed": {"description": "Block failed message"},
+
+  "blockedUsers": "Blockierte Benutzer",
+  "@blockedUsers": {"description": "Blocked users settings title"},
+
+  "noBlockedUsers": "Keine blockierten Benutzer",
+  "@noBlockedUsers": {"description": "No blocked users message"},
+
+  "unblock": "Entsperren",
+  "@unblock": {"description": "Unblock button"},
+
+  "userUnblocked": "{userName} wurde entsperrt",
+  "@userUnblocked": {
+    "description": "User unblocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "reportUser": "Benutzer melden",
+  "@reportUser": {"description": "Report user option"},
+
+  "reportUserDescription": "Diesen Benutzer an den Reiseveranstalter melden",
+  "@reportUserDescription": {"description": "Report user description"},
+
+  "discardTrip": "Reise verwerfen?",
+  "discardTripMessage": "Sind Sie sicher, dass Sie diese Reise verwerfen möchten? Alle Änderungen gehen verloren.",
+  "discardChanges": "Änderungen verwerfen?",
+  "discardChangesMessage": "Sind Sie sicher, dass Sie Ihre Änderungen verwerfen möchten?",
+  "keepEditing": "Weiter bearbeiten",
+  "discard": "Verwerfen",
+  "tripCreatedSuccess": "Reise erfolgreich erstellt!",
+  "tripUpdatedSuccess": "Reise erfolgreich aktualisiert!",
+  "tripNotFound": "Reise nicht gefunden",
+  "itinerarySaved": "Reiseplan gespeichert",
+  "comingSoon": "Demnächst verfügbar",
+  "signOut": "Abmelden",
+  "retry": "Erneut versuchen",
+  "viewParticipants": "Teilnehmer anzeigen",
+  "pinnedMessages": "Angeheftete Nachrichten",
+  "searchMessages": "Nachrichten suchen",
+  "sendAnnouncement": "Ankündigung senden",
+  "photo": "Foto",
+  "camera": "Kamera",
+  "sharePhotosFromGallery": "Fotos aus der Galerie teilen",
+  "takeNewPhoto": "Neues Foto aufnehmen",
+  "shareCurrentLocation": "Aktuellen Standort teilen",
+  "featureComingSoon": "Funktion demnächst verfügbar!",
+  "activityAddedSuccess": "Aktivität erfolgreich hinzugefügt",
+  "filePickerComingSoon": "Dateiauswahl demnächst verfügbar",
+  "pleaseEnterMessage": "Bitte geben Sie eine Nachricht ein",
+  "announcementSentSuccess": "Ankündigung erfolgreich gesendet!",
+  "failedToLoadParticipants": "Teilnehmer konnten nicht geladen werden",
+  "loginRequired": "Anmeldung erforderlich",
+  "inviteSendFailed": "Einladung konnte nicht gesendet werden. Bitte erneut versuchen.",
+  "newInviteLinkGenerated": "Neuer Einladungslink generiert",
+  "inviteLinkCopied": "Einladungslink kopiert",
+  "userNotFound": "Benutzer nicht gefunden",
+  "noDestination": "Kein Ziel",
+  "loginTitle": "Willkommen",
+  "loginSubtitle": "Melden Sie sich an, um Ihre Reise zu beginnen",
+  "continueWithKakao": "Mit Kakao fortfahren",
+  "continueWithNaver": "Mit Naver fortfahren",
+  "continueWithGoogle": "Mit Google fortfahren",
+
+  "locationPermissionDenied": "Standortberechtigung verweigert",
+  "locationPermissionDeniedForever": "Standortberechtigung dauerhaft verweigert. Bitte in den Einstellungen aktivieren.",
+  "locationServicesDisabled": "Standortdienste deaktiviert",
+  "gettingLocation": "Standort wird ermittelt...",
+  "currentLocation": "Aktueller Standort",
+  "shareLocation": "Standort teilen",
+  "shareLocationConfirmation": "Mochten Sie diesen Standort im Chat teilen?",
+  "share": "Teilen",
+  "uploadFailed": "Upload fehlgeschlagen",
+  "openInGoogleMaps": "In Google Maps offnen",
+  "getDirections": "Wegbeschreibung abrufen",
+  "drivingDirections": "Fahrtroute",
+  "walkingDirections": "Fussweg",
+  "transitDirections": "OPNV-Route",
+  "noPinnedMessages": "Keine angehefteten Nachrichten",
+  "noItineraryYet": "Noch kein Reiseplan",
+  "viewFullItinerary": "Vollstandigen Reiseplan anzeigen",
+  "inviteParticipant": "Teilnehmer einladen",
+  "emailAddress": "E-Mail-Adresse",
+  "enterEmailAddress": "E-Mail-Adresse eingeben",
+  "invalidEmail": "Ungultige E-Mail-Adresse",
+  "role": "Rolle",
+  "permissions": "Berechtigungen",
+  "sendInvite": "Einladung senden",
+  "inviteSent": "Einladung gesendet",
+  "editItinerary": "Reiseplan bearbeiten",
+  "deleteItinerary": "Reiseplan loschen",
+  "deleteItineraryConfirm": "Sind Sie sicher, dass Sie diesen Reiseplan loschen mochten?",
+  "itineraryDeleted": "Reiseplan geloscht",
+  "searchPlaces": "Orte suchen",
+  "selectLocation": "Standort auswahlen",
+  "confirmLocation": "Standort bestatigen",
+  "hotelName": "Hotelname",
+  "roomType": "Zimmertyp",
+  "checkInTime": "Check-in-Zeit",
+  "checkOutTime": "Check-out-Zeit",
+  "carCompany": "Autovermietung",
+  "carModel": "Automodell",
+  "pickupLocation": "Abholort",
+  "dropoffLocation": "Ruckgabeort",
+  "pickupTime": "Abholzeit",
+  "dropoffTime": "Ruckgabezeit",
+  "restaurantName": "Restaurantname",
+  "cuisine": "Kuche",
+  "priceRange": "Preisklasse",
+  "reservationTime": "Reservierungszeit",
+  "departureAirport": "Abflughafen",
+  "arrivalAirport": "Ankunftsflughafen",
+  "departureTime": "Abflugzeit",
+  "arrivalTime": "Ankunftszeit",
+  "terminal": "Terminal",
+  "gate": "Gate",
+  "confirmationNumber": "Bestatigungsnummer",
+  "other": "Sonstiges",
+  "title": "Titel",
+  "description": "Beschreibung",
+  "itemNotFound": "Element nicht gefunden",
+  "selectDay": "Tag auswahlen",
+  "selectAirline": "Fluggesellschaft auswahlen",
+  "enterNotesHint": "Zusatzliche Notizen eingeben",
+  "enterHotelName": "Hotelnamen eingeben",
+  "enterRoomType": "z.B. Deluxe Doppelzimmer",
+  "enterAddress": "Adresse eingeben",
+  "enterConfirmationNumber": "Bestatigungsnummer eingeben",
+  "selectCarCompany": "Autovermietung auswahlen",
+  "enterCarModel": "z.B. VW Golf",
+  "enterPickupLocation": "Abholort eingeben",
+  "enterDropoffLocation": "Ruckgabeort eingeben",
+  "pickupInfo": "Abholinformationen",
+  "dropoffInfo": "Ruckgabeinformationen",
+  "enterRestaurantName": "Restaurantnamen eingeben",
+  "cuisineType": "Kuchenart",
+  "selectCuisineType": "Kuchenart auswahlen",
+  "reservationInfo": "Reservierungsinformationen",
+  "enterTitle": "Titel eingeben",
+  "enterDescription": "Beschreibung eingeben",
+  "enterLocation": "Ort eingeben",
+  "startTime": "Startzeit",
+  "endTime": "Endzeit",
+  "addAttachments": "Anhange hinzufugen",
+  "attachmentHint": "E-Ticket, Reservierungsbestatigung, usw.",
+  "itemUpdatedSuccess": "Element erfolgreich aktualisiert",
+  "itemDeletedSuccess": "Element erfolgreich geloscht"
 }

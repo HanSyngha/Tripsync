@@ -713,123 +713,122 @@ class AppLocalizationsAr extends AppLocalizations {
   String get earlier => 'سابقاً';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'تجاهل الرحلة؟';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'هل أنت متأكد أنك تريد تجاهل هذه الرحلة؟ سيتم فقدان جميع التغييرات.';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'تجاهل التغييرات؟';
 
   @override
-  String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+  String get discardChangesMessage => 'هل أنت متأكد أنك تريد تجاهل تغييراتك؟';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'متابعة التعديل';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'تجاهل';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'تم إنشاء الرحلة بنجاح!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'تم تحديث الرحلة بنجاح!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'الرحلة غير موجودة';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'تم حفظ خط الرحلة';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'قريباً';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'تسجيل الخروج';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'إعادة المحاولة';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'عرض المشاركين';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'الرسائل المثبتة';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'البحث في الرسائل';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'إرسال إعلان';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'صورة';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'الكاميرا';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'مشاركة الصور من المعرض';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'التقاط صورة جديدة';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'مشاركة موقعك الحالي';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'الميزة قريباً!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'تمت إضافة النشاط بنجاح';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'منتقي الملفات قريباً';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'يرجى إدخال رسالة';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'تم إرسال الإعلان بنجاح!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'فشل تحميل المشاركين';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'تسجيل الدخول مطلوب';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => 'فشل إرسال الدعوة. يرجى المحاولة مرة أخرى.';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'تم إنشاء رابط دعوة جديد';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'تم نسخ رابط الدعوة';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'المستخدم غير موجود';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'لا يوجد وجهة';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'مرحباً';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'سجل دخولك لبدء رحلتك';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'المتابعة مع كاكاو';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'المتابعة مع نيفر';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'المتابعة مع جوجل';
 
   @override
   String get account => 'الحساب';
@@ -859,4 +858,340 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'تحذير: لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع بياناتك بما في ذلك الرحلات والرسائل نهائياً.';
+
+  @override
+  String get reportMessage => 'الإبلاغ عن الرسالة';
+
+  @override
+  String get reportMessageDescription =>
+      'الإبلاغ عن محتوى غير لائق لمنظم الرحلة';
+
+  @override
+  String get blockUser => 'حظر المستخدم';
+
+  @override
+  String get blockUserDescription => 'لن تشاهد رسائل من هذا المستخدم بعد الآن';
+
+  @override
+  String get selectReportReason => 'اختر سبب الإبلاغ:';
+
+  @override
+  String get additionalDetails => 'تفاصيل إضافية';
+
+  @override
+  String get optionalDescription => 'صف المشكلة (اختياري)';
+
+  @override
+  String get report => 'إبلاغ';
+
+  @override
+  String get block => 'حظر';
+
+  @override
+  String get reportTypeSpam => 'رسائل مزعجة';
+
+  @override
+  String get reportTypeHarassment => 'مضايقة';
+
+  @override
+  String get reportTypeInappropriate => 'محتوى غير لائق';
+
+  @override
+  String get reportTypeHateSpeech => 'خطاب كراهية';
+
+  @override
+  String get reportTypeViolence => 'عنف';
+
+  @override
+  String get reportTypeOther => 'أخرى';
+
+  @override
+  String get reportSubmitted => 'تم إرسال البلاغ. سيتم إخطار منظم الرحلة.';
+
+  @override
+  String get reportFailed => 'فشل في إرسال البلاغ. يرجى المحاولة مرة أخرى.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return 'هل أنت متأكد من أنك تريد حظر $userName؟ لن تشاهد رسائلهم بعد الآن.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return 'تم حظر $userName';
+  }
+
+  @override
+  String get blockFailed => 'فشل في حظر المستخدم. يرجى المحاولة مرة أخرى.';
+
+  @override
+  String get blockedUsers => 'المستخدمون المحظورون';
+
+  @override
+  String get noBlockedUsers => 'لا يوجد مستخدمون محظورون';
+
+  @override
+  String get unblock => 'إلغاء الحظر';
+
+  @override
+  String userUnblocked(String userName) {
+    return 'تم إلغاء حظر $userName';
+  }
+
+  @override
+  String get reportUser => 'الإبلاغ عن المستخدم';
+
+  @override
+  String get reportUserDescription => 'الإبلاغ عن هذا المستخدم لمنظم الرحلة';
+
+  @override
+  String get locationPermissionDenied => 'تم رفض إذن الموقع';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'تم رفض إذن الموقع نهائياً. يرجى تفعيله من الإعدادات.';
+
+  @override
+  String get locationServicesDisabled => 'خدمات الموقع معطلة';
+
+  @override
+  String get gettingLocation => 'جاري الحصول على الموقع...';
+
+  @override
+  String get currentLocation => 'الموقع الحالي';
+
+  @override
+  String get shareLocation => 'مشاركة الموقع';
+
+  @override
+  String get shareLocationConfirmation =>
+      'هل تريد مشاركة هذا الموقع في الدردشة؟';
+
+  @override
+  String get share => 'مشاركة';
+
+  @override
+  String get uploadFailed => 'فشل الرفع';
+
+  @override
+  String get openInGoogleMaps => 'فتح في خرائط جوجل';
+
+  @override
+  String get getDirections => 'الحصول على الاتجاهات';
+
+  @override
+  String get drivingDirections => 'اتجاهات القيادة';
+
+  @override
+  String get walkingDirections => 'اتجاهات المشي';
+
+  @override
+  String get transitDirections => 'اتجاهات وسائل النقل العام';
+
+  @override
+  String get noPinnedMessages => 'لا توجد رسائل مثبتة';
+
+  @override
+  String get noItineraryYet => 'لا يوجد جدول رحلة حتى الآن';
+
+  @override
+  String get viewFullItinerary => 'عرض جدول الرحلة الكامل';
+
+  @override
+  String get inviteParticipant => 'دعوة مشارك';
+
+  @override
+  String get emailAddress => 'عنوان البريد الإلكتروني';
+
+  @override
+  String get enterEmailAddress => 'أدخل عنوان البريد الإلكتروني';
+
+  @override
+  String get invalidEmail => 'بريد إلكتروني غير صالح';
+
+  @override
+  String get role => 'الدور';
+
+  @override
+  String get permissions => 'الصلاحيات';
+
+  @override
+  String get sendInvite => 'إرسال الدعوة';
+
+  @override
+  String get inviteSent => 'تم إرسال الدعوة';
+
+  @override
+  String get editItinerary => 'تعديل جدول الرحلة';
+
+  @override
+  String get deleteItinerary => 'حذف جدول الرحلة';
+
+  @override
+  String get deleteItineraryConfirm => 'هل أنت متأكد من حذف جدول الرحلة هذا؟';
+
+  @override
+  String get itineraryDeleted => 'تم حذف جدول الرحلة';
+
+  @override
+  String get searchPlaces => 'البحث عن أماكن';
+
+  @override
+  String get selectLocation => 'اختيار الموقع';
+
+  @override
+  String get confirmLocation => 'تأكيد الموقع';
+
+  @override
+  String get hotelName => 'اسم الفندق';
+
+  @override
+  String get roomType => 'نوع الغرفة';
+
+  @override
+  String get checkInTime => 'وقت تسجيل الوصول';
+
+  @override
+  String get checkOutTime => 'وقت تسجيل المغادرة';
+
+  @override
+  String get carCompany => 'شركة التأجير';
+
+  @override
+  String get carModel => 'موديل السيارة';
+
+  @override
+  String get pickupLocation => 'موقع الاستلام';
+
+  @override
+  String get dropoffLocation => 'موقع التسليم';
+
+  @override
+  String get pickupTime => 'وقت الاستلام';
+
+  @override
+  String get dropoffTime => 'وقت التسليم';
+
+  @override
+  String get restaurantName => 'اسم المطعم';
+
+  @override
+  String get cuisine => 'نوع المطبخ';
+
+  @override
+  String get priceRange => 'نطاق الأسعار';
+
+  @override
+  String get reservationTime => 'وقت الحجز';
+
+  @override
+  String get departureAirport => 'مطار المغادرة';
+
+  @override
+  String get arrivalAirport => 'مطار الوصول';
+
+  @override
+  String get departureTime => 'وقت المغادرة';
+
+  @override
+  String get arrivalTime => 'وقت الوصول';
+
+  @override
+  String get terminal => 'الصالة';
+
+  @override
+  String get gate => 'البوابة';
+
+  @override
+  String get confirmationNumber => 'رقم التأكيد';
+
+  @override
+  String get other => 'أخرى';
+
+  @override
+  String get title => 'العنوان';
+
+  @override
+  String get description => 'الوصف';
+
+  @override
+  String get itemNotFound => 'العنصر غير موجود';
+
+  @override
+  String get selectDay => 'اختر اليوم';
+
+  @override
+  String get selectAirline => 'اختر شركة الطيران';
+
+  @override
+  String get enterNotesHint => 'أدخل ملاحظات إضافية';
+
+  @override
+  String get enterHotelName => 'أدخل اسم الفندق';
+
+  @override
+  String get enterRoomType => 'مثال: جناح فاخر';
+
+  @override
+  String get enterAddress => 'أدخل العنوان';
+
+  @override
+  String get enterConfirmationNumber => 'أدخل رقم التأكيد';
+
+  @override
+  String get selectCarCompany => 'اختر شركة تأجير السيارات';
+
+  @override
+  String get enterCarModel => 'مثال: تويوتا كامري';
+
+  @override
+  String get enterPickupLocation => 'أدخل موقع الاستلام';
+
+  @override
+  String get enterDropoffLocation => 'أدخل موقع التسليم';
+
+  @override
+  String get pickupInfo => 'معلومات الاستلام';
+
+  @override
+  String get dropoffInfo => 'معلومات التسليم';
+
+  @override
+  String get enterRestaurantName => 'أدخل اسم المطعم';
+
+  @override
+  String get cuisineType => 'نوع المطبخ';
+
+  @override
+  String get selectCuisineType => 'اختر نوع المطبخ';
+
+  @override
+  String get reservationInfo => 'معلومات الحجز';
+
+  @override
+  String get enterTitle => 'أدخل العنوان';
+
+  @override
+  String get enterDescription => 'أدخل الوصف';
+
+  @override
+  String get enterLocation => 'أدخل الموقع';
+
+  @override
+  String get startTime => 'وقت البدء';
+
+  @override
+  String get endTime => 'وقت الانتهاء';
+
+  @override
+  String get addAttachments => 'إضافة مرفقات';
+
+  @override
+  String get attachmentHint => 'التذكرة الإلكترونية، تأكيد الحجز، إلخ.';
+
+  @override
+  String get itemUpdatedSuccess => 'تم تحديث العنصر بنجاح';
+
+  @override
+  String get itemDeletedSuccess => 'تم حذف العنصر بنجاح';
 }

@@ -715,123 +715,124 @@ class AppLocalizationsHi extends AppLocalizations {
   String get earlier => 'पहले';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'यात्रा त्यागें?';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'क्या आप वाकई इस यात्रा को त्यागना चाहते हैं? सभी परिवर्तन खो जाएंगे।';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'परिवर्तन त्यागें?';
 
   @override
   String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+      'क्या आप वाकई अपने परिवर्तन त्यागना चाहते हैं?';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'संपादन जारी रखें';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'त्यागें';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'यात्रा सफलतापूर्वक बनाई गई!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'यात्रा सफलतापूर्वक अपडेट की गई!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'यात्रा नहीं मिली';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'यात्रा कार्यक्रम सहेजा गया';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'जल्द आ रहा है';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'साइन आउट';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'पुनः प्रयास करें';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'प्रतिभागियों को देखें';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'पिन किए गए संदेश';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'संदेश खोजें';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'घोषणा भेजें';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'फ़ोटो';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'कैमरा';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'गैलरी से फ़ोटो साझा करें';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'नई फ़ोटो लें';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'अपना वर्तमान स्थान साझा करें';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'सुविधा जल्द आ रही है!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'गतिविधि सफलतापूर्वक जोड़ी गई';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'फ़ाइल चयनकर्ता जल्द आ रहा है';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'कृपया एक संदेश दर्ज करें';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'घोषणा सफलतापूर्वक भेजी गई!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'प्रतिभागियों को लोड करने में विफल';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'लॉगिन आवश्यक';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed =>
+      'आमंत्रण भेजने में विफल। कृपया पुनः प्रयास करें।';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'नया आमंत्रण लिंक उत्पन्न हुआ';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'आमंत्रण लिंक कॉपी किया गया';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'उपयोगकर्ता नहीं मिला';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'कोई गंतव्य नहीं';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'स्वागत है';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'अपनी यात्रा शुरू करने के लिए साइन इन करें';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Kakao के साथ जारी रखें';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Naver के साथ जारी रखें';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Google के साथ जारी रखें';
 
   @override
   String get account => 'खाता';
@@ -861,4 +862,344 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'चेतावनी: इस क्रिया को पूर्ववत नहीं किया जा सकता। यात्राओं और संदेशों सहित आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।';
+
+  @override
+  String get reportMessage => 'संदेश की रिपोर्ट करें';
+
+  @override
+  String get reportMessageDescription =>
+      'यात्रा आयोजक को अनुचित सामग्री की रिपोर्ट करें';
+
+  @override
+  String get blockUser => 'उपयोगकर्ता को ब्लॉक करें';
+
+  @override
+  String get blockUserDescription => 'आप इस उपयोगकर्ता के संदेश नहीं देखेंगे';
+
+  @override
+  String get selectReportReason => 'रिपोर्ट का कारण चुनें:';
+
+  @override
+  String get additionalDetails => 'अतिरिक्त विवरण';
+
+  @override
+  String get optionalDescription => 'समस्या का वर्णन करें (वैकल्पिक)';
+
+  @override
+  String get report => 'रिपोर्ट करें';
+
+  @override
+  String get block => 'ब्लॉक करें';
+
+  @override
+  String get reportTypeSpam => 'स्पैम';
+
+  @override
+  String get reportTypeHarassment => 'उत्पीड़न';
+
+  @override
+  String get reportTypeInappropriate => 'अनुचित सामग्री';
+
+  @override
+  String get reportTypeHateSpeech => 'घृणा भाषण';
+
+  @override
+  String get reportTypeViolence => 'हिंसा';
+
+  @override
+  String get reportTypeOther => 'अन्य';
+
+  @override
+  String get reportSubmitted =>
+      'रिपोर्ट भेजी गई। यात्रा आयोजक को सूचित किया जाएगा।';
+
+  @override
+  String get reportFailed => 'रिपोर्ट भेजने में विफल। कृपया पुनः प्रयास करें।';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return 'क्या आप वाकई $userName को ब्लॉक करना चाहते हैं? आप उनके संदेश नहीं देख पाएंगे।';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName को ब्लॉक कर दिया गया';
+  }
+
+  @override
+  String get blockFailed =>
+      'उपयोगकर्ता को ब्लॉक करने में विफल। कृपया पुनः प्रयास करें।';
+
+  @override
+  String get blockedUsers => 'ब्लॉक किए गए उपयोगकर्ता';
+
+  @override
+  String get noBlockedUsers => 'कोई ब्लॉक किए गए उपयोगकर्ता नहीं';
+
+  @override
+  String get unblock => 'अनब्लॉक करें';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName को अनब्लॉक कर दिया गया';
+  }
+
+  @override
+  String get reportUser => 'उपयोगकर्ता की रिपोर्ट करें';
+
+  @override
+  String get reportUserDescription =>
+      'इस उपयोगकर्ता की यात्रा आयोजक को रिपोर्ट करें';
+
+  @override
+  String get locationPermissionDenied => 'स्थान अनुमति अस्वीकार';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'स्थान अनुमति स्थायी रूप से अस्वीकार। कृपया सेटिंग्स में सक्षम करें।';
+
+  @override
+  String get locationServicesDisabled => 'स्थान सेवाएं अक्षम';
+
+  @override
+  String get gettingLocation => 'स्थान प्राप्त कर रहे हैं...';
+
+  @override
+  String get currentLocation => 'वर्तमान स्थान';
+
+  @override
+  String get shareLocation => 'स्थान साझा करें';
+
+  @override
+  String get shareLocationConfirmation =>
+      'क्या आप इस स्थान को चैट में साझा करना चाहते हैं?';
+
+  @override
+  String get share => 'साझा करें';
+
+  @override
+  String get uploadFailed => 'अपलोड विफल';
+
+  @override
+  String get openInGoogleMaps => 'Google Maps में खोलें';
+
+  @override
+  String get getDirections => 'दिशा-निर्देश प्राप्त करें';
+
+  @override
+  String get drivingDirections => 'ड्राइविंग दिशा-निर्देश';
+
+  @override
+  String get walkingDirections => 'पैदल दिशा-निर्देश';
+
+  @override
+  String get transitDirections => 'सार्वजनिक परिवहन दिशा-निर्देश';
+
+  @override
+  String get noPinnedMessages => 'कोई पिन किए गए संदेश नहीं';
+
+  @override
+  String get noItineraryYet => 'अभी तक कोई यात्रा कार्यक्रम नहीं';
+
+  @override
+  String get viewFullItinerary => 'पूरा यात्रा कार्यक्रम देखें';
+
+  @override
+  String get inviteParticipant => 'प्रतिभागी को आमंत्रित करें';
+
+  @override
+  String get emailAddress => 'ईमेल पता';
+
+  @override
+  String get enterEmailAddress => 'ईमेल पता दर्ज करें';
+
+  @override
+  String get invalidEmail => 'अमान्य ईमेल';
+
+  @override
+  String get role => 'भूमिका';
+
+  @override
+  String get permissions => 'अनुमतियाँ';
+
+  @override
+  String get sendInvite => 'आमंत्रण भेजें';
+
+  @override
+  String get inviteSent => 'आमंत्रण भेजा गया';
+
+  @override
+  String get editItinerary => 'यात्रा कार्यक्रम संपादित करें';
+
+  @override
+  String get deleteItinerary => 'यात्रा कार्यक्रम हटाएं';
+
+  @override
+  String get deleteItineraryConfirm =>
+      'क्या आप वाकई इस यात्रा कार्यक्रम को हटाना चाहते हैं?';
+
+  @override
+  String get itineraryDeleted => 'यात्रा कार्यक्रम हटाया गया';
+
+  @override
+  String get searchPlaces => 'स्थान खोजें';
+
+  @override
+  String get selectLocation => 'स्थान चुनें';
+
+  @override
+  String get confirmLocation => 'स्थान की पुष्टि करें';
+
+  @override
+  String get hotelName => 'होटल का नाम';
+
+  @override
+  String get roomType => 'कमरे का प्रकार';
+
+  @override
+  String get checkInTime => 'चेक-इन समय';
+
+  @override
+  String get checkOutTime => 'चेक-आउट समय';
+
+  @override
+  String get carCompany => 'कार किराये की कंपनी';
+
+  @override
+  String get carModel => 'कार मॉडल';
+
+  @override
+  String get pickupLocation => 'पिकअप स्थान';
+
+  @override
+  String get dropoffLocation => 'ड्रॉप-ऑफ स्थान';
+
+  @override
+  String get pickupTime => 'पिकअप समय';
+
+  @override
+  String get dropoffTime => 'ड्रॉप-ऑफ समय';
+
+  @override
+  String get restaurantName => 'रेस्तरां का नाम';
+
+  @override
+  String get cuisine => 'व्यंजन';
+
+  @override
+  String get priceRange => 'मूल्य सीमा';
+
+  @override
+  String get reservationTime => 'आरक्षण समय';
+
+  @override
+  String get departureAirport => 'प्रस्थान हवाई अड्डा';
+
+  @override
+  String get arrivalAirport => 'आगमन हवाई अड्डा';
+
+  @override
+  String get departureTime => 'प्रस्थान समय';
+
+  @override
+  String get arrivalTime => 'आगमन समय';
+
+  @override
+  String get terminal => 'टर्मिनल';
+
+  @override
+  String get gate => 'गेट';
+
+  @override
+  String get confirmationNumber => 'पुष्टिकरण संख्या';
+
+  @override
+  String get other => 'अन्य';
+
+  @override
+  String get title => 'शीर्षक';
+
+  @override
+  String get description => 'विवरण';
+
+  @override
+  String get itemNotFound => 'आइटम नहीं मिला';
+
+  @override
+  String get selectDay => 'दिन चुनें';
+
+  @override
+  String get selectAirline => 'एयरलाइन चुनें';
+
+  @override
+  String get enterNotesHint => 'अतिरिक्त नोट्स दर्ज करें';
+
+  @override
+  String get enterHotelName => 'होटल का नाम दर्ज करें';
+
+  @override
+  String get enterRoomType => 'उदा: डीलक्स सुइट';
+
+  @override
+  String get enterAddress => 'पता दर्ज करें';
+
+  @override
+  String get enterConfirmationNumber => 'पुष्टिकरण संख्या दर्ज करें';
+
+  @override
+  String get selectCarCompany => 'कार किराया कंपनी चुनें';
+
+  @override
+  String get enterCarModel => 'उदा: टोयोटा कैमरी';
+
+  @override
+  String get enterPickupLocation => 'पिकअप स्थान दर्ज करें';
+
+  @override
+  String get enterDropoffLocation => 'ड्रॉप-ऑफ स्थान दर्ज करें';
+
+  @override
+  String get pickupInfo => 'पिकअप जानकारी';
+
+  @override
+  String get dropoffInfo => 'ड्रॉप-ऑफ जानकारी';
+
+  @override
+  String get enterRestaurantName => 'रेस्तरां का नाम दर्ज करें';
+
+  @override
+  String get cuisineType => 'व्यंजन प्रकार';
+
+  @override
+  String get selectCuisineType => 'व्यंजन प्रकार चुनें';
+
+  @override
+  String get reservationInfo => 'आरक्षण जानकारी';
+
+  @override
+  String get enterTitle => 'शीर्षक दर्ज करें';
+
+  @override
+  String get enterDescription => 'विवरण दर्ज करें';
+
+  @override
+  String get enterLocation => 'स्थान दर्ज करें';
+
+  @override
+  String get startTime => 'प्रारंभ समय';
+
+  @override
+  String get endTime => 'समाप्ति समय';
+
+  @override
+  String get addAttachments => 'अनुलग्नक जोड़ें';
+
+  @override
+  String get attachmentHint => 'ई-टिकट, आरक्षण पुष्टि, आदि।';
+
+  @override
+  String get itemUpdatedSuccess => 'आइटम सफलतापूर्वक अपडेट किया गया';
+
+  @override
+  String get itemDeletedSuccess => 'आइटम सफलतापूर्वक हटाया गया';
 }

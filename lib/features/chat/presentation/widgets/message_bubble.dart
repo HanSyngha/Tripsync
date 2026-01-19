@@ -12,6 +12,7 @@ class MessageBubble extends StatelessWidget {
   final bool showSenderInfo;
   final VoidCallback? onLocationTap;
   final VoidCallback? onImageTap;
+  final VoidCallback? onLongPress;
 
   const MessageBubble({
     super.key,
@@ -20,6 +21,7 @@ class MessageBubble extends StatelessWidget {
     this.showSenderInfo = true,
     this.onLocationTap,
     this.onImageTap,
+    this.onLongPress,
   });
 
   @override
@@ -48,7 +50,10 @@ class MessageBubble extends StatelessWidget {
                 const SizedBox(width: AppTheme.spacingSm),
               ],
               Flexible(
-                child: _buildBubble(context, isDark),
+                child: GestureDetector(
+                  onLongPress: onLongPress,
+                  child: _buildBubble(context, isDark),
+                ),
               ),
             ],
           ),
@@ -199,7 +204,6 @@ class MessageBubble extends StatelessWidget {
         return _buildAnnouncementMessage(context, textColor);
       case MessageType.text:
       case MessageType.systemMessage:
-      default:
         return _buildTextMessage(context, textColor);
     }
   }

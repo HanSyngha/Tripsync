@@ -712,123 +712,121 @@ class AppLocalizationsZh extends AppLocalizations {
   String get earlier => '更早';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => '放弃行程？';
 
   @override
-  String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+  String get discardTripMessage => '确定要放弃此行程吗？所有更改都将丢失。';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => '放弃更改？';
 
   @override
-  String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+  String get discardChangesMessage => '确定要放弃您的更改吗？';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => '继续编辑';
 
   @override
-  String get discard => 'Discard';
+  String get discard => '放弃';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => '行程创建成功！';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => '行程更新成功！';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => '未找到行程';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => '行程已保存';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => '即将推出';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => '退出登录';
 
   @override
-  String get retry => 'Retry';
+  String get retry => '重试';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => '查看参与者';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => '置顶消息';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => '搜索消息';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => '发送公告';
 
   @override
-  String get photo => 'Photo';
+  String get photo => '照片';
 
   @override
-  String get camera => 'Camera';
+  String get camera => '相机';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => '从相册分享照片';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => '拍摄新照片';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => '分享当前位置';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => '功能即将推出！';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => '活动添加成功';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => '文件选择器即将推出';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => '请输入消息';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => '公告发送成功！';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => '加载参与者失败';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => '需要登录';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => '发送邀请失败，请重试。';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => '已生成新邀请链接';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => '邀请链接已复制';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => '未找到用户';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => '无目的地';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => '欢迎';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => '登录开始您的旅程';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => '使用Kakao继续';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => '使用Naver继续';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => '使用Google继续';
 
   @override
   String get account => '账户';
@@ -856,4 +854,337 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get deleteAccountWarning => '警告：您的账户和所有相关数据将被永久删除。';
+
+  @override
+  String get reportMessage => '举报消息';
+
+  @override
+  String get reportMessageDescription => '向旅行组织者举报不当内容';
+
+  @override
+  String get blockUser => '屏蔽用户';
+
+  @override
+  String get blockUserDescription => '您将不再看到此用户的消息';
+
+  @override
+  String get selectReportReason => '选择举报原因：';
+
+  @override
+  String get additionalDetails => '补充说明';
+
+  @override
+  String get optionalDescription => '描述问题（可选）';
+
+  @override
+  String get report => '举报';
+
+  @override
+  String get block => '屏蔽';
+
+  @override
+  String get reportTypeSpam => '垃圾信息';
+
+  @override
+  String get reportTypeHarassment => '骚扰';
+
+  @override
+  String get reportTypeInappropriate => '不当内容';
+
+  @override
+  String get reportTypeHateSpeech => '仇恨言论';
+
+  @override
+  String get reportTypeViolence => '暴力内容';
+
+  @override
+  String get reportTypeOther => '其他';
+
+  @override
+  String get reportSubmitted => '举报已提交。旅行组织者将收到通知。';
+
+  @override
+  String get reportFailed => '举报提交失败，请重试。';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return '确定要屏蔽 $userName 吗？您将不再看到他们的消息。';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName 已被屏蔽';
+  }
+
+  @override
+  String get blockFailed => '屏蔽用户失败，请重试。';
+
+  @override
+  String get blockedUsers => '已屏蔽用户';
+
+  @override
+  String get noBlockedUsers => '没有已屏蔽的用户';
+
+  @override
+  String get unblock => '取消屏蔽';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName 已取消屏蔽';
+  }
+
+  @override
+  String get reportUser => '举报用户';
+
+  @override
+  String get reportUserDescription => '向旅行组织者举报此用户';
+
+  @override
+  String get locationPermissionDenied => '位置权限被拒绝';
+
+  @override
+  String get locationPermissionDeniedForever => '位置权限已被永久拒绝。请在设置中启用。';
+
+  @override
+  String get locationServicesDisabled => '位置服务已禁用';
+
+  @override
+  String get gettingLocation => '正在获取位置...';
+
+  @override
+  String get currentLocation => '当前位置';
+
+  @override
+  String get shareLocation => '分享位置';
+
+  @override
+  String get shareLocationConfirmation => '您要在聊天中分享此位置吗？';
+
+  @override
+  String get share => '分享';
+
+  @override
+  String get uploadFailed => '上传失败';
+
+  @override
+  String get openInGoogleMaps => '在谷歌地图中打开';
+
+  @override
+  String get getDirections => '获取路线';
+
+  @override
+  String get drivingDirections => '驾车路线';
+
+  @override
+  String get walkingDirections => '步行路线';
+
+  @override
+  String get transitDirections => '公共交通路线';
+
+  @override
+  String get noPinnedMessages => '没有置顶消息';
+
+  @override
+  String get noItineraryYet => '暂无行程';
+
+  @override
+  String get viewFullItinerary => '查看完整行程';
+
+  @override
+  String get inviteParticipant => '邀请参与者';
+
+  @override
+  String get emailAddress => '电子邮箱';
+
+  @override
+  String get enterEmailAddress => '输入电子邮箱';
+
+  @override
+  String get invalidEmail => '无效的电子邮箱';
+
+  @override
+  String get role => '角色';
+
+  @override
+  String get permissions => '权限';
+
+  @override
+  String get sendInvite => '发送邀请';
+
+  @override
+  String get inviteSent => '邀请已发送';
+
+  @override
+  String get editItinerary => '编辑行程';
+
+  @override
+  String get deleteItinerary => '删除行程';
+
+  @override
+  String get deleteItineraryConfirm => '您确定要删除此行程吗？';
+
+  @override
+  String get itineraryDeleted => '行程已删除';
+
+  @override
+  String get searchPlaces => '搜索地点';
+
+  @override
+  String get selectLocation => '选择位置';
+
+  @override
+  String get confirmLocation => '确认位置';
+
+  @override
+  String get hotelName => '酒店名称';
+
+  @override
+  String get roomType => '房间类型';
+
+  @override
+  String get checkInTime => '入住时间';
+
+  @override
+  String get checkOutTime => '退房时间';
+
+  @override
+  String get carCompany => '租车公司';
+
+  @override
+  String get carModel => '车型';
+
+  @override
+  String get pickupLocation => '取车地点';
+
+  @override
+  String get dropoffLocation => '还车地点';
+
+  @override
+  String get pickupTime => '取车时间';
+
+  @override
+  String get dropoffTime => '还车时间';
+
+  @override
+  String get restaurantName => '餐厅名称';
+
+  @override
+  String get cuisine => '菜系';
+
+  @override
+  String get priceRange => '价格范围';
+
+  @override
+  String get reservationTime => '预约时间';
+
+  @override
+  String get departureAirport => '出发机场';
+
+  @override
+  String get arrivalAirport => '到达机场';
+
+  @override
+  String get departureTime => '出发时间';
+
+  @override
+  String get arrivalTime => '到达时间';
+
+  @override
+  String get terminal => '航站楼';
+
+  @override
+  String get gate => '登机口';
+
+  @override
+  String get confirmationNumber => '确认号';
+
+  @override
+  String get other => '其他';
+
+  @override
+  String get title => '标题';
+
+  @override
+  String get description => '描述';
+
+  @override
+  String get itemNotFound => '未找到项目';
+
+  @override
+  String get selectDay => '选择日期';
+
+  @override
+  String get selectAirline => '选择航空公司';
+
+  @override
+  String get enterNotesHint => '请输入补充说明';
+
+  @override
+  String get enterHotelName => '请输入酒店名称';
+
+  @override
+  String get enterRoomType => '例如：豪华双床房';
+
+  @override
+  String get enterAddress => '请输入地址';
+
+  @override
+  String get enterConfirmationNumber => '请输入确认号';
+
+  @override
+  String get selectCarCompany => '选择租车公司';
+
+  @override
+  String get enterCarModel => '例如：丰田卡罗拉';
+
+  @override
+  String get enterPickupLocation => '请输入取车地点';
+
+  @override
+  String get enterDropoffLocation => '请输入还车地点';
+
+  @override
+  String get pickupInfo => '取车信息';
+
+  @override
+  String get dropoffInfo => '还车信息';
+
+  @override
+  String get enterRestaurantName => '请输入餐厅名称';
+
+  @override
+  String get cuisineType => '菜系类型';
+
+  @override
+  String get selectCuisineType => '选择菜系类型';
+
+  @override
+  String get reservationInfo => '预约信息';
+
+  @override
+  String get enterTitle => '请输入标题';
+
+  @override
+  String get enterDescription => '请输入描述';
+
+  @override
+  String get enterLocation => '请输入位置';
+
+  @override
+  String get startTime => '开始时间';
+
+  @override
+  String get endTime => '结束时间';
+
+  @override
+  String get addAttachments => '添加附件';
+
+  @override
+  String get attachmentHint => '电子机票、预约确认书等';
+
+  @override
+  String get itemUpdatedSuccess => '项目已更新';
+
+  @override
+  String get itemDeletedSuccess => '项目已删除';
 }

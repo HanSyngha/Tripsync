@@ -884,5 +884,347 @@
   "@deleteAccountFailed": {"description": "Account deletion failed message"},
 
   "deleteAccountWarning": "Warning: This will permanently delete your account and all associated data.",
-  "@deleteAccountWarning": {"description": "Delete account warning text"}
+  "@deleteAccountWarning": {"description": "Delete account warning text"},
+
+  "reportMessage": "Report Message",
+  "@reportMessage": {"description": "Report message option"},
+
+  "reportMessageDescription": "Report inappropriate content to trip organizer",
+  "@reportMessageDescription": {"description": "Report message description"},
+
+  "blockUser": "Block User",
+  "@blockUser": {"description": "Block user option"},
+
+  "blockUserDescription": "You won't see messages from this user",
+  "@blockUserDescription": {"description": "Block user description"},
+
+  "selectReportReason": "Select a reason for reporting:",
+  "@selectReportReason": {"description": "Report reason selection prompt"},
+
+  "additionalDetails": "Additional Details",
+  "@additionalDetails": {"description": "Additional details field label"},
+
+  "optionalDescription": "Describe the issue (optional)",
+  "@optionalDescription": {"description": "Optional description hint"},
+
+  "report": "Report",
+  "@report": {"description": "Report button"},
+
+  "block": "Block",
+  "@block": {"description": "Block button"},
+
+  "reportTypeSpam": "Spam",
+  "@reportTypeSpam": {"description": "Spam report type"},
+
+  "reportTypeHarassment": "Harassment",
+  "@reportTypeHarassment": {"description": "Harassment report type"},
+
+  "reportTypeInappropriate": "Inappropriate Content",
+  "@reportTypeInappropriate": {"description": "Inappropriate content report type"},
+
+  "reportTypeHateSpeech": "Hate Speech",
+  "@reportTypeHateSpeech": {"description": "Hate speech report type"},
+
+  "reportTypeViolence": "Violence",
+  "@reportTypeViolence": {"description": "Violence report type"},
+
+  "reportTypeOther": "Other",
+  "@reportTypeOther": {"description": "Other report type"},
+
+  "reportSubmitted": "Report submitted. The trip organizer will be notified.",
+  "@reportSubmitted": {"description": "Report submitted success message"},
+
+  "reportFailed": "Failed to submit report. Please try again.",
+  "@reportFailed": {"description": "Report failed message"},
+
+  "blockUserConfirmation": "Are you sure you want to block {userName}? You won't see their messages anymore.",
+  "@blockUserConfirmation": {
+    "description": "Block user confirmation message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "userBlocked": "{userName} has been blocked",
+  "@userBlocked": {
+    "description": "User blocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "blockFailed": "Failed to block user. Please try again.",
+  "@blockFailed": {"description": "Block failed message"},
+
+  "blockedUsers": "Blocked Users",
+  "@blockedUsers": {"description": "Blocked users settings title"},
+
+  "noBlockedUsers": "No blocked users",
+  "@noBlockedUsers": {"description": "No blocked users message"},
+
+  "unblock": "Unblock",
+  "@unblock": {"description": "Unblock button"},
+
+  "userUnblocked": "{userName} has been unblocked",
+  "@userUnblocked": {
+    "description": "User unblocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "reportUser": "Report User",
+  "@reportUser": {"description": "Report user option"},
+
+  "reportUserDescription": "Report this user to trip organizer",
+  "@reportUserDescription": {"description": "Report user description"},
+
+  "locationPermissionDenied": "Location permission denied",
+  "@locationPermissionDenied": {"description": "Location permission denied message"},
+
+  "locationPermissionDeniedForever": "Location permission permanently denied. Please enable in settings.",
+  "@locationPermissionDeniedForever": {"description": "Location permission permanently denied message"},
+
+  "locationServicesDisabled": "Location services are disabled. Please enable location services.",
+  "@locationServicesDisabled": {"description": "Location services disabled message"},
+
+  "gettingLocation": "Getting your location...",
+  "@gettingLocation": {"description": "Getting location loading message"},
+
+  "currentLocation": "Current Location",
+  "@currentLocation": {"description": "Current location label"},
+
+  "shareLocation": "Share Location",
+  "@shareLocation": {"description": "Share location title"},
+
+  "shareLocationConfirmation": "Do you want to share your current location with the group?",
+  "@shareLocationConfirmation": {"description": "Share location confirmation message"},
+
+  "share": "Share",
+  "@share": {"description": "Share button"},
+
+  "uploadFailed": "Upload failed",
+  "@uploadFailed": {"description": "Upload failed message"},
+
+  "openInGoogleMaps": "Open in Google Maps",
+  "@openInGoogleMaps": {"description": "Open in Google Maps option"},
+
+  "getDirections": "Get Directions",
+  "@getDirections": {"description": "Get directions option"},
+
+  "drivingDirections": "Driving Directions",
+  "@drivingDirections": {"description": "Driving directions option"},
+
+  "walkingDirections": "Walking Directions",
+  "@walkingDirections": {"description": "Walking directions option"},
+
+  "transitDirections": "Transit Directions",
+  "@transitDirections": {"description": "Transit directions option"},
+
+  "noPinnedMessages": "No pinned messages yet",
+  "@noPinnedMessages": {"description": "No pinned messages message"},
+
+  "noItineraryYet": "No itinerary items yet",
+  "@noItineraryYet": {"description": "No itinerary message"},
+
+  "viewFullItinerary": "View Full Itinerary",
+  "@viewFullItinerary": {"description": "View full itinerary button"},
+
+  "inviteParticipant": "Invite Participant",
+  "@inviteParticipant": {"description": "Invite participant title"},
+
+  "emailAddress": "Email Address",
+  "@emailAddress": {"description": "Email address field"},
+
+  "enterEmailAddress": "Enter email address",
+  "@enterEmailAddress": {"description": "Email address placeholder"},
+
+  "invalidEmail": "Please enter a valid email address",
+  "@invalidEmail": {"description": "Invalid email error"},
+
+  "role": "Role",
+  "@role": {"description": "Role label"},
+
+  "permissions": "Permissions",
+  "@permissions": {"description": "Permissions label"},
+
+  "sendInvite": "Send Invite",
+  "@sendInvite": {"description": "Send invite button"},
+
+  "inviteSent": "Invite sent successfully",
+  "@inviteSent": {"description": "Invite sent success message"},
+
+  "editItinerary": "Edit Itinerary",
+  "@editItinerary": {"description": "Edit itinerary button"},
+
+  "deleteItinerary": "Delete Itinerary",
+  "@deleteItinerary": {"description": "Delete itinerary button"},
+
+  "deleteItineraryConfirm": "Are you sure you want to delete this itinerary item?",
+  "@deleteItineraryConfirm": {"description": "Delete itinerary confirmation"},
+
+  "itineraryDeleted": "Itinerary item deleted",
+  "@itineraryDeleted": {"description": "Itinerary deleted message"},
+
+  "searchPlaces": "Search places",
+  "@searchPlaces": {"description": "Search places placeholder"},
+
+  "selectLocation": "Select Location",
+  "@selectLocation": {"description": "Select location title"},
+
+  "confirmLocation": "Confirm Location",
+  "@confirmLocation": {"description": "Confirm location button"},
+
+  "hotelName": "Hotel Name",
+  "@hotelName": {"description": "Hotel name field"},
+
+  "roomType": "Room Type",
+  "@roomType": {"description": "Room type field"},
+
+  "checkInTime": "Check-in Time",
+  "@checkInTime": {"description": "Check-in time field"},
+
+  "checkOutTime": "Check-out Time",
+  "@checkOutTime": {"description": "Check-out time field"},
+
+  "carCompany": "Car Company",
+  "@carCompany": {"description": "Car company field"},
+
+  "carModel": "Car Model",
+  "@carModel": {"description": "Car model field"},
+
+  "pickupLocation": "Pickup Location",
+  "@pickupLocation": {"description": "Pickup location field"},
+
+  "dropoffLocation": "Drop-off Location",
+  "@dropoffLocation": {"description": "Drop-off location field"},
+
+  "pickupTime": "Pickup Time",
+  "@pickupTime": {"description": "Pickup time field"},
+
+  "dropoffTime": "Drop-off Time",
+  "@dropoffTime": {"description": "Drop-off time field"},
+
+  "restaurantName": "Restaurant Name",
+  "@restaurantName": {"description": "Restaurant name field"},
+
+  "cuisine": "Cuisine",
+  "@cuisine": {"description": "Cuisine field"},
+
+  "priceRange": "Price Range",
+  "@priceRange": {"description": "Price range field"},
+
+  "reservationTime": "Reservation Time",
+  "@reservationTime": {"description": "Reservation time field"},
+
+  "departureAirport": "Departure Airport",
+  "@departureAirport": {"description": "Departure airport field"},
+
+  "arrivalAirport": "Arrival Airport",
+  "@arrivalAirport": {"description": "Arrival airport field"},
+
+  "departureTime": "Departure Time",
+  "@departureTime": {"description": "Departure time field"},
+
+  "arrivalTime": "Arrival Time",
+  "@arrivalTime": {"description": "Arrival time field"},
+
+  "terminal": "Terminal",
+  "@terminal": {"description": "Terminal field"},
+
+  "gate": "Gate",
+  "@gate": {"description": "Gate field"},
+
+  "confirmationNumber": "Confirmation Number",
+  "@confirmationNumber": {"description": "Confirmation number field"},
+
+  "other": "Other",
+  "@other": {"description": "Other category"},
+
+  "title": "Title",
+  "@title": {"description": "Title field"},
+
+  "description": "Description",
+  "@description": {"description": "Description field"},
+
+  "itemNotFound": "Item not found",
+  "@itemNotFound": {"description": "Item not found error"},
+
+  "selectDay": "Select Day",
+  "@selectDay": {"description": "Select day section title"},
+
+  "selectAirline": "Select airline",
+  "@selectAirline": {"description": "Airline selection hint"},
+
+  "enterNotesHint": "Enter additional notes here",
+  "@enterNotesHint": {"description": "Notes hint in edit/add screen"},
+
+  "enterHotelName": "Enter hotel name",
+  "@enterHotelName": {"description": "Hotel name input hint"},
+
+  "enterRoomType": "e.g. Deluxe Twin",
+  "@enterRoomType": {"description": "Room type input hint"},
+
+  "enterAddress": "Enter address",
+  "@enterAddress": {"description": "Address input hint"},
+
+  "enterConfirmationNumber": "Enter confirmation number",
+  "@enterConfirmationNumber": {"description": "Confirmation number input hint"},
+
+  "selectCarCompany": "Select car company",
+  "@selectCarCompany": {"description": "Car company selection hint"},
+
+  "enterCarModel": "e.g. Hyundai Avante",
+  "@enterCarModel": {"description": "Car model input hint"},
+
+  "enterPickupLocation": "Enter pickup location",
+  "@enterPickupLocation": {"description": "Pickup location input hint"},
+
+  "enterDropoffLocation": "Enter drop-off location",
+  "@enterDropoffLocation": {"description": "Dropoff location input hint"},
+
+  "pickupInfo": "Pickup Info",
+  "@pickupInfo": {"description": "Pickup info section title"},
+
+  "dropoffInfo": "Drop-off Info",
+  "@dropoffInfo": {"description": "Dropoff info section title"},
+
+  "enterRestaurantName": "Enter restaurant name",
+  "@enterRestaurantName": {"description": "Restaurant name input hint"},
+
+  "cuisineType": "Cuisine Type",
+  "@cuisineType": {"description": "Cuisine type field label"},
+
+  "selectCuisineType": "Select cuisine type",
+  "@selectCuisineType": {"description": "Cuisine type selection hint"},
+
+  "reservationInfo": "Reservation Info",
+  "@reservationInfo": {"description": "Reservation info section title"},
+
+  "enterTitle": "Enter title",
+  "@enterTitle": {"description": "Title input hint"},
+
+  "enterDescription": "Enter description",
+  "@enterDescription": {"description": "Description input hint"},
+
+  "enterLocation": "Enter location",
+  "@enterLocation": {"description": "Location input hint"},
+
+  "startTime": "Start Time",
+  "@startTime": {"description": "Start time label"},
+
+  "endTime": "End Time",
+  "@endTime": {"description": "End time label"},
+
+  "addAttachments": "Add Attachments",
+  "@addAttachments": {"description": "Add attachments section title"},
+
+  "attachmentHint": "E-ticket, reservation confirmation, etc.",
+  "@attachmentHint": {"description": "Attachment hint text"},
+
+  "itemUpdatedSuccess": "Item updated successfully",
+  "@itemUpdatedSuccess": {"description": "Item update success message"},
+
+  "itemDeletedSuccess": "Item deleted successfully",
+  "@itemDeletedSuccess": {"description": "Item delete success message"}
 }

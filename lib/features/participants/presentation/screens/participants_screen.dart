@@ -33,7 +33,6 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
   @override
   Widget build(BuildContext context) {
     final participantState = ref.watch(participantManagementProvider(widget.tripId));
-    final inviteLinkState = ref.watch(inviteLinkProvider(widget.tripId));
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
@@ -49,8 +48,6 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
                       ? _buildErrorState(participantState.error!)
                       : _buildContent(context, participantState, isDarkMode),
             ),
-            if (inviteLinkState.isActive)
-              _buildInviteLinkBanner(context, inviteLinkState, isDarkMode),
           ],
         ),
       ),
@@ -703,74 +700,6 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
     );
   }
 
-  Widget _buildInviteLinkBanner(
-    BuildContext context,
-    InviteLinkState linkState,
-    bool isDarkMode,
-  ) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-        color: isDarkMode ? AppColors.surfaceDark : Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.08),
-            blurRadius: 12,
-            offset: const Offset(0, -4),
-          ),
-        ],
-      ),
-      child: SafeArea(
-        top: false,
-        child: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: AppColors.success.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(AppTheme.radiusSm),
-              ),
-              child: const Icon(
-                Icons.link,
-                color: AppColors.success,
-                size: 20,
-              ),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                '초대 링크가 활성화되었습니다',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
-                ),
-              ),
-            ),
-            TextButton(
-              onPressed: () => _copyInviteLink(linkState.link),
-              style: TextButton.styleFrom(
-                foregroundColor: AppColors.primary,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                backgroundColor: AppColors.primary.withOpacity(0.1),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppTheme.radiusSm),
-                ),
-              ),
-              child: const Text(
-                '복사',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   Widget _buildErrorState(String error) {
     return Center(
       child: Padding(
@@ -827,7 +756,6 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
 
   void _showSettingsBottomSheet(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-    final inviteLinkState = ref.read(inviteLinkProvider(widget.tripId));
 
     showModalBottomSheet(
       context: context,
@@ -853,26 +781,12 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
                 ),
                 const SizedBox(height: 20),
                 _buildSettingsTile(
-                  icon: Icons.link,
-                  title: '초대 링크',
-                  subtitle: inviteLinkState.isActive ? '활성화됨' : '비활성화됨',
-                  trailing: Switch(
-                    value: inviteLinkState.isActive,
-                    onChanged: (value) {
-                      ref.read(inviteLinkProvider(widget.tripId).notifier).state =
-                          inviteLinkState.copyWith(isActive: value);
-                      Navigator.pop(context);
-                    },
-                  ),
-                  isDarkMode: isDarkMode,
-                ),
-                _buildSettingsTile(
-                  icon: Icons.refresh,
-                  title: '새 초대 링크 생성',
-                  subtitle: '기존 링크는 무효화됩니다',
+                  icon: Icons.person_add,
+                  title: '새 멤버 초대',
+                  subtitle: '이메일로 사용자를 검색하여 초대',
                   onTap: () {
                     Navigator.pop(context);
-                    _generateNewInviteLink();
+                    _navigateToInviteScreen(context);
                   },
                   isDarkMode: isDarkMode,
                 ),
@@ -1251,35 +1165,4 @@ class _ParticipantsScreenState extends ConsumerState<ParticipantsScreen> {
     }
   }
 
-  Future<void> _generateNewInviteLink() async {
-    final link = await ref
-        .read(participantActionsProvider(widget.tripId).notifier)
-        .generateInviteLink();
-
-    if (mounted && link != null) {
-      ref.read(inviteLinkProvider(widget.tripId).notifier).state = InviteLinkState(
-        isActive: true,
-        link: link,
-        expiresAt: DateTime.now().add(const Duration(days: 7)),
-      );
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(AppLocalizations.of(context)!.newInviteLinkGenerated),
-          backgroundColor: AppColors.success,
-        ),
-      );
-    }
-  }
-
-  void _copyInviteLink(String? link) {
-    if (link != null) {
-      Clipboard.setData(ClipboardData(text: link));
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(AppLocalizations.of(context)!.inviteLinkCopied),
-          backgroundColor: AppColors.success,
-        ),
-      );
-    }
-  }
 }

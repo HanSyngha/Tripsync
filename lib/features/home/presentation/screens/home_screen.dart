@@ -69,17 +69,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
-      backgroundColor: AppColors.backgroundLight,
+      backgroundColor: isDarkMode ? AppColors.backgroundDark : AppColors.backgroundLight,
       body: IndexedStack(
         index: _selectedNavIndex,
         children: [
-          _buildHomeTab(),
+          _buildHomeTab(isDarkMode),
           _buildChatTab(),
-          _buildProfileTab(),
+          _buildProfileTab(isDarkMode),
         ],
       ),
-      bottomNavigationBar: _buildBottomNav(),
+      bottomNavigationBar: _buildBottomNav(isDarkMode),
       floatingActionButton: _selectedNavIndex == 0
           ? FloatingActionButton(
               onPressed: () => context.push('/home/create-trip'),
@@ -90,7 +91,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildHomeTab() {
+  Widget _buildHomeTab(bool isDarkMode) {
     final l10n = AppLocalizations.of(context)!;
     final currentUser = ref.watch(currentUserProvider);
     final authUser = ref.watch(authStateProvider).valueOrNull;
@@ -115,7 +116,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         l10n.welcomeBack,
                         style: TextStyle(
                           fontSize: 13,
-                          color: Colors.grey[600],
+                          color: isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -130,23 +131,26 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           return currentUser.when(
                             data: (user) => Text(
                               user?.displayName ?? authUser?.displayName ?? 'Traveler',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
                               ),
                             ),
                             loading: () => Text(
                               authUser?.displayName ?? 'Traveler',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
                               ),
                             ),
                             error: (_, __) => Text(
                               authUser?.displayName ?? 'Traveler',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
                               ),
                             ),
                           );
@@ -158,7 +162,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     onPressed: () => context.push('/notifications'),
                     icon: Stack(
                       children: [
-                        const Icon(Icons.notifications_outlined, size: 28),
+                        Icon(Icons.notifications_outlined, size: 28, color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight),
                         Positioned(
                           right: 0,
                           top: 0,
@@ -185,10 +189,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
               child: RichText(
                 text: TextSpan(
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.textPrimaryLight,
+                    color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
                   ),
                   children: [
                     TextSpan(text: '${l10n.readyForYour}\n'),
@@ -208,7 +212,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: isDarkMode ? AppColors.surfaceDark : Colors.grey[200],
                   borderRadius: BorderRadius.circular(12),
                 ),
                 padding: const EdgeInsets.all(4),
@@ -217,18 +221,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     _buildTabButton(
                       label: l10n.allTrips,
                       isSelected: selectedTab == TripFilterTab.all,
+                      isDarkMode: isDarkMode,
                       onTap: () => ref.read(tripFilterTabProvider.notifier).state =
                           TripFilterTab.all,
                     ),
                     _buildTabButton(
                       label: l10n.hosting,
                       isSelected: selectedTab == TripFilterTab.hosting,
+                      isDarkMode: isDarkMode,
                       onTap: () => ref.read(tripFilterTabProvider.notifier).state =
                           TripFilterTab.hosting,
                     ),
                     _buildTabButton(
                       label: l10n.participating,
                       isSelected: selectedTab == TripFilterTab.participating,
+                      isDarkMode: isDarkMode,
                       onTap: () => ref.read(tripFilterTabProvider.notifier).state =
                           TripFilterTab.participating,
                     ),
@@ -316,7 +323,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             data: (trips) {
               if (trips.isEmpty) {
                 return SliverToBoxAdapter(
-                  child: _buildEmptyState(),
+                  child: _buildEmptyState(isDarkMode),
                 );
               }
               return SliverPadding(
@@ -361,6 +368,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _buildTabButton({
     required String label,
     required bool isSelected,
+    required bool isDarkMode,
     required VoidCallback onTap,
   }) {
     return Expanded(
@@ -370,7 +378,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
-            color: isSelected ? Colors.white : Colors.transparent,
+            color: isSelected
+                ? (isDarkMode ? AppColors.cardDark : Colors.white)
+                : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
             boxShadow: isSelected
                 ? [
@@ -387,7 +397,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             style: TextStyle(
               fontSize: 13,
               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-              color: isSelected ? AppColors.primary : Colors.grey[600],
+              color: isSelected
+                  ? AppColors.primary
+                  : (isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight),
             ),
             textAlign: TextAlign.center,
           ),
@@ -396,7 +408,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildEmptyState() {
+  Widget _buildEmptyState(bool isDarkMode) {
     final l10n = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.all(40),
@@ -406,14 +418,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           Icon(
             Icons.luggage_outlined,
             size: 80,
-            color: Colors.grey[300],
+            color: isDarkMode ? Colors.grey[700] : Colors.grey[300],
           ),
           const SizedBox(height: 16),
           Text(
             l10n.noTripsYet,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
+              color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
             ),
           ),
           const SizedBox(height: 8),
@@ -421,7 +434,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             l10n.createFirstTrip,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.grey[600],
+              color: isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
             ),
             textAlign: TextAlign.center,
           ),
@@ -520,10 +533,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildProfileTab() {
+  Widget _buildProfileTab(bool isDarkMode) {
     final l10n = AppLocalizations.of(context)!;
     final currentUser = ref.watch(currentUserProvider);
-    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -557,9 +569,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   const SizedBox(height: 16),
                   Text(
                     user?.displayName ?? 'User',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
+                      color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -567,7 +580,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     user?.email ?? '',
                     style: TextStyle(
                       fontSize: 14,
-                      color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,
+                      color: isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
                     ),
                   ),
                 ],
@@ -580,21 +593,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             _buildProfileMenuItem(
               icon: Icons.person_outline,
               title: l10n.profile,
+              isDarkMode: isDarkMode,
               onTap: () => context.push('/settings/profile'),
             ),
             _buildProfileMenuItem(
               icon: Icons.language,
               title: l10n.language,
+              isDarkMode: isDarkMode,
               onTap: () => context.push('/settings/language'),
             ),
             _buildProfileMenuItem(
               icon: Icons.notifications_outlined,
               title: l10n.notifications,
+              isDarkMode: isDarkMode,
               onTap: () => context.push('/notifications'),
             ),
             _buildProfileMenuItem(
               icon: Icons.settings_outlined,
               title: l10n.settings,
+              isDarkMode: isDarkMode,
               onTap: () => context.push('/settings'),
             ),
             const SizedBox(height: 24),
@@ -648,13 +665,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _buildProfileMenuItem({
     required IconData icon,
     required String title,
+    required bool isDarkMode,
     required VoidCallback onTap,
   }) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
-        color: isDark ? AppColors.surfaceDark : Colors.white,
+        color: isDarkMode ? AppColors.cardDark : Colors.white,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
@@ -666,17 +683,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
       child: ListTile(
         leading: Icon(icon, color: AppColors.primary),
-        title: Text(title),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isDarkMode ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
+          ),
+        ),
         trailing: Icon(
           Icons.chevron_right,
-          color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,
+          color: isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
         ),
         onTap: onTap,
       ),
     );
   }
 
-  Widget _buildBottomNav() {
+  Widget _buildBottomNav(bool isDarkMode) {
     final l10n = AppLocalizations.of(context)!;
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -686,7 +708,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         // Navigation Bar
         Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: isDarkMode ? AppColors.cardDark : Colors.white,
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.05),
@@ -701,9 +723,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _buildNavItem(0, Icons.home_outlined, Icons.home, l10n.home),
-                  _buildNavItem(1, Icons.chat_bubble_outline, Icons.chat_bubble, l10n.chat),
-                  _buildNavItem(2, Icons.person_outline, Icons.person, l10n.profile),
+                  _buildNavItem(0, Icons.home_outlined, Icons.home, l10n.home, isDarkMode),
+                  _buildNavItem(1, Icons.chat_bubble_outline, Icons.chat_bubble, l10n.chat, isDarkMode),
+                  _buildNavItem(2, Icons.person_outline, Icons.person, l10n.profile, isDarkMode),
                 ],
               ),
             ),
@@ -713,7 +735,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildNavItem(int index, IconData icon, IconData activeIcon, String label) {
+  Widget _buildNavItem(int index, IconData icon, IconData activeIcon, String label, bool isDarkMode) {
     final isSelected = _selectedNavIndex == index;
     return GestureDetector(
       onTap: () => setState(() => _selectedNavIndex = index),
@@ -725,7 +747,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           children: [
             Icon(
               isSelected ? activeIcon : icon,
-              color: isSelected ? AppColors.primary : Colors.grey[400],
+              color: isSelected
+                  ? AppColors.primary
+                  : (isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight),
               size: 24,
             ),
             const SizedBox(height: 4),
@@ -734,7 +758,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               style: TextStyle(
                 fontSize: 11,
                 fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                color: isSelected ? AppColors.primary : Colors.grey[400],
+                color: isSelected
+                    ? AppColors.primary
+                    : (isDarkMode ? AppColors.textSecondaryDark : AppColors.textSecondaryLight),
               ),
             ),
           ],

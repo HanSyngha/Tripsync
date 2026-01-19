@@ -9,9 +9,11 @@ import '../../features/trip/presentation/screens/create_trip_screen.dart';
 import '../../features/trip/presentation/screens/edit_trip_screen.dart';
 import '../../features/itinerary/presentation/screens/itinerary_screen.dart';
 import '../../features/itinerary/presentation/screens/add_itinerary_item_screen.dart';
+import '../../features/itinerary/presentation/screens/edit_itinerary_item_screen.dart';
 import '../../features/participants/presentation/screens/participants_screen.dart';
 import '../../features/participants/presentation/screens/invite_participant_screen.dart';
 import '../../features/chat/presentation/screens/chat_screen.dart';
+import '../../features/chat/presentation/screens/send_announcement_screen.dart';
 import '../../features/notifications/presentation/screens/notifications_screen.dart';
 import '../../features/settings/presentation/screens/settings_screen.dart';
 import '../../features/settings/presentation/screens/language_settings_screen.dart';
@@ -102,6 +104,18 @@ final routerProvider = Provider<GoRouter>((ref) {
                   );
                 },
               ),
+              GoRoute(
+                path: 'edit/:itemId',
+                name: 'edit-itinerary-item',
+                builder: (context, state) {
+                  final tripId = state.pathParameters['tripId']!;
+                  final itemId = state.pathParameters['itemId']!;
+                  return EditItineraryItemScreen(
+                    tripId: tripId,
+                    itemId: itemId,
+                  );
+                },
+              ),
             ],
           ),
           GoRoute(
@@ -128,6 +142,14 @@ final routerProvider = Provider<GoRouter>((ref) {
             builder: (context, state) {
               final tripId = state.pathParameters['tripId']!;
               return ChatScreen(tripId: tripId);
+            },
+          ),
+          GoRoute(
+            path: 'announcement',
+            name: 'send-announcement',
+            builder: (context, state) {
+              final tripId = state.pathParameters['tripId']!;
+              return SendAnnouncementScreen(tripId: tripId);
             },
           ),
         ],

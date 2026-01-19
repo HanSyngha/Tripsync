@@ -11,6 +11,7 @@ class UserModel {
   final DateTime? lastLoginAt;
   final String? fcmToken;
   final UserSettings settings;
+  final List<BlockedUser> blockedUsers;
 
   UserModel({
     required this.id,
@@ -23,6 +24,7 @@ class UserModel {
     this.lastLoginAt,
     this.fcmToken,
     required this.settings,
+    this.blockedUsers = const [],
   });
 
   factory UserModel.fromFirestore(DocumentSnapshot doc) {
@@ -38,6 +40,9 @@ class UserModel {
       lastLoginAt: (data['lastLoginAt'] as Timestamp?)?.toDate(),
       fcmToken: data['fcmToken'],
       settings: UserSettings.fromMap(data['settings'] ?? {}),
+      blockedUsers: (data['blockedUsers'] as List<dynamic>?)
+          ?.map((e) => BlockedUser.fromMap(e as Map<String, dynamic>))
+          .toList() ?? [],
     );
   }
 
@@ -52,7 +57,12 @@ class UserModel {
       'lastLoginAt': lastLoginAt != null ? Timestamp.fromDate(lastLoginAt!) : null,
       'fcmToken': fcmToken,
       'settings': settings.toMap(),
+      'blockedUsers': blockedUsers.map((e) => e.toMap()).toList(),
     };
+  }
+
+  bool isUserBlocked(String userId) {
+    return blockedUsers.any((blocked) => blocked.userId == userId);
   }
 
   UserModel copyWith({
@@ -66,6 +76,7 @@ class UserModel {
     DateTime? lastLoginAt,
     String? fcmToken,
     UserSettings? settings,
+    List<BlockedUser>? blockedUsers,
   }) {
     return UserModel(
       id: id ?? this.id,
@@ -78,7 +89,36 @@ class UserModel {
       lastLoginAt: lastLoginAt ?? this.lastLoginAt,
       fcmToken: fcmToken ?? this.fcmToken,
       settings: settings ?? this.settings,
+      blockedUsers: blockedUsers ?? this.blockedUsers,
     );
+  }
+}
+
+class BlockedUser {
+  final String userId;
+  final String userName;
+  final DateTime blockedAt;
+
+  BlockedUser({
+    required this.userId,
+    required this.userName,
+    required this.blockedAt,
+  });
+
+  factory BlockedUser.fromMap(Map<String, dynamic> map) {
+    return BlockedUser(
+      userId: map['userId'] ?? '',
+      userName: map['userName'] ?? '',
+      blockedAt: (map['blockedAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'userId': userId,
+      'userName': userName,
+      'blockedAt': Timestamp.fromDate(blockedAt),
+    };
   }
 }
 

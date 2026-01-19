@@ -1777,6 +1777,660 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Warning: This will permanently delete your account and all associated data.'**
   String get deleteAccountWarning;
+
+  /// Report message option
+  ///
+  /// In en, this message translates to:
+  /// **'Report Message'**
+  String get reportMessage;
+
+  /// Report message description
+  ///
+  /// In en, this message translates to:
+  /// **'Report inappropriate content to trip organizer'**
+  String get reportMessageDescription;
+
+  /// Block user option
+  ///
+  /// In en, this message translates to:
+  /// **'Block User'**
+  String get blockUser;
+
+  /// Block user description
+  ///
+  /// In en, this message translates to:
+  /// **'You won\'t see messages from this user'**
+  String get blockUserDescription;
+
+  /// Report reason selection prompt
+  ///
+  /// In en, this message translates to:
+  /// **'Select a reason for reporting:'**
+  String get selectReportReason;
+
+  /// Additional details field label
+  ///
+  /// In en, this message translates to:
+  /// **'Additional Details'**
+  String get additionalDetails;
+
+  /// Optional description hint
+  ///
+  /// In en, this message translates to:
+  /// **'Describe the issue (optional)'**
+  String get optionalDescription;
+
+  /// Report button
+  ///
+  /// In en, this message translates to:
+  /// **'Report'**
+  String get report;
+
+  /// Block button
+  ///
+  /// In en, this message translates to:
+  /// **'Block'**
+  String get block;
+
+  /// Spam report type
+  ///
+  /// In en, this message translates to:
+  /// **'Spam'**
+  String get reportTypeSpam;
+
+  /// Harassment report type
+  ///
+  /// In en, this message translates to:
+  /// **'Harassment'**
+  String get reportTypeHarassment;
+
+  /// Inappropriate content report type
+  ///
+  /// In en, this message translates to:
+  /// **'Inappropriate Content'**
+  String get reportTypeInappropriate;
+
+  /// Hate speech report type
+  ///
+  /// In en, this message translates to:
+  /// **'Hate Speech'**
+  String get reportTypeHateSpeech;
+
+  /// Violence report type
+  ///
+  /// In en, this message translates to:
+  /// **'Violence'**
+  String get reportTypeViolence;
+
+  /// Other report type
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get reportTypeOther;
+
+  /// Report submitted success message
+  ///
+  /// In en, this message translates to:
+  /// **'Report submitted. The trip organizer will be notified.'**
+  String get reportSubmitted;
+
+  /// Report failed message
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to submit report. Please try again.'**
+  String get reportFailed;
+
+  /// Block user confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to block {userName}? You won\'t see their messages anymore.'**
+  String blockUserConfirmation(String userName);
+
+  /// User blocked success message
+  ///
+  /// In en, this message translates to:
+  /// **'{userName} has been blocked'**
+  String userBlocked(String userName);
+
+  /// Block failed message
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to block user. Please try again.'**
+  String get blockFailed;
+
+  /// Blocked users settings title
+  ///
+  /// In en, this message translates to:
+  /// **'Blocked Users'**
+  String get blockedUsers;
+
+  /// No blocked users message
+  ///
+  /// In en, this message translates to:
+  /// **'No blocked users'**
+  String get noBlockedUsers;
+
+  /// Unblock button
+  ///
+  /// In en, this message translates to:
+  /// **'Unblock'**
+  String get unblock;
+
+  /// User unblocked success message
+  ///
+  /// In en, this message translates to:
+  /// **'{userName} has been unblocked'**
+  String userUnblocked(String userName);
+
+  /// Report user option
+  ///
+  /// In en, this message translates to:
+  /// **'Report User'**
+  String get reportUser;
+
+  /// Report user description
+  ///
+  /// In en, this message translates to:
+  /// **'Report this user to trip organizer'**
+  String get reportUserDescription;
+
+  /// Location permission denied message
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission denied'**
+  String get locationPermissionDenied;
+
+  /// Location permission permanently denied message
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission permanently denied. Please enable in settings.'**
+  String get locationPermissionDeniedForever;
+
+  /// Location services disabled message
+  ///
+  /// In en, this message translates to:
+  /// **'Location services are disabled. Please enable location services.'**
+  String get locationServicesDisabled;
+
+  /// Getting location loading message
+  ///
+  /// In en, this message translates to:
+  /// **'Getting your location...'**
+  String get gettingLocation;
+
+  /// Current location label
+  ///
+  /// In en, this message translates to:
+  /// **'Current Location'**
+  String get currentLocation;
+
+  /// Share location title
+  ///
+  /// In en, this message translates to:
+  /// **'Share Location'**
+  String get shareLocation;
+
+  /// Share location confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to share your current location with the group?'**
+  String get shareLocationConfirmation;
+
+  /// Share button
+  ///
+  /// In en, this message translates to:
+  /// **'Share'**
+  String get share;
+
+  /// Upload failed message
+  ///
+  /// In en, this message translates to:
+  /// **'Upload failed'**
+  String get uploadFailed;
+
+  /// Open in Google Maps option
+  ///
+  /// In en, this message translates to:
+  /// **'Open in Google Maps'**
+  String get openInGoogleMaps;
+
+  /// Get directions option
+  ///
+  /// In en, this message translates to:
+  /// **'Get Directions'**
+  String get getDirections;
+
+  /// Driving directions option
+  ///
+  /// In en, this message translates to:
+  /// **'Driving Directions'**
+  String get drivingDirections;
+
+  /// Walking directions option
+  ///
+  /// In en, this message translates to:
+  /// **'Walking Directions'**
+  String get walkingDirections;
+
+  /// Transit directions option
+  ///
+  /// In en, this message translates to:
+  /// **'Transit Directions'**
+  String get transitDirections;
+
+  /// No pinned messages message
+  ///
+  /// In en, this message translates to:
+  /// **'No pinned messages yet'**
+  String get noPinnedMessages;
+
+  /// No itinerary message
+  ///
+  /// In en, this message translates to:
+  /// **'No itinerary items yet'**
+  String get noItineraryYet;
+
+  /// View full itinerary button
+  ///
+  /// In en, this message translates to:
+  /// **'View Full Itinerary'**
+  String get viewFullItinerary;
+
+  /// Invite participant title
+  ///
+  /// In en, this message translates to:
+  /// **'Invite Participant'**
+  String get inviteParticipant;
+
+  /// Email address field
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get emailAddress;
+
+  /// Email address placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Enter email address'**
+  String get enterEmailAddress;
+
+  /// Invalid email error
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address'**
+  String get invalidEmail;
+
+  /// Role label
+  ///
+  /// In en, this message translates to:
+  /// **'Role'**
+  String get role;
+
+  /// Permissions label
+  ///
+  /// In en, this message translates to:
+  /// **'Permissions'**
+  String get permissions;
+
+  /// Send invite button
+  ///
+  /// In en, this message translates to:
+  /// **'Send Invite'**
+  String get sendInvite;
+
+  /// Invite sent success message
+  ///
+  /// In en, this message translates to:
+  /// **'Invite sent successfully'**
+  String get inviteSent;
+
+  /// Edit itinerary button
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Itinerary'**
+  String get editItinerary;
+
+  /// Delete itinerary button
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Itinerary'**
+  String get deleteItinerary;
+
+  /// Delete itinerary confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this itinerary item?'**
+  String get deleteItineraryConfirm;
+
+  /// Itinerary deleted message
+  ///
+  /// In en, this message translates to:
+  /// **'Itinerary item deleted'**
+  String get itineraryDeleted;
+
+  /// Search places placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Search places'**
+  String get searchPlaces;
+
+  /// Select location title
+  ///
+  /// In en, this message translates to:
+  /// **'Select Location'**
+  String get selectLocation;
+
+  /// Confirm location button
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Location'**
+  String get confirmLocation;
+
+  /// Hotel name field
+  ///
+  /// In en, this message translates to:
+  /// **'Hotel Name'**
+  String get hotelName;
+
+  /// Room type field
+  ///
+  /// In en, this message translates to:
+  /// **'Room Type'**
+  String get roomType;
+
+  /// Check-in time field
+  ///
+  /// In en, this message translates to:
+  /// **'Check-in Time'**
+  String get checkInTime;
+
+  /// Check-out time field
+  ///
+  /// In en, this message translates to:
+  /// **'Check-out Time'**
+  String get checkOutTime;
+
+  /// Car company field
+  ///
+  /// In en, this message translates to:
+  /// **'Car Company'**
+  String get carCompany;
+
+  /// Car model field
+  ///
+  /// In en, this message translates to:
+  /// **'Car Model'**
+  String get carModel;
+
+  /// Pickup location field
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup Location'**
+  String get pickupLocation;
+
+  /// Drop-off location field
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-off Location'**
+  String get dropoffLocation;
+
+  /// Pickup time field
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup Time'**
+  String get pickupTime;
+
+  /// Drop-off time field
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-off Time'**
+  String get dropoffTime;
+
+  /// Restaurant name field
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant Name'**
+  String get restaurantName;
+
+  /// Cuisine field
+  ///
+  /// In en, this message translates to:
+  /// **'Cuisine'**
+  String get cuisine;
+
+  /// Price range field
+  ///
+  /// In en, this message translates to:
+  /// **'Price Range'**
+  String get priceRange;
+
+  /// Reservation time field
+  ///
+  /// In en, this message translates to:
+  /// **'Reservation Time'**
+  String get reservationTime;
+
+  /// Departure airport field
+  ///
+  /// In en, this message translates to:
+  /// **'Departure Airport'**
+  String get departureAirport;
+
+  /// Arrival airport field
+  ///
+  /// In en, this message translates to:
+  /// **'Arrival Airport'**
+  String get arrivalAirport;
+
+  /// Departure time field
+  ///
+  /// In en, this message translates to:
+  /// **'Departure Time'**
+  String get departureTime;
+
+  /// Arrival time field
+  ///
+  /// In en, this message translates to:
+  /// **'Arrival Time'**
+  String get arrivalTime;
+
+  /// Terminal field
+  ///
+  /// In en, this message translates to:
+  /// **'Terminal'**
+  String get terminal;
+
+  /// Gate field
+  ///
+  /// In en, this message translates to:
+  /// **'Gate'**
+  String get gate;
+
+  /// Confirmation number field
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmation Number'**
+  String get confirmationNumber;
+
+  /// Other category
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get other;
+
+  /// Title field
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// Description field
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// Item not found error
+  ///
+  /// In en, this message translates to:
+  /// **'Item not found'**
+  String get itemNotFound;
+
+  /// Select day section title
+  ///
+  /// In en, this message translates to:
+  /// **'Select Day'**
+  String get selectDay;
+
+  /// Airline selection hint
+  ///
+  /// In en, this message translates to:
+  /// **'Select airline'**
+  String get selectAirline;
+
+  /// Notes hint in edit/add screen
+  ///
+  /// In en, this message translates to:
+  /// **'Enter additional notes here'**
+  String get enterNotesHint;
+
+  /// Hotel name input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter hotel name'**
+  String get enterHotelName;
+
+  /// Room type input hint
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Deluxe Twin'**
+  String get enterRoomType;
+
+  /// Address input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter address'**
+  String get enterAddress;
+
+  /// Confirmation number input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter confirmation number'**
+  String get enterConfirmationNumber;
+
+  /// Car company selection hint
+  ///
+  /// In en, this message translates to:
+  /// **'Select car company'**
+  String get selectCarCompany;
+
+  /// Car model input hint
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Hyundai Avante'**
+  String get enterCarModel;
+
+  /// Pickup location input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter pickup location'**
+  String get enterPickupLocation;
+
+  /// Dropoff location input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter drop-off location'**
+  String get enterDropoffLocation;
+
+  /// Pickup info section title
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup Info'**
+  String get pickupInfo;
+
+  /// Dropoff info section title
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-off Info'**
+  String get dropoffInfo;
+
+  /// Restaurant name input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter restaurant name'**
+  String get enterRestaurantName;
+
+  /// Cuisine type field label
+  ///
+  /// In en, this message translates to:
+  /// **'Cuisine Type'**
+  String get cuisineType;
+
+  /// Cuisine type selection hint
+  ///
+  /// In en, this message translates to:
+  /// **'Select cuisine type'**
+  String get selectCuisineType;
+
+  /// Reservation info section title
+  ///
+  /// In en, this message translates to:
+  /// **'Reservation Info'**
+  String get reservationInfo;
+
+  /// Title input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter title'**
+  String get enterTitle;
+
+  /// Description input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter description'**
+  String get enterDescription;
+
+  /// Location input hint
+  ///
+  /// In en, this message translates to:
+  /// **'Enter location'**
+  String get enterLocation;
+
+  /// Start time label
+  ///
+  /// In en, this message translates to:
+  /// **'Start Time'**
+  String get startTime;
+
+  /// End time label
+  ///
+  /// In en, this message translates to:
+  /// **'End Time'**
+  String get endTime;
+
+  /// Add attachments section title
+  ///
+  /// In en, this message translates to:
+  /// **'Add Attachments'**
+  String get addAttachments;
+
+  /// Attachment hint text
+  ///
+  /// In en, this message translates to:
+  /// **'E-ticket, reservation confirmation, etc.'**
+  String get attachmentHint;
+
+  /// Item update success message
+  ///
+  /// In en, this message translates to:
+  /// **'Item updated successfully'**
+  String get itemUpdatedSuccess;
+
+  /// Item delete success message
+  ///
+  /// In en, this message translates to:
+  /// **'Item deleted successfully'**
+  String get itemDeletedSuccess;
 }
 
 class _AppLocalizationsDelegate

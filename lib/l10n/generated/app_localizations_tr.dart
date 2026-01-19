@@ -717,123 +717,123 @@ class AppLocalizationsTr extends AppLocalizations {
   String get earlier => 'Daha Once';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'Geziyi Sil?';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'Bu geziyi silmek istediginizden emin misiniz? Tum degisiklikler kaybolacak.';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'Degisiklikleri Sil?';
 
   @override
   String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+      'Degisikliklerinizi silmek istediginizden emin misiniz?';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'Duzenlemeye Devam Et';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'Sil';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'Gezi basariyla olusturuldu!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'Gezi basariyla guncellendi!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'Gezi bulunamadi';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'Seyahat plani kaydedildi';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'Yakin Zamanda';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'Cikis Yap';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Tekrar Dene';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'Katilimcilari Gor';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'Sabitlenmis Mesajlar';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'Mesajlari Ara';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'Duyuru Gonder';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'Foto';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'Kamera';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'Galeriden foto paylas';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'Yeni foto cek';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'Mevcut konumunuzu paylasin';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'Ozellik yakin zamanda!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'Aktivite basariyla eklendi';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'Dosya secici yakin zamanda';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'Lutfen bir mesaj girin';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'Duyuru basariyla gonderildi!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'Katilimcilar yuklenemedi';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'Giris gerekli';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => 'Davet gonderilemedi. Lutfen tekrar deneyin.';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'Yeni davet linki olusturuldu';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'Davet linki kopyalandi';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'Kullanici bulunamadi';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'Hedef yok';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'Hosgeldiniz';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'Yolculugunuzu baslatmak icin giris yapin';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Kakao ile Devam Et';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Naver ile Devam Et';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Google ile Devam Et';
 
   @override
   String get account => 'Hesap';
@@ -863,4 +863,344 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'Uyari: Bu islem geri alinamaz. Geziler ve mesajlar dahil tum verileriniz kalici olarak silinecektir.';
+
+  @override
+  String get reportMessage => 'Mesaji Sikayet Et';
+
+  @override
+  String get reportMessageDescription =>
+      'Uygunsuz icerigi gezi organizatorune bildir';
+
+  @override
+  String get blockUser => 'Kullaniciyi Engelle';
+
+  @override
+  String get blockUserDescription =>
+      'Bu kullanicinin mesajlarini artik gormeyeceksiniz';
+
+  @override
+  String get selectReportReason => 'Sikayet nedenini secin:';
+
+  @override
+  String get additionalDetails => 'Ek Detaylar';
+
+  @override
+  String get optionalDescription => 'Sorunu aciklayin (istege bagli)';
+
+  @override
+  String get report => 'Sikayet Et';
+
+  @override
+  String get block => 'Engelle';
+
+  @override
+  String get reportTypeSpam => 'Spam';
+
+  @override
+  String get reportTypeHarassment => 'Taciz';
+
+  @override
+  String get reportTypeInappropriate => 'Uygunsuz Icerik';
+
+  @override
+  String get reportTypeHateSpeech => 'Nefret Soylemi';
+
+  @override
+  String get reportTypeViolence => 'Siddet';
+
+  @override
+  String get reportTypeOther => 'Diger';
+
+  @override
+  String get reportSubmitted =>
+      'Sikayet gonderildi. Gezi organizatoru bilgilendirilecek.';
+
+  @override
+  String get reportFailed => 'Sikayet gonderilemedi. Lutfen tekrar deneyin.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return '$userName kullanicisini engellemek istediginizden emin misiniz? Mesajlarini artik gormeyeceksiniz.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName engellendi';
+  }
+
+  @override
+  String get blockFailed => 'Kullanici engellenemedi. Lutfen tekrar deneyin.';
+
+  @override
+  String get blockedUsers => 'Engellenen Kullanicilar';
+
+  @override
+  String get noBlockedUsers => 'Engellenen kullanici yok';
+
+  @override
+  String get unblock => 'Engeli Kaldir';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName engeli kaldirildi';
+  }
+
+  @override
+  String get reportUser => 'Kullaniciyi Sikayet Et';
+
+  @override
+  String get reportUserDescription =>
+      'Bu kullaniciyi gezi organizatorune bildir';
+
+  @override
+  String get locationPermissionDenied => 'Konum izni reddedildi';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'Konum izni kalici olarak reddedildi. Lutfen ayarlardan etkinlestirin.';
+
+  @override
+  String get locationServicesDisabled => 'Konum servisleri devre disi';
+
+  @override
+  String get gettingLocation => 'Konum aliniyor...';
+
+  @override
+  String get currentLocation => 'Mevcut konum';
+
+  @override
+  String get shareLocation => 'Konum paylas';
+
+  @override
+  String get shareLocationConfirmation =>
+      'Bu konumu sohbette paylasmak ister misiniz?';
+
+  @override
+  String get share => 'Paylas';
+
+  @override
+  String get uploadFailed => 'Yukleme basarisiz';
+
+  @override
+  String get openInGoogleMaps => 'Google Maps\'te ac';
+
+  @override
+  String get getDirections => 'Yol tarifi al';
+
+  @override
+  String get drivingDirections => 'Arac yol tarifi';
+
+  @override
+  String get walkingDirections => 'Yuruyus yol tarifi';
+
+  @override
+  String get transitDirections => 'Toplu tasima yol tarifi';
+
+  @override
+  String get noPinnedMessages => 'Sabitlenmis mesaj yok';
+
+  @override
+  String get noItineraryYet => 'Henuz seyahat plani yok';
+
+  @override
+  String get viewFullItinerary => 'Tam seyahat planini gor';
+
+  @override
+  String get inviteParticipant => 'Katilimci davet et';
+
+  @override
+  String get emailAddress => 'E-posta adresi';
+
+  @override
+  String get enterEmailAddress => 'E-posta adresini girin';
+
+  @override
+  String get invalidEmail => 'Gecersiz e-posta';
+
+  @override
+  String get role => 'Rol';
+
+  @override
+  String get permissions => 'Izinler';
+
+  @override
+  String get sendInvite => 'Davet gonder';
+
+  @override
+  String get inviteSent => 'Davet gonderildi';
+
+  @override
+  String get editItinerary => 'Seyahat planini duzenle';
+
+  @override
+  String get deleteItinerary => 'Seyahat planini sil';
+
+  @override
+  String get deleteItineraryConfirm =>
+      'Bu seyahat planini silmek istediginizden emin misiniz?';
+
+  @override
+  String get itineraryDeleted => 'Seyahat plani silindi';
+
+  @override
+  String get searchPlaces => 'Yer ara';
+
+  @override
+  String get selectLocation => 'Konum sec';
+
+  @override
+  String get confirmLocation => 'Konumu onayla';
+
+  @override
+  String get hotelName => 'Otel adi';
+
+  @override
+  String get roomType => 'Oda tipi';
+
+  @override
+  String get checkInTime => 'Giris saati';
+
+  @override
+  String get checkOutTime => 'Cikis saati';
+
+  @override
+  String get carCompany => 'Arac kiralama sirketi';
+
+  @override
+  String get carModel => 'Arac modeli';
+
+  @override
+  String get pickupLocation => 'Alis yeri';
+
+  @override
+  String get dropoffLocation => 'Teslim yeri';
+
+  @override
+  String get pickupTime => 'Alis saati';
+
+  @override
+  String get dropoffTime => 'Teslim saati';
+
+  @override
+  String get restaurantName => 'Restoran adi';
+
+  @override
+  String get cuisine => 'Mutfak';
+
+  @override
+  String get priceRange => 'Fiyat araligi';
+
+  @override
+  String get reservationTime => 'Rezervasyon saati';
+
+  @override
+  String get departureAirport => 'Kalkis havalimani';
+
+  @override
+  String get arrivalAirport => 'Varis havalimani';
+
+  @override
+  String get departureTime => 'Kalkis saati';
+
+  @override
+  String get arrivalTime => 'Varis saati';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get gate => 'Kapi';
+
+  @override
+  String get confirmationNumber => 'Onay numarasi';
+
+  @override
+  String get other => 'Diger';
+
+  @override
+  String get title => 'Baslik';
+
+  @override
+  String get description => 'Aciklama';
+
+  @override
+  String get itemNotFound => 'Oge bulunamadi';
+
+  @override
+  String get selectDay => 'Gun sec';
+
+  @override
+  String get selectAirline => 'Havayolu sec';
+
+  @override
+  String get enterNotesHint => 'Notlari girin...';
+
+  @override
+  String get enterHotelName => 'Otel adini girin';
+
+  @override
+  String get enterRoomType => 'Oda tipini girin';
+
+  @override
+  String get enterAddress => 'Adresi girin';
+
+  @override
+  String get enterConfirmationNumber => 'Onay numarasini girin';
+
+  @override
+  String get selectCarCompany => 'Arac kiralama sirketi sec';
+
+  @override
+  String get enterCarModel => 'Arac modelini girin';
+
+  @override
+  String get enterPickupLocation => 'Alis yerini girin';
+
+  @override
+  String get enterDropoffLocation => 'Teslim yerini girin';
+
+  @override
+  String get pickupInfo => 'Alis bilgisi';
+
+  @override
+  String get dropoffInfo => 'Teslim bilgisi';
+
+  @override
+  String get enterRestaurantName => 'Restoran adini girin';
+
+  @override
+  String get cuisineType => 'Mutfak turu';
+
+  @override
+  String get selectCuisineType => 'Mutfak turunu sec';
+
+  @override
+  String get reservationInfo => 'Rezervasyon bilgisi';
+
+  @override
+  String get enterTitle => 'Baslik girin';
+
+  @override
+  String get enterDescription => 'Aciklama girin';
+
+  @override
+  String get enterLocation => 'Konum girin';
+
+  @override
+  String get startTime => 'Baslangic saati';
+
+  @override
+  String get endTime => 'Bitis saati';
+
+  @override
+  String get addAttachments => 'Ek ekle';
+
+  @override
+  String get attachmentHint => 'Belge veya gorsel ekleyin';
+
+  @override
+  String get itemUpdatedSuccess => 'Oge basariyla guncellendi';
+
+  @override
+  String get itemDeletedSuccess => 'Oge basariyla silindi';
 }

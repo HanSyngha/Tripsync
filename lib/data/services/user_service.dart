@@ -173,4 +173,19 @@ class UserService {
         return providerId;
     }
   }
+
+  // Search user by email
+  Future<UserModel?> searchUserByEmail(String email) async {
+    try {
+      final query = await _usersCollection
+          .where('email', isEqualTo: email.toLowerCase().trim())
+          .limit(1)
+          .get();
+
+      if (query.docs.isEmpty) return null;
+      return UserModel.fromFirestore(query.docs.first);
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

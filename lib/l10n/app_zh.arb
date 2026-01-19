@@ -252,5 +252,222 @@
   "@deleteAccountFailed": {"description": "Account deletion failed message"},
 
   "deleteAccountWarning": "警告：您的账户和所有相关数据将被永久删除。",
-  "@deleteAccountWarning": {"description": "Delete account warning text"}
+  "@deleteAccountWarning": {"description": "Delete account warning text"},
+
+  "reportMessage": "举报消息",
+  "@reportMessage": {"description": "Report message option"},
+
+  "reportMessageDescription": "向旅行组织者举报不当内容",
+  "@reportMessageDescription": {"description": "Report message description"},
+
+  "blockUser": "屏蔽用户",
+  "@blockUser": {"description": "Block user option"},
+
+  "blockUserDescription": "您将不再看到此用户的消息",
+  "@blockUserDescription": {"description": "Block user description"},
+
+  "selectReportReason": "选择举报原因：",
+  "@selectReportReason": {"description": "Report reason selection prompt"},
+
+  "additionalDetails": "补充说明",
+  "@additionalDetails": {"description": "Additional details field label"},
+
+  "optionalDescription": "描述问题（可选）",
+  "@optionalDescription": {"description": "Optional description hint"},
+
+  "report": "举报",
+  "@report": {"description": "Report button"},
+
+  "block": "屏蔽",
+  "@block": {"description": "Block button"},
+
+  "reportTypeSpam": "垃圾信息",
+  "@reportTypeSpam": {"description": "Spam report type"},
+
+  "reportTypeHarassment": "骚扰",
+  "@reportTypeHarassment": {"description": "Harassment report type"},
+
+  "reportTypeInappropriate": "不当内容",
+  "@reportTypeInappropriate": {"description": "Inappropriate content report type"},
+
+  "reportTypeHateSpeech": "仇恨言论",
+  "@reportTypeHateSpeech": {"description": "Hate speech report type"},
+
+  "reportTypeViolence": "暴力内容",
+  "@reportTypeViolence": {"description": "Violence report type"},
+
+  "reportTypeOther": "其他",
+  "@reportTypeOther": {"description": "Other report type"},
+
+  "reportSubmitted": "举报已提交。旅行组织者将收到通知。",
+  "@reportSubmitted": {"description": "Report submitted success message"},
+
+  "reportFailed": "举报提交失败，请重试。",
+  "@reportFailed": {"description": "Report failed message"},
+
+  "blockUserConfirmation": "确定要屏蔽 {userName} 吗？您将不再看到他们的消息。",
+  "@blockUserConfirmation": {
+    "description": "Block user confirmation message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "userBlocked": "{userName} 已被屏蔽",
+  "@userBlocked": {
+    "description": "User blocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "blockFailed": "屏蔽用户失败，请重试。",
+  "@blockFailed": {"description": "Block failed message"},
+
+  "blockedUsers": "已屏蔽用户",
+  "@blockedUsers": {"description": "Blocked users settings title"},
+
+  "noBlockedUsers": "没有已屏蔽的用户",
+  "@noBlockedUsers": {"description": "No blocked users message"},
+
+  "unblock": "取消屏蔽",
+  "@unblock": {"description": "Unblock button"},
+
+  "userUnblocked": "{userName} 已取消屏蔽",
+  "@userUnblocked": {
+    "description": "User unblocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "reportUser": "举报用户",
+  "@reportUser": {"description": "Report user option"},
+
+  "reportUserDescription": "向旅行组织者举报此用户",
+  "@reportUserDescription": {"description": "Report user description"},
+
+  "discardTrip": "放弃行程？",
+  "discardTripMessage": "确定要放弃此行程吗？所有更改都将丢失。",
+  "discardChanges": "放弃更改？",
+  "discardChangesMessage": "确定要放弃您的更改吗？",
+  "keepEditing": "继续编辑",
+  "discard": "放弃",
+  "tripCreatedSuccess": "行程创建成功！",
+  "tripUpdatedSuccess": "行程更新成功！",
+  "tripNotFound": "未找到行程",
+  "itinerarySaved": "行程已保存",
+  "comingSoon": "即将推出",
+  "signOut": "退出登录",
+  "retry": "重试",
+  "viewParticipants": "查看参与者",
+  "pinnedMessages": "置顶消息",
+  "searchMessages": "搜索消息",
+  "sendAnnouncement": "发送公告",
+  "photo": "照片",
+  "camera": "相机",
+  "sharePhotosFromGallery": "从相册分享照片",
+  "takeNewPhoto": "拍摄新照片",
+  "shareCurrentLocation": "分享当前位置",
+  "featureComingSoon": "功能即将推出！",
+  "activityAddedSuccess": "活动添加成功",
+  "filePickerComingSoon": "文件选择器即将推出",
+  "pleaseEnterMessage": "请输入消息",
+  "announcementSentSuccess": "公告发送成功！",
+  "failedToLoadParticipants": "加载参与者失败",
+  "loginRequired": "需要登录",
+  "inviteSendFailed": "发送邀请失败，请重试。",
+  "newInviteLinkGenerated": "已生成新邀请链接",
+  "inviteLinkCopied": "邀请链接已复制",
+  "userNotFound": "未找到用户",
+  "noDestination": "无目的地",
+  "loginTitle": "欢迎",
+  "loginSubtitle": "登录开始您的旅程",
+  "continueWithKakao": "使用Kakao继续",
+  "continueWithNaver": "使用Naver继续",
+  "continueWithGoogle": "使用Google继续",
+
+  "locationPermissionDenied": "位置权限被拒绝",
+  "locationPermissionDeniedForever": "位置权限已被永久拒绝。请在设置中启用。",
+  "locationServicesDisabled": "位置服务已禁用",
+  "gettingLocation": "正在获取位置...",
+  "currentLocation": "当前位置",
+  "shareLocation": "分享位置",
+  "shareLocationConfirmation": "您要在聊天中分享此位置吗？",
+  "share": "分享",
+  "uploadFailed": "上传失败",
+  "openInGoogleMaps": "在谷歌地图中打开",
+  "getDirections": "获取路线",
+  "drivingDirections": "驾车路线",
+  "walkingDirections": "步行路线",
+  "transitDirections": "公共交通路线",
+  "noPinnedMessages": "没有置顶消息",
+  "noItineraryYet": "暂无行程",
+  "viewFullItinerary": "查看完整行程",
+  "inviteParticipant": "邀请参与者",
+  "emailAddress": "电子邮箱",
+  "enterEmailAddress": "输入电子邮箱",
+  "invalidEmail": "无效的电子邮箱",
+  "role": "角色",
+  "permissions": "权限",
+  "sendInvite": "发送邀请",
+  "inviteSent": "邀请已发送",
+  "editItinerary": "编辑行程",
+  "deleteItinerary": "删除行程",
+  "deleteItineraryConfirm": "您确定要删除此行程吗？",
+  "itineraryDeleted": "行程已删除",
+  "searchPlaces": "搜索地点",
+  "selectLocation": "选择位置",
+  "confirmLocation": "确认位置",
+  "hotelName": "酒店名称",
+  "roomType": "房间类型",
+  "checkInTime": "入住时间",
+  "checkOutTime": "退房时间",
+  "carCompany": "租车公司",
+  "carModel": "车型",
+  "pickupLocation": "取车地点",
+  "dropoffLocation": "还车地点",
+  "pickupTime": "取车时间",
+  "dropoffTime": "还车时间",
+  "restaurantName": "餐厅名称",
+  "cuisine": "菜系",
+  "priceRange": "价格范围",
+  "reservationTime": "预约时间",
+  "departureAirport": "出发机场",
+  "arrivalAirport": "到达机场",
+  "departureTime": "出发时间",
+  "arrivalTime": "到达时间",
+  "terminal": "航站楼",
+  "gate": "登机口",
+  "confirmationNumber": "确认号",
+  "other": "其他",
+  "title": "标题",
+  "description": "描述",
+  "itemNotFound": "未找到项目",
+  "selectDay": "选择日期",
+  "selectAirline": "选择航空公司",
+  "enterNotesHint": "请输入补充说明",
+  "enterHotelName": "请输入酒店名称",
+  "enterRoomType": "例如：豪华双床房",
+  "enterAddress": "请输入地址",
+  "enterConfirmationNumber": "请输入确认号",
+  "selectCarCompany": "选择租车公司",
+  "enterCarModel": "例如：丰田卡罗拉",
+  "enterPickupLocation": "请输入取车地点",
+  "enterDropoffLocation": "请输入还车地点",
+  "pickupInfo": "取车信息",
+  "dropoffInfo": "还车信息",
+  "enterRestaurantName": "请输入餐厅名称",
+  "cuisineType": "菜系类型",
+  "selectCuisineType": "选择菜系类型",
+  "reservationInfo": "预约信息",
+  "enterTitle": "请输入标题",
+  "enterDescription": "请输入描述",
+  "enterLocation": "请输入位置",
+  "startTime": "开始时间",
+  "endTime": "结束时间",
+  "addAttachments": "添加附件",
+  "attachmentHint": "电子机票、预约确认书等",
+  "itemUpdatedSuccess": "项目已更新",
+  "itemDeletedSuccess": "项目已删除"
 }

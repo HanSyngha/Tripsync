@@ -31,6 +31,22 @@
         { "fieldPath": "userId", "order": "ASCENDING" },
         { "fieldPath": "createdAt", "order": "DESCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "itinerary",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dayNumber", "order": "ASCENDING" },
+        { "fieldPath": "orderIndex", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "itinerary",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dayNumber", "order": "ASCENDING" },
+        { "fieldPath": "startTime", "order": "ASCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []

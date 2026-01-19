@@ -719,123 +719,124 @@ class AppLocalizationsNl extends AppLocalizations {
   String get earlier => 'Eerder';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'Reis verwijderen?';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'Weet je zeker dat je deze reis wilt verwijderen? Alle wijzigingen gaan verloren.';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'Wijzigingen verwijderen?';
 
   @override
   String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+      'Weet je zeker dat je je wijzigingen wilt verwijderen?';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'Doorgaan met bewerken';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'Verwijderen';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'Reis succesvol aangemaakt!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'Reis succesvol bijgewerkt!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'Reis niet gevonden';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'Reisplan opgeslagen';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'Binnenkort beschikbaar';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'Uitloggen';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Opnieuw proberen';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'Deelnemers bekijken';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'Vastgezette berichten';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'Berichten zoeken';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'Aankondiging versturen';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'Foto';
 
   @override
   String get camera => 'Camera';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'Foto\'s delen vanuit galerij';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'Nieuwe foto maken';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'Huidige locatie delen';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'Functie binnenkort beschikbaar!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'Activiteit succesvol toegevoegd';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'Bestandskiezer binnenkort beschikbaar';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'Voer een bericht in';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'Aankondiging succesvol verzonden!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'Kon deelnemers niet laden';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'Inloggen vereist';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed =>
+      'Uitnodiging verzenden mislukt. Probeer het opnieuw.';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'Nieuwe uitnodigingslink gegenereerd';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'Uitnodigingslink gekopieerd';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'Gebruiker niet gevonden';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'Geen bestemming';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'Welkom';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'Log in om je reis te beginnen';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Doorgaan met Kakao';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Doorgaan met Naver';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Doorgaan met Google';
 
   @override
   String get account => 'Account';
@@ -866,4 +867,344 @@ class AppLocalizationsNl extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'Waarschuwing: Deze actie kan niet ongedaan worden gemaakt. Al je gegevens inclusief reizen en berichten worden permanent verwijderd.';
+
+  @override
+  String get reportMessage => 'Bericht melden';
+
+  @override
+  String get reportMessageDescription =>
+      'Ongepaste inhoud melden aan de reisorganisator';
+
+  @override
+  String get blockUser => 'Gebruiker blokkeren';
+
+  @override
+  String get blockUserDescription =>
+      'Je ziet geen berichten meer van deze gebruiker';
+
+  @override
+  String get selectReportReason => 'Selecteer een reden voor het melden:';
+
+  @override
+  String get additionalDetails => 'Extra details';
+
+  @override
+  String get optionalDescription => 'Beschrijf het probleem (optioneel)';
+
+  @override
+  String get report => 'Melden';
+
+  @override
+  String get block => 'Blokkeren';
+
+  @override
+  String get reportTypeSpam => 'Spam';
+
+  @override
+  String get reportTypeHarassment => 'Intimidatie';
+
+  @override
+  String get reportTypeInappropriate => 'Ongepaste inhoud';
+
+  @override
+  String get reportTypeHateSpeech => 'Haatzaaien';
+
+  @override
+  String get reportTypeViolence => 'Geweld';
+
+  @override
+  String get reportTypeOther => 'Anders';
+
+  @override
+  String get reportSubmitted =>
+      'Melding verzonden. De reisorganisator wordt op de hoogte gebracht.';
+
+  @override
+  String get reportFailed => 'Melding verzenden mislukt. Probeer het opnieuw.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return 'Weet je zeker dat je $userName wilt blokkeren? Je ziet hun berichten niet meer.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName is geblokkeerd';
+  }
+
+  @override
+  String get blockFailed => 'Gebruiker blokkeren mislukt. Probeer het opnieuw.';
+
+  @override
+  String get blockedUsers => 'Geblokkeerde gebruikers';
+
+  @override
+  String get noBlockedUsers => 'Geen geblokkeerde gebruikers';
+
+  @override
+  String get unblock => 'Deblokkeren';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName is gedeblokkeerd';
+  }
+
+  @override
+  String get reportUser => 'Gebruiker melden';
+
+  @override
+  String get reportUserDescription =>
+      'Deze gebruiker melden aan de reisorganisator';
+
+  @override
+  String get locationPermissionDenied => 'Locatietoestemming geweigerd';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'Locatietoestemming permanent geweigerd. Schakel in via instellingen.';
+
+  @override
+  String get locationServicesDisabled => 'Locatiediensten uitgeschakeld';
+
+  @override
+  String get gettingLocation => 'Locatie ophalen...';
+
+  @override
+  String get currentLocation => 'Huidige locatie';
+
+  @override
+  String get shareLocation => 'Locatie delen';
+
+  @override
+  String get shareLocationConfirmation =>
+      'Wil je deze locatie delen in de chat?';
+
+  @override
+  String get share => 'Delen';
+
+  @override
+  String get uploadFailed => 'Upload mislukt';
+
+  @override
+  String get openInGoogleMaps => 'Openen in Google Maps';
+
+  @override
+  String get getDirections => 'Route opvragen';
+
+  @override
+  String get drivingDirections => 'Autoroute';
+
+  @override
+  String get walkingDirections => 'Looproute';
+
+  @override
+  String get transitDirections => 'OV-route';
+
+  @override
+  String get noPinnedMessages => 'Geen vastgezette berichten';
+
+  @override
+  String get noItineraryYet => 'Nog geen reisschema';
+
+  @override
+  String get viewFullItinerary => 'Volledig reisschema bekijken';
+
+  @override
+  String get inviteParticipant => 'Deelnemer uitnodigen';
+
+  @override
+  String get emailAddress => 'E-mailadres';
+
+  @override
+  String get enterEmailAddress => 'Voer e-mailadres in';
+
+  @override
+  String get invalidEmail => 'Ongeldig e-mailadres';
+
+  @override
+  String get role => 'Rol';
+
+  @override
+  String get permissions => 'Rechten';
+
+  @override
+  String get sendInvite => 'Uitnodiging verzenden';
+
+  @override
+  String get inviteSent => 'Uitnodiging verzonden';
+
+  @override
+  String get editItinerary => 'Reisschema bewerken';
+
+  @override
+  String get deleteItinerary => 'Reisschema verwijderen';
+
+  @override
+  String get deleteItineraryConfirm =>
+      'Weet je zeker dat je dit reisschema wilt verwijderen?';
+
+  @override
+  String get itineraryDeleted => 'Reisschema verwijderd';
+
+  @override
+  String get searchPlaces => 'Plaatsen zoeken';
+
+  @override
+  String get selectLocation => 'Locatie selecteren';
+
+  @override
+  String get confirmLocation => 'Locatie bevestigen';
+
+  @override
+  String get hotelName => 'Hotelnaam';
+
+  @override
+  String get roomType => 'Kamertype';
+
+  @override
+  String get checkInTime => 'Inchecktijd';
+
+  @override
+  String get checkOutTime => 'Uitchecktijd';
+
+  @override
+  String get carCompany => 'Autoverhuurbedrijf';
+
+  @override
+  String get carModel => 'Automodel';
+
+  @override
+  String get pickupLocation => 'Ophaallocatie';
+
+  @override
+  String get dropoffLocation => 'Inleverlocatie';
+
+  @override
+  String get pickupTime => 'Ophaaltijd';
+
+  @override
+  String get dropoffTime => 'Inlevertijd';
+
+  @override
+  String get restaurantName => 'Restaurantnaam';
+
+  @override
+  String get cuisine => 'Keuken';
+
+  @override
+  String get priceRange => 'Prijsklasse';
+
+  @override
+  String get reservationTime => 'Reserveringstijd';
+
+  @override
+  String get departureAirport => 'Vertrekvliegveld';
+
+  @override
+  String get arrivalAirport => 'Aankomstvliegveld';
+
+  @override
+  String get departureTime => 'Vertrektijd';
+
+  @override
+  String get arrivalTime => 'Aankomsttijd';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get gate => 'Gate';
+
+  @override
+  String get confirmationNumber => 'Bevestigingsnummer';
+
+  @override
+  String get other => 'Overig';
+
+  @override
+  String get title => 'Titel';
+
+  @override
+  String get description => 'Beschrijving';
+
+  @override
+  String get itemNotFound => 'Item niet gevonden';
+
+  @override
+  String get selectDay => 'Selecteer dag';
+
+  @override
+  String get selectAirline => 'Selecteer luchtvaartmaatschappij';
+
+  @override
+  String get enterNotesHint => 'Voer notities in...';
+
+  @override
+  String get enterHotelName => 'Voer hotelnaam in';
+
+  @override
+  String get enterRoomType => 'Voer kamertype in';
+
+  @override
+  String get enterAddress => 'Voer adres in';
+
+  @override
+  String get enterConfirmationNumber => 'Voer bevestigingsnummer in';
+
+  @override
+  String get selectCarCompany => 'Selecteer autoverhuurbedrijf';
+
+  @override
+  String get enterCarModel => 'Voer automodel in';
+
+  @override
+  String get enterPickupLocation => 'Voer ophaallocatie in';
+
+  @override
+  String get enterDropoffLocation => 'Voer inleverlocatie in';
+
+  @override
+  String get pickupInfo => 'Ophaalinfo';
+
+  @override
+  String get dropoffInfo => 'Inleverinfo';
+
+  @override
+  String get enterRestaurantName => 'Voer restaurantnaam in';
+
+  @override
+  String get cuisineType => 'Keukentype';
+
+  @override
+  String get selectCuisineType => 'Selecteer keukentype';
+
+  @override
+  String get reservationInfo => 'Reserveringsinfo';
+
+  @override
+  String get enterTitle => 'Voer titel in';
+
+  @override
+  String get enterDescription => 'Voer beschrijving in';
+
+  @override
+  String get enterLocation => 'Voer locatie in';
+
+  @override
+  String get startTime => 'Starttijd';
+
+  @override
+  String get endTime => 'Eindtijd';
+
+  @override
+  String get addAttachments => 'Bijlagen toevoegen';
+
+  @override
+  String get attachmentHint => 'Voeg documenten of afbeeldingen toe';
+
+  @override
+  String get itemUpdatedSuccess => 'Item succesvol bijgewerkt';
+
+  @override
+  String get itemDeletedSuccess => 'Item succesvol verwijderd';
 }

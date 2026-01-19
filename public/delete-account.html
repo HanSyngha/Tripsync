@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripSync - Account Deletion | 계정 삭제</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #247D8F;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-left: 4px solid #247D8F;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        p, li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background: #E3F2FD;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #247D8F;
+        }
+        .warning {
+            background: #FFF3E0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #FF9800;
+        }
+        .steps {
+            background: #F5F5F5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .steps ol {
+            margin-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        .contact {
+            background: #247D8F;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .contact a {
+            color: #FFE082;
+        }
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-toggle button {
+            background: #247D8F;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .lang-toggle button:hover {
+            background: #1B5E6B;
+        }
+        .lang-toggle button.active {
+            background: #B8734A;
+        }
+        .en, .ko { display: none; }
+        .show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-toggle">
+            <button onclick="showLang('ko')" id="btn-ko" class="active">한국어</button>
+            <button onclick="showLang('en')" id="btn-en">English</button>
+        </div>
+
+        <!-- Korean Version -->
+        <div class="ko show">
+            <h1>TripSync 계정 삭제 안내</h1>
+            <p class="subtitle">Account Deletion Instructions</p>
+
+            <h2>계정 삭제 방법</h2>
+            <div class="steps">
+                <p><strong>앱 내에서 직접 삭제하실 수 있습니다:</strong></p>
+                <ol>
+                    <li>TripSync 앱을 실행합니다</li>
+                    <li>하단의 <strong>프로필</strong> 탭을 선택합니다</li>
+                    <li><strong>설정</strong> 메뉴로 이동합니다</li>
+                    <li>하단의 <strong>계정 삭제</strong>를 선택합니다</li>
+                    <li>확인 문구 "DELETE"를 입력합니다</li>
+                    <li><strong>계정 삭제</strong> 버튼을 눌러 완료합니다</li>
+                </ol>
+            </div>
+
+            <h2>삭제되는 데이터</h2>
+            <p>계정 삭제 시 다음 데이터가 <strong>영구적으로 삭제</strong>됩니다:</p>
+            <ul>
+                <li>프로필 정보 (이름, 이메일, 프로필 사진)</li>
+                <li>생성한 여행 일정</li>
+                <li>채팅 메시지</li>
+                <li>여행 참여 기록</li>
+                <li>앱 설정 및 환경설정</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ 주의사항</strong>
+                <ul>
+                    <li>계정 삭제는 <strong>되돌릴 수 없습니다</strong></li>
+                    <li>호스트인 여행이 있는 경우, 먼저 다른 참여자에게 호스트 권한을 이전하거나 여행을 삭제해 주세요</li>
+                    <li>삭제 요청 후 <strong>30일 이내</strong>에 모든 데이터가 완전히 삭제됩니다</li>
+                </ul>
+            </div>
+
+            <h2>데이터 보관 기간</h2>
+            <ul>
+                <li><strong>즉시 삭제</strong>: 프로필 정보, 앱 설정</li>
+                <li><strong>30일 후 삭제</strong>: 채팅 메시지, 여행 데이터 (백업에서 완전 제거)</li>
+                <li><strong>법적 의무에 따른 보관</strong>: 결제 기록 등 법적으로 보관이 필요한 정보는 관련 법령에 따라 보관될 수 있습니다</li>
+            </ul>
+
+            <div class="contact">
+                <strong>📧 도움이 필요하신가요?</strong>
+                <p>앱 내에서 삭제가 어려우시면 아래 이메일로 문의해 주세요:</p>
+                <p><a href="mailto:support@tripsync.app">support@tripsync.app</a></p>
+                <p style="font-size: 13px; margin-top: 10px;">문의 시 가입하신 이메일 주소를 함께 보내주세요.</p>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div class="en">
+            <h1>TripSync Account Deletion</h1>
+            <p class="subtitle">How to delete your account and data</p>
+
+            <h2>How to Delete Your Account</h2>
+            <div class="steps">
+                <p><strong>You can delete your account directly in the app:</strong></p>
+                <ol>
+                    <li>Open the TripSync app</li>
+                    <li>Tap the <strong>Profile</strong> tab at the bottom</li>
+                    <li>Go to <strong>Settings</strong></li>
+                    <li>Scroll down and tap <strong>Delete Account</strong></li>
+                    <li>Type "DELETE" to confirm</li>
+                    <li>Tap the <strong>Delete Account</strong> button to complete</li>
+                </ol>
+            </div>
+
+            <h2>Data That Will Be Deleted</h2>
+            <p>When you delete your account, the following data will be <strong>permanently deleted</strong>:</p>
+            <ul>
+                <li>Profile information (name, email, profile photo)</li>
+                <li>Trip itineraries you created</li>
+                <li>Chat messages</li>
+                <li>Trip participation history</li>
+                <li>App settings and preferences</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Important Notice</strong>
+                <ul>
+                    <li>Account deletion is <strong>irreversible</strong></li>
+                    <li>If you are a host of any trips, please transfer host privileges or delete the trips first</li>
+                    <li>All data will be completely deleted within <strong>30 days</strong> after the deletion request</li>
+                </ul>
+            </div>
+
+            <h2>Data Retention Period</h2>
+            <ul>
+                <li><strong>Immediate deletion</strong>: Profile information, app settings</li>
+                <li><strong>Deleted after 30 days</strong>: Chat messages, trip data (removed from backups)</li>
+                <li><strong>Retained as required by law</strong>: Payment records and other legally required information may be retained according to applicable laws</li>
+            </ul>
+
+            <div class="contact">
+                <strong>📧 Need Help?</strong>
+                <p>If you have trouble deleting your account in the app, please contact us:</p>
+                <p><a href="mailto:support@tripsync.app">support@tripsync.app</a></p>
+                <p style="font-size: 13px; margin-top: 10px;">Please include your registered email address in your request.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #999; font-size: 12px;">
+            TripSync &copy; 2024. All rights reserved.
+        </p>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll('.ko, .en').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('.' + lang).forEach(el => el.classList.add('show'));
+            document.getElementById('btn-ko').classList.remove('active');
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

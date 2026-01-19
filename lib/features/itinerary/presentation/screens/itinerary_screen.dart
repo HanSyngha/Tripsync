@@ -73,6 +73,7 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
                   ),
                 )
               : null,
+          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         );
       },
       loading: () => const Scaffold(
@@ -111,23 +112,6 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
               color: AppColors.textPrimaryLight,
             ),
           ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                // Save action
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(AppLocalizations.of(context)!.itinerarySaved)),
-                );
-              },
-              child: const Text(
-                'Save',
-                style: TextStyle(
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ],
         ),
 
         // Cover Image Section
@@ -431,6 +415,8 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
   }
 
   Widget _buildActivityCard(ItineraryItemModel item) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -493,6 +479,7 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
                 if (item.duration != null)
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    margin: const EdgeInsets.only(right: 8),
                     decoration: BoxDecoration(
                       color: AppColors.backgroundLight,
                       borderRadius: BorderRadius.circular(8),
@@ -506,6 +493,47 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
                       ),
                     ),
                   ),
+                // Edit/Delete menu
+                PopupMenuButton<String>(
+                  icon: const Icon(
+                    Icons.more_vert,
+                    color: AppColors.textSecondaryLight,
+                    size: 20,
+                  ),
+                  padding: EdgeInsets.zero,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  onSelected: (value) {
+                    if (value == 'edit') {
+                      _editItem(item);
+                    } else if (value == 'delete') {
+                      _showDeleteConfirmation(item, l10n);
+                    }
+                  },
+                  itemBuilder: (context) => [
+                    PopupMenuItem(
+                      value: 'edit',
+                      child: Row(
+                        children: [
+                          const Icon(Icons.edit_outlined, size: 20, color: AppColors.primary),
+                          const SizedBox(width: 12),
+                          Text(l10n.edit),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'delete',
+                      child: Row(
+                        children: [
+                          const Icon(Icons.delete_outline, size: 20, color: AppColors.error),
+                          const SizedBox(width: 12),
+                          Text(l10n.delete, style: const TextStyle(color: AppColors.error)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -914,6 +942,66 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
         return Icons.directions_bus;
       default:
         return Icons.more_horiz;
+    }
+  }
+
+  void _editItem(ItineraryItemModel item) {
+    context.push('/trip/${widget.tripId}/itinerary/edit/${item.id}');
+  }
+
+  void _showDeleteConfirmation(ItineraryItemModel item, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Text(l10n.deleteItinerary),
+        content: Text(l10n.deleteItineraryConfirm),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l10n.cancel),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              Navigator.pop(context);
+              await _deleteItem(item, l10n);
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.error,
+              foregroundColor: Colors.white,
+            ),
+            child: Text(l10n.delete),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _deleteItem(ItineraryItemModel item, AppLocalizations l10n) async {
+    try {
+      await ref.read(itineraryNotifierProvider.notifier).deleteItem(
+        widget.tripId,
+        item.id,
+      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(l10n.itemDeletedSuccess),
+            backgroundColor: AppColors.success,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('${l10n.error}: $e'),
+            backgroundColor: AppColors.error,
+          ),
+        );
+      }
     }
   }
 }

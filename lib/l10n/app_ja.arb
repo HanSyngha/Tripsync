@@ -252,5 +252,222 @@
   "@deleteAccountFailed": {"description": "Account deletion failed message"},
 
   "deleteAccountWarning": "警告：アカウントと関連するすべてのデータが完全に削除されます。",
-  "@deleteAccountWarning": {"description": "Delete account warning text"}
+  "@deleteAccountWarning": {"description": "Delete account warning text"},
+
+  "reportMessage": "メッセージを報告",
+  "@reportMessage": {"description": "Report message option"},
+
+  "reportMessageDescription": "不適切なコンテンツを旅行主催者に報告",
+  "@reportMessageDescription": {"description": "Report message description"},
+
+  "blockUser": "ユーザーをブロック",
+  "@blockUser": {"description": "Block user option"},
+
+  "blockUserDescription": "このユーザーからのメッセージは表示されなくなります",
+  "@blockUserDescription": {"description": "Block user description"},
+
+  "selectReportReason": "報告理由を選択してください：",
+  "@selectReportReason": {"description": "Report reason selection prompt"},
+
+  "additionalDetails": "追加の詳細",
+  "@additionalDetails": {"description": "Additional details field label"},
+
+  "optionalDescription": "問題を説明してください（任意）",
+  "@optionalDescription": {"description": "Optional description hint"},
+
+  "report": "報告",
+  "@report": {"description": "Report button"},
+
+  "block": "ブロック",
+  "@block": {"description": "Block button"},
+
+  "reportTypeSpam": "スパム",
+  "@reportTypeSpam": {"description": "Spam report type"},
+
+  "reportTypeHarassment": "嫌がらせ",
+  "@reportTypeHarassment": {"description": "Harassment report type"},
+
+  "reportTypeInappropriate": "不適切なコンテンツ",
+  "@reportTypeInappropriate": {"description": "Inappropriate content report type"},
+
+  "reportTypeHateSpeech": "ヘイトスピーチ",
+  "@reportTypeHateSpeech": {"description": "Hate speech report type"},
+
+  "reportTypeViolence": "暴力",
+  "@reportTypeViolence": {"description": "Violence report type"},
+
+  "reportTypeOther": "その他",
+  "@reportTypeOther": {"description": "Other report type"},
+
+  "reportSubmitted": "報告が送信されました。旅行主催者に通知されます。",
+  "@reportSubmitted": {"description": "Report submitted success message"},
+
+  "reportFailed": "報告の送信に失敗しました。もう一度お試しください。",
+  "@reportFailed": {"description": "Report failed message"},
+
+  "blockUserConfirmation": "{userName}をブロックしますか？このユーザーのメッセージは表示されなくなります。",
+  "@blockUserConfirmation": {
+    "description": "Block user confirmation message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "userBlocked": "{userName}をブロックしました",
+  "@userBlocked": {
+    "description": "User blocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "blockFailed": "ユーザーのブロックに失敗しました。もう一度お試しください。",
+  "@blockFailed": {"description": "Block failed message"},
+
+  "blockedUsers": "ブロック中のユーザー",
+  "@blockedUsers": {"description": "Blocked users settings title"},
+
+  "noBlockedUsers": "ブロック中のユーザーはいません",
+  "@noBlockedUsers": {"description": "No blocked users message"},
+
+  "unblock": "ブロック解除",
+  "@unblock": {"description": "Unblock button"},
+
+  "userUnblocked": "{userName}のブロックを解除しました",
+  "@userUnblocked": {
+    "description": "User unblocked success message",
+    "placeholders": {
+      "userName": {"type": "String"}
+    }
+  },
+
+  "reportUser": "ユーザーを報告",
+  "@reportUser": {"description": "Report user option"},
+
+  "reportUserDescription": "このユーザーを旅行主催者に報告",
+  "@reportUserDescription": {"description": "Report user description"},
+
+  "discardTrip": "旅行を破棄しますか？",
+  "discardTripMessage": "この旅行を破棄してよろしいですか？すべての変更が失われます。",
+  "discardChanges": "変更を破棄しますか？",
+  "discardChangesMessage": "変更を破棄してよろしいですか？",
+  "keepEditing": "編集を続ける",
+  "discard": "破棄",
+  "tripCreatedSuccess": "旅行が正常に作成されました！",
+  "tripUpdatedSuccess": "旅行が正常に更新されました！",
+  "tripNotFound": "旅行が見つかりません",
+  "itinerarySaved": "旅程が保存されました",
+  "comingSoon": "近日公開",
+  "signOut": "サインアウト",
+  "retry": "再試行",
+  "viewParticipants": "参加者を表示",
+  "pinnedMessages": "固定メッセージ",
+  "searchMessages": "メッセージを検索",
+  "sendAnnouncement": "お知らせを送信",
+  "photo": "写真",
+  "camera": "カメラ",
+  "sharePhotosFromGallery": "ギャラリーから写真を共有",
+  "takeNewPhoto": "新しい写真を撮る",
+  "shareCurrentLocation": "現在地を共有",
+  "featureComingSoon": "機能は近日公開！",
+  "activityAddedSuccess": "アクティビティが正常に追加されました",
+  "filePickerComingSoon": "ファイル選択は近日公開",
+  "pleaseEnterMessage": "メッセージを入力してください",
+  "announcementSentSuccess": "お知らせが正常に送信されました！",
+  "failedToLoadParticipants": "参加者の読み込みに失敗しました",
+  "loginRequired": "ログインが必要です",
+  "inviteSendFailed": "招待の送信に失敗しました。もう一度お試しください。",
+  "newInviteLinkGenerated": "新しい招待リンクが生成されました",
+  "inviteLinkCopied": "招待リンクがコピーされました",
+  "userNotFound": "ユーザーが見つかりません",
+  "noDestination": "目的地なし",
+  "loginTitle": "ようこそ",
+  "loginSubtitle": "サインインして旅を始めましょう",
+  "continueWithKakao": "Kakaoで続行",
+  "continueWithNaver": "Naverで続行",
+  "continueWithGoogle": "Googleで続行",
+
+  "locationPermissionDenied": "位置情報の許可が拒否されました",
+  "locationPermissionDeniedForever": "位置情報の許可が永久に拒否されました。設定で有効にしてください。",
+  "locationServicesDisabled": "位置情報サービスが無効です",
+  "gettingLocation": "位置情報を取得中...",
+  "currentLocation": "現在地",
+  "shareLocation": "位置情報を共有",
+  "shareLocationConfirmation": "この位置情報をチャットで共有しますか？",
+  "share": "共有",
+  "uploadFailed": "アップロードに失敗しました",
+  "openInGoogleMaps": "Googleマップで開く",
+  "getDirections": "道順を取得",
+  "drivingDirections": "車での道順",
+  "walkingDirections": "徒歩での道順",
+  "transitDirections": "公共交通機関での道順",
+  "noPinnedMessages": "固定メッセージはありません",
+  "noItineraryYet": "まだ旅程がありません",
+  "viewFullItinerary": "完全な旅程を表示",
+  "inviteParticipant": "参加者を招待",
+  "emailAddress": "メールアドレス",
+  "enterEmailAddress": "メールアドレスを入力",
+  "invalidEmail": "無効なメールアドレス",
+  "role": "役割",
+  "permissions": "権限",
+  "sendInvite": "招待を送信",
+  "inviteSent": "招待が送信されました",
+  "editItinerary": "旅程を編集",
+  "deleteItinerary": "旅程を削除",
+  "deleteItineraryConfirm": "この旅程を削除してもよろしいですか？",
+  "itineraryDeleted": "旅程が削除されました",
+  "searchPlaces": "場所を検索",
+  "selectLocation": "場所を選択",
+  "confirmLocation": "場所を確認",
+  "hotelName": "ホテル名",
+  "roomType": "部屋タイプ",
+  "checkInTime": "チェックイン時間",
+  "checkOutTime": "チェックアウト時間",
+  "carCompany": "レンタカー会社",
+  "carModel": "車種",
+  "pickupLocation": "ピックアップ場所",
+  "dropoffLocation": "返却場所",
+  "pickupTime": "ピックアップ時間",
+  "dropoffTime": "返却時間",
+  "restaurantName": "レストラン名",
+  "cuisine": "料理の種類",
+  "priceRange": "価格帯",
+  "reservationTime": "予約時間",
+  "departureAirport": "出発空港",
+  "arrivalAirport": "到着空港",
+  "departureTime": "出発時間",
+  "arrivalTime": "到着時間",
+  "terminal": "ターミナル",
+  "gate": "ゲート",
+  "confirmationNumber": "確認番号",
+  "other": "その他",
+  "title": "タイトル",
+  "description": "説明",
+  "itemNotFound": "アイテムが見つかりません",
+  "selectDay": "日を選択",
+  "selectAirline": "航空会社を選択",
+  "enterNotesHint": "追加のメモを入力してください",
+  "enterHotelName": "ホテル名を入力",
+  "enterRoomType": "例：デラックスツイン",
+  "enterAddress": "住所を入力",
+  "enterConfirmationNumber": "確認番号を入力",
+  "selectCarCompany": "レンタカー会社を選択",
+  "enterCarModel": "例：トヨタ カローラ",
+  "enterPickupLocation": "ピックアップ場所を入力",
+  "enterDropoffLocation": "返却場所を入力",
+  "pickupInfo": "ピックアップ情報",
+  "dropoffInfo": "返却情報",
+  "enterRestaurantName": "レストラン名を入力",
+  "cuisineType": "料理の種類",
+  "selectCuisineType": "料理の種類を選択",
+  "reservationInfo": "予約情報",
+  "enterTitle": "タイトルを入力",
+  "enterDescription": "説明を入力",
+  "enterLocation": "場所を入力",
+  "startTime": "開始時間",
+  "endTime": "終了時間",
+  "addAttachments": "添付ファイルを追加",
+  "attachmentHint": "Eチケット、予約確認書など",
+  "itemUpdatedSuccess": "アイテムが更新されました",
+  "itemDeletedSuccess": "アイテムが削除されました"
 }

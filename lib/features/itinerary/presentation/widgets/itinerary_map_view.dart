@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/constants/app_constants.dart';
@@ -550,24 +552,162 @@ class _ItineraryMapViewState extends ConsumerState<ItineraryMapView> {
   }
 
   void _goToCurrentLocation() async {
-    // TODO: Implement current location
     if (_mapController == null) return;
+    final l10n = AppLocalizations.of(context)!;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(AppLocalizations.of(context)!.featureComingSoon)),
-    );
+    try {
+      // Check location permission
+      LocationPermission permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+        if (permission == LocationPermission.denied) {
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(l10n.locationPermissionDenied)),
+            );
+          }
+          return;
+        }
+      }
+
+      if (permission == LocationPermission.deniedForever) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(l10n.locationPermissionDeniedForever)),
+          );
+        }
+        return;
+      }
+
+      // Check if location services are enabled
+      bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(l10n.locationServicesDisabled)),
+          );
+        }
+        return;
+      }
+
+      // Get current position
+      final position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high,
+      );
+
+      // Animate camera to current location
+      await _mapController?.animateCamera(
+        CameraUpdate.newLatLngZoom(
+          LatLng(position.latitude, position.longitude),
+          15,
+        ),
+      );
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('${l10n.error}: $e')),
+        );
+      }
+    }
   }
 
-  void _openDirections(ItineraryItemModel item) {
+  void _openDirections(ItineraryItemModel item) async {
     if (item.coordinates == null) return;
+    final l10n = AppLocalizations.of(context)!;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(AppLocalizations.of(context)!.featureComingSoon)),
+    final lat = item.coordinates!.latitude;
+    final lng = item.coordinates!.longitude;
+
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 40,
+              height: 4,
+              margin: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: AppColors.divider,
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            ListTile(
+              leading: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(Icons.location_on, color: AppColors.primary),
+              ),
+              title: Text(item.title),
+              subtitle: Text(item.location ?? item.address ?? '$lat, $lng'),
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.directions_car),
+              title: Text(l10n.drivingDirections),
+              onTap: () async {
+                Navigator.pop(context);
+                final url = Uri.parse(
+                  'https://www.google.com/maps/dir/?api=1&destination=$lat,$lng&travelmode=driving',
+                );
+                try {
+                  await launchUrl(url, mode: LaunchMode.externalApplication);
+                } catch (e) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Could not open maps: $e')),
+                    );
+                  }
+                }
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.directions_walk),
+              title: Text(l10n.walkingDirections),
+              onTap: () async {
+                Navigator.pop(context);
+                final url = Uri.parse(
+                  'https://www.google.com/maps/dir/?api=1&destination=$lat,$lng&travelmode=walking',
+                );
+                try {
+                  await launchUrl(url, mode: LaunchMode.externalApplication);
+                } catch (e) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Could not open maps: $e')),
+                    );
+                  }
+                }
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.directions_transit),
+              title: Text(l10n.transitDirections),
+              onTap: () async {
+                Navigator.pop(context);
+                final url = Uri.parse(
+                  'https://www.google.com/maps/dir/?api=1&destination=$lat,$lng&travelmode=transit',
+                );
+                try {
+                  await launchUrl(url, mode: LaunchMode.externalApplication);
+                } catch (e) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Could not open maps: $e')),
+                    );
+                  }
+                }
+              },
+            ),
+            const SizedBox(height: 16),
+          ],
+        ),
+      ),
     );
-
-    // TODO: Open Google Maps directions
-    // final url = 'https://www.google.com/maps/dir/?api=1&destination=${item.coordinates!.latitude},${item.coordinates!.longitude}';
-    // launchUrl(Uri.parse(url));
   }
 
   double _getMarkerHue(ItineraryItemType type) {

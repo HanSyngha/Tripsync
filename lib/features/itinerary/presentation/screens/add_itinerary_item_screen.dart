@@ -6,6 +6,8 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../data/models/trip_model.dart';
+import '../../../../data/models/airport_model.dart';
+import '../../../../data/services/flight_search_service.dart';
 import '../../../trip/providers/trip_provider.dart';
 import '../../providers/itinerary_provider.dart';
 
@@ -34,6 +36,144 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
     _CategoryTab(type: ItineraryItemType.restaurant, emoji: '\ud83c\udf7d\ufe0f', label: '\ub808\uc2a4\ud1a0\ub791', labelEn: 'Restaurant'),
     _CategoryTab(type: ItineraryItemType.attraction, emoji: '\ud83c\udff0', label: '\uad00\uad11', labelEn: 'Attraction'),
     _CategoryTab(type: ItineraryItemType.activity, emoji: '\ud83e\udd7e', label: '\uc561\ud2f0\ube44\ud2f0', labelEn: 'Activity'),
+  ];
+
+  // Major airlines list (100+)
+  static const List<String> _majorAirlines = [
+    // Korean Airlines
+    'Korean Air',
+    'Asiana Airlines',
+    'Jeju Air',
+    'Jin Air',
+    'T\'way Air',
+    'Air Busan',
+    'Air Seoul',
+    'Eastar Jet',
+    // Japanese Airlines
+    'All Nippon Airways (ANA)',
+    'Japan Airlines (JAL)',
+    'Peach Aviation',
+    'Jetstar Japan',
+    'Skymark Airlines',
+    'Solaseed Air',
+    'StarFlyer',
+    // Chinese Airlines
+    'Air China',
+    'China Eastern Airlines',
+    'China Southern Airlines',
+    'Hainan Airlines',
+    'Xiamen Airlines',
+    'Sichuan Airlines',
+    'Shenzhen Airlines',
+    'Spring Airlines',
+    'Juneyao Airlines',
+    // Southeast Asian Airlines
+    'Singapore Airlines',
+    'Cathay Pacific',
+    'Thai Airways',
+    'Vietnam Airlines',
+    'Malaysia Airlines',
+    'Philippine Airlines',
+    'Garuda Indonesia',
+    'AirAsia',
+    'AirAsia X',
+    'Scoot',
+    'Cebu Pacific',
+    'VietJet Air',
+    'Bangkok Airways',
+    'Lion Air',
+    'Batik Air',
+    // Middle Eastern Airlines
+    'Emirates',
+    'Qatar Airways',
+    'Etihad Airways',
+    'Turkish Airlines',
+    'Saudia',
+    'Oman Air',
+    'Gulf Air',
+    'Kuwait Airways',
+    'Royal Jordanian',
+    'EgyptAir',
+    // European Airlines
+    'Lufthansa',
+    'British Airways',
+    'Air France',
+    'KLM Royal Dutch Airlines',
+    'Swiss International Air Lines',
+    'Austrian Airlines',
+    'Scandinavian Airlines (SAS)',
+    'Finnair',
+    'Iberia',
+    'TAP Air Portugal',
+    'Alitalia',
+    'LOT Polish Airlines',
+    'Czech Airlines',
+    'Aeroflot',
+    'Norwegian Air',
+    'Vueling',
+    'EasyJet',
+    'Ryanair',
+    'Eurowings',
+    'Wizz Air',
+    'Transavia',
+    'Aegean Airlines',
+    'Icelandair',
+    'Brussels Airlines',
+    'Air Europa',
+    'Aer Lingus',
+    // North American Airlines
+    'United Airlines',
+    'American Airlines',
+    'Delta Air Lines',
+    'Southwest Airlines',
+    'JetBlue Airways',
+    'Alaska Airlines',
+    'Spirit Airlines',
+    'Frontier Airlines',
+    'Hawaiian Airlines',
+    'Air Canada',
+    'WestJet',
+    'Porter Airlines',
+    'Aeromexico',
+    'Volaris',
+    'Interjet',
+    // South American Airlines
+    'LATAM Airlines',
+    'Avianca',
+    'GOL Airlines',
+    'Azul Brazilian Airlines',
+    'Copa Airlines',
+    'Aerolineas Argentinas',
+    // Oceania Airlines
+    'Qantas',
+    'Virgin Australia',
+    'Jetstar Airways',
+    'Air New Zealand',
+    'Fiji Airways',
+    // African Airlines
+    'Ethiopian Airlines',
+    'South African Airways',
+    'Kenya Airways',
+    'Royal Air Maroc',
+    'Air Mauritius',
+    // Indian Subcontinent Airlines
+    'Air India',
+    'IndiGo',
+    'SpiceJet',
+    'GoAir',
+    'Vistara',
+    'SriLankan Airlines',
+    'Pakistan International Airlines',
+    'Biman Bangladesh Airlines',
+    // Other Asian Airlines
+    'EVA Air',
+    'China Airlines',
+    'Starlux Airlines',
+    'Hong Kong Airlines',
+    'Mongolian Airlines',
+    // Cargo Airlines (passenger service)
+    'Cargolux',
+    'Atlas Air',
   ];
 
   @override
@@ -198,6 +338,12 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
 
   Widget _buildFlightForm(TripModel trip, AddItineraryItemState formState) {
     final notifier = ref.read(addItineraryItemProvider.notifier);
+    final departureAirport = formState.departureAirport != null
+        ? AirportDatabase.findByCode(formState.departureAirport!)
+        : null;
+    final arrivalAirport = formState.arrivalAirport != null
+        ? AirportDatabase.findByCode(formState.arrivalAirport!)
+        : null;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -213,33 +359,82 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
         const SizedBox(height: 24),
 
         // Basic info section
-        _buildSectionTitle('\uae30\ubcf8 \uc815\ubcf4', 'Basic Info'),
+        _buildSectionTitle('기본 정보', 'Basic Info'),
         const SizedBox(height: 12),
         _buildDropdownField(
-          label: '\ud56d\uacf5\uc0ac (Airline)',
-          hint: '\ud56d\uacf5\uc0ac \uc120\ud0dd',
+          label: '항공사 (Airline)',
+          hint: '항공사 선택',
           value: formState.airline,
-          items: ['Korean Air', 'Asiana Airlines', 'Jeju Air', 'Jin Air', 'T\'way Air'],
+          items: _majorAirlines,
           onChanged: (value) => notifier.updateAirline(value ?? ''),
         ),
         const SizedBox(height: 12),
-        _buildTextField(
-          label: '\ud56d\uacf5\ud3b8\uba85 (Flight Number)',
-          hint: 'KE123',
-          value: formState.flightNumber,
-          onChanged: notifier.updateFlightNumber,
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Expanded(
+              child: _buildTextField(
+                label: '항공편명 (Flight Number)',
+                hint: 'KE123',
+                value: formState.flightNumber,
+                onChanged: notifier.updateFlightNumber,
+              ),
+            ),
+            const SizedBox(width: 12),
+            SizedBox(
+              height: 52,
+              child: ElevatedButton.icon(
+                onPressed: formState.flightNumber?.isNotEmpty == true
+                    ? () => _searchFlight(formState, notifier)
+                    : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMd),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                ),
+                icon: const Icon(Icons.search, size: 20),
+                label: const Text('검색'),
+              ),
+            ),
+          ],
         ),
 
         const SizedBox(height: 24),
 
+        // Terminal section
+        if (departureAirport != null && departureAirport.terminals.isNotEmpty) ...[
+          _buildSectionTitle('출발 터미널', 'Departure Terminal'),
+          const SizedBox(height: 12),
+          _buildTerminalSelector(
+            terminals: departureAirport.terminals,
+            selectedTerminal: formState.departureTerminal,
+            onSelect: notifier.updateDepartureTerminal,
+          ),
+          const SizedBox(height: 24),
+        ],
+
+        if (arrivalAirport != null && arrivalAirport.terminals.isNotEmpty) ...[
+          _buildSectionTitle('도착 터미널', 'Arrival Terminal'),
+          const SizedBox(height: 12),
+          _buildTerminalSelector(
+            terminals: arrivalAirport.terminals,
+            selectedTerminal: formState.arrivalTerminal,
+            onSelect: notifier.updateArrivalTerminal,
+          ),
+          const SizedBox(height: 24),
+        ],
+
         // Schedule section
-        _buildSectionTitle('\uc77c\uc815', 'Schedule'),
+        _buildSectionTitle('일정', 'Schedule'),
         const SizedBox(height: 12),
         Row(
           children: [
             Expanded(
               child: _buildDateTimePicker(
-                label: '\ucd9c\ubc1c (Departure)',
+                label: '출발 (Departure)',
                 value: formState.departureTime,
                 onChanged: notifier.updateDepartureTime,
               ),
@@ -247,7 +442,7 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
             const SizedBox(width: 12),
             Expanded(
               child: _buildDateTimePicker(
-                label: '\ub3c4\ucc29 (Arrival)',
+                label: '도착 (Arrival)',
                 value: formState.arrivalTime,
                 onChanged: notifier.updateArrivalTime,
               ),
@@ -258,7 +453,7 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
         const SizedBox(height: 24),
 
         // Notes
-        _buildSectionTitle('\uba54\ubaa8', 'Notes'),
+        _buildSectionTitle('메모', 'Notes'),
         const SizedBox(height: 12),
         _buildTextArea(
           hint: '\ucd94\uac00 \uba54\ubaa8\ub97c \uc785\ub825\ud558\uc138\uc694',
@@ -283,6 +478,12 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
 
   Widget _buildFlightVisualCard(AddItineraryItemState formState) {
     final notifier = ref.read(addItineraryItemProvider.notifier);
+    final departureAirport = formState.departureAirport != null
+        ? AirportDatabase.findByCode(formState.departureAirport!)
+        : null;
+    final arrivalAirport = formState.arrivalAirport != null
+        ? AirportDatabase.findByCode(formState.arrivalAirport!)
+        : null;
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -308,27 +509,18 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            child: Column(
-              children: [
-                const Text(
-                  'FROM',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                _buildAirportCodeInput(
-                  value: formState.departureAirport ?? '',
-                  hint: 'GMP',
-                  onChanged: notifier.updateDepartureAirport,
-                ),
-              ],
+            child: _buildAirportSelector(
+              label: 'FROM',
+              airport: departureAirport,
+              airportCode: formState.departureAirport,
+              hint: 'GMP',
+              onSelect: (airport) {
+                notifier.updateDepartureAirport(airport.iataCode);
+              },
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               children: [
                 Transform.rotate(
@@ -357,22 +549,73 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
             ),
           ),
           Expanded(
+            child: _buildAirportSelector(
+              label: 'TO',
+              airport: arrivalAirport,
+              airportCode: formState.arrivalAirport,
+              hint: 'CJU',
+              onSelect: (airport) {
+                notifier.updateArrivalAirport(airport.iataCode);
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAirportSelector({
+    required String label,
+    Airport? airport,
+    String? airportCode,
+    required String hint,
+    required Function(Airport) onSelect,
+  }) {
+    return GestureDetector(
+      onTap: () => _showAirportSearchModal(onSelect),
+      child: Column(
+        children: [
+          Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white70,
+              fontSize: 11,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: Column(
               children: [
-                const Text(
-                  'TO',
+                Text(
+                  airportCode?.isNotEmpty == true ? airportCode! : hint,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
+                    color: airportCode?.isNotEmpty == true
+                        ? Colors.white
+                        : Colors.white.withOpacity(0.5),
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2,
                   ),
                 ),
-                const SizedBox(height: 4),
-                _buildAirportCodeInput(
-                  value: formState.arrivalAirport ?? '',
-                  hint: 'CJU',
-                  onChanged: notifier.updateArrivalAirport,
-                ),
+                if (airport != null) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    airport.cityKo,
+                    style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 11,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ],
             ),
           ),
@@ -381,41 +624,156 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
     );
   }
 
-  Widget _buildAirportCodeInput({
-    required String value,
-    required String hint,
-    required Function(String) onChanged,
-  }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.2),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: TextField(
-        controller: TextEditingController(text: value),
-        onChanged: onChanged,
-        textAlign: TextAlign.center,
-        textCapitalization: TextCapitalization.characters,
-        maxLength: 3,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 2,
-        ),
-        decoration: InputDecoration(
-          hintText: hint,
-          hintStyle: TextStyle(
-            color: Colors.white.withOpacity(0.5),
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
+  Future<void> _searchFlight(AddItineraryItemState formState, AddItineraryItemNotifier notifier) async {
+    final flightNumber = formState.flightNumber;
+    if (flightNumber == null || flightNumber.isEmpty) return;
+
+    // 날짜 선택 다이얼로그
+    final selectedDate = await showDatePicker(
+      context: context,
+      initialDate: formState.departureTime ?? DateTime.now(),
+      firstDate: DateTime.now().subtract(const Duration(days: 7)),
+      lastDate: DateTime.now().add(const Duration(days: 365)),
+      helpText: '비행 날짜를 선택하세요',
+    );
+
+    if (selectedDate == null || !mounted) return;
+
+    // 로딩 표시
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => const Center(
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 16),
+                Text('항공편 검색 중...'),
+              ],
+            ),
           ),
-          border: InputBorder.none,
-          counterText: '',
-          isDense: true,
-          contentPadding: const EdgeInsets.symmetric(vertical: 8),
         ),
+      ),
+    );
+
+    try {
+      final service = FlightSearchService();
+      final flightInfo = await service.searchFlight(flightNumber, selectedDate);
+      service.dispose();
+
+      if (!mounted) return;
+      Navigator.of(context).pop(); // 로딩 다이얼로그 닫기
+
+      if (flightInfo != null) {
+        // 검색 결과로 폼 자동 채우기
+        if (flightInfo.airline.isNotEmpty) {
+          notifier.updateAirline(flightInfo.airlineName);
+        }
+        if (flightInfo.departureAirport.isNotEmpty) {
+          notifier.updateDepartureAirport(flightInfo.departureAirport);
+        }
+        if (flightInfo.arrivalAirport.isNotEmpty) {
+          notifier.updateArrivalAirport(flightInfo.arrivalAirport);
+        }
+        if (flightInfo.departureTime != null) {
+          notifier.updateDepartureTime(flightInfo.departureTime!);
+        }
+        if (flightInfo.arrivalTime != null) {
+          notifier.updateArrivalTime(flightInfo.arrivalTime!);
+        }
+        if (flightInfo.departureTerminal != null) {
+          notifier.updateDepartureTerminal(flightInfo.departureTerminal!);
+        }
+        if (flightInfo.arrivalTerminal != null) {
+          notifier.updateArrivalTerminal(flightInfo.arrivalTerminal!);
+        }
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('${flightInfo.airlineName} ${flightInfo.flightNumber} 정보를 불러왔습니다'),
+            backgroundColor: Colors.green,
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('항공편 정보를 찾을 수 없습니다'),
+            backgroundColor: Colors.orange,
+          ),
+        );
+      }
+    } catch (e) {
+      if (!mounted) return;
+      Navigator.of(context).pop(); // 로딩 다이얼로그 닫기
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('검색 오류: $e'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
+  void _showAirportSearchModal(Function(Airport) onSelect) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => _AirportSearchModal(
+        onSelect: (airport) {
+          onSelect(airport);
+          Navigator.pop(context);
+        },
+      ),
+    );
+  }
+
+  Widget _buildTerminalSelector({
+    required List<String> terminals,
+    required String? selectedTerminal,
+    required Function(String) onSelect,
+  }) {
+    return SizedBox(
+      height: 44,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: terminals.length,
+        itemBuilder: (context, index) {
+          final terminal = terminals[index];
+          final isSelected = selectedTerminal == terminal;
+
+          return Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: GestureDetector(
+              onTap: () => onSelect(terminal),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                decoration: BoxDecoration(
+                  color: isSelected ? AppColors.primary : Colors.white,
+                  borderRadius: BorderRadius.circular(AppTheme.radiusMd),
+                  border: Border.all(
+                    color: isSelected ? AppColors.primary : AppColors.divider,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    terminal,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: isSelected ? Colors.white : AppColors.textPrimaryLight,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -870,6 +1228,10 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
           controller: TextEditingController(text: value),
           onChanged: onChanged,
           keyboardType: keyboardType,
+          style: const TextStyle(
+            color: AppColors.textPrimaryLight,
+            fontSize: 16,
+          ),
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(color: AppColors.textMutedLight),
@@ -930,6 +1292,11 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
                 ),
               ),
               isExpanded: true,
+              style: const TextStyle(
+                color: AppColors.textPrimaryLight,
+                fontSize: 16,
+              ),
+              dropdownColor: Colors.white,
               icon: const Padding(
                 padding: EdgeInsets.only(right: 12),
                 child: Icon(Icons.keyboard_arrow_down, color: AppColors.textSecondaryLight),
@@ -939,7 +1306,10 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
                   value: item,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(item),
+                    child: Text(
+                      item,
+                      style: const TextStyle(color: AppColors.textPrimaryLight),
+                    ),
                   ),
                 );
               }).toList(),
@@ -960,6 +1330,10 @@ class _AddItineraryItemScreenState extends ConsumerState<AddItineraryItemScreen>
       controller: TextEditingController(text: value),
       onChanged: onChanged,
       maxLines: 4,
+      style: const TextStyle(
+        color: AppColors.textPrimaryLight,
+        fontSize: 16,
+      ),
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: const TextStyle(color: AppColors.textMutedLight),
@@ -1240,4 +1614,264 @@ class _CategoryTab {
     required this.label,
     required this.labelEn,
   });
+}
+
+// Airport Search Modal
+class _AirportSearchModal extends StatefulWidget {
+  final Function(Airport) onSelect;
+
+  const _AirportSearchModal({required this.onSelect});
+
+  @override
+  State<_AirportSearchModal> createState() => _AirportSearchModalState();
+}
+
+class _AirportSearchModalState extends State<_AirportSearchModal> {
+  final _searchController = TextEditingController();
+  List<Airport> _searchResults = [];
+  bool _isSearching = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Show popular airports initially
+    _searchResults = AirportDatabase.airports.take(20).toList();
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _onSearchChanged(String query) {
+    setState(() {
+      _isSearching = query.isNotEmpty;
+      if (query.isEmpty) {
+        _searchResults = AirportDatabase.airports.take(20).toList();
+      } else {
+        _searchResults = AirportDatabase.search(query);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.85,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      child: Column(
+        children: [
+          // Handle bar
+          Container(
+            margin: const EdgeInsets.only(top: 12),
+            width: 40,
+            height: 4,
+            decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+
+          // Title
+          const Padding(
+            padding: EdgeInsets.all(16),
+            child: Text(
+              '공항 검색',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: AppColors.textPrimaryLight,
+              ),
+            ),
+          ),
+
+          // Search field
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: TextField(
+              controller: _searchController,
+              onChanged: _onSearchChanged,
+              autofocus: true,
+              style: const TextStyle(
+                color: AppColors.textPrimaryLight,
+                fontSize: 16,
+              ),
+              decoration: InputDecoration(
+                hintText: '도시, 공항명, IATA 코드로 검색',
+                hintStyle: const TextStyle(color: AppColors.textMutedLight),
+                prefixIcon: const Icon(Icons.search, color: AppColors.textSecondaryLight),
+                suffixIcon: _searchController.text.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear, color: AppColors.textSecondaryLight),
+                        onPressed: () {
+                          _searchController.clear();
+                          _onSearchChanged('');
+                        },
+                      )
+                    : null,
+                filled: true,
+                fillColor: AppColors.surfaceLight,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 8),
+
+          // Section header
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                _isSearching ? '검색 결과' : '인기 공항',
+                style: const TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textSecondaryLight,
+                ),
+              ),
+            ),
+          ),
+
+          // Results list
+          Expanded(
+            child: _searchResults.isEmpty
+                ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.search_off, size: 48, color: Colors.grey[400]),
+                        const SizedBox(height: 12),
+                        Text(
+                          '검색 결과가 없습니다',
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : ListView.builder(
+                    itemCount: _searchResults.length,
+                    itemBuilder: (context, index) {
+                      final airport = _searchResults[index];
+                      return _AirportListTile(
+                        airport: airport,
+                        onTap: () => widget.onSelect(airport),
+                      );
+                    },
+                  ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _AirportListTile extends StatelessWidget {
+  final Airport airport;
+  final VoidCallback onTap;
+
+  const _AirportListTile({
+    required this.airport,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
+          children: [
+            // IATA code badge
+            Container(
+              width: 56,
+              height: 40,
+              decoration: BoxDecoration(
+                color: AppColors.flightColor.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Center(
+                child: Text(
+                  airport.iataCode,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.flightColor,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+
+            // Airport info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${airport.cityKo} (${airport.city})',
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.textPrimaryLight,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    airport.nameKo,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: AppColors.textSecondaryLight,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  if (airport.terminals.isNotEmpty) ...[
+                    const SizedBox(height: 2),
+                    Text(
+                      '터미널: ${airport.terminals.join(", ")}',
+                      style: const TextStyle(
+                        fontSize: 11,
+                        color: AppColors.textMutedLight,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ],
+              ),
+            ),
+
+            // Country flag/code
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  airport.countryKo,
+                  style: const TextStyle(
+                    fontSize: 11,
+                    color: AppColors.textSecondaryLight,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

@@ -63,6 +63,22 @@ service cloud.firestore {
           request.auth.uid in get(/databases/$(database)/documents/trips/$(tripId)).data.participantIds
         );
       }
+
+      // Participants subcollection
+      match /participants/{participantId} {
+        // Anyone authenticated can read participants of a trip
+        allow read: if isAuthenticated();
+        // Host can add participants, or user can add themselves
+        allow create: if isAuthenticated() && (
+          get(/databases/$(database)/documents/trips/$(tripId)).data.hostId == request.auth.uid ||
+          participantId == request.auth.uid
+        );
+        // Host can update/delete, or participant can update their own
+        allow update, delete: if isAuthenticated() && (
+          get(/databases/$(database)/documents/trips/$(tripId)).data.hostId == request.auth.uid ||
+          participantId == request.auth.uid
+        );
+      }
     }
 
 

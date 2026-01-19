@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/services/ad_service.dart';
@@ -130,18 +131,6 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
           ),
         ),
         leadingWidth: 80,
-        actions: [
-          TextButton(
-            onPressed: formState.isLoading ? null : _handleSave,
-            child: Text(
-              l10n.save,
-              style: TextStyle(
-                color: formState.isLoading ? Colors.grey : AppColors.primary,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-        ],
       ),
       body: SafeArea(
         child: Column(
@@ -182,7 +171,7 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                           l10n.hostCanEditLater,
                           style: TextStyle(
                             fontSize: 12,
-                            color: Colors.grey[600],
+                            color: AppColors.textSecondaryLight,
                           ),
                         ),
                       ],
@@ -363,9 +352,13 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
         TextField(
           controller: _tripNameController,
           onChanged: (value) => ref.read(createTripFormProvider.notifier).updateTripName(value),
+          style: const TextStyle(
+            color: AppColors.textPrimaryLight,
+            fontSize: 15,
+          ),
           decoration: InputDecoration(
             hintText: l10n.tripNameHint,
-            hintStyle: TextStyle(color: Colors.grey[400]),
+            hintStyle: TextStyle(color: AppColors.textMutedLight),
             filled: true,
             fillColor: Colors.white,
             border: OutlineInputBorder(
@@ -398,12 +391,16 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
         TextField(
           controller: _destinationController,
           onChanged: (value) => ref.read(createTripFormProvider.notifier).updateDestination(value),
+          style: const TextStyle(
+            color: AppColors.textPrimaryLight,
+            fontSize: 15,
+          ),
           decoration: InputDecoration(
             hintText: l10n.destinationHint,
-            hintStyle: TextStyle(color: Colors.grey[400]),
+            hintStyle: TextStyle(color: AppColors.textMutedLight),
             filled: true,
             fillColor: Colors.white,
-            prefixIcon: Icon(Icons.location_on_outlined, color: Colors.grey[500]),
+            prefixIcon: Icon(Icons.location_on_outlined, color: AppColors.textSecondaryLight),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide(color: Colors.grey[300]!),
@@ -531,14 +528,14 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                       Icon(
                         Icons.add_photo_alternate_outlined,
                         size: 48,
-                        color: Colors.grey[400],
+                        color: AppColors.textMutedLight,
                       ),
                       const SizedBox(height: 8),
                       Text(
                         l10n.tapToUploadCover,
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.grey[500],
+                          color: AppColors.textSecondaryLight,
                         ),
                       ),
                     ],
@@ -561,9 +558,13 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
           controller: _tripGoalController,
           onChanged: (value) => ref.read(createTripFormProvider.notifier).updateTripGoal(value),
           maxLines: 4,
+          style: const TextStyle(
+            color: AppColors.textPrimaryLight,
+            fontSize: 15,
+          ),
           decoration: InputDecoration(
             hintText: l10n.tripGoalHint,
-            hintStyle: TextStyle(color: Colors.grey[400]),
+            hintStyle: TextStyle(color: AppColors.textMutedLight),
             filled: true,
             fillColor: Colors.white,
             border: OutlineInputBorder(
@@ -658,13 +659,13 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(Icons.location_on_outlined, size: 16, color: Colors.grey[600]),
+                        Icon(Icons.location_on_outlined, size: 16, color: AppColors.textSecondaryLight),
                         const SizedBox(width: 4),
                         Text(
                           formState.destination.isEmpty ? 'No destination' : formState.destination,
                           style: TextStyle(
                             fontSize: 14,
-                            color: Colors.grey[600],
+                            color: AppColors.textSecondaryLight,
                           ),
                         ),
                       ],
@@ -672,7 +673,7 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(Icons.calendar_today_outlined, size: 16, color: Colors.grey[600]),
+                        Icon(Icons.calendar_today_outlined, size: 16, color: AppColors.textSecondaryLight),
                         const SizedBox(width: 4),
                         Text(
                           formState.startDate != null && formState.endDate != null
@@ -680,7 +681,7 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                               : 'No dates selected',
                           style: TextStyle(
                             fontSize: 14,
-                            color: Colors.grey[600],
+                            color: AppColors.textSecondaryLight,
                           ),
                         ),
                       ],
@@ -693,7 +694,7 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
                         formState.tripGoal,
                         style: TextStyle(
                           fontSize: 13,
-                          color: Colors.grey[700],
+                          color: AppColors.textSecondaryLight,
                         ),
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
@@ -727,14 +728,14 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
         ),
         child: Row(
           children: [
-            Icon(Icons.calendar_today_outlined, size: 18, color: Colors.grey[500]),
+            Icon(Icons.calendar_today_outlined, size: 18, color: AppColors.textSecondaryLight),
             const SizedBox(width: 8),
             Expanded(
               child: Text(
                 date != null ? dateFormat.format(date) : label,
                 style: TextStyle(
                   fontSize: 14,
-                  color: date != null ? AppColors.textPrimaryLight : Colors.grey[400],
+                  color: date != null ? AppColors.textPrimaryLight : AppColors.textMutedLight,
                 ),
               ),
             ),
@@ -826,15 +827,6 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
     );
   }
 
-  Future<void> _handleSave() async {
-    final formState = ref.read(createTripFormProvider);
-    if (!formState.isStep1Valid) {
-      ref.read(createTripFormProvider.notifier).setError('Please fill in all required fields');
-      return;
-    }
-    await _createTrip();
-  }
-
   void _handleNextStep(int currentStep, CreateTripFormState formState) {
     // Clear any previous error
     ref.read(createTripFormProvider.notifier).setError(null);
@@ -865,11 +857,18 @@ class _CreateTripScreenState extends ConsumerState<CreateTripScreen> {
     try {
       final tripService = ref.read(tripServiceProvider);
 
-      // TODO: Upload cover image to storage and get URL
+      // Upload cover image to Firebase Storage
       String? coverImageUrl;
       if (formState.coverImagePath != null) {
-        // In a real app, upload the image to Firebase Storage here
-        // coverImageUrl = await uploadImage(formState.coverImagePath!);
+        final imageFile = File(formState.coverImagePath!);
+        final fileName = 'trip_cover_${DateTime.now().millisecondsSinceEpoch}.jpg';
+        final storageRef = FirebaseStorage.instance
+            .ref()
+            .child('trip_covers')
+            .child(fileName);
+
+        await storageRef.putFile(imageFile);
+        coverImageUrl = await storageRef.getDownloadURL();
       }
 
       await tripService.createTrip(

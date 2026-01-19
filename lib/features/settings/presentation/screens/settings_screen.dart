@@ -251,10 +251,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   Widget _buildProfileCard(UserModel user, AppLocalizations l10n, bool isDarkMode) {
-    // Determine role badge
-    final isHost = true; // This should come from the user's trips/role
-    final roleText = isHost ? l10n.host : l10n.participant;
-    final roleColor = isHost ? AppColors.primary : AppColors.coral;
+    // TODO: Determine role from user's trips/role data
+    final roleText = l10n.host;
+    final roleColor = AppColors.primary;
 
     return Container(
       padding: const EdgeInsets.all(16),

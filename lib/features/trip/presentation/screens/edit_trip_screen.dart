@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../data/models/trip_model.dart';
@@ -265,22 +266,24 @@ class _EditTripScreenState extends ConsumerState<EditTripScreen> {
           ),
         ),
         centerTitle: true,
-        actions: [
-          TextButton(
-            onPressed: formState.isLoading || !formState.hasChanges
-                ? null
-                : () => _handleSave(trip, formState),
-            child: Text(
-              l10n.save,
-              style: TextStyle(
-                color: formState.isLoading || !formState.hasChanges
-                    ? Colors.grey
-                    : AppColors.primary,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-        ],
+        actions: currentStep < _totalSteps - 1
+            ? [
+                TextButton(
+                  onPressed: formState.isLoading || !formState.hasChanges
+                      ? null
+                      : () => _handleSave(trip, formState),
+                  child: Text(
+                    l10n.save,
+                    style: TextStyle(
+                      color: formState.isLoading || !formState.hasChanges
+                          ? Colors.grey
+                          : AppColors.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ]
+            : null,
       ),
       body: SafeArea(
         child: Column(
@@ -1021,11 +1024,23 @@ class _EditTripScreenState extends ConsumerState<EditTripScreen> {
     try {
       final tripService = ref.read(tripServiceProvider);
 
-      // TODO: Upload new cover image if changed
+      // Upload new cover image if changed
       String? coverImageUrl = formState.existingCoverImageUrl;
+      print('[EditTrip] existingCoverImageUrl: $coverImageUrl');
+      print('[EditTrip] coverImagePath: ${formState.coverImagePath}');
+
       if (formState.coverImagePath != null) {
-        // In a real app, upload the image to Firebase Storage here
-        // coverImageUrl = await uploadImage(formState.coverImagePath!);
+        final imageFile = File(formState.coverImagePath!);
+        final fileName = 'trip_cover_${trip.id}_${DateTime.now().millisecondsSinceEpoch}.jpg';
+        final storageRef = FirebaseStorage.instance
+            .ref()
+            .child('trip_covers')
+            .child(fileName);
+
+        print('[EditTrip] Uploading image to: ${storageRef.fullPath}');
+        await storageRef.putFile(imageFile);
+        coverImageUrl = await storageRef.getDownloadURL();
+        print('[EditTrip] Upload success! URL: $coverImageUrl');
       }
 
       final updates = <String, dynamic>{
@@ -1038,11 +1053,18 @@ class _EditTripScreenState extends ConsumerState<EditTripScreen> {
 
       if (coverImageUrl != formState.existingCoverImageUrl) {
         updates['coverImageUrl'] = coverImageUrl;
+        print('[EditTrip] Adding coverImageUrl to updates');
       }
 
+      print('[EditTrip] Updates: $updates');
       await tripService.updateTrip(trip.id, updates);
+      print('[EditTrip] Trip updated successfully');
 
       if (mounted) {
+        // Invalidate providers to refresh data
+        ref.invalidate(userTripsProvider);
+        ref.invalidate(tripProvider(trip.id));
+
         context.pop();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(

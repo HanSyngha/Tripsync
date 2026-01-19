@@ -716,123 +716,123 @@ class AppLocalizationsVi extends AppLocalizations {
   String get earlier => 'Trước đó';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'Hủy chuyến đi?';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'Bạn có chắc muốn hủy chuyến đi này? Tất cả thay đổi sẽ bị mất.';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'Hủy thay đổi?';
 
   @override
   String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+      'Bạn có chắc muốn hủy các thay đổi của mình?';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'Tiếp tục chỉnh sửa';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'Hủy';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'Chuyến đi đã được tạo thành công!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'Chuyến đi đã được cập nhật thành công!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'Không tìm thấy chuyến đi';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'Lịch trình đã được lưu';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'Sắp ra mắt';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'Đăng xuất';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Thử lại';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'Xem người tham gia';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'Tin nhắn ghim';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'Tìm kiếm tin nhắn';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'Gửi thông báo';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'Ảnh';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'Máy ảnh';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'Chia sẻ ảnh từ thư viện';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'Chụp ảnh mới';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'Chia sẻ vị trí hiện tại';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'Tính năng sắp ra mắt!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'Hoạt động đã được thêm thành công';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'Bộ chọn tệp sắp ra mắt';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'Vui lòng nhập tin nhắn';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'Thông báo đã được gửi thành công!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'Không thể tải người tham gia';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'Yêu cầu đăng nhập';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => 'Gửi lời mời thất bại. Vui lòng thử lại.';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'Đã tạo liên kết mời mới';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'Đã sao chép liên kết mời';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'Không tìm thấy người dùng';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'Không có điểm đến';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'Chào mừng';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'Đăng nhập để bắt đầu hành trình của bạn';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Tiếp tục với Kakao';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Tiếp tục với Naver';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Tiếp tục với Google';
 
   @override
   String get account => 'Tài khoản';
@@ -862,4 +862,344 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'Cảnh báo: Hành động này không thể hoàn tác. Tất cả dữ liệu của bạn bao gồm chuyến đi và tin nhắn sẽ bị xóa vĩnh viễn.';
+
+  @override
+  String get reportMessage => 'Báo cáo tin nhắn';
+
+  @override
+  String get reportMessageDescription =>
+      'Báo cáo nội dung không phù hợp cho người tổ chức chuyến đi';
+
+  @override
+  String get blockUser => 'Chặn người dùng';
+
+  @override
+  String get blockUserDescription =>
+      'Bạn sẽ không thấy tin nhắn từ người dùng này nữa';
+
+  @override
+  String get selectReportReason => 'Chọn lý do báo cáo:';
+
+  @override
+  String get additionalDetails => 'Chi tiết bổ sung';
+
+  @override
+  String get optionalDescription => 'Mô tả vấn đề (không bắt buộc)';
+
+  @override
+  String get report => 'Báo cáo';
+
+  @override
+  String get block => 'Chặn';
+
+  @override
+  String get reportTypeSpam => 'Spam';
+
+  @override
+  String get reportTypeHarassment => 'Quấy rối';
+
+  @override
+  String get reportTypeInappropriate => 'Nội dung không phù hợp';
+
+  @override
+  String get reportTypeHateSpeech => 'Phát ngôn thù ghét';
+
+  @override
+  String get reportTypeViolence => 'Bạo lực';
+
+  @override
+  String get reportTypeOther => 'Khác';
+
+  @override
+  String get reportSubmitted =>
+      'Báo cáo đã được gửi. Người tổ chức chuyến đi sẽ được thông báo.';
+
+  @override
+  String get reportFailed => 'Gửi báo cáo thất bại. Vui lòng thử lại.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return 'Bạn có chắc muốn chặn $userName? Bạn sẽ không thấy tin nhắn của họ nữa.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName đã bị chặn';
+  }
+
+  @override
+  String get blockFailed => 'Chặn người dùng thất bại. Vui lòng thử lại.';
+
+  @override
+  String get blockedUsers => 'Người dùng bị chặn';
+
+  @override
+  String get noBlockedUsers => 'Không có người dùng bị chặn';
+
+  @override
+  String get unblock => 'Bỏ chặn';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName đã được bỏ chặn';
+  }
+
+  @override
+  String get reportUser => 'Báo cáo người dùng';
+
+  @override
+  String get reportUserDescription =>
+      'Báo cáo người dùng này cho người tổ chức chuyến đi';
+
+  @override
+  String get locationPermissionDenied => 'Quyền truy cập vị trí bị từ chối';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'Quyền truy cập vị trí bị từ chối vĩnh viễn. Vui lòng bật trong cài đặt.';
+
+  @override
+  String get locationServicesDisabled => 'Dịch vụ vị trí bị tắt';
+
+  @override
+  String get gettingLocation => 'Đang lấy vị trí...';
+
+  @override
+  String get currentLocation => 'Vị trí hiện tại';
+
+  @override
+  String get shareLocation => 'Chia sẻ vị trí';
+
+  @override
+  String get shareLocationConfirmation =>
+      'Bạn có muốn chia sẻ vị trí này trong cuộc trò chuyện không?';
+
+  @override
+  String get share => 'Chia sẻ';
+
+  @override
+  String get uploadFailed => 'Tải lên thất bại';
+
+  @override
+  String get openInGoogleMaps => 'Mở trong Google Maps';
+
+  @override
+  String get getDirections => 'Lấy chỉ đường';
+
+  @override
+  String get drivingDirections => 'Chỉ đường lái xe';
+
+  @override
+  String get walkingDirections => 'Chỉ đường đi bộ';
+
+  @override
+  String get transitDirections => 'Chỉ đường phương tiện công cộng';
+
+  @override
+  String get noPinnedMessages => 'Không có tin nhắn ghim';
+
+  @override
+  String get noItineraryYet => 'Chưa có lịch trình';
+
+  @override
+  String get viewFullItinerary => 'Xem lịch trình đầy đủ';
+
+  @override
+  String get inviteParticipant => 'Mời người tham gia';
+
+  @override
+  String get emailAddress => 'Địa chỉ email';
+
+  @override
+  String get enterEmailAddress => 'Nhập địa chỉ email';
+
+  @override
+  String get invalidEmail => 'Email không hợp lệ';
+
+  @override
+  String get role => 'Vai trò';
+
+  @override
+  String get permissions => 'Quyền';
+
+  @override
+  String get sendInvite => 'Gửi lời mời';
+
+  @override
+  String get inviteSent => 'Đã gửi lời mời';
+
+  @override
+  String get editItinerary => 'Chỉnh sửa lịch trình';
+
+  @override
+  String get deleteItinerary => 'Xóa lịch trình';
+
+  @override
+  String get deleteItineraryConfirm =>
+      'Bạn có chắc muốn xóa lịch trình này không?';
+
+  @override
+  String get itineraryDeleted => 'Đã xóa lịch trình';
+
+  @override
+  String get searchPlaces => 'Tìm kiếm địa điểm';
+
+  @override
+  String get selectLocation => 'Chọn vị trí';
+
+  @override
+  String get confirmLocation => 'Xác nhận vị trí';
+
+  @override
+  String get hotelName => 'Tên khách sạn';
+
+  @override
+  String get roomType => 'Loại phòng';
+
+  @override
+  String get checkInTime => 'Giờ nhận phòng';
+
+  @override
+  String get checkOutTime => 'Giờ trả phòng';
+
+  @override
+  String get carCompany => 'Công ty cho thuê xe';
+
+  @override
+  String get carModel => 'Mẫu xe';
+
+  @override
+  String get pickupLocation => 'Điểm nhận xe';
+
+  @override
+  String get dropoffLocation => 'Điểm trả xe';
+
+  @override
+  String get pickupTime => 'Giờ nhận xe';
+
+  @override
+  String get dropoffTime => 'Giờ trả xe';
+
+  @override
+  String get restaurantName => 'Tên nhà hàng';
+
+  @override
+  String get cuisine => 'Ẩm thực';
+
+  @override
+  String get priceRange => 'Khoảng giá';
+
+  @override
+  String get reservationTime => 'Giờ đặt bàn';
+
+  @override
+  String get departureAirport => 'Sân bay khởi hành';
+
+  @override
+  String get arrivalAirport => 'Sân bay đến';
+
+  @override
+  String get departureTime => 'Giờ khởi hành';
+
+  @override
+  String get arrivalTime => 'Giờ đến';
+
+  @override
+  String get terminal => 'Nhà ga';
+
+  @override
+  String get gate => 'Cổng';
+
+  @override
+  String get confirmationNumber => 'Số xác nhận';
+
+  @override
+  String get other => 'Khác';
+
+  @override
+  String get title => 'Tiêu đề';
+
+  @override
+  String get description => 'Mô tả';
+
+  @override
+  String get itemNotFound => 'Không tìm thấy mục';
+
+  @override
+  String get selectDay => 'Chọn ngày';
+
+  @override
+  String get selectAirline => 'Chọn hãng hàng không';
+
+  @override
+  String get enterNotesHint => 'Nhập ghi chú...';
+
+  @override
+  String get enterHotelName => 'Nhập tên khách sạn';
+
+  @override
+  String get enterRoomType => 'Nhập loại phòng';
+
+  @override
+  String get enterAddress => 'Nhập địa chỉ';
+
+  @override
+  String get enterConfirmationNumber => 'Nhập số xác nhận';
+
+  @override
+  String get selectCarCompany => 'Chọn công ty cho thuê xe';
+
+  @override
+  String get enterCarModel => 'Nhập mẫu xe';
+
+  @override
+  String get enterPickupLocation => 'Nhập điểm nhận xe';
+
+  @override
+  String get enterDropoffLocation => 'Nhập điểm trả xe';
+
+  @override
+  String get pickupInfo => 'Thông tin nhận xe';
+
+  @override
+  String get dropoffInfo => 'Thông tin trả xe';
+
+  @override
+  String get enterRestaurantName => 'Nhập tên nhà hàng';
+
+  @override
+  String get cuisineType => 'Loại ẩm thực';
+
+  @override
+  String get selectCuisineType => 'Chọn loại ẩm thực';
+
+  @override
+  String get reservationInfo => 'Thông tin đặt chỗ';
+
+  @override
+  String get enterTitle => 'Nhập tiêu đề';
+
+  @override
+  String get enterDescription => 'Nhập mô tả';
+
+  @override
+  String get enterLocation => 'Nhập vị trí';
+
+  @override
+  String get startTime => 'Thời gian bắt đầu';
+
+  @override
+  String get endTime => 'Thời gian kết thúc';
+
+  @override
+  String get addAttachments => 'Thêm tệp đính kèm';
+
+  @override
+  String get attachmentHint => 'Thêm tài liệu hoặc hình ảnh';
+
+  @override
+  String get itemUpdatedSuccess => 'Mục đã được cập nhật thành công';
+
+  @override
+  String get itemDeletedSuccess => 'Mục đã được xóa thành công';
 }

@@ -9,14 +9,7 @@ import '../../../../data/models/trip_model.dart';
 import '../../../../data/models/itinerary_item_model.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../providers/trip_provider.dart';
-
-/// Provider for itinerary items
-final tripItineraryProvider =
-    StreamProvider.family<List<ItineraryItemModel>, String>((ref, tripId) {
-  // In a real app, this would fetch from itinerary service
-  // For now, return empty stream
-  return Stream.value([]);
-});
+import '../../../itinerary/providers/itinerary_provider.dart';
 
 /// Provider for selected tab in trip detail
 final tripDetailTabProvider = StateProvider.autoDispose<int>((ref) => 0);
@@ -169,19 +162,6 @@ class _TripDetailContent extends ConsumerWidget {
                   ),
                   onPressed: () => context.push('/trip/${trip.id}/edit'),
                 ),
-              IconButton(
-                icon: Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.3),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(Icons.share, color: Colors.white, size: 20),
-                ),
-                onPressed: () {
-                  // TODO: Share trip
-                },
-              ),
             ],
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
@@ -337,31 +317,25 @@ class _TripDetailContent extends ConsumerWidget {
               ),
               child: Row(
                 children: [
-                  _buildQuickActionTab(
-                    context,
-                    icon: Icons.map_outlined,
-                    label: l10n.mapView,
-                    onTap: () {
-                      context.push('/trip/${trip.id}/itinerary?view=map');
-                    },
+                  Expanded(
+                    child: _buildQuickActionTab(
+                      context,
+                      icon: Icons.map_outlined,
+                      label: l10n.mapView,
+                      onTap: () {
+                        context.push('/trip/${trip.id}/itinerary?view=map');
+                      },
+                    ),
                   ),
-                  _buildQuickActionTab(
-                    context,
-                    icon: Icons.chat_bubble_outline,
-                    label: l10n.groupChat,
-                    onTap: () {
-                      context.push('/trip/${trip.id}/chat');
-                    },
-                  ),
-                  _buildQuickActionTab(
-                    context,
-                    icon: Icons.folder_outlined,
-                    label: l10n.savedDocs,
-                    onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l10n.featureComingSoon)),
-                      );
-                    },
+                  Expanded(
+                    child: _buildQuickActionTab(
+                      context,
+                      icon: Icons.chat_bubble_outline,
+                      label: l10n.groupChat,
+                      onTap: () {
+                        context.push('/trip/${trip.id}/chat');
+                      },
+                    ),
                   ),
                 ],
               ),
@@ -543,7 +517,9 @@ class _TripDetailContent extends ConsumerWidget {
               context,
               title: l10n.itinerary,
               trailing: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/trip/${trip.id}/itinerary');
+                },
                 child: Text(
                   l10n.expandAll,
                   style: const TextStyle(
@@ -557,14 +533,9 @@ class _TripDetailContent extends ConsumerWidget {
             ),
           ),
 
-          // Accommodation section
-          SliverToBoxAdapter(
-            child: _buildSection(
-              context,
-              title: l10n.accommodation,
-              child: _buildAccommodationCard(context, l10n),
-            ),
-          ),
+          // Accommodation section - only show if there's accommodation data
+          // TODO: Implement with real itinerary accommodation data
+          // For now, this section is hidden until accommodation is added via itinerary
 
           // Bottom padding for footer
           const SliverToBoxAdapter(
@@ -573,7 +544,7 @@ class _TripDetailContent extends ConsumerWidget {
         ],
       ),
 
-      // Footer with countdown and check-in button
+      // Footer with countdown
       bottomNavigationBar: trip.isUpcoming
           ? Container(
               padding: const EdgeInsets.all(16),
@@ -589,45 +560,24 @@ class _TripDetailContent extends ConsumerWidget {
               ),
               child: SafeArea(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            l10n.tripStartsIn(daysUntilTrip.abs()),
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.textPrimaryLight,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            dateFormat.format(trip.startDate),
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                        ],
+                    const Icon(Icons.calendar_today, size: 20, color: AppColors.primary),
+                    const SizedBox(width: 8),
+                    Text(
+                      l10n.tripStartsIn(daysUntilTrip.abs()),
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.textPrimaryLight,
                       ),
                     ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        // TODO: Handle check-in
-                      },
-                      icon: const Icon(Icons.check_circle_outline, size: 20),
-                      label: Text(l10n.checkIn),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.coral,
-                        foregroundColor: Colors.white,
-                        elevation: 0,
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
+                    const SizedBox(width: 8),
+                    Text(
+                      '(${dateFormat.format(trip.startDate)})',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey[600],
                       ),
                     ),
                   ],
@@ -713,63 +663,314 @@ class _TripDetailContent extends ConsumerWidget {
   }
 
   Widget _buildItineraryTimeline(BuildContext context, TripModel trip, WidgetRef ref) {
-    // Generate sample days based on trip duration
-    final days = List.generate(
-      trip.totalDays > 5 ? 5 : trip.totalDays,
-      (index) => index + 1,
-    );
+    final itemsAsync = ref.watch(itineraryItemsProvider(trip.id));
+    final l10n = AppLocalizations.of(context)!;
 
-    return Column(
-      children: days.map((dayNumber) {
-        final date = trip.startDate.add(Duration(days: dayNumber - 1));
-        final dateFormat = DateFormat('EEE, MMM d');
-        final isCurrentDay = trip.isInProgress && trip.currentDay == dayNumber;
+    return itemsAsync.when(
+      data: (allItems) {
+        if (allItems.isEmpty) {
+          return _buildEmptyItineraryState(context, trip, l10n);
+        }
 
-        return _buildDaySection(
-          context,
-          dayNumber: dayNumber,
-          date: dateFormat.format(date),
-          isCurrentDay: isCurrentDay,
-          activities: _getSampleActivities(dayNumber),
+        // Group items by day
+        final Map<int, List<ItineraryItemModel>> groupedItems = {};
+        for (final item in allItems) {
+          groupedItems.putIfAbsent(item.dayNumber, () => []).add(item);
+        }
+
+        // Sort each day's items by time
+        for (final items in groupedItems.values) {
+          items.sort((a, b) => a.startTime.compareTo(b.startTime));
+        }
+
+        // Get sorted day numbers (show first 5 days max in preview)
+        final days = groupedItems.keys.toList()..sort();
+        final displayDays = days.take(5).toList();
+
+        return Column(
+          children: [
+            ...displayDays.map((dayNumber) {
+              final date = trip.startDate.add(Duration(days: dayNumber - 1));
+              final dateFormat = DateFormat('EEE, MMM d');
+              final isCurrentDay = trip.isInProgress && trip.currentDay == dayNumber;
+              final dayItems = groupedItems[dayNumber] ?? [];
+
+              return _buildDaySectionWithItems(
+                context,
+                dayNumber: dayNumber,
+                date: dateFormat.format(date),
+                isCurrentDay: isCurrentDay,
+                items: dayItems,
+              );
+            }),
+            // View full itinerary button
+            if (days.length > 5 || allItems.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: TextButton(
+                  onPressed: () => context.push('/trip/${trip.id}/itinerary'),
+                  child: Text(
+                    l10n.viewFullItinerary,
+                    style: const TextStyle(
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+          ],
         );
-      }).toList(),
+      },
+      loading: () => const Center(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: CircularProgressIndicator(),
+        ),
+      ),
+      error: (error, _) => Center(
+        child: Text('Error: $error'),
+      ),
     );
   }
 
-  List<Map<String, dynamic>> _getSampleActivities(int day) {
-    // Sample activities for demonstration
-    if (day == 1) {
-      return [
-        {
-          'time': '08:00',
-          'title': 'Arrive at destination',
-          'type': ItineraryItemType.flight,
-          'location': 'Airport',
-        },
-        {
-          'time': '14:00',
-          'title': 'Hotel Check-in',
-          'type': ItineraryItemType.accommodation,
-          'location': 'Hotel Grand Plaza',
-        },
-      ];
-    } else if (day == 2) {
-      return [
-        {
-          'time': '09:00',
-          'title': 'City Tour',
-          'type': ItineraryItemType.activity,
-          'location': 'City Center',
-        },
-        {
-          'time': '12:30',
-          'title': 'Lunch at Local Restaurant',
-          'type': ItineraryItemType.restaurant,
-          'location': 'Traditional Cuisine',
-        },
-      ];
-    }
-    return [];
+  Widget _buildEmptyItineraryState(BuildContext context, TripModel trip, AppLocalizations l10n) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.event_note_outlined,
+          size: 48,
+          color: Colors.grey[300],
+        ),
+        const SizedBox(height: 12),
+        Text(
+          l10n.noItineraryYet,
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.grey[600],
+          ),
+        ),
+        const SizedBox(height: 16),
+        Center(
+          child: ElevatedButton.icon(
+            onPressed: () => context.push('/trip/${trip.id}/itinerary'),
+            icon: const Icon(Icons.add, size: 18),
+            label: Text(l10n.addActivity),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.primary,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDaySectionWithItems(
+    BuildContext context, {
+    required int dayNumber,
+    required String date,
+    required bool isCurrentDay,
+    required List<ItineraryItemModel> items,
+  }) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Day header
+          Row(
+            children: [
+              Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  color: isCurrentDay ? AppColors.primary : Colors.grey[200],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Center(
+                  child: Text(
+                    '$dayNumber',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: isCurrentDay ? Colors.white : Colors.grey[700],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Day $dayNumber',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    date,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
+              ),
+              if (isCurrentDay)
+                Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: AppColors.success.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: const Text(
+                    'Today',
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.success,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // Activities from Firebase
+          if (items.isNotEmpty)
+            ...items.map((item) => _buildItineraryItem(item))
+          else
+            Padding(
+              padding: const EdgeInsets.only(left: 48),
+              child: Text(
+                'No activities planned',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: Colors.grey[500],
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildItineraryItem(ItineraryItemModel item) {
+    final timeFormat = DateFormat('HH:mm');
+    final color = _getTypeColor(item.type);
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, bottom: 8),
+      child: Row(
+        children: [
+          // Timeline line and dot
+          SizedBox(
+            width: 32,
+            child: Column(
+              children: [
+                Container(
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    color: color.withOpacity(0.2),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: color, width: 2),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // Activity details
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.grey[50],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.grey[200]!),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: color.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Icon(
+                      _getTypeIcon(item.type),
+                      size: 18,
+                      color: color,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item.title,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Row(
+                          children: [
+                            Text(
+                              timeFormat.format(item.startTime),
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                            if (item.location != null || item.address != null) ...[
+                              const SizedBox(width: 8),
+                              Icon(
+                                Icons.location_on_outlined,
+                                size: 12,
+                                color: Colors.grey[500],
+                              ),
+                              const SizedBox(width: 2),
+                              Expanded(
+                                child: Text(
+                                  item.location ?? item.address ?? '',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey[600],
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.chevron_right,
+                    color: Colors.grey[400],
+                    size: 20,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildDaySection(
@@ -967,174 +1168,6 @@ class _TripDetailContent extends ConsumerWidget {
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildAccommodationCard(BuildContext context, AppLocalizations l10n) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: AppColors.accommodationColor.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.accommodationColor.withOpacity(0.2)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: AppColors.accommodationColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Icon(
-                  Icons.hotel,
-                  color: AppColors.accommodationColor,
-                  size: 24,
-                ),
-              ),
-              const SizedBox(width: 12),
-              const Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Hotel Grand Plaza',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 2),
-                    Text(
-                      '123 Main Street, City Center',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          const Divider(height: 1),
-          const SizedBox(height: 16),
-
-          // Check-in/Check-out times
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      l10n.checkIn,
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Colors.grey[600],
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    const Row(
-                      children: [
-                        Icon(Icons.login, size: 16, color: AppColors.success),
-                        SizedBox(width: 4),
-                        Text(
-                          '3:00 PM',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: 1,
-                height: 40,
-                color: Colors.grey[300],
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        l10n.checkOut,
-                        style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.grey[600],
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      const Row(
-                        children: [
-                          Icon(Icons.logout, size: 16, color: AppColors.error),
-                          SizedBox(width: 4),
-                          Text(
-                            '11:00 AM',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-
-          // Action buttons
-          Row(
-            children: [
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(Icons.directions, size: 18),
-                  label: Text(l10n.directions),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.primary,
-                    side: const BorderSide(color: AppColors.primary),
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(Icons.confirmation_number, size: 18),
-                  label: Text(l10n.reservation),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.primary,
-                    side: const BorderSide(color: AppColors.primary),
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                ),
-              ),
-            ],
           ),
         ],
       ),

@@ -716,123 +716,123 @@ class AppLocalizationsId extends AppLocalizations {
   String get earlier => 'Sebelumnya';
 
   @override
-  String get discardTrip => 'Discard Trip?';
+  String get discardTrip => 'Buang Perjalanan?';
 
   @override
   String get discardTripMessage =>
-      'Are you sure you want to discard this trip? All changes will be lost.';
+      'Apakah Anda yakin ingin membuang perjalanan ini? Semua perubahan akan hilang.';
 
   @override
-  String get discardChanges => 'Discard Changes?';
+  String get discardChanges => 'Buang Perubahan?';
 
   @override
   String get discardChangesMessage =>
-      'Are you sure you want to discard your changes?';
+      'Apakah Anda yakin ingin membuang perubahan Anda?';
 
   @override
-  String get keepEditing => 'Keep Editing';
+  String get keepEditing => 'Lanjutkan Mengedit';
 
   @override
-  String get discard => 'Discard';
+  String get discard => 'Buang';
 
   @override
-  String get tripCreatedSuccess => 'Trip created successfully!';
+  String get tripCreatedSuccess => 'Perjalanan berhasil dibuat!';
 
   @override
-  String get tripUpdatedSuccess => 'Trip updated successfully!';
+  String get tripUpdatedSuccess => 'Perjalanan berhasil diperbarui!';
 
   @override
-  String get tripNotFound => 'Trip not found';
+  String get tripNotFound => 'Perjalanan tidak ditemukan';
 
   @override
-  String get itinerarySaved => 'Itinerary saved';
+  String get itinerarySaved => 'Rencana perjalanan disimpan';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'Segera Hadir';
 
   @override
-  String get signOut => 'Sign Out';
+  String get signOut => 'Keluar';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Coba Lagi';
 
   @override
-  String get viewParticipants => 'View Participants';
+  String get viewParticipants => 'Lihat Peserta';
 
   @override
-  String get pinnedMessages => 'Pinned Messages';
+  String get pinnedMessages => 'Pesan Disematkan';
 
   @override
-  String get searchMessages => 'Search Messages';
+  String get searchMessages => 'Cari Pesan';
 
   @override
-  String get sendAnnouncement => 'Send Announcement';
+  String get sendAnnouncement => 'Kirim Pengumuman';
 
   @override
-  String get photo => 'Photo';
+  String get photo => 'Foto';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'Kamera';
 
   @override
-  String get sharePhotosFromGallery => 'Share photos from gallery';
+  String get sharePhotosFromGallery => 'Bagikan foto dari galeri';
 
   @override
-  String get takeNewPhoto => 'Take a new photo';
+  String get takeNewPhoto => 'Ambil foto baru';
 
   @override
-  String get shareCurrentLocation => 'Share your current location';
+  String get shareCurrentLocation => 'Bagikan lokasi saat ini';
 
   @override
-  String get featureComingSoon => 'Feature coming soon!';
+  String get featureComingSoon => 'Fitur segera hadir!';
 
   @override
-  String get activityAddedSuccess => 'Activity added successfully';
+  String get activityAddedSuccess => 'Aktivitas berhasil ditambahkan';
 
   @override
-  String get filePickerComingSoon => 'File picker coming soon';
+  String get filePickerComingSoon => 'Pemilih file segera hadir';
 
   @override
-  String get pleaseEnterMessage => 'Please enter a message';
+  String get pleaseEnterMessage => 'Silakan masukkan pesan';
 
   @override
-  String get announcementSentSuccess => 'Announcement sent successfully!';
+  String get announcementSentSuccess => 'Pengumuman berhasil dikirim!';
 
   @override
-  String get failedToLoadParticipants => 'Failed to load participants';
+  String get failedToLoadParticipants => 'Gagal memuat peserta';
 
   @override
-  String get loginRequired => 'Login required';
+  String get loginRequired => 'Login diperlukan';
 
   @override
-  String get inviteSendFailed => 'Failed to send invite. Please try again.';
+  String get inviteSendFailed => 'Gagal mengirim undangan. Silakan coba lagi.';
 
   @override
-  String get newInviteLinkGenerated => 'New invite link generated';
+  String get newInviteLinkGenerated => 'Link undangan baru dibuat';
 
   @override
-  String get inviteLinkCopied => 'Invite link copied';
+  String get inviteLinkCopied => 'Link undangan disalin';
 
   @override
-  String get userNotFound => 'User not found';
+  String get userNotFound => 'Pengguna tidak ditemukan';
 
   @override
-  String get noDestination => 'No destination';
+  String get noDestination => 'Tidak ada tujuan';
 
   @override
-  String get loginTitle => 'Welcome';
+  String get loginTitle => 'Selamat Datang';
 
   @override
-  String get loginSubtitle => 'Sign in to start your journey';
+  String get loginSubtitle => 'Masuk untuk memulai perjalanan Anda';
 
   @override
-  String get continueWithKakao => 'Continue with Kakao';
+  String get continueWithKakao => 'Lanjutkan dengan Kakao';
 
   @override
-  String get continueWithNaver => 'Continue with Naver';
+  String get continueWithNaver => 'Lanjutkan dengan Naver';
 
   @override
-  String get continueWithGoogle => 'Continue with Google';
+  String get continueWithGoogle => 'Lanjutkan dengan Google';
 
   @override
   String get account => 'Akun';
@@ -862,4 +862,344 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get deleteAccountWarning =>
       'Peringatan: Tindakan ini tidak dapat dibatalkan. Semua data Anda termasuk perjalanan dan pesan akan dihapus secara permanen.';
+
+  @override
+  String get reportMessage => 'Laporkan Pesan';
+
+  @override
+  String get reportMessageDescription =>
+      'Laporkan konten tidak pantas kepada penyelenggara perjalanan';
+
+  @override
+  String get blockUser => 'Blokir Pengguna';
+
+  @override
+  String get blockUserDescription =>
+      'Anda tidak akan melihat pesan dari pengguna ini lagi';
+
+  @override
+  String get selectReportReason => 'Pilih alasan pelaporan:';
+
+  @override
+  String get additionalDetails => 'Detail Tambahan';
+
+  @override
+  String get optionalDescription => 'Jelaskan masalahnya (opsional)';
+
+  @override
+  String get report => 'Laporkan';
+
+  @override
+  String get block => 'Blokir';
+
+  @override
+  String get reportTypeSpam => 'Spam';
+
+  @override
+  String get reportTypeHarassment => 'Pelecehan';
+
+  @override
+  String get reportTypeInappropriate => 'Konten Tidak Pantas';
+
+  @override
+  String get reportTypeHateSpeech => 'Ujaran Kebencian';
+
+  @override
+  String get reportTypeViolence => 'Kekerasan';
+
+  @override
+  String get reportTypeOther => 'Lainnya';
+
+  @override
+  String get reportSubmitted =>
+      'Laporan terkirim. Penyelenggara perjalanan akan diberitahu.';
+
+  @override
+  String get reportFailed => 'Gagal mengirim laporan. Silakan coba lagi.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return 'Apakah Anda yakin ingin memblokir $userName? Anda tidak akan melihat pesan mereka lagi.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName telah diblokir';
+  }
+
+  @override
+  String get blockFailed => 'Gagal memblokir pengguna. Silakan coba lagi.';
+
+  @override
+  String get blockedUsers => 'Pengguna yang Diblokir';
+
+  @override
+  String get noBlockedUsers => 'Tidak ada pengguna yang diblokir';
+
+  @override
+  String get unblock => 'Buka Blokir';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName telah dibuka blokirnya';
+  }
+
+  @override
+  String get reportUser => 'Laporkan Pengguna';
+
+  @override
+  String get reportUserDescription =>
+      'Laporkan pengguna ini kepada penyelenggara perjalanan';
+
+  @override
+  String get locationPermissionDenied => 'Izin lokasi ditolak';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      'Izin lokasi ditolak secara permanen. Silakan aktifkan di pengaturan.';
+
+  @override
+  String get locationServicesDisabled => 'Layanan lokasi dinonaktifkan';
+
+  @override
+  String get gettingLocation => 'Mendapatkan lokasi...';
+
+  @override
+  String get currentLocation => 'Lokasi saat ini';
+
+  @override
+  String get shareLocation => 'Bagikan lokasi';
+
+  @override
+  String get shareLocationConfirmation =>
+      'Apakah Anda ingin membagikan lokasi ini di chat?';
+
+  @override
+  String get share => 'Bagikan';
+
+  @override
+  String get uploadFailed => 'Gagal mengunggah';
+
+  @override
+  String get openInGoogleMaps => 'Buka di Google Maps';
+
+  @override
+  String get getDirections => 'Dapatkan petunjuk arah';
+
+  @override
+  String get drivingDirections => 'Petunjuk arah berkendara';
+
+  @override
+  String get walkingDirections => 'Petunjuk arah berjalan';
+
+  @override
+  String get transitDirections => 'Petunjuk arah transportasi umum';
+
+  @override
+  String get noPinnedMessages => 'Tidak ada pesan disematkan';
+
+  @override
+  String get noItineraryYet => 'Belum ada rencana perjalanan';
+
+  @override
+  String get viewFullItinerary => 'Lihat rencana perjalanan lengkap';
+
+  @override
+  String get inviteParticipant => 'Undang peserta';
+
+  @override
+  String get emailAddress => 'Alamat email';
+
+  @override
+  String get enterEmailAddress => 'Masukkan alamat email';
+
+  @override
+  String get invalidEmail => 'Email tidak valid';
+
+  @override
+  String get role => 'Peran';
+
+  @override
+  String get permissions => 'Izin';
+
+  @override
+  String get sendInvite => 'Kirim undangan';
+
+  @override
+  String get inviteSent => 'Undangan terkirim';
+
+  @override
+  String get editItinerary => 'Edit rencana perjalanan';
+
+  @override
+  String get deleteItinerary => 'Hapus rencana perjalanan';
+
+  @override
+  String get deleteItineraryConfirm =>
+      'Apakah Anda yakin ingin menghapus rencana perjalanan ini?';
+
+  @override
+  String get itineraryDeleted => 'Rencana perjalanan dihapus';
+
+  @override
+  String get searchPlaces => 'Cari tempat';
+
+  @override
+  String get selectLocation => 'Pilih lokasi';
+
+  @override
+  String get confirmLocation => 'Konfirmasi lokasi';
+
+  @override
+  String get hotelName => 'Nama hotel';
+
+  @override
+  String get roomType => 'Tipe kamar';
+
+  @override
+  String get checkInTime => 'Waktu check-in';
+
+  @override
+  String get checkOutTime => 'Waktu check-out';
+
+  @override
+  String get carCompany => 'Perusahaan rental';
+
+  @override
+  String get carModel => 'Model mobil';
+
+  @override
+  String get pickupLocation => 'Lokasi pengambilan';
+
+  @override
+  String get dropoffLocation => 'Lokasi pengembalian';
+
+  @override
+  String get pickupTime => 'Waktu pengambilan';
+
+  @override
+  String get dropoffTime => 'Waktu pengembalian';
+
+  @override
+  String get restaurantName => 'Nama restoran';
+
+  @override
+  String get cuisine => 'Jenis masakan';
+
+  @override
+  String get priceRange => 'Kisaran harga';
+
+  @override
+  String get reservationTime => 'Waktu reservasi';
+
+  @override
+  String get departureAirport => 'Bandara keberangkatan';
+
+  @override
+  String get arrivalAirport => 'Bandara kedatangan';
+
+  @override
+  String get departureTime => 'Waktu keberangkatan';
+
+  @override
+  String get arrivalTime => 'Waktu kedatangan';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get gate => 'Gerbang';
+
+  @override
+  String get confirmationNumber => 'Nomor konfirmasi';
+
+  @override
+  String get other => 'Lainnya';
+
+  @override
+  String get title => 'Judul';
+
+  @override
+  String get description => 'Deskripsi';
+
+  @override
+  String get itemNotFound => 'Item tidak ditemukan';
+
+  @override
+  String get selectDay => 'Pilih hari';
+
+  @override
+  String get selectAirline => 'Pilih maskapai';
+
+  @override
+  String get enterNotesHint => 'Masukkan catatan...';
+
+  @override
+  String get enterHotelName => 'Masukkan nama hotel';
+
+  @override
+  String get enterRoomType => 'Masukkan tipe kamar';
+
+  @override
+  String get enterAddress => 'Masukkan alamat';
+
+  @override
+  String get enterConfirmationNumber => 'Masukkan nomor konfirmasi';
+
+  @override
+  String get selectCarCompany => 'Pilih perusahaan rental';
+
+  @override
+  String get enterCarModel => 'Masukkan model mobil';
+
+  @override
+  String get enterPickupLocation => 'Masukkan lokasi pengambilan';
+
+  @override
+  String get enterDropoffLocation => 'Masukkan lokasi pengembalian';
+
+  @override
+  String get pickupInfo => 'Info pengambilan';
+
+  @override
+  String get dropoffInfo => 'Info pengembalian';
+
+  @override
+  String get enterRestaurantName => 'Masukkan nama restoran';
+
+  @override
+  String get cuisineType => 'Jenis masakan';
+
+  @override
+  String get selectCuisineType => 'Pilih jenis masakan';
+
+  @override
+  String get reservationInfo => 'Info reservasi';
+
+  @override
+  String get enterTitle => 'Masukkan judul';
+
+  @override
+  String get enterDescription => 'Masukkan deskripsi';
+
+  @override
+  String get enterLocation => 'Masukkan lokasi';
+
+  @override
+  String get startTime => 'Waktu mulai';
+
+  @override
+  String get endTime => 'Waktu selesai';
+
+  @override
+  String get addAttachments => 'Tambah lampiran';
+
+  @override
+  String get attachmentHint => 'Tambah dokumen atau gambar';
+
+  @override
+  String get itemUpdatedSuccess => 'Item berhasil diperbarui';
+
+  @override
+  String get itemDeletedSuccess => 'Item berhasil dihapus';
 }

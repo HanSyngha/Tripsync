@@ -855,4 +855,339 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get deleteAccountWarning => '경고: 계정과 관련된 모든 데이터가 영구적으로 삭제됩니다.';
+
+  @override
+  String get reportMessage => '메시지 신고';
+
+  @override
+  String get reportMessageDescription => '부적절한 내용을 여행 진행자에게 신고합니다';
+
+  @override
+  String get blockUser => '사용자 차단';
+
+  @override
+  String get blockUserDescription => '이 사용자의 메시지를 더 이상 볼 수 없습니다';
+
+  @override
+  String get selectReportReason => '신고 사유를 선택하세요:';
+
+  @override
+  String get additionalDetails => '추가 설명';
+
+  @override
+  String get optionalDescription => '문제를 설명해 주세요 (선택사항)';
+
+  @override
+  String get report => '신고';
+
+  @override
+  String get block => '차단';
+
+  @override
+  String get reportTypeSpam => '스팸';
+
+  @override
+  String get reportTypeHarassment => '괴롭힘';
+
+  @override
+  String get reportTypeInappropriate => '부적절한 콘텐츠';
+
+  @override
+  String get reportTypeHateSpeech => '혐오 발언';
+
+  @override
+  String get reportTypeViolence => '폭력';
+
+  @override
+  String get reportTypeOther => '기타';
+
+  @override
+  String get reportSubmitted => '신고가 접수되었습니다. 여행 진행자에게 알림이 전송됩니다.';
+
+  @override
+  String get reportFailed => '신고 접수에 실패했습니다. 다시 시도해 주세요.';
+
+  @override
+  String blockUserConfirmation(String userName) {
+    return '$userName님을 차단하시겠습니까? 더 이상 이 사용자의 메시지를 볼 수 없습니다.';
+  }
+
+  @override
+  String userBlocked(String userName) {
+    return '$userName님이 차단되었습니다';
+  }
+
+  @override
+  String get blockFailed => '사용자 차단에 실패했습니다. 다시 시도해 주세요.';
+
+  @override
+  String get blockedUsers => '차단된 사용자';
+
+  @override
+  String get noBlockedUsers => '차단된 사용자가 없습니다';
+
+  @override
+  String get unblock => '차단 해제';
+
+  @override
+  String userUnblocked(String userName) {
+    return '$userName님의 차단이 해제되었습니다';
+  }
+
+  @override
+  String get reportUser => '사용자 신고';
+
+  @override
+  String get reportUserDescription => '이 사용자를 여행 진행자에게 신고합니다';
+
+  @override
+  String get locationPermissionDenied => '위치 권한이 거부되었습니다';
+
+  @override
+  String get locationPermissionDeniedForever =>
+      '위치 권한이 영구적으로 거부되었습니다. 설정에서 활성화해 주세요.';
+
+  @override
+  String get locationServicesDisabled =>
+      '위치 서비스가 비활성화되어 있습니다. 위치 서비스를 활성화해 주세요.';
+
+  @override
+  String get gettingLocation => '현재 위치를 가져오는 중...';
+
+  @override
+  String get currentLocation => '현재 위치';
+
+  @override
+  String get shareLocation => '위치 공유';
+
+  @override
+  String get shareLocationConfirmation => '현재 위치를 그룹과 공유하시겠습니까?';
+
+  @override
+  String get share => '공유';
+
+  @override
+  String get uploadFailed => '업로드 실패';
+
+  @override
+  String get openInGoogleMaps => 'Google 지도에서 열기';
+
+  @override
+  String get getDirections => '길찾기';
+
+  @override
+  String get drivingDirections => '자동차 길찾기';
+
+  @override
+  String get walkingDirections => '도보 길찾기';
+
+  @override
+  String get transitDirections => '대중교통 길찾기';
+
+  @override
+  String get noPinnedMessages => '고정된 메시지가 없습니다';
+
+  @override
+  String get noItineraryYet => '아직 일정이 없습니다';
+
+  @override
+  String get viewFullItinerary => '전체 일정 보기';
+
+  @override
+  String get inviteParticipant => '참여자 초대';
+
+  @override
+  String get emailAddress => '이메일 주소';
+
+  @override
+  String get enterEmailAddress => '이메일 주소를 입력하세요';
+
+  @override
+  String get invalidEmail => '유효한 이메일 주소를 입력해 주세요';
+
+  @override
+  String get role => '역할';
+
+  @override
+  String get permissions => '권한';
+
+  @override
+  String get sendInvite => '초대 보내기';
+
+  @override
+  String get inviteSent => '초대가 전송되었습니다';
+
+  @override
+  String get editItinerary => '일정 수정';
+
+  @override
+  String get deleteItinerary => '일정 삭제';
+
+  @override
+  String get deleteItineraryConfirm => '이 일정 항목을 삭제하시겠습니까?';
+
+  @override
+  String get itineraryDeleted => '일정이 삭제되었습니다';
+
+  @override
+  String get searchPlaces => '장소 검색';
+
+  @override
+  String get selectLocation => '위치 선택';
+
+  @override
+  String get confirmLocation => '위치 확인';
+
+  @override
+  String get hotelName => '호텔 이름';
+
+  @override
+  String get roomType => '객실 유형';
+
+  @override
+  String get checkInTime => '체크인 시간';
+
+  @override
+  String get checkOutTime => '체크아웃 시간';
+
+  @override
+  String get carCompany => '렌터카 회사';
+
+  @override
+  String get carModel => '차량 모델';
+
+  @override
+  String get pickupLocation => '픽업 장소';
+
+  @override
+  String get dropoffLocation => '반납 장소';
+
+  @override
+  String get pickupTime => '픽업 시간';
+
+  @override
+  String get dropoffTime => '반납 시간';
+
+  @override
+  String get restaurantName => '식당 이름';
+
+  @override
+  String get cuisine => '음식 종류';
+
+  @override
+  String get priceRange => '가격대';
+
+  @override
+  String get reservationTime => '예약 시간';
+
+  @override
+  String get departureAirport => '출발 공항';
+
+  @override
+  String get arrivalAirport => '도착 공항';
+
+  @override
+  String get departureTime => '출발 시간';
+
+  @override
+  String get arrivalTime => '도착 시간';
+
+  @override
+  String get terminal => '터미널';
+
+  @override
+  String get gate => '게이트';
+
+  @override
+  String get confirmationNumber => '예약 번호';
+
+  @override
+  String get other => '기타';
+
+  @override
+  String get title => '제목';
+
+  @override
+  String get description => '설명';
+
+  @override
+  String get itemNotFound => '항목을 찾을 수 없습니다';
+
+  @override
+  String get selectDay => '일자 선택';
+
+  @override
+  String get selectAirline => '항공사 선택';
+
+  @override
+  String get enterNotesHint => '추가 메모를 입력하세요';
+
+  @override
+  String get enterHotelName => '호텔 이름을 입력하세요';
+
+  @override
+  String get enterRoomType => '예: 디럭스 트윈';
+
+  @override
+  String get enterAddress => '주소를 입력하세요';
+
+  @override
+  String get enterConfirmationNumber => '예약 번호를 입력하세요';
+
+  @override
+  String get selectCarCompany => '렌터카 회사 선택';
+
+  @override
+  String get enterCarModel => '예: 현대 아반떼';
+
+  @override
+  String get enterPickupLocation => '픽업 장소를 입력하세요';
+
+  @override
+  String get enterDropoffLocation => '반납 장소를 입력하세요';
+
+  @override
+  String get pickupInfo => '픽업 정보';
+
+  @override
+  String get dropoffInfo => '반납 정보';
+
+  @override
+  String get enterRestaurantName => '식당 이름을 입력하세요';
+
+  @override
+  String get cuisineType => '음식 종류';
+
+  @override
+  String get selectCuisineType => '음식 종류 선택';
+
+  @override
+  String get reservationInfo => '예약 정보';
+
+  @override
+  String get enterTitle => '제목을 입력하세요';
+
+  @override
+  String get enterDescription => '설명을 입력하세요';
+
+  @override
+  String get enterLocation => '위치를 입력하세요';
+
+  @override
+  String get startTime => '시작 시간';
+
+  @override
+  String get endTime => '종료 시간';
+
+  @override
+  String get addAttachments => '첨부파일 추가';
+
+  @override
+  String get attachmentHint => 'E-티켓, 예약 확인서 등';
+
+  @override
+  String get itemUpdatedSuccess => '항목이 업데이트되었습니다';
+
+  @override
+  String get itemDeletedSuccess => '항목이 삭제되었습니다';
 }

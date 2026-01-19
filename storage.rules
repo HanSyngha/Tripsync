@@ -8,8 +8,20 @@ service firebase.storage {
       allow write: if request.auth != null && request.auth.uid == userId;
     }
 
+    // Trip cover images
+    match /trip_covers/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+
     // Trip images
     match /trips/{tripId}/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+
+    // Chat images
+    match /chat_images/{tripId}/{allPaths=**} {
       allow read: if request.auth != null;
       allow write: if request.auth != null;
     }
