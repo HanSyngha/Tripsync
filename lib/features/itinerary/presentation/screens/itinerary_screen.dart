@@ -12,6 +12,7 @@ import '../../../trip/providers/trip_provider.dart';
 import '../../providers/itinerary_provider.dart';
 import '../widgets/itinerary_map_view.dart';
 import '../widgets/itinerary_people_view.dart';
+import '../widgets/itinerary_settings_view.dart';
 
 class ItineraryScreen extends ConsumerStatefulWidget {
   final String tripId;
@@ -801,10 +802,7 @@ class _ItineraryScreenState extends ConsumerState<ItineraryScreen> {
   }
 
   Widget _buildSettingsTab() {
-    final l10n = AppLocalizations.of(context)!;
-    return Center(
-      child: Text('${l10n.settings} - ${l10n.comingSoon}'),
-    );
+    return ItinerarySettingsView(tripId: widget.tripId);
   }
 
   Widget _buildBottomNav(TripModel trip) {

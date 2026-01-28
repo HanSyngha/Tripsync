@@ -170,6 +170,8 @@
   "next": "Suivant",
   "search": "Rechercher",
   "noResults": "Aucun résultat",
+  "noMapLocations": "Aucun lieu à afficher sur la carte",
+  "noMapLocationsHint": "Ajoutez des lieux à votre itinéraire pour les voir sur la carte",
   "selectDate": "Sélectionner une date",
   "selectTime": "Sélectionner une heure",
   "from": "De",

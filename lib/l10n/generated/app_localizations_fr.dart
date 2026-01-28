@@ -613,6 +613,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get noResults => 'Aucun résultat';
 
   @override
+  String get noMapLocations => 'Aucun lieu à afficher sur la carte';
+
+  @override
+  String get noMapLocationsHint => 'Ajoutez des lieux à votre itinéraire pour les voir sur la carte';
+
+  @override
   String get selectDate => 'Sélectionner une date';
 
   @override

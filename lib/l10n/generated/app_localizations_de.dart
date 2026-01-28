@@ -616,6 +616,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get noResults => 'Keine Ergebnisse';
 
   @override
+  String get noMapLocations => 'Keine Orte auf der Karte anzuzeigen';
+
+  @override
+  String get noMapLocationsHint => 'Fügen Sie Orte zu Ihrer Reiseroute hinzu, um sie auf der Karte zu sehen';
+
+  @override
   String get selectDate => 'Datum auswählen';
 
   @override

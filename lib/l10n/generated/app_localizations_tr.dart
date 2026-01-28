@@ -614,6 +614,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get noResults => 'Sonuc bulunamadi';
 
   @override
+  String get noMapLocations => 'No locations to display on map';
+
+  @override
+  String get noMapLocationsHint => 'Add locations to your itinerary to see them on the map';
+
+  @override
   String get selectDate => 'Tarih Sec';
 
   @override

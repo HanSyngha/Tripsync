@@ -614,6 +614,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noResults => 'No se encontraron resultados';
 
   @override
+  String get noMapLocations => 'No hay ubicaciones para mostrar en el mapa';
+
+  @override
+  String get noMapLocationsHint => 'Agrega ubicaciones a tu itinerario para verlas en el mapa';
+
+  @override
   String get selectDate => 'Seleccionar fecha';
 
   @override

@@ -192,6 +192,8 @@
   "next": "Siguiente",
   "search": "Buscar",
   "noResults": "No se encontraron resultados",
+  "noMapLocations": "No hay ubicaciones para mostrar en el mapa",
+  "noMapLocationsHint": "Agrega ubicaciones a tu itinerario para verlas en el mapa",
   "selectDate": "Seleccionar fecha",
   "selectTime": "Seleccionar hora",
   "from": "Desde",

@@ -610,6 +610,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get noResults => '結果が見つかりません';
 
   @override
+  String get noMapLocations => '地図に表示する場所がありません';
+
+  @override
+  String get noMapLocationsHint => '旅程に場所を追加すると地図で確認できます';
+
+  @override
   String get selectDate => '日付を選択';
 
   @override

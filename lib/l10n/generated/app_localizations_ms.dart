@@ -613,6 +613,12 @@ class AppLocalizationsMs extends AppLocalizations {
   String get noResults => 'Tiada hasil dijumpai';
 
   @override
+  String get noMapLocations => 'No locations to display on map';
+
+  @override
+  String get noMapLocationsHint => 'Add locations to your itinerary to see them on the map';
+
+  @override
   String get selectDate => 'Pilih Tarikh';
 
   @override

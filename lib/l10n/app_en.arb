@@ -640,6 +640,12 @@
   "noResults": "No results found",
   "@noResults": {"description": "No search results"},
 
+  "noMapLocations": "No locations to display on map",
+  "@noMapLocations": {"description": "Map empty state title"},
+
+  "noMapLocationsHint": "Add locations to your itinerary to see them on the map",
+  "@noMapLocationsHint": {"description": "Map empty state hint"},
+
   "selectDate": "Select Date",
   "@selectDate": {"description": "Date picker title"},
 

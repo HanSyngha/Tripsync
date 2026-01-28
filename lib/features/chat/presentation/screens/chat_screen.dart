@@ -392,11 +392,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: AppTheme.spacingMd,
         right: AppTheme.spacingMd,
         top: AppTheme.spacingSm,
-        bottom: MediaQuery.of(context).padding.bottom + AppTheme.spacingSm,
+        bottom: AppTheme.spacingSm,
       ),
       decoration: BoxDecoration(
         color: isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
@@ -407,6 +407,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         ),
       ),
       child: SafeArea(
+        top: false,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [

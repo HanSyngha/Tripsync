@@ -639,6 +639,8 @@
 
   "noResults": "Không tìm thấy kết quả",
   "@noResults": {"description": "No search results"},
+  "noMapLocations": "No locations to display on map",
+  "noMapLocationsHint": "Add locations to your itinerary to see them on the map",
 
   "selectDate": "Chọn ngày",
   "@selectDate": {"description": "Date picker title"},

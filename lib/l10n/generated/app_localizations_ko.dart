@@ -610,6 +610,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get noResults => '검색 결과가 없습니다';
 
   @override
+  String get noMapLocations => '지도에 표시할 장소가 없습니다';
+
+  @override
+  String get noMapLocationsHint => '일정에 장소를 추가하면 지도에서 확인할 수 있습니다';
+
+  @override
   String get selectDate => '날짜 선택';
 
   @override

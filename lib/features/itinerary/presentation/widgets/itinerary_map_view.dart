@@ -179,7 +179,7 @@ class _ItineraryMapViewState extends ConsumerState<ItineraryMapView> {
           ),
           const SizedBox(height: 16),
           Text(
-            l10n.noResults,
+            l10n.noMapLocations,
             style: TextStyle(
               fontSize: 16,
               color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,
@@ -187,7 +187,7 @@ class _ItineraryMapViewState extends ConsumerState<ItineraryMapView> {
           ),
           const SizedBox(height: 8),
           Text(
-            'Add locations to your itinerary to see them on the map',
+            l10n.noMapLocationsHint,
             style: TextStyle(
               fontSize: 14,
               color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,

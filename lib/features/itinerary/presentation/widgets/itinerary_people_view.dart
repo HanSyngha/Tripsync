@@ -55,63 +55,150 @@ class ItineraryPeopleView extends ConsumerWidget {
       );
     }
 
-    return Column(
-      children: [
+    // Separate hosts and participants
+    final hosts = participantState.hosts;
+    final participants = participantState.participants;
+
+    return CustomScrollView(
+      slivers: [
+        // Top spacing
+        const SliverToBoxAdapter(
+          child: SizedBox(height: 20),
+        ),
         // Header
-        Container(
-          padding: const EdgeInsets.all(16),
-          color: isDark ? AppColors.surfaceDark : Colors.white,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    l10n.people,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l10n.people,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        color: isDark
+                            ? AppColors.textPrimaryDark
+                            : AppColors.textPrimaryLight,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${allParticipants.length} ${l10n.participant}${allParticipants.length > 1 ? 's' : ''}',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,
+                    const SizedBox(height: 4),
+                    Text(
+                      '${allParticipants.length} ${l10n.participant}${allParticipants.length > 1 ? 's' : ''}',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: isDark
+                            ? AppColors.textMutedDark
+                            : AppColors.textMutedLight,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              canManageAsync.when(
-                data: (canManage) => canManage
-                    ? TextButton.icon(
-                        onPressed: () => context.push('/trip/$tripId/participants'),
-                        icon: const Icon(Icons.settings),
-                        label: Text(l10n.manage),
-                        style: TextButton.styleFrom(
-                          foregroundColor: AppColors.primary,
-                        ),
-                      )
-                    : const SizedBox.shrink(),
-                loading: () => const SizedBox.shrink(),
-                error: (_, __) => const SizedBox.shrink(),
-              ),
-            ],
+                  ],
+                ),
+                canManageAsync.when(
+                  data: (canManage) => canManage
+                      ? Container(
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: TextButton.icon(
+                            onPressed: () =>
+                                context.push('/trip/$tripId/participants'),
+                            icon: const Icon(Icons.tune, size: 18),
+                            label: Text(l10n.manage),
+                            style: TextButton.styleFrom(
+                              foregroundColor: AppColors.primary,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 14, vertical: 6),
+                              textStyle: const TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                        )
+                      : const SizedBox.shrink(),
+                  loading: () => const SizedBox.shrink(),
+                  error: (_, __) => const SizedBox.shrink(),
+                ),
+              ],
+            ),
           ),
         ),
-        const Divider(height: 1),
-        // Participants list
-        Expanded(
-          child: ListView.builder(
-            padding: const EdgeInsets.all(16),
-            itemCount: allParticipants.length,
-            itemBuilder: (context, index) {
-              final participant = allParticipants[index];
-              return _buildParticipantCard(context, participant, l10n, isDark);
-            },
+        const SliverToBoxAdapter(child: SizedBox(height: 20)),
+        // Hosts section
+        if (hosts.isNotEmpty) ...[
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: _buildSectionLabel(
+                Icons.star_rounded,
+                l10n.host,
+                AppColors.primary,
+                isDark,
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => _buildParticipantCard(
+                    context, hosts[index], l10n, isDark),
+                childCount: hosts.length,
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: 20)),
+        ],
+        // Participants section
+        if (participants.isNotEmpty) ...[
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: _buildSectionLabel(
+                Icons.people_rounded,
+                l10n.participant,
+                AppColors.info,
+                isDark,
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => _buildParticipantCard(
+                    context, participants[index], l10n, isDark),
+                childCount: participants.length,
+              ),
+            ),
+          ),
+        ],
+        const SliverToBoxAdapter(child: SizedBox(height: 24)),
+      ],
+    );
+  }
+
+  Widget _buildSectionLabel(
+      IconData icon, String label, Color color, bool isDark) {
+    return Row(
+      children: [
+        Icon(icon, size: 18, color: color),
+        const SizedBox(width: 6),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+            color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
+            letterSpacing: 0.5,
           ),
         ),
       ],
@@ -125,68 +212,107 @@ class ItineraryPeopleView extends ConsumerWidget {
     bool isDark,
   ) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: isDark ? AppColors.surfaceDark : Colors.white,
-        borderRadius: BorderRadius.circular(AppTheme.radiusMd),
+        borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+        border: Border.all(
+          color: isDark
+              ? Colors.white.withValues(alpha: 0.06)
+              : Colors.black.withValues(alpha: 0.05),
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 4,
+            color: Colors.black.withValues(alpha: isDark ? 0.15 : 0.04),
+            blurRadius: 8,
             offset: const Offset(0, 2),
           ),
         ],
       ),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        leading: CircleAvatar(
-          radius: 24,
-          backgroundColor: _getRoleColor(participant.role).withValues(alpha: 0.2),
-          backgroundImage: participant.photoUrl != null
-              ? NetworkImage(participant.photoUrl!)
-              : null,
-          child: participant.photoUrl == null
-              ? Text(
-                  participant.displayName.isNotEmpty
-                      ? participant.displayName[0].toUpperCase()
-                      : '?',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: _getRoleColor(participant.role),
-                  ),
-                )
-              : null,
-        ),
-        title: Row(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        child: Row(
           children: [
-            Flexible(
-              child: Text(
-                participant.displayName,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
-                ),
-                overflow: TextOverflow.ellipsis,
+            // Avatar
+            Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: participant.photoUrl == null
+                    ? LinearGradient(
+                        colors: [
+                          _getRoleColor(participant.role),
+                          _getRoleColor(participant.role).withValues(alpha: 0.7),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      )
+                    : null,
+                image: participant.photoUrl != null
+                    ? DecorationImage(
+                        image: NetworkImage(participant.photoUrl!),
+                        fit: BoxFit.cover,
+                      )
+                    : null,
+              ),
+              child: participant.photoUrl == null
+                  ? Center(
+                      child: Text(
+                        participant.displayName.isNotEmpty
+                            ? participant.displayName[0].toUpperCase()
+                            : '?',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  : null,
+            ),
+            const SizedBox(width: 14),
+            // Info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          participant.displayName,
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: isDark
+                                ? AppColors.textPrimaryDark
+                                : AppColors.textPrimaryLight,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      _buildRoleBadge(participant.role, l10n, isDark),
+                    ],
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    participant.email,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: isDark
+                          ? AppColors.textMutedDark
+                          : AppColors.textMutedLight,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 8),
-            _buildRoleBadge(participant.role, l10n, isDark),
+            _buildPermissionIcons(participant, isDark),
           ],
         ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 4),
-          child: Text(
-            participant.email,
-            style: TextStyle(
-              fontSize: 13,
-              color: isDark ? AppColors.textMutedDark : AppColors.textMutedLight,
-            ),
-            overflow: TextOverflow.ellipsis,
-          ),
-        ),
-        trailing: _buildPermissionIcons(participant, isDark),
       ),
     );
   }
@@ -213,7 +339,7 @@ class ItineraryPeopleView extends ConsumerWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.15),
+        color: color.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Text(

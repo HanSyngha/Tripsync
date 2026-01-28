@@ -166,6 +166,8 @@
   "next": "Weiter",
   "search": "Suchen",
   "noResults": "Keine Ergebnisse",
+  "noMapLocations": "Keine Orte auf der Karte anzuzeigen",
+  "noMapLocationsHint": "Fügen Sie Orte zu Ihrer Reiseroute hinzu, um sie auf der Karte zu sehen",
   "selectDate": "Datum auswählen",
   "selectTime": "Uhrzeit auswählen",
   "from": "Von",

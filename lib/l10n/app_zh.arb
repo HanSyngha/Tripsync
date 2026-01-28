@@ -192,6 +192,8 @@
   "next": "下一步",
   "search": "搜索",
   "noResults": "未找到结果",
+  "noMapLocations": "地图上没有可显示的地点",
+  "noMapLocationsHint": "将地点添加到行程中即可在地图上查看",
   "selectDate": "选择日期",
   "selectTime": "选择时间",
   "from": "从",

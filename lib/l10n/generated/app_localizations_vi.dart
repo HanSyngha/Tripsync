@@ -613,6 +613,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get noResults => 'Không tìm thấy kết quả';
 
   @override
+  String get noMapLocations => 'No locations to display on map';
+
+  @override
+  String get noMapLocationsHint => 'Add locations to your itinerary to see them on the map';
+
+  @override
   String get selectDate => 'Chọn ngày';
 
   @override

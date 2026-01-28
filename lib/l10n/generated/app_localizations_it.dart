@@ -614,6 +614,12 @@ class AppLocalizationsIt extends AppLocalizations {
   String get noResults => 'Nessun risultato trovato';
 
   @override
+  String get noMapLocations => 'No locations to display on map';
+
+  @override
+  String get noMapLocationsHint => 'Add locations to your itinerary to see them on the map';
+
+  @override
   String get selectDate => 'Seleziona Data';
 
   @override

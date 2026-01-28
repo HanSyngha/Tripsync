@@ -192,6 +192,8 @@
   "next": "次へ",
   "search": "検索",
   "noResults": "結果が見つかりません",
+  "noMapLocations": "地図に表示する場所がありません",
+  "noMapLocationsHint": "旅程に場所を追加すると地図で確認できます",
   "selectDate": "日付を選択",
   "selectTime": "時間を選択",
   "from": "出発地",

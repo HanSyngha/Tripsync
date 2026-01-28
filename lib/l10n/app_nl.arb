@@ -639,6 +639,8 @@
 
   "noResults": "Geen resultaten gevonden",
   "@noResults": {"description": "No search results"},
+  "noMapLocations": "No locations to display on map",
+  "noMapLocationsHint": "Add locations to your itinerary to see them on the map",
 
   "selectDate": "Selecteer datum",
   "@selectDate": {"description": "Date picker title"},

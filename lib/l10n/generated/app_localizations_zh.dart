@@ -610,6 +610,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noResults => '未找到结果';
 
   @override
+  String get noMapLocations => '地图上没有可显示的地点';
+
+  @override
+  String get noMapLocationsHint => '将地点添加到行程中即可在地图上查看';
+
+  @override
   String get selectDate => '选择日期';
 
   @override

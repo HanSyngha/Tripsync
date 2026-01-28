@@ -1286,6 +1286,18 @@ abstract class AppLocalizations {
   /// **'No results found'**
   String get noResults;
 
+  /// Map empty state title
+  ///
+  /// In en, this message translates to:
+  /// **'No locations to display on map'**
+  String get noMapLocations;
+
+  /// Map empty state hint
+  ///
+  /// In en, this message translates to:
+  /// **'Add locations to your itinerary to see them on the map'**
+  String get noMapLocationsHint;
+
   /// Date picker title
   ///
   /// In en, this message translates to:
